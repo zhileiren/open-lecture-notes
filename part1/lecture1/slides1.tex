@@ -77,12 +77,12 @@ Dalian University of Technology
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
-  \tableofcontents[currentsection,currentsubsection, 
-    hideothersubsections, 
-    sectionstyle=show,
-]
-\end{frame}
+%\begin{frame}{Outline}
+%  \tableofcontents[currentsection,currentsubsection, 
+%    hideothersubsections, 
+%    sectionstyle=show,
+%]
+%\end{frame}
 
 \AtBeginSection[]
 {
@@ -99,7 +99,6 @@ Dalian University of Technology
 		\item 副教授
 		\item 2003年进入软件学院学习
 		\item \url{http://oscar-lab.org/people/~zren}
-		\item \scriptsize{\url{https://bitbucket.org/rezilla/open-lecture-notes.git}}
 		\item \href{mailto:zren@dlut.edu.cn}{\texttt{zren@dlut.edu.cn}}
 		\item 研究兴趣: 
 
@@ -112,6 +111,7 @@ Dalian University of Technology
 %		\item OSCAR stands for ``Optimizing Software by Computation from ARtificial intelligence''
 %			\pause
 %		\item or ``Operating System will Crash whenever my Algorithm Runs''
+		\item \scriptsize{\url{https://bitbucket.org/rezilla/open-lecture-notes.git}}
 	\end{itemize}
 \end{block}
 \end{frame}
@@ -128,6 +128,7 @@ Dalian University of Technology
 \end{block}
 \end{frame}
 
+\section{定义}
 \begin{frame}
   \frametitle{开源软件的定义}
 	\begin{block}{定义}
@@ -171,6 +172,13 @@ Dalian University of Technology
 \begin{frame}
   \frametitle{向前追溯}
 	\begin{block}{UNIX vs. GNU vs. Linux}
+		\scriptsize
+		\begin{itemize}
+			\item 1984年，Richard Stallman发起了GNU项目，目标是创建一个完全自由且向下兼容UNIX的操作系统。这个项目不断发展壮大，包含了越来越多的内容。现在，GNU项目的产品，如Emacs、GCC等已经成为各种其它自由发布的类UNIX系统中的核心角色。
+			\item 1990年，Linus Torvalds决定编写一个自己的Minix内核，初名为Linus' Minix，意为Linus的Minix内核，后来改名为Linux。此内核于1991年正式发布，并逐渐引起人们的注意。当时GNU操作系统仍未完成，GNU系统软件集与Linux内核结合后，GNU软件构成了这个POSIX兼容操作系统GNU/Linux的基础。今天GNU/Linux已经成为发展最为活跃的自由／开放源码的类Unix操作系统。
+			\item 1994年，受到GNU工程的鼓舞，BSD走上了复兴的道路。BSD的开发也走向了几个不同的方向，并最终导致了FreeBSD、NetBSD、OpenBSD和DragonFlyBSD等基于BSD的操作系统的出现。
+			\item 2007年发布的Mac OS X 10.5 Leopard通过The Open Group的UNIX03认证。
+		\end{itemize}
 		
 	\end{block}
 	

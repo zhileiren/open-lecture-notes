@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{关于我}{2}{0}{1}
+\beamer@sectionintoc {2}{定义}{6}{0}{2}
