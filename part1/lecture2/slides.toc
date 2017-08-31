@@ -1,0 +1,3 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Python环境安装}{2}{0}{1}
+\beamer@sectionintoc {2}{Hello world}{8}{0}{2}
