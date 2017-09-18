@@ -1,0 +1,14 @@
+\frametitle{pymongo API使用}
+\begin{block}{Python snippet}
+\begin{verbatim}
+import pymongo
+from pymongo import MongoClient
+client = MongoClient()
+
+# Get the sampleDB database
+db = client.sampleDB
+# equivalently, use db = client['sampleDB']
+coll = db.sampleCollection
+# equivalently, use coll = db['sampleCollection']
+\end{verbatim}
+^^I\end{block}
