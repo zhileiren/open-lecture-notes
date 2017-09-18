@@ -191,6 +191,48 @@ Dalian University of Technology
 }
 \end{verbatim}
 \end{frame}
+\begin{frame}[t,fragile]{CRUD操作概览}
+\begin{block}{CRUD (1): Create}
+	\scriptsize
+\begin{verbatim}
+#choose db
+>use test
+#insert json object into collection
+>db.students.insert({"id": 123, "name": "zhangsan", "age": 19})
+WriteResult({ "nInserted" : 1 })
+\end{verbatim}
+\end{block}
+\begin{block}{CRUD (2): Retrieve}
+	\scriptsize
+\begin{verbatim}
+#choose db
+>use test
+> db.students.find({"id": 123})
+{ "_id" : ObjectId("..."), "id" : 123, "name" : "zhangsan", "age" : 19 }
+
+\end{verbatim}
+\end{block}
+\end{frame}
+\begin{frame}[t,fragile]{CRUD操作概览}
+\begin{block}{CRUD (3): Update}
+	\scriptsize
+\begin{verbatim}
+> db.students.update({"id":123}, {"$inc": {"age":1}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find()
+{ "_id" : ObjectId("..."), "id" : 123, "name" : "zhangsan", "age" : 20 }
+\end{verbatim}
+\end{block}
+\begin{block}{CRUD (4): Delete}
+	\scriptsize
+\begin{verbatim}
+> db.students.deleteMany({"id":123})
+{ "acknowledged" : true, "deletedCount" : 1 }
+
+\end{verbatim}
+\end{block}
+\end{frame}
+
 \section{基于pymongo的数据库连接}
 \begin{frame}[t]{pymongo简介}
 \end{frame}
