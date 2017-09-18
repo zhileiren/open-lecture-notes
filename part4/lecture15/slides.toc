@@ -1,3 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {1}{MongoDB}{2}{0}{1}
-\beamer@sectionintoc {2}{基于pymongo的数据库连接}{9}{0}{2}
+\beamer@sectionintoc {2}{基于pymongo的数据库连接}{10}{0}{2}

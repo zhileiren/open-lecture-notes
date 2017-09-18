@@ -101,10 +101,20 @@ Dalian University of Technology
 }
 \section{MongoDB}
 \begin{frame}[t]{NoSQL简介}
+    \begin{block}{概念}
+        NoSQL是对不同于传统的关系数据库的数据库管理系统的统称。两者存在许多显著的不同点，其中最重要的是NoSQL不使用SQL作为查询语言。其数据存储可以不需要固定的表格模式，也经常会避免使用SQL的JOIN操作，一般有水平可扩展性的特征。
+
+        NoSQL的结构通常提供弱一致性的保证，如最终一致性，或交易仅限于单个的数据项。
+
+        \begin{itemize}
+            \item 图形关系存储：Neo4J、ArangoDB
+            \item 键-值存储：Redis、MemcacheD、BerkeleyDB
+            \item 列存储: HBase、Cassandra
+            \item 文档存储: MongoDB、CouchDB
+        \end{itemize}
+    \end{block}
 \end{frame}
 \begin{frame}[t]{MongoDB简介}
-\end{frame}
-\begin{frame}[t]{MongoDB基本使用}
 	\centering
 	\includegraphics[width=.4\textwidth]{mongodb.png}
 	\begin{block}{Intro}
@@ -127,10 +137,59 @@ Dalian University of Technology
 	\centering
 	\begin{figure}
 		\includegraphics[width=.4\textwidth]{definitive-vs-good.jpg}
-		\caption{The definitive guide vs. the good part}
+		\caption{JavaScript: the definitive guide vs. the good parts}
 	\end{figure}
 \end{frame}
+\begin{frame}[t]{JavaScript}
+    \begin{block}{今天就能开始用的小知识}
+        \begin{itemize}
+            \item JavaScript学名ECMAScript
+            \item JavaScript与Java的关系约等于济科和张继科的关系
+            \item 相比于Java，更接近Lisp/Scheme
+            \item 设计周期为10天\footnote{\url{https://www.w3.org/community/webed/wiki/A\_Short\_History\_of\_JavaScript}}\footnote{\url{https://www.bilibili.com/video/av1623152/}}\footnote{\url{https://www.destroyallsoftware.com/talks/the-birth-and-death-of-javascript}}\footnote{\url{https://gist.github.com/zhangchn/29015a7f65ce11c94846}}
+        \end{itemize}
+    \end{block}
+\end{frame}
 \begin{frame}[t]{MongoDB数据结构}
+    \begin{block}{JSON}
+    JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式。它基于 ECMAScript (w3c制定的js规范)的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。
+    \end{block}
+    \begin{block}{BSON}
+        BSON( Binary Serialized Document Format) 是一种二进制形式的存储格式，采用了类似于 C 语言结构体的名称、对表示方法，支持内嵌的文档对象和数组对象，具有轻量性、可遍历性、高效性的特点，可以有效描述非结构化数据和结构化数据。
+    \end{block}
+\end{frame}
+\begin{frame}[fragile]{Example of JSON\footnote{\url{https://en.wikipedia.org/wiki/JSON}}}
+    \tiny
+    \begin{verbatim}
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 25,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    },
+    {
+      "type": "mobile",
+      "number": "123 456-7890"
+    }
+  ],
+  "children": [],
+  "spouse": null
+}
+\end{verbatim}
 \end{frame}
 \section{基于pymongo的数据库连接}
 \begin{frame}[t]{pymongo简介}
