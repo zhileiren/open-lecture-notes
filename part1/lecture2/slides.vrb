@@ -1,0 +1,13 @@
+\frametitle{第一个Python程序}
+^^I\scriptsize
+\begin{verbatim}
+In [1]: print "Hello world"
+Hello world
+
+In [2]: print 1 + 2
+3
+
+In [3]:
+\end{verbatim}
+
+
