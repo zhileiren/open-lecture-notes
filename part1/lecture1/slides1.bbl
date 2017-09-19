@@ -1,0 +1,47 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{Gates1976An}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0f61116a684a6009281b8d08b2d5be91}{%
+           family={Gates},
+           familyi={G\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f61116a684a6009281b8d08b2d5be91}
+      \strng{fullhash}{0f61116a684a6009281b8d08b2d5be91}
+      \strng{authornamehash}{0f61116a684a6009281b8d08b2d5be91}
+      \strng{authorfullhash}{0f61116a684a6009281b8d08b2d5be91}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Homebrew Computer Club Newsletter}
+      \field{number}{1}
+      \field{title}{An Open Letter to Hobbyists}
+      \field{volume}{2}
+      \field{year}{1976}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
