@@ -1,14 +1,18 @@
 \frametitle{pymongo API使用}
 \begin{block}{Python snippet}
+^^I^^I\scriptsize
 \begin{verbatim}
-import pymongo
-from pymongo import MongoClient
-client = MongoClient()
-
-# Get the sampleDB database
-db = client.sampleDB
-# equivalently, use db = client['sampleDB']
-coll = db.sampleCollection
-# equivalently, use coll = db['sampleCollection']
+#CRUD: Update
+col.update({"age": {"$lt": 20}}, {"$inc": {"age": 1}})
+#{u'n': 1, u'nModified': 1, u'ok': 1, 'updatedExisting': True}
+col.update({"age": {"$lt": 20}}, {"$inc": {"age": 1}}, multi=True)
+#{u'n': 2, u'nModified': 2, u'ok': 1, 'updatedExisting': True}
+#CRUD: Delete
+col.remove({"age": {"$gt": 10}})
+#{u'n': 2, u'ok': 1}
+coll.insert_one({"id": 123, "name": "zhangsan", "age": 18})
+coll.insert_one({"id": 124, "name": "lisi", "age": 17})
+col.remove({"age": {"$gt": 10}}, multi=False)
+#{u'n': 1, u'ok': 1}
 \end{verbatim}
 ^^I\end{block}

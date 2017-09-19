@@ -126,14 +126,36 @@ Dalian University of Technology
 	{\color{red}Mongo} for \pause hu{\color{red}mongo}us
 \end{frame}
 \section{MongoDB安装}
-\begin{frame}[t]{MongoDB安装}
+\begin{frame}[t,fragile]{MongoDB安装}
 \begin{block}{开箱即用}
 	\begin{itemize}
-		\item Debian/Ubuntu: apt-get install mongodb
+		\item Debian/Ubuntu: \begin{verbatim}sudo apt-get install mongodb\end{verbatim}
 		\item Windows: \url{https://www.mongodb.com/download-center}，下载后一路Next安装，或直接下载压缩包解压
-		\item OSX: brew install mongodb
+		\item OSX: \begin{verbatim}brew install mongodb\end{verbatim}
 	\end{itemize}
 \end{block}
+\end{frame}
+\begin{frame}[t]{MongoDB启动}
+\begin{block}{开箱即用}
+	\begin{itemize}
+		\item Debian/Ubuntu: service mongodb start
+		\item Windows: mongod -{}-dbpath path$\backslash$to$\backslash$dbpath
+		\item OSX: mongod -{}-dbpath path/to/dbpath
+	\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}[t]{MongoDB常用参数}
+	\scriptsize
+	\begin{tabular}{ll}
+-{}-dbpath arg  & directory for datafiles - defaults to /data/db                                \\
+-{}-port arg    & specify port number - 27017 by default                                        \\
+-{}-replSet arg & arg is <setname>                                                              \\
+-{}-configsvr   & declare this is a config db of a cluster;                                     \\
+                & default port 27019; default dir /data/configdb                                \\
+-{}-journal     & enable journaling                                                             \\
+-{}-nojournal   & disable journaling (journaling is on by default for 64 bit)                   \\
+-{}-logpath arg & log file to send write to instead of stdout - has to be a file, not directory \\
+	\end{tabular}
 \end{frame}
 \section{MongoDB基本操作}
 \begin{frame}[t]{MongoDB REPL}
@@ -245,13 +267,24 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 \end{frame}
 
 \section{基于pymongo的数据库连接}
-\begin{frame}[t]{pymongo简介}
-\end{frame}
-\begin{frame}[t]{pymongo安装}
+\begin{frame}[t,fragile]{pymongo安装}
+	\begin{block}{}
+		\begin{itemize}
+			\item via pip
+\begin{verbatim}
+$pip install pymongo
+\end{verbatim}
+			\item via distro (e.g., apt)
+\begin{verbatim}
+$sudo apt-get install python-pymongo
+\end{verbatim}
+		\end{itemize}
+	\end{block}
 \end{frame}
 
-\begin{frame}[fragile]{pymongo API使用}
+\begin{frame}[t,fragile]{pymongo API使用}
 	\begin{block}{Python snippet}
+		\scriptsize
 \begin{verbatim}
 import pymongo
 from pymongo import MongoClient
@@ -262,11 +295,47 @@ db = client.sampleDB
 # equivalently, use db = client['sampleDB']
 coll = db.sampleCollection
 # equivalently, use coll = db['sampleCollection']
+#CRUD: Create
+coll.insert_one({"id": 123, "name": "zhangsan", "age": 18})
+coll.insert_one({"id": 124, "name": "lisi", "age": 17})
+#CRUD: Retrieve
+for entry in coll.find():
+    print("id: %d, name: %s, age: %d" % 
+          (entry['id'], entry['name'], entry['age'])
 \end{verbatim}
 	\end{block}
 \end{frame}
 
-\begin{frame}[t]{pymongo API使用}
+\begin{frame}[t,fragile]{pymongo API使用}
+	\begin{block}{Python snippet}
+		\scriptsize
+\begin{verbatim}
+#CRUD: Update
+col.update({"age": {"$lt": 20}}, {"$inc": {"age": 1}})
+#{u'n': 1, u'nModified': 1, u'ok': 1, 'updatedExisting': True}
+col.update({"age": {"$lt": 20}}, {"$inc": {"age": 1}}, multi=True)
+#{u'n': 2, u'nModified': 2, u'ok': 1, 'updatedExisting': True}
+#CRUD: Delete
+col.remove({"age": {"$gt": 10}})
+#{u'n': 2, u'ok': 1}
+coll.insert_one({"id": 123, "name": "zhangsan", "age": 18})
+coll.insert_one({"id": 124, "name": "lisi", "age": 17})
+col.remove({"age": {"$gt": 10}}, multi=False)
+#{u'n': 1, u'ok': 1}
+\end{verbatim}
+	\end{block}
 \end{frame}
 
+\begin{frame}
+	\vspace{3cm}
+	\Huge
+	Thanks
+	\vspace{2cm}
+	\normalsize
+	\flushright
+		Zhilei Ren
+
+		zren@dlut.edu.cn
+	
+\end{frame}
 \end{document}
