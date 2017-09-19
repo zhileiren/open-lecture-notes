@@ -1,2 +1,4 @@
-\BOOKMARK [2][]{Outline0.1}{MongoDB}{}% 1
-\BOOKMARK [2][]{Outline0.2}{基于pymongo的数据库连接}{}% 2
+\BOOKMARK [2][]{Outline0.1}{MongoDB简介}{}% 1
+\BOOKMARK [2][]{Outline0.2}{MongoDB安装}{}% 2
+\BOOKMARK [2][]{Outline0.3}{MongoDB基本操作}{}% 3
+\BOOKMARK [2][]{Outline0.4}{基于pymongo的数据库连接}{}% 4
