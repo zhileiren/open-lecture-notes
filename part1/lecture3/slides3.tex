@@ -1,0 +1,204 @@
+\documentclass{beamer}
+
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}
+	\usecolortheme{beaver}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage{xeCJK}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{biblatex}
+\usepackage{bibentry}
+\usepackage{verbatim}
+\bibliography{cite}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\setCJKmainfont{WenQuanYi Micro Hei}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\raggedright
+
+\let\oldfootnotesize\footnotesize
+\renewcommand*{\footnotesize}{\oldfootnotesize\tiny}
+
+\title[开源软件基础] 
+{开源软件仓库与开源软件生态}
+\subtitle{概念与历史}
+
+\author[Zhilei Ren] 
+{Zhilei Ren}
+
+\institute[OSCAR Team] % (optional, but mostly needed)
+{
+\\\includegraphics[width=0.2\textwidth]{../../utils/logo.jpg}\\
+OSCAR Team, School of Software, 
+Dalian University of Technology
+}
+
+
+\subject{Open Source}
+
+
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{../../utils/logo.jpg}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry journal}{}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+%  \tableofcontents[currentsection,currentsubsection, 
+%    hideothersubsections, 
+%    sectionstyle=show,
+%]
+%\end{frame}
+
+\AtBeginSection[]
+{
+ \begin{frame}<beamer>
+ \frametitle{Outline}
+ \tableofcontents[currentsection]
+ \end{frame}
+}
+\section{开源软件仓库}
+\begin{frame}[t]{软件仓库}
+	\begin{block}{定义}
+A software repository is a storage location from which software packages may be retrieved and installed on a computer.
+
+Many software publishers and other organizations maintain servers on the Internet for this purpose, either free of charge or for a subscription fee. Repositories may be solely for particular programs, such as CPAN for the Perl programming language, or for an entire operating system\footnote{\url{https://en.wikipedia.org/wiki/Software\_repository}}. 
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]{典型软件仓库}
+	\begin{block}{软件仓库分类}
+\begin{itemize}
+	\item 操作系统发行版：基于某种内核的操作系统及外围软件构成的完整系统，如Debian、Fedora等GNU/Linux发行版，或FreeBSD、OpenBSD等BSD发行版
+	\item 特定语言仓库：提供针对某个语言的软件包/类库等，如Perl的CPAN、R的CRAN、\TeX{}的CTAN、C++的boost等
+\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[t]{软件仓库}
+	\begin{block}{软件仓库的操作}
+Operators of such repositories typically provide a package management system, tools intended to search for, install and otherwise manipulate software packages from the repositories. For example, many Linux distributions use Advanced Packaging Tool (APT), commonly found in Debian based distributions, or yum found in Red Hat based distributions. There are also multiple independent package management systems, such as pacman, used in Arch Linux and equo, found in Sabayon Linux.
+	\end{block}
+\end{frame}
+\begin{frame}[t,fragile]{APT梗}
+	\begin{block}{今天就能开始用的小知识}
+	\scriptsize
+	\begin{verbatim}
+$apt moo
+                 (__) 
+                 (oo) 
+           /------\/ 
+          / |    ||   
+         *  /\---/\ 
+            ~~   ~~   
+..."Have you mooed today?"...
+$ LC_ALL=C apt |tail -n 1
+                                        This APT has Super Cow Powers.
+$ apt |tail -n 1
+                                         本 APT 具有超级牛力。
+\end{verbatim}
+\end{block}
+\end{frame}
+\begin{frame}[t]{Linux发行版}
+	\centering
+	\includegraphics[width=0.25\textwidth,angle=90]{distro-timeline.png}
+\end{frame}
+\begin{frame}[t]{典型Linux发行版}
+	\begin{block}{Debian}
+
+	\end{block}
+\end{frame}
+\begin{frame}[t]{典型Linux发行版}
+	\begin{block}{Ubuntu}
+
+	\end{block}
+\end{frame}
+\begin{frame}[t]{典型Linux发行版}
+	\begin{block}{Arch Linux}
+
+	\end{block}
+\end{frame}
+\begin{frame}[t]{典型Linux发行版}
+	\begin{block}{Red Hat}
+
+	\end{block}
+\end{frame}
+\begin{frame}[t]{典型Linux发行版}
+	\begin{block}{Fedora}
+
+	\end{block}
+\end{frame}
+\begin{frame}[t]{典型Linux发行版}
+	\begin{block}{Gentoo}
+
+	\end{block}
+\end{frame}
+\section{开源生态系统}
+\begin{frame}[t]{所谓全栈}
+	\begin{block}{Full Stack}
+To me, a Full Stack Developer is someone with familiarity in each layer, if not mastery in many and a genuine interest in all software technology.
+\\
+		
+		Good developers who are familiar with the entire stack know how to make life easier for those around them. This is why I'm so against silos in the work place. Sure, politics and communication challenges get in the way in large organizations. I think the point Facebook is going for with their hiring policy is, if smart people use their heads and their hearts, a better product gets built in less time\footnote{\url{https://www.laurencegellert.com/2012/08/what-is-a-full-stack-developer/}}.
+	\end{block}
+\end{frame}
+\begin{frame}[t]{所谓全栈}
+	\begin{block}{Layers of the full stack}
+		\begin{itemize}
+			\item Server, Network, and Hosting Environment.
+			\item Data Modeling
+			\item Business Logic
+			\item API layer/Action layer/MVC
+			\item User Interface
+			\item User Experience
+			\item Understanding what the customer and the business need
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}[t]{所谓全栈}
+	\centering
+	\vspace{-1.2cm}
+	\includegraphics[width=0.4\textwidth]{full-stack.jpg}
+\end{frame}
+\end{document}
