@@ -134,6 +134,103 @@ Dalian University of Technology
 	\end{itemize}
 \end{block}
 \end{frame}
+\begin{frame}[t]{关于课程}
+    \begin{block}
+        {开源的几个含义}
+        \begin{itemize}
+            \item 课程主题为开源软件
+            \item 课程使用软件均为开源软件
+            \item 课件开源发布
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\section{特色栏目} % (fold)
+\label{sec:特色栏目}
+\begin{frame}[t]{特色栏目}
+    \begin{block}{}
+        \begin{itemize}
+            \item {人物介绍}
+            \item {今天就能开始用的小知识}
+            \item {书籍推荐}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]{人物介绍}
+    \begin{minipage}{.4\textwidth}
+    \begin{block}
+        {Richard Stallman\footnote{\url{https://zh.wikipedia.org/zh-cn/理查德·斯托曼}}}
+        美国程序员，自由软件活动家。他发起自由软件运动，倡导软件使用者能够对软件自由进行使用、学习、共享和修改，确保了这些软件被称作自由软件。斯托曼发起了GNU项目，并成立了自由软件基金会。他开发了GCC、GDB、GNU Emacs，同时编写了GNU通用公共许可协议。
+    \end{block}
+\end{minipage}
+\begin{minipage}
+    {.5\textwidth}
+    \centering
+    \includegraphics[width=.9\textwidth]{olpc.jpg}
+\end{minipage}
+\end{frame}
+\begin{frame}[t]{今天就能开始用的小知识}
+    \begin{block}
+        {关于Richard Stallman的事实}
+        \begin{itemize}
+            \item Richard Stallman很长时间使用一台龙芯笔记本
+            \item Richard Stallman的键盘是HHKB
+        \end{itemize}
+    \end{block}
+    \includegraphics[width=.4\textwidth]{hhkb.jpg}
+\end{frame}
+\begin{frame}[t]{书籍推荐}
+    \includegraphics[width=.4\textwidth]{book.png}
+\end{frame}
+% section 特色栏目 (end)
+\section{教学内容} % (fold)
+\label{sec:教学内容}
+\begin{frame}[t]{教学大纲}
+    \begin{block}{}
+        \begin{itemize}
+            \item 开源软件的概念和历史，开源软件仓库与开源软件生态系统
+            \item 开源软件许可证制度，开源软件成熟度评估与选型
+            \item 开源软件仓库结构
+            \item 基于python的数据获取（1）：python入门
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]{教学大纲}
+    \begin{block}{}
+        \begin{itemize}
+            \item 基于python的数据获取（2）：python的进阶知识
+            \item 基于python的数据获取（3）：requests、scrapy与pyspider
+            \item 基于python的数据获取（4）：基于beautifulSoup的数据过滤
+            \item 版本控制的概念与入门
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]{教学大纲}
+    \begin{block}{}
+        \begin{itemize}
+            \item 基于git的团队协作
+            \item 基于nose的测试自动化
+            \item git提交日志分析
+            \item 基于sqlalchemy的结构化数据存储
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]{教学大纲}
+    \begin{block}{}
+        \begin{itemize}
+            \item 基于pymongodb的半结构化数据存储
+            \item 基于kettle的数据转换
+            \item 基于pandas的开源软件数据探索性分析
+            \item 基于matplotlib和ggplot的图表生成自动化
+            \item 基于webpy与django的web应用框架
+        \end{itemize}
+    \end{block}
+\end{frame}
+% section 教学内容 (end)
 
 \section{定义}
 \begin{frame}
@@ -145,7 +242,7 @@ Dalian University of Technology
 			\item 自由再散布（Free Distribution）：允许获得源代码的人可自由再将此源代码散布。
 			\item 源代码（Source Code）：程序的可执行文件在散布时，必需以随附完整源代码或是可让人方便的事后获取源代码。
 			\item 派生著作（Derived Works）：让人可依此源代码修改后，在依照同一许可协议的情形下再散布。
-			\item 原创作者程序源代码的完整性（Integrity of The Author’s Source Code）：意即修改后的版本，需以不同的版本号码以与原始的代码做分别，保障原始的代码完整性。
+			\item 原创作者程序源代码的完整性（Integrity of The Author's Source Code）：意即修改后的版本，需以不同的版本号码以与原始的代码做分别，保障原始的代码完整性。
 			\item 不得对任何人或团体有差别待遇（No Discrimination Against Persons or Groups）：开放源代码软件不得因性别、团体、国家、族群等设置限制，但若是因为法律规定的情形则为例外（如：美国政府限制高加密软件的出口）。
 		\end{itemize}
 	\end{block}
@@ -181,6 +278,31 @@ Dalian University of Technology
 	
 \end{frame}
 
+\begin{frame}[t]{向前追溯}
+    \begin{block}
+        {UNIX}
+        \scriptsize
+        Unix的前身为1964年开始的Multics，贝尔实验室 （Bell Labs）1965年时，加入一项由通用电气（General Electric）和麻省理工学院（MIT）合作 的计划；该计划要创建一套多用户、多任务、多层次（multi-user、multi-processor、multi-level）的MULTICS操作系统。贝尔实验室参与了这个操作系统的研发，但因为开发速度太慢，1969年贝尔实验室决定退出这个计划。贝尔实验室的工程师，肯·汤普逊和丹尼斯·里奇，在此时自行开发了Unix。
+    \end{block}
+\end{frame}
+
+\begin{frame}[t]{向前追溯}
+    \begin{block}
+        {UNIX}
+        \scriptsize
+此后的10年，Unix在学术机构和大型企业中得到了广泛的应用，当时的UNIX拥有者AT\&T公司以低廉甚至免费的许可将Unix源码授权给学术机构做研究或教学之用，许多机构在此源码基础上加以扩充和改进，形成了所谓的"Unix变种"，这些变种反过来也促进了Unix的发展，其中最著名的变种之一是由加州大学柏克莱分校开发的柏克莱软件包(BSD)产品。
+    \end{block}
+\end{frame}
+
+
+\begin{frame}[t]{向前追溯}
+    \begin{block}
+        {UNIX}
+        \scriptsize
+后来AT\&T意识到了Unix的商业价值，不再将Unix源码授权给学术机构，并对之前的Unix及其变种声明了版权权利。BSD在Unix的历史发展中具有相当大的影响力，被很多商业厂家采用，成为很多商用Unix的基础。其不断增大的影响力终于引起了AT\&T的关注，于是开始了一场持久的版权官司，这场官司一直打到AT\&T将自己的Unix系统实验室卖掉，新接手的Novell采取了一种比较开明的做法，允许柏克莱分校自由发布自己的Unix变种，但是前提是必须将来自于AT\&T的代码完全删除，于是诞生了4.4 BSD Lite版，由于这个版本不存在法律问题，4.4 BSD Lite成为了现代柏克莱软件包的基础版本。尽管后来，非商业版的Unix系统又经过了很多演变，但其中有不少最终都是创建在BSD版本上（Linux、Minix等系统除外）。
+    \end{block}
+\end{frame}
+
 \begin{frame}
   \frametitle{向前追溯}
 	\begin{block}{UNIX vs. GNU vs. Linux}
@@ -193,8 +315,18 @@ Dalian University of Technology
 		\end{itemize}
 		
 	\end{block}
-	
 \end{frame}
+\begin{frame}[t]{UNIX}
+    \begin{block}{今天就能开始用的小知识}
+        \begin{itemize}
+            \item Minix是处于教学目的的一个类Unix克隆，作者是Andrew S. Tanenbaum
+            \item UNIX是一个注册注册商标
+            \item 目前它的商标权由国际开放标准组织所拥有，只有匹配单一UNIX规范的UNIX系统才能使用UNIX这个名称，否则只能称为类UNIX（UNIX-like）
+            \item UNIX哲学：做一件事并做好；让程序能够互相协同工作；让程序处理文本数据流
+        \end{itemize}
+    \end{block}
+\end{frame}
+
 \begin{frame}
 	\frametitle{相关定义}
 	\begin{block}{自由软件}
@@ -215,7 +347,7 @@ Free as in free speech, not as in free beer.
 \end{frame}
 
 \begin{frame}
-\frametitle{梗：免费啤酒许可证\footnote{\url{https://people.freebsd.org/~phk/}}}
+\frametitle{今天就能开始用的小知识：免费啤酒许可证\footnote{\url{https://people.freebsd.org/~phk/}}}
 \begin{block}{Beer-ware License}
 	\scriptsize
 /*
@@ -245,9 +377,9 @@ Free as in free speech, not as in free beer.
 开放源代码的规定较为宽松，而自由软件的规定更加有严格。很多的开放源代码所认可的授权不算是自由软件。
 
 \begin{itemize}
-	\item 开放源代码作用是，使用开放的开发方式，尽可能的使软件最佳化，而自由软件则将尊重用户自由作为道德标准。
-    \item 如果说「自由软件」会引起誤解，（因為英文「Free」一詞有「自由」、「免费」的双重含义），那么「开放源代码」的名字则会引起的误解則更多。“开源”很容易让人认为是只要把源代码「公开」就算是开源了，即“你可以看到源代码”。但是如果使用者的自由仍然得不到尊重，那么即使公开源代码也沒有意义。有的软件公司只是为了想找使用者帮它除错、吸收社区贡献的功能，破坏了自由软件的原意。一个例子是Tivo公司生产的机顶盒。虽然它基于GNU/Linux，TiVo公司也按照许可证发布了源代码，但是却禁止用户在机顶盒上运行自己的程序，或重新安装系统。
-    \item 自由软件的原意就是要給予使用者運用软件的自由，这个『自由』就是自由软件的精神所在。但是一些商业化开放的源代码故意忽略了这个最重要的精神，反而无法让使用者体会到『自由』的真意，开源這一个替代自由软件的辞句反而把自由的原意除去了。
+    \item 开放源代码作用是，使用开放的开发方式，尽可能的使软件最优化，而自由软件则将尊重用户自由作为道德标准。
+    \item 如果说“自由软件”会引起误解，（因为英文“Free”一词有“自由”、“免费”的双重含意），那么“开放源代码”的名字则会引起的误解则更多。“开源”很容易让人认为是只要把源代码“公开”出来就算是开源了，即“你可以看到源代码”。但是如果用户的自由仍然得不到尊重，那么即使公开源代码也没有意义。有的软件公司只是为了想找用户帮它除错、吸收社区贡献的功能，这样子会破坏了自由软件的原意。一个例子是Tivo公司生产的机顶盒。虽然它基于GNU/Linux，TiVo公司也按照许可证发布了源代码，但是却禁止用户在机顶盒上运行自己的程序，或重新安装系统。[9]
+    \item 自由软件的原意就是要给予用户运用软件的自由，这个‘自由’就是自由软件的精神所在。但是一些商业化开放的源代码却故意忽略了这个最重要的精神，反而无法让用户体认到‘自由’的真意，那么开源这一个替代自由软件的辞句反而把自由的原意除去了。
 \end{itemize}
 }
 	\end{block}
@@ -267,6 +399,289 @@ Free as in free speech, not as in free beer.
      ``I used to be worried about fragmentation, and I used to think that it was inevitable at some point,'' said Torvalds. ``Everyone was looking at the history of Linux and comparing it with UNIX. People would say that it's going to fail because it's going to fragment. That's what happened before, so why even bother?''
 
 	 What made the difference was the license. ``FSF [Free Software Foundation] and I don't have a loving relationship, but I love GPL v2,'' said Torvalds. ``I really think the license has been one of the defining factors in the success of Linux because it enforced that you have to give back, which meant that the fragmentation has never been something that has been viable from a technical standpoint.''\footnote{\url{https://www.infoworld.com/article/3112778}}
+\end{frame}
+\begin{frame}[t]{Linux与GPL}
+    
+    \raggedright
+     ``我过去担心在特定时间Linux会分裂，''Torvalds说，``每个回顾Linux历史的人都会将其与UNIX进行比较。人们说既然会分裂则一定会失败。过去就发生过，为什么还要去做？''
+
+     使情况变化的是许可证协议。``我对自由软件基金会并不感冒，但是我喜爱GPL v2，''Torvalds说。``我确实认为许可证是保证Linux成功的决定性因素，因为它确保你需要在获取的同时给予回报，这意味着分裂从技术角度就是不会发生的。''\footnote{\url{https://www.infoworld.com/article/3112778}}
+\end{frame}
+\begin{frame}[t]{开源软件仓库}
+    \begin{block}
+        {定义}
+    软件仓库是收藏互联网上可用软件包(应用程序)的"图书馆"。通过软件仓库用户可以获取和安装软件包。开源软件仓库是针对开源软件的软件仓库。
+
+    大多数软件仓库将仓库部署在互联网服务器上。软件仓库可能针对特定语言编写的程序，如Perl语言的CPAN仓库或Python的PyPI，或者针对整个操作系统，如大多数Linux发行版。大多数软件仓库为用户提供包管理器（Package Manager），用来解决软件包搜索、安装、卸载、处理软件包之间依赖关系。例如Debian及其衍生发行版（如Ubuntu）提供的APT（Advanced Packaging Tool）。
+    \end{block}
+\end{frame}
+\begin{frame}[t]{开源软件仓库}
+    
+\begin{tabular}{lr}
+C++      		 & Boost   \\
+Haskell  		 & Hackage\\
+Java     		 & Maven\\
+.NET     	     & NuGet\\
+Node.js  		 & NPM\\
+Perl     		 & CPAN\\
+PHP      	     & PEAR \\
+Python   	     & PyPI\\
+R        	     & CRAN\\
+\TeX{}/\LaTeX{}	 & CTAN\\
+
+\end{tabular}
+
+\pause
+\begin{block}
+    {}
+C[PRT]AN代表Comprehensive Perl/R/\TeX{} Archive Network
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{开源生态系统}
+    软件生态系统值一组在相同环境下共同开发和协同进化的一组软件系统。生态系统可以指组织（软件公司），社会（开源社区）或技术（如Python技术栈）。
+
+    软件生态系统词组使用较为广泛，不过尚存在争议\footnote{\url{https://www.gnu.org/philosophy/words-to-avoid.html\#Ecosystem}}。本课程中取技术角度的含义。
+
+    
+\end{frame}
+
+\begin{frame}[t]{主力语言}
+\begin{block}{}
+\begin{itemize}
+\item C/C++: Gcc/llvm
+\item Java 
+\item C\#: via mono
+\item Rust: 讨论过程开源：\url{https://github.com/rust-lang/rfcs} 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{胶水语言}
+\begin{block}{}
+\begin{itemize}
+\item Python
+\item Perl
+\item PHP
+\item Ruby
+\item Bash
+\item PowerShell
+\item JavaScript
+\item Lua
+\item R
+\item Julia 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{数据库}
+\begin{block}{}
+\begin{itemize}
+\item Oracle
+\item MySQL
+\item Postgresql
+\item MongoDB
+\item Redis
+\item Sqlite 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{服务器}
+\begin{block}{}
+\begin{itemize}
+\item IIS
+\item nginx
+\item Apache
+\end{itemize}
+\end{block}
+\begin{table}
+    \caption{市场份额, 2017/10\footnote{\url{https://en.wikipedia.org/wiki/Web\_server}}}
+    
+\begin{tabular}{lll}
+Apache               & Apache                 & 48.5\%\\
+nginx                & NGINX, Inc.            & 35.4\%\\
+IIS                  & Microsoft              & 10.8\%\\
+LiteSpeed Web Server & LiteSpeed Technologies & 2.9\%\\
+GWS                  & Google                 & 1.1\%\\
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}[t]{Web框架}
+\begin{block}{}
+\begin{itemize}
+\item J2EE
+\item Dancer
+\item Django
+\item Ruby on Rails
+\item Zend 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{数据挖掘/机器学习}
+\begin{block}{}
+\begin{itemize}
+\item Weka
+\item CRAN 
+\item sk-learn
+\item tensorflow 
+\item torch
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{前端}
+\begin{block}{}
+\begin{itemize}
+\item Angular
+\item Express
+\item Ext.js
+\item Bootstrap
+\item Vue.js
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{GUI}
+\begin{block}{}
+\begin{itemize}
+\item Qt
+\item Gtk
+\item MFC
+\item WPF
+\item wxWidgets 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{软件测试}
+\begin{block}{}
+\begin{itemize}
+\item cpptest
+\item Googletest
+\item Junit 
+\item nose
+\item pytest
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{分布式系统}
+\begin{block}{}
+\begin{itemize}
+\item Hadoop
+\item Spark
+\item Storm 
+\item Openstack
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{虚拟化}
+\begin{block}{}
+\begin{itemize}
+\item Openstack
+\item Docker
+\item debootstrap 
+\item libvirt
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{数据获取}
+\begin{block}{}
+\begin{itemize}
+        \item nutch
+\item scrapy
+\item requests
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{版本控制}
+    \begin{minipage}
+        {.4\textwidth}
+\begin{block}{}
+\begin{itemize}
+\item SVN
+\item Git
+\item Mercurial
+\item Bazaar
+\end{itemize}
+\end{block}
+    \end{minipage}
+    \begin{minipage}
+        {.5\textwidth}
+        \centering
+\includegraphics[width=.8\textwidth]{git.png}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}[t]{可视化}
+\begin{block}{}
+\begin{itemize}
+\item gnuplot
+\item matplotlib
+\item ggplot2
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[t]{文档}
+\begin{block}{}
+\begin{itemize}
+\item \LaTeX{}
+\item MS Office
+\item Doxygen
+\item Wiki
+\item sphinx
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{其他}
+\begin{block}{Functional programming}
+\begin{itemize}
+\item Lisp
+\item Haskell
+\item Ocaml
+\item R 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{其他}
+\begin{block}{Literate Programming}
+    文学编程是由高德纳提出的编程方法，希望能用来取代结构化编程范型。文学编程范型不同于传统的由计算机强加的编写程序的方式和顺序，而代之以让程序员用他们自己思维内在的逻辑和流程所要求的顺序开发程序。
+\begin{itemize}
+\item cweb
+\item knitr
+\item jupyter
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{其他}
+\begin{block}{编辑器/开发环境}
+\begin{itemize}
+\item vim
+\item emacs
+\item sublime
+\item atom 
+\item vscode
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{小结}
+    \begin{itemize}
+        \item 开源的发展历史定义
+        \item 开源软件仓库
+        \item 开源技术典型案例
+    \end{itemize}
 \end{frame}
 
 \end{document}
