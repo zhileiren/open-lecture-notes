@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {1}{许可证制度}{2}{0}{1}
 \beamer@sectionintoc {2}{许可证案例}{16}{0}{2}
+\beamer@sectionintoc {3}{开源软件生态系统}{25}{0}{3}

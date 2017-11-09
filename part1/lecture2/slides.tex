@@ -157,6 +157,18 @@ Dalian University of Technology
 		在软件和软件的所有副本中都必须包含以上版权声明和本许可声明。
 	\end{itemize}
 \end{frame}
+\begin{frame}[t]{Apache许可证}
+    \begin{block}
+        {Apache License和BSD类似，同样鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再发布(作为开源或商业软件)}
+        \begin{itemize}
+            \item 需要给代码的用户一份Apache License
+            \item 如果你修改了代码，需要再被修改的文件中说明
+            \item 在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议、商标、专利声明和其他原来作者规定需要包含的说明
+            \item 如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache License。你可以在Notice中增加自己的许可，但不可以表现为对Apache License构成更改
+            \item Apache License也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售。
+        \end{itemize}
+    \end{block}
+\end{frame}
 \begin{frame}
   \frametitle{今天就能开始用的小知识}
 	\begin{block}
@@ -172,11 +184,6 @@ Dalian University of Technology
 	\centering
 	\includegraphics[height=0.3\textwidth]{apache-Goyaale.jpg}
 	\includegraphics[height=0.3\textwidth]{Apache-Longbow.jpg}
-	
-\end{frame}
-
-\begin{frame}
-  \frametitle{许可证的兼容性}
 	
 \end{frame}
 
@@ -201,11 +208,7 @@ Dalian University of Technology
 \section{许可证案例} % (fold)
 \label{sec:许可证案例}
 \begin{frame}
-  \frametitle{虚拟场景}
-	
-\end{frame}
-\begin{frame}
-  \frametitle{真实案例}
+  \frametitle{版权争议}
 	\begin{block}
 		{SCO vs. IBM}
 		\scriptsize
@@ -218,7 +221,7 @@ Dalian University of Technology
 \end{frame}
 
 	\begin{frame}
-		\frametitle{真实案例}
+		\frametitle{许可证附加条款}
 		\begin{block}
 			{Facebook React}
 			\begin{itemize}
@@ -232,16 +235,351 @@ Dalian University of Technology
 
 	\end{frame}
 
-\begin{frame}
-  \frametitle{许可证典型案例}
-	Minix
-\end{frame}
+    \begin{frame}
+        \frametitle{许可证典型案例}
+        \begin{block}
+            {MINIX — The most popular OS in the world, thanks to Intel}
+            If you have a modern Intel CPU (released in the last few years) with Intel's Management Engine built in, you've got another complete operating system running that you might not have had any clue was in there: MINIX.  \footnote{\url{https://www.networkworld.com/article/3236064/servers/minix-the-most-popular-os-in-the-world-thanks-to-intel.html}}
+
+            MINIX is running on "Ring -3" (that's "negative 3") on its own CPU. A CPU that you, the user/owner of the machine, have no access to. 
+        \end{block}
+    \end{frame}
+
+    \begin{frame}[t]{MINIX作者的公开信}
+        Thanks for putting a version of MINIX inside the ME-11 management engine chip used on almost all recent desktop and laptop computers in the world. I guess that makes MINIX the most widely used computer operating system in the world, even more than Windows, Linux, or MacOS. And I didn't even know until I read a press report about it.  \footnote{\url{http://www.cs.vu.nl/~ast/intel/}}
+
+        Also a hint was the discussion about the license. I (implicitly) gathered that the fact that MINIX uses the Berkeley license was very important. I have run across this before, when companies have told me that they hate the GPL because they are not keen on spending a lot of time, energy, and money modifying some piece of code, only to be required to give it to their competitors for free. These discussions were why we put MINIX out under the Berkeley license in 2000 (after prying it loose from my publisher).
+    \end{frame}
 
 	\begin{frame}
 	  \frametitle{Android与Linux}
-		
-	\end{frame}
+      Linux采用GPL v2许可证。Android并非采取GPL协议（除了对Linux内核的修改），而是Apache License。
 
+	\end{frame}
+    \begin{frame}[t]{Android如何规避GPL传染性？}
+        \begin{itemize}
+            \item 
+NOTE! This copyright does *not* cover user programs that use kernel
+ services by normal system calls - this is merely considered normal use
+ of the kernel, and does *not* fall under the heading of "derived work".
+ Also note that the GPL below is copyrighted by the Free Software
+ Foundation, but the instance of code that it refers to (the Linux
+ kernel) is copyrighted by me and others who actually wrote it.
+            \item 
+ Also note that the only valid version of the GPL as far as the kernel
+ is concerned is \_this\_ particular version of the license (ie v2, not
+ v2.2 or v3.x or whatever), unless explicitly otherwise stated.
+        \end{itemize}
+        \pause
+        翻译：许可证不覆盖通过正常系统调用来使用Linux内核服务的用户程序。 
+    \end{frame}
+
+    \begin{frame}[t]{Android如何规避GPL传染性？}
+ 一般的GNU/Linux上图中的libc位置是glibc。 glibc是GNU的，属于GPL授权，有传染性。
+ libc是google 改写优化的Free BSD Bionic库，属于BSD协议。\footnote{\url{https://my.oschina.net/blueprint/blog/142244}}
+
+ \centering
+    \includegraphics[width=0.6\textwidth]{android.jpeg}
+    \end{frame}
 	
 % section 许可证案例 (end)
+\section{开源软件生态系统} % (fold)
+\label{sec:开源软件生态系统}
+\begin{frame}[t]{开源软件仓库}
+    \begin{block}
+        {定义}
+    软件仓库是收藏互联网上可用软件包(应用程序)的"图书馆"。通过软件仓库用户可以获取和安装软件包。开源软件仓库是针对开源软件的软件仓库。
+
+    大多数软件仓库将仓库部署在互联网服务器上。软件仓库可能针对特定语言编写的程序，如Perl语言的CPAN仓库或Python的PyPI，或者针对整个操作系统，如大多数Linux发行版。大多数软件仓库为用户提供包管理器（Package Manager），用来解决软件包搜索、安装、卸载、处理软件包之间依赖关系。例如Debian及其衍生发行版（如Ubuntu）提供的APT（Advanced Packaging Tool）。
+    \end{block}
+\end{frame}
+\begin{frame}[t]{开源软件仓库}
+    
+\begin{tabular}{lr}
+C++      		 & Boost   \\
+Haskell  		 & Hackage\\
+Java     		 & Maven\\
+.NET     	     & NuGet\\
+Node.js  		 & NPM\\
+Perl     		 & CPAN\\
+PHP      	     & PEAR \\
+Python   	     & PyPI\\
+R        	     & CRAN\\
+\TeX{}/\LaTeX{}	 & CTAN\\
+
+\end{tabular}
+
+\pause
+\begin{block}
+    {}
+C[PRT]AN代表Comprehensive Perl/R/\TeX{} Archive Network
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{开源生态系统}
+    软件生态系统值一组在相同环境下共同开发和协同进化的一组软件系统。生态系统可以指组织（软件公司），社会（开源社区）或技术（如Python技术栈）。
+
+    软件生态系统词组使用较为广泛，不过尚存在争议\footnote{\url{https://www.gnu.org/philosophy/words-to-avoid.html\#Ecosystem}}。本课程中取技术角度的含义。
+
+    
+\end{frame}
+
+\begin{frame}[t]{所谓全栈}
+	\begin{block}{Full Stack}
+To me, a Full Stack Developer is someone with familiarity in each layer, if not mastery in many and a genuine interest in all software technology.
+\\
+		
+		Good developers who are familiar with the entire stack know how to make life easier for those around them. This is why I'm so against silos in the work place. Sure, politics and communication challenges get in the way in large organizations. I think the point Facebook is going for with their hiring policy is, if smart people use their heads and their hearts, a better product gets built in less time\footnote{\url{https://www.laurencegellert.com/2012/08/what-is-a-full-stack-developer/}}.
+	\end{block}
+\end{frame}
+\begin{frame}[t]{所谓全栈}
+	\begin{block}{Layers of the full stack}
+		\begin{itemize}
+			\item Server, Network, and Hosting Environment.
+			\item Data Modeling
+			\item Business Logic
+			\item API layer/Action layer/MVC
+			\item User Interface
+			\item User Experience
+			\item Understanding what the customer and the business need
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}[t]{所谓全栈}
+	\centering
+	\vspace{-1.2cm}
+	\includegraphics[width=0.4\textwidth]{full-stack.jpg}
+\end{frame}
+
+\begin{frame}[t]{主力语言}
+\begin{block}{}
+\begin{itemize}
+\item C/C++: Gcc/llvm
+\item Java 
+\item C\#: via mono
+\item Rust: 讨论过程开源：\url{https://github.com/rust-lang/rfcs} 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{胶水语言}
+\begin{block}{}
+\begin{itemize}
+\item Python
+\item Perl
+\item PHP
+\item Ruby
+\item Bash
+\item PowerShell
+\item JavaScript
+\item Lua
+\item R
+\item Julia 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{数据库}
+\begin{block}{}
+\begin{itemize}
+\item Oracle
+\item MySQL
+\item Postgresql
+\item MongoDB
+\item Redis
+\item Sqlite 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{服务器}
+\begin{block}{}
+\begin{itemize}
+\item IIS
+\item nginx
+\item Apache
+\end{itemize}
+\end{block}
+\begin{table}
+    \caption{市场份额, 2017/10\footnote{\url{https://en.wikipedia.org/wiki/Web\_server}}}
+    
+\begin{tabular}{lll}
+Apache               & Apache                 & 48.5\%\\
+nginx                & NGINX, Inc.            & 35.4\%\\
+IIS                  & Microsoft              & 10.8\%\\
+LiteSpeed Web Server & LiteSpeed Technologies & 2.9\%\\
+GWS                  & Google                 & 1.1\%\\
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}[t]{Web框架}
+\begin{block}{}
+\begin{itemize}
+\item J2EE
+\item Dancer
+\item Django
+\item Ruby on Rails
+\item Zend 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{数据挖掘/机器学习}
+\begin{block}{}
+\begin{itemize}
+\item Weka
+\item CRAN 
+\item sk-learn
+\item tensorflow 
+\item torch
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{前端}
+\begin{block}{}
+\begin{itemize}
+\item Angular
+\item Express
+\item Ext.js
+\item Bootstrap
+\item Vue.js
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{GUI}
+\begin{block}{}
+\begin{itemize}
+\item Qt
+\item Gtk
+\item MFC
+\item WPF
+\item wxWidgets 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{软件测试}
+\begin{block}{}
+\begin{itemize}
+\item cpptest
+\item Googletest
+\item Junit 
+\item nose
+\item pytest
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{分布式系统}
+\begin{block}{}
+\begin{itemize}
+\item Hadoop
+\item Spark
+\item Storm 
+\item Openstack
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{虚拟化}
+\begin{block}{}
+\begin{itemize}
+\item Openstack
+\item Docker
+\item debootstrap 
+\item libvirt
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{数据获取}
+\begin{block}{}
+\begin{itemize}
+        \item nutch
+\item scrapy
+\item requests
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{版本控制}
+    \begin{minipage}
+        {.4\textwidth}
+\begin{block}{}
+\begin{itemize}
+\item SVN
+\item Git
+\item Mercurial
+\item Bazaar
+\end{itemize}
+\end{block}
+    \end{minipage}
+    \begin{minipage}
+        {.5\textwidth}
+        \centering
+\includegraphics[width=.8\textwidth]{git.png}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}[t]{可视化}
+\begin{block}{}
+\begin{itemize}
+\item gnuplot
+\item matplotlib
+\item ggplot2
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[t]{文档}
+\begin{block}{}
+\begin{itemize}
+\item \LaTeX{}
+\item MS Office
+\item Doxygen
+\item Wiki
+\item sphinx
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{其他}
+\begin{block}{Functional programming}
+\begin{itemize}
+\item Lisp
+\item Haskell
+\item Ocaml
+\item R 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{其他}
+\begin{block}{Literate Programming}
+    文学编程是由高德纳提出的编程方法，希望能用来取代结构化编程范型。文学编程范型不同于传统的由计算机强加的编写程序的方式和顺序，而代之以让程序员用他们自己思维内在的逻辑和流程所要求的顺序开发程序。
+\begin{itemize}
+\item cweb
+\item knitr
+\item jupyter
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[t]{其他}
+\begin{block}{编辑器/开发环境}
+\begin{itemize}
+\item vim
+\item emacs
+\item sublime
+\item atom 
+\item vscode
+\end{itemize}
+\end{block}
+\end{frame}
+
+% section 开源软件生态系统 (end)
 \end{document}

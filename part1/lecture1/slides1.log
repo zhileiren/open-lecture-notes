@@ -1,8 +1,8 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  7 NOV 2017 06:42
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  9 NOV 2017 23:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**slides1
+**slides1.tex
 (./slides1.tex
 LaTeX2e <2017-04-15>
 Babel <3.13> and hyphenation patterns for 32 language(s) loaded.
@@ -2323,114 +2323,6 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [33
 
 ]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [34
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [35
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [36
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [37
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [38
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [39
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [40
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [41
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [42
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
-
-[43
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [44
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [45
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [46
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [47
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [48
-
-]
-File: git.png Graphic file (type bmp)
-<git.png>
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [49
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [50
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [51
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [52
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [53
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [54
-
-]
 \tf@nav=\write8
 \openout8 = `slides1.nav'.
 
@@ -2440,11 +2332,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write10
 \openout10 = `slides1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 680.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 680.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 418.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 418.
  (./slides1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 680.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 680.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 418.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 418.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2454,12 +2346,12 @@ Package logreq Info: Writing requests to 'slides1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42784 strings out of 494499
- 853093 string characters out of 6165137
- 1282341 words of memory out of 5000000
- 46066 multiletter control sequences out of 15000+600000
+ 42704 strings out of 494499
+ 851312 string characters out of 6165137
+ 1281862 words of memory out of 5000000
+ 45987 multiletter control sequences out of 15000+600000
  572928 words of font info for 94 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 58i,15n,63p,10437b,5082s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,15n,63p,10441b,5082s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides1.pdf (54 pages).
+Output written on slides1.pdf (33 pages).
