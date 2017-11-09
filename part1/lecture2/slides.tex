@@ -29,7 +29,7 @@
 
 \title[开源软件基础] 
 {开源软件基础}
-\subtitle{概念与历史}
+\subtitle{许可证与生态系统}
 
 \author[Zhilei Ren] 
 {Zhilei Ren}
@@ -93,75 +93,155 @@ Dalian University of Technology
  \tableofcontents[currentsection]
  \end{frame}
 }
-\section{Python环境安装}
+\section{许可证制度} % (fold)
+\label{sec:许可证制度}
 \begin{frame}
-	\frametitle{为什么选择Python}
-\end{frame}
-\begin{frame}
-	\frametitle{Python版本}
-\end{frame}
-\begin{frame}
-	\frametitle{Python发行版}
-	\begin{block}{}
+  \frametitle{常见许可证}
+	\begin{block}
+		{许可证}
 		\begin{itemize}
-			\item vanilla Python
-			\item Anaconda
-			\item Python (x,y)
-			\item Active Python
+			\item GPL (GNU Public License)
+			\item LGPL (Lesser GNU Public License)
+			\item MPL (Mozilla Public License)
+			\item Apache License
+			\item BSD (Berkeley Software Distribution)
+			\item MIT (Massachusetts Institute of Technology)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{GNU Public License}
+	GNU通用公共许可协议（英语：GNU General Public License，简称 GNU GPL、GPL）是广泛使用的免费软件许可证，可以保证终端用户得自由运行，学习，共享和修改软件。许可证最初由GNU项目的自由软件基金会的理查德·斯托曼撰写，并授予计算机程序的收件人自由软件定义的权利。  GPL是一个Copyleft许可证，这意味着派生作品只能以相同的许可条款分发。 这与许可免费软件许可证有所区别 ，其中BSD许可证和MIT许可证是广泛使用的示例。 GPL是第一个普遍使用的Copyleft许可证\footnote{\url{https://zh.wikipedia.org/wiki/GPL}}。
+	
+\end{frame}
+\begin{frame}
+  \frametitle{Copyleft}
+	GPL授权版本的修改后作品的发行权不是无条件的。 当有人分发GPL的作品又加上自己的修改时，分发整个作品的要求不能大于GPL中的要求。这个要求被称为Copyleft。 它通过软件程序使用版权获得法律权力。 由于GPL的作品受版权保护，被许可人无权重新分发，即使是以修改形式（除合理使用 ）外，除了许可条款外， 如果希望行使通常受版权法限制的权利，例如重新分配，只需遵守GPL的条款。 相反，如果在不遵守GPL条款（例如保留源代码秘密）的情况下分发作品的副本，则原始作者可以根据版权法起诉 。因此，Copyleft使用版权法来完成与常见法律的设置目的相反，不是施加限制，而是赋予其他人权利，以确保权利不能随之被剥夺的方式\footnote{\url{https://zh.wikipedia.org/wiki/Copyleft}}。
+\end{frame}
+
+\begin{frame}
+  \frametitle{GPL传染性}
+	根据GPL许可证，如果原始授权人（作者）使用GPL许可证发布作品，则无论该作品的衍生作品都需要遵循GPL协议。该衍生作品的后续衍生作品同样需要基于GPL发布。
+
+	Linus Torvalds使用GPL协议保护Linux内核。
+\end{frame}
+
+\begin{frame}
+  \frametitle{BSD许可证}
+	\begin{itemize}
+		\item BSD许可证包括多个变种。
+		\item 目前比较流行的是新版BSD许可证，一般认为是比较宽容的许可证。
+		\item 有时被成为Copycenter。
+		\item 使用该许可证的软件包括FreeBSD、Subversion、Postgresql等
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{BSD许可证}
+	\begin{itemize}
+		\item 对于本软件源代码的再散播，必须保留上述的版权宣告、此三条件表列，以及下述的免责声明。
+		\item 对于本套件二进位可执行形式的再散播，必须连带以文件以及／或者其他附于散播包装中的媒介方式，重制上述之版权宣告、此三条件表列，以及下述的免责声明。
+		\item 未获事前取得书面许可，不得使用柏克莱加州大学或本软件贡献者之名称，来为本软件之衍生物做任何表示支持、认可或推广、促销之行为。
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{MIT许可证}
+	\begin{itemize}
+		\item 被授权人权利
+
+		被授权人有权利使用、复制、修改、合并、出版发行、散布、再授权和/或贩售软件及软件的副本，及授予被供应人同等权利，惟服从以下义务。
+		\item 被授权人义务
+
+		在软件和软件的所有副本中都必须包含以上版权声明和本许可声明。
+	\end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{今天就能开始用的小知识}
+	\begin{block}
+		{Apache}
+		\begin{itemize}
+			\item The name 'Apache' was chosen from respect for the Native American Indian tribe of Apache (Indé), well-known for their superior skills in warfare strategy and their inexhaustible endurance. \footnote{\url{https://wiki.apache.org/httpd/FAQ}}
+			\item Apache server = A patchy server (误)
 		\end{itemize}
 	\end{block}
 \end{frame}
 \begin{frame}
-	\frametitle{Jupyter Notebook}
+  \frametitle{今天就能开始用的小知识}
+	\centering
+	\includegraphics[height=0.3\textwidth]{apache-Goyaale.jpg}
+	\includegraphics[height=0.3\textwidth]{Apache-Longbow.jpg}
+	
+\end{frame}
+
+\begin{frame}
+  \frametitle{许可证的兼容性}
+	
+\end{frame}
+
+\begin{frame}
+  \frametitle{许可证的兼容性}
+	\centering
+	\includegraphics[width=0.6\textwidth]{license-compatibility.png}
+
+	箭头表示兼容方向，左侧许可证相对宽松\footnote{\url{http://www.dwheeler.com/essays/floss-license-slide.html}}
+	
 \end{frame}
 \begin{frame}
-	\frametitle{本学期将涉及的Python知识}
-	\begin{block}{知识点}
-		\begin{itemize}
-			\item 流程控制（结构化）
-			\item 面向对象（皮毛）
-			\item 数据获取
-			\item 数据存储
-			\item 数据可视化
-			\item Web开发（皮毛）
-		\end{itemize}
+  \frametitle{开源软件许可证的共同特点}
+	
+\end{frame}
+\begin{frame}
+  \frametitle{常见许可证的特点}
+	
+\end{frame}
+
+% section 许可证制度 (end)
+\section{许可证案例} % (fold)
+\label{sec:许可证案例}
+\begin{frame}
+  \frametitle{虚拟场景}
+	
+\end{frame}
+\begin{frame}
+  \frametitle{真实案例}
+	\begin{block}
+		{SCO vs. IBM}
+		\scriptsize
+		SCO-Linux争议，发生于2003年至2010年间的美国著作权诉讼争议，由软件公司SCO Group对Linux最终用户以及IBM公司等Linux供应商提出的一系列法律案件。声称拥有UNIX System V部分源代码所有权的SCO公司，控诉由IBM公司贡献与集成进入Linux核心中的源代码中，使用了System V的源代码，违反著作权。IBM、Novell与Red Hat反驳此项指控。
+
+2007年8月24日，联邦法院审理SCO对Novell案（SCO v. Novell），法院认定Novell才是Unix商标的合法拥有者，而不是SCO。
+
+2010年3月20日，美国联邦第十巡回上诉法院宣判，Novell才是UNIX与UnixWare商标的合法拥有者。此项判决宣布后，已进入破产保护程序的SCO公司，决定停止继续提出诉讼。
 	\end{block}
 \end{frame}
-\section{Hello world}
-\begin{frame}[fragile]
-	\frametitle{第一个Python程序}
-	\scriptsize
-\begin{verbatim}
-$ipython
-Python 2.7.13 (default, Jan 19 2017, 14:48:08)
-Type "copyright", "credits" or "license" for more information.
 
-IPython 5.1.0 -- An enhanced Interactive Python.
-?         -> Introduction and overview of IPython's features.
-%quickref -> Quick reference.
-help      -> Python's own help system.
-object?   -> Details about 'object', use 'object??' for extra details.
+	\begin{frame}
+		\frametitle{真实案例}
+		\begin{block}
+			{Facebook React}
+			\begin{itemize}
+				\item React（有时叫React.js或ReactJS）是一个为数据提供渲染为HTML视图的开源JavaScript 库。React视图通常采用包含以自定义HTML标记规定的其他组件的组件渲染。\footnote{\url{https://zh.wikipedia.org/wiki/React}}
+				\item 2013年，React开源
+				\item 2016 年 7月，React.js 开源许可协议中的附加专利条款引发争议。
+				\item React被授权为 BSD +专利许可：由于条款限制，不能做任何构成与 Facebook 竞争的事情，否则不再允许使用 ReactJS 或根据本许可证发布的任何 
+				\item Apache 基金会将 Facebook 公司 BSD + 专利许可证下的代码重新分类为 “X 类”。\footnote{\url{https://www.apache.org/legal/resolved.html}}
+			\end{itemize}
+		\end{block}
 
-In [1]:
-\end{verbatim}
+	\end{frame}
 
-
+\begin{frame}
+  \frametitle{许可证典型案例}
+	Minix
 \end{frame}
 
-\begin{frame}[fragile]
-	\frametitle{第一个Python程序}
-	\scriptsize
-\begin{verbatim}
-In [1]: print "Hello world"
-Hello world
+	\begin{frame}
+	  \frametitle{Android与Linux}
+		
+	\end{frame}
 
-In [2]: print 1 + 2
-3
-
-In [3]: 
-\end{verbatim}
-
-\end{frame}
-
-
+	
+% section 许可证案例 (end)
 \end{document}
