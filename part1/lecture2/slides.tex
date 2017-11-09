@@ -197,10 +197,11 @@ Dalian University of Technology
 \end{frame}
 \begin{frame}
   \frametitle{开源软件许可证的共同特点}
-	
-\end{frame}
-\begin{frame}
-  \frametitle{常见许可证的特点}
+  \begin{itemize}
+      \item 开源软件许可证都会规定在被许可人接受本许可证获得源代码之后，有将源代码发布的义务（非所有）
+      \item 开源软件许可证一般有``不担保''（No Warranty）条款
+      \item 开源软件许可证一般都规定了关于修改、复制和再发布的条款，但赋予被许可人的各项权利可能不同
+  \end{itemize}
 	
 \end{frame}
 
@@ -581,5 +582,27 @@ GWS                  & Google                 & 1.1\%\\
 \end{block}
 \end{frame}
 
+\begin{frame}[t,fragile]{小结}
+    \begin{itemize}
+        \item 开源软件许可证以及案例
+        \item 开源软件生态环境
+    \end{itemize}
+
+    \begin{block}
+        {准备}
+        \begin{itemize}
+            \item \url{https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/}
+            \item \url{https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/}
+        \end{itemize}
+        \tiny
+        \begin{verbatim}
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+        \end{verbatim}
+    \end{block}
+\end{frame}
+
 % section 开源软件生态系统 (end)
+
 \end{document}

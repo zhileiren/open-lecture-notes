@@ -1,0 +1,19 @@
+\frametitle{小结}
+\begin{itemize}
+        \item 开源软件许可证以及案例
+        \item 开源软件生态环境
+    \end{itemize}
+
+    \begin{block}
+        {准备}
+        \begin{itemize}
+            \item \url{https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/}
+            \item \url{https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/}
+        \end{itemize}
+        \tiny
+        \begin{verbatim}
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+        \end{verbatim}
+    \end{block}
