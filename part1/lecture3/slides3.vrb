@@ -1,18 +1,8 @@
-\frametitle{APT梗}
-\begin{block}{今天就能开始用的小知识}
-^^I\scriptsize
-^^I\begin{verbatim}
-$apt moo
-                 (__)
-                 (oo)
-           /------\/
-          / |    ||
-         *  /\---/\
-            ~~   ~~
-..."Have you mooed today?"...
-$ LC_ALL=C apt |tail -n 1
-                                        This APT has Super Cow Powers.
-$ apt |tail -n 1
-                                         本 APT 具有超级牛力。
+\frametitle{以Debian为例}
+\begin{block}{Debian的依赖管理}
+^^I^^I\begin{verbatim}
+$debtree nano | dot -Tpng > nano.png
 \end{verbatim}
-\end{block}
+^^I\end{block}
+^^I\includegraphics[width=0.25\textwidth]{nano.png}
+

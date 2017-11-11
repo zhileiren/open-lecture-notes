@@ -1,0 +1,15 @@
+digraph "nano" {
+	rankdir=LR;
+	node [shape=box];
+	"nano" -> "libncursesw5" [color=blue,label="(>= 6)"];
+	"libncursesw5" -> "libtinfo5" [color=blue,label="(= 6.0+20170902-1)"];
+	"libncursesw5" -> "libgpm2";
+	"nano" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"nano" -> "pico" [color=red];
+	"nano" [style="setlinewidth(2)"]
+	"pico" [style=filled,fillcolor=oldlace];
+}
+// Excluded dependencies:
+// libc6 zlib1g
+// total size of all shown packages: 3093504
+// download size of all shown packages: 976236

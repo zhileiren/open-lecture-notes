@@ -1,0 +1,704 @@
+digraph "vim" {
+	rankdir=LR;
+	node [shape=box];
+	"vim" -> "vim-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"vim-common" -> "xxd" [color=blue];
+	"vim-common" -> "alt1";
+	"alt1":"vim-gtk" -> "vim-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt1":"vim-gtk" -> "vim-gui-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"vim-gui-common" -> "alt2";
+	"alt2":"vim-gtk3" -> "vim-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt2":"vim-gtk3" -> "vim-gui-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt2":"vim-gtk3" -> "vim-runtime" [color=blue,label="(= 2:8.0.1144-1)"];
+	"vim-runtime" -> "alt1";
+	"alt1":"vim-athena" -> "vim-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt1":"vim-athena" -> "vim-gui-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt1":"vim-athena" -> "vim-runtime" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt1":"vim-athena" -> "libacl1" [color=blue,label="(>= 2.2.51-8)"];
+	"libacl1" -> "libattr1" [color=blue,label="(>= 1:2.4.46-8)"];
+	"libacl1" -> "libacl1-kerberos4kth" [color=red];
+	"alt1":"vim-athena" -> "libgpm2" [color=blue,label="(>= 1.20.4)"];
+	"alt1":"vim-athena" -> "libice6" [color=blue,label="(>= 1:1.0.0)"];
+	"libice6" -> "libbsd0" [color=blue,label="(>= 0.2.0)"];
+	"libice6" -> "x11-common" [color=blue];
+	"alt1":"vim-athena" -> "liblua5.2-0" [color=blue];
+	"alt1":"vim-athena" -> "libperl5.26" [color=blue,label="(>= 5.26.0~rc1)"];
+	"libperl5.26" -> "libbz2-1.0" [color=blue];
+	"libperl5.26" -> "libdb5.3" [color=blue];
+	"libperl5.26" -> "libgdbm3" [color=blue,label="(>= 1.8.3)"];
+	"libgdbm3" -> "alt3":"dpkg" [color=blue,label="(>= 1.15.4)"];
+	"alt3":"install-info" -> "alt3":"dpkg" [color=purple,style=bold,label="(>= 1.16.1)"];
+	"libperl5.26" -> "perl-modules-5.26" [color=blue,label="(>= 5.26.1-2)"];
+	"perl-modules-5.26" -> "alt3":"dpkg" [color=purple,style=bold,label="(>= 1.17.17)"];
+	"perl-modules-5.26" -> "perl-base" [color=blue,label="(>= 5.26.1-1)"];
+	"perl-base" -> "alt3":"dpkg" [color=purple,style=bold,label="(>= 1.17.17)"];
+	"perl-modules-5.26" -> "perl" [label="(>= 5.26.1-1)"];
+	"alt1":"vim-athena" -> "libpython3.6" [color=blue,label="(>= 3.6.0~b2)"];
+	"libpython3.6" -> "libpython3.6-stdlib" [color=blue,label="(= 3.6.3-1)"];
+	"libpython3.6-stdlib" -> "libpython3.6-minimal" [color=blue,label="(= 3.6.3-1)"];
+	"libpython3.6-minimal" -> "libssl1.1" [color=blue,label="(>= 1.1.0)"];
+	"libssl1.1" -> "alt4":"debconf" [color=blue,label="(>= 0.5)"];
+	"alt4":"debconf-2.0" -> virt1 [dir=back,arrowtail=inv,color=green];
+	"libpython3.6-minimal" -> "libpython3.6-stdlib";
+	"libpython3.6-stdlib" -> "mime-support" [color=blue];
+	"mime-support" -> "bzip2";
+	"bzip2" -> "libbz2-1.0" [color=blue,label="(= 1.0.6-8.1)"];
+	"mime-support" -> "file";
+	"file" -> "libmagic1" [color=blue,label="(= 1:5.32-1)"];
+	"libmagic1" -> "libmagic-mgc" [color=blue,label="(= 1:5.32-1)"];
+	"mime-support" -> "xz-utils";
+	"xz-utils" -> "liblzma5" [color=blue,label="(>= 5.2.2)"];
+	"xz-utils" -> "xz-lzma" [color=red];
+	"libpython3.6-stdlib" -> "libbz2-1.0" [color=blue];
+	"libpython3.6-stdlib" -> "libdb5.3" [color=blue];
+	"libpython3.6-stdlib" -> "libffi6" [color=blue,label="(>= 3.0.4)"];
+	"libpython3.6-stdlib" -> "liblzma5" [color=blue,label="(>= 5.1.1alpha+20120614)"];
+	"libpython3.6-stdlib" -> "libmpdec2" [color=blue];
+	"libpython3.6-stdlib" -> "libncursesw5" [color=blue,label="(>= 6)"];
+	"libncursesw5" -> "libtinfo5" [color=blue,label="(= 6.0+20170902-1)"];
+	"libncursesw5" -> "libgpm2";
+	"libpython3.6-stdlib" -> "libreadline7" [color=blue,label="(>= 7.0~beta)"];
+	"libreadline7" -> "readline-common" [color=blue];
+	"readline-common" -> "alt3":"dpkg" [color=blue,label="(>= 1.15.4)"];
+	"readline-common" -> "libreadline-common" [color=red];
+	"libreadline7" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"libpython3.6-stdlib" -> "libsqlite3-0" [color=blue,label="(>= 3.5.9)"];
+	"libpython3.6-stdlib" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"libpython3.6" -> "libexpat1" [color=blue,label="(>= 2.1~beta3)"];
+	"alt1":"vim-athena" -> "libruby2.3" [color=blue,label="(>= 2.3.0~preview2)"];
+	"libruby2.3" -> "rake" [color=blue,label="(>= 10.4.2)"];
+	"rake" -> "alt5" [color=blue];
+	"alt5":"ruby" -> "ruby2.3" [color=blue];
+	"ruby2.3" -> "rubygems-integration" [color=blue,label="(>= 1.8)"];
+	"rubygems-integration" -> "ca-certificates" [color=blue];
+	"ca-certificates" -> "openssl" [color=blue,label="(>= 1.0.0)"];
+	"openssl" -> "libssl1.1" [color=blue,label="(>= 1.1.0)"];
+	"ca-certificates" -> "alt4":"debconf" [color=blue,label="(>= 0.5)"];
+	"ruby2.3" -> "libgmp10" [color=blue];
+	"ruby2.3" -> "libruby2.3" [color=blue,label="(>= 2.3.0~preview2)"];
+	"ruby2.3" -> "fonts-lato";
+	"fonts-lato" -> "alt3":"dpkg" [color=purple,style=bold,label="(>= 1.15.6~)"];
+	"ruby2.3" -> "libjs-jquery";
+	"libjs-jquery" -> "jquery" [color=red];
+	"libjs-jquery" -> "javascript-common";
+	"alt5":"ruby" -> "ruby-activesupport-2.3" [color=red];
+	"alt5":"ruby" -> "ruby-activesupport-3.2" [color=red];
+	"alt5":"ruby-interpreter" -> "ruby2.1" [dir=back,arrowtail=inv,color=green];
+	"ruby2.1" -> "rubygems-integration" [color=blue,label="(>= 1.8)"];
+	"ruby2.1" -> "libgmp10" [color=blue];
+	"ruby2.1" -> "libruby2.1" [color=blue,label="(>= 2.1.0)"];
+	"libruby2.1" -> "libffi6" [color=blue,label="(>= 3.0.4)"];
+	"libruby2.1" -> "libgdbm3" [color=blue,label="(>= 1.8.3)"];
+	"libruby2.1" -> "libgmp10" [color=blue];
+	"libruby2.1" -> "libncurses5" [color=blue,label="(>= 5.5-5~)"];
+	"libncurses5" -> "libtinfo5" [color=blue,label="(= 6.0+20170902-1)"];
+	"libncurses5" -> "libgpm2";
+	"libruby2.1" -> "libreadline6" [color=blue,label="(>= 6.0)"];
+	"libreadline6" -> "readline-common" [color=blue];
+	"libreadline6" -> "libtinfo5" [color=blue];
+	"libruby2.1" -> "libssl1.0.0" [color=blue,label="(>= 1.0.1)"];
+	"libssl1.0.0" -> "alt4":"debconf" [color=blue,label="(>= 0.5)"];
+	"libruby2.1" -> "libtinfo5" [color=blue];
+	"libruby2.1" -> "libyaml-0-2" [color=blue];
+	"ruby2.1" -> "libjs-jquery";
+	"rake" -> "zip";
+	"zip" -> "libbz2-1.0" [color=blue];
+	"zip" -> "unzip";
+	"unzip" -> "libbz2-1.0" [color=blue];
+	"libruby2.3" -> "ruby-did-you-mean" [color=blue,label="(>= 1.0)"];
+	"libruby2.3" -> "ruby-minitest" [color=blue,label="(>= 5.4)"];
+	"libruby2.3" -> "ruby-net-telnet" [color=blue,label="(>= 0.1.1)"];
+	"libruby2.3" -> "ruby-test-unit" [color=blue,label="(>= 3.0.8~)"];
+	"ruby-test-unit" -> "alt5" [color=blue];
+	"ruby-test-unit" -> "ruby-power-assert" [color=blue];
+	"libruby2.3" -> "libffi6" [color=blue,label="(>= 3.0.4)"];
+	"libruby2.3" -> "libgdbm3" [color=blue,label="(>= 1.8.3)"];
+	"libruby2.3" -> "libgmp10" [color=blue];
+	"libruby2.3" -> "libncurses5" [color=blue,label="(>= 6)"];
+	"libruby2.3" -> "libreadline7" [color=blue,label="(>= 6.0)"];
+	"libruby2.3" -> "libssl1.0.2" [color=blue,label="(>= 1.0.2d)"];
+	"libssl1.0.2" -> "alt4":"debconf" [color=blue,label="(>= 0.5)"];
+	"libruby2.3" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"libruby2.3" -> "libyaml-0-2" [color=blue];
+	"alt1":"vim-athena" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"libselinux1" -> "libpcre3" [color=blue];
+	"alt1":"vim-athena" -> "libsm6" [color=blue];
+	"libsm6" -> "libice6" [color=blue,label="(>= 1:1.0.0)"];
+	"libsm6" -> "libuuid1" [color=blue,label="(>= 2.16)"];
+	"libuuid1" -> "uuid-runtime";
+	"uuid-runtime" -> "libuuid1" [color=purple,style=bold,label="(>= 2.25-5~)"];
+	"uuid-runtime" -> "adduser" [color=blue];
+	"adduser" -> "passwd" [color=blue];
+	"adduser" -> "alt4":"debconf" [color=blue,label="(>= 0.5)"];
+	"uuid-runtime" -> "init-system-helpers" [color=blue,label="(>= 1.18~)"];
+	"init-system-helpers" -> "perl-base" [color=blue,label="(>= 5.20.1-3)"];
+	"uuid-runtime" -> "libsystemd0" [color=blue];
+	"libsystemd0" -> "libgcrypt20" [color=purple,style=bold,label="(>= 1.7.0)"];
+	"libgcrypt20" -> "libgpg-error0" [color=blue,label="(>= 1.14)"];
+	"libsystemd0" -> "liblz4-1" [color=purple,style=bold,label="(>= 0.0~r113)"];
+	"libsystemd0" -> "liblzma5" [color=purple,style=bold,label="(>= 5.1.1alpha+20120614)"];
+	"libsystemd0" -> "libselinux1" [color=purple,style=bold,label="(>= 2.1.9)"];
+	"alt1":"vim-athena" -> "libtcl8.6" [color=blue,label="(>= 8.6.0)"];
+	"libtcl8.6" -> "tzdata" [color=blue];
+	"tzdata" -> "alt4":"debconf" [color=blue,label="(>= 0.5)"];
+	"alt1":"vim-athena" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"alt1":"vim-athena" -> "libxaw7" [color=blue];
+	"libxaw7" -> "libxext6" [color=blue];
+	"libxaw7" -> "libxmu6" [color=blue];
+	"libxmu6" -> "libxext6" [color=blue];
+	"libxmu6" -> "libxt6" [color=blue];
+	"libxt6" -> "libice6" [color=blue,label="(>= 1:1.0.0)"];
+	"libxt6" -> "libsm6" [color=blue];
+	"libxaw7" -> "libxpm4" [color=blue];
+	"libxaw7" -> "libxt6" [color=blue];
+	"alt1":"vim-athena" -> "libxmu6" [color=blue];
+	"alt1":"vim-athena" -> "libxpm4" [color=blue];
+	"alt1":"vim-athena" -> "libxt6" [color=blue];
+	"alt1":"vim-nox" -> "vim-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt1":"vim-nox" -> "vim-runtime" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt1":"vim-nox" -> "libacl1" [color=blue,label="(>= 2.2.51-8)"];
+	"alt1":"vim-nox" -> "libgpm2" [color=blue,label="(>= 1.20.4)"];
+	"alt1":"vim-nox" -> "liblua5.2-0" [color=blue];
+	"alt1":"vim-nox" -> "libperl5.26" [color=blue,label="(>= 5.26.0~rc1)"];
+	"alt1":"vim-nox" -> "libpython3.6" [color=blue,label="(>= 3.6.0~b2)"];
+	"alt1":"vim-nox" -> "libruby2.3" [color=blue,label="(>= 2.3.0~preview2)"];
+	"alt1":"vim-nox" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"alt1":"vim-nox" -> "libtcl8.6" [color=blue,label="(>= 8.6.0)"];
+	"alt1":"vim-nox" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"alt1":"vim-tiny" -> "vim-common" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt1":"vim-tiny" -> "libacl1" [color=blue,label="(>= 2.2.51-8)"];
+	"alt1":"vim-tiny" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"alt1":"vim-tiny" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"alt2":"vim-gtk3" -> "libacl1" [color=blue,label="(>= 2.2.51-8)"];
+	"alt2":"vim-gtk3" -> "libcairo2" [color=blue,label="(>= 1.4.10)"];
+	"libcairo2" -> "libfontconfig1" [color=blue,label="(>= 2.12)"];
+	"libcairo2" -> "libfreetype6" [color=blue,label="(>= 2.7.1)"];
+	"libfreetype6" -> "libpng16-16" [color=blue,label="(>= 1.6.2-1)"];
+	"libcairo2" -> "libpixman-1-0" [color=blue,label="(>= 0.30.0)"];
+	"libcairo2" -> "libpng16-16" [color=blue,label="(>= 1.6.2-1)"];
+	"libcairo2" -> "libxcb-render0" [color=blue];
+	"libxcb-render0" -> "libxcb1" [color=blue,label="(>= 1.8)"];
+	"libxcb1" -> "libxau6" [color=blue];
+	"libxcb1" -> "libxdmcp6" [color=blue];
+	"libxdmcp6" -> "libbsd0" [color=blue,label="(>= 0.2.0)"];
+	"libcairo2" -> "libxcb-shm0" [color=blue];
+	"libxcb-shm0" -> "libxcb1" [color=blue,label="(>= 1.12)"];
+	"libcairo2" -> "libxcb1" [color=blue,label="(>= 1.6)"];
+	"libcairo2" -> "libxext6" [color=blue];
+	"libcairo2" -> "libxrender1" [color=blue];
+	"alt2":"vim-gtk3" -> "libgdk-pixbuf2.0-0" [color=blue,label="(>= 2.22.0)"];
+	"libgdk-pixbuf2.0-0" -> "libglib2.0-0" [color=blue,label="(>= 2.48.0)"];
+	"libgdk-pixbuf2.0-0" -> "libjpeg62-turbo" [color=blue,label="(>= 1.3.1)"];
+	"libjpeg62-turbo" -> "libjpeg62" [color=red];
+	"libgdk-pixbuf2.0-0" -> "libpng16-16" [color=blue,label="(>= 1.6.2-1)"];
+	"libgdk-pixbuf2.0-0" -> "libtiff5" [color=blue,label="(>= 4.0.3)"];
+	"libtiff5" -> "libjbig0" [color=blue,label="(>= 2.0)"];
+	"libtiff5" -> "libjpeg62-turbo" [color=blue,label="(>= 1.3.1)"];
+	"libtiff5" -> "liblzma5" [color=blue,label="(>= 5.1.1alpha+20120614)"];
+	"libgdk-pixbuf2.0-0" -> "shared-mime-info" [color=blue];
+	"shared-mime-info" -> "libglib2.0-0" [color=blue,label="(>= 2.35.9)"];
+	"shared-mime-info" -> "libxml2" [color=blue,label="(>= 2.7.4)"];
+	"libxml2" -> "libicu57" [color=blue,label="(>= 57.1-1~)"];
+	"libxml2" -> "liblzma5" [color=blue,label="(>= 5.1.1alpha+20120614)"];
+	"libgdk-pixbuf2.0-0" -> "libgdk-pixbuf2.0-common" [color=blue,label="(= 2.36.11-1)"];
+	"libgdk-pixbuf2.0-0" -> "libgdk-pixbuf2.0-bin";
+	"libgdk-pixbuf2.0-bin" -> "libgdk-pixbuf2.0-0" [color=blue,label="(>= 2.35.4)"];
+	"libgdk-pixbuf2.0-bin" -> "libglib2.0-0" [color=blue,label="(>= 2.48.0)"];
+	"libgdk-pixbuf2.0-bin" -> "libpng16-16" [color=blue,label="(>= 1.6.2-1)"];
+	"alt2":"vim-gtk3" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"alt2":"vim-gtk3" -> "libgpm2" [color=blue,label="(>= 1.20.4)"];
+	"alt2":"vim-gtk3" -> "libgtk-3-0" [color=blue,label="(>= 3.21.5)"];
+	"libgtk-3-0" -> "libgtk-3-common" [color=blue,label="(>= 3.22.24-3)"];
+	"libgtk-3-common" -> "alt6" [color=blue];
+	"alt6":"dconf-gsettings-backend" -> "libglib2.0-0" [color=blue,label="(>= 2.44.0)"];
+	"alt6":"dconf-gsettings-backend" -> "dconf-service" [color=blue,label="(>= 0.26.1-1)"];
+	"dconf-service" -> "libglib2.0-0" [color=blue,label="(>= 2.44.0)"];
+	"dconf-service" -> "libdconf1" [color=blue,label="(= 0.26.1-1)"];
+	"libdconf1" -> "libglib2.0-0" [color=blue,label="(>= 2.44.0)"];
+	"dconf-service" -> "alt7" [color=blue];
+	"alt7":"default-dbus-session-bus" -> "dbus-user-session" [dir=back,arrowtail=inv,color=green];
+	"dbus-user-session" -> "dbus" [color=blue,label="(>= 1.12.0-1)"];
+	"dbus-user-session" -> "libpam-systemd" [color=blue];
+	"libpam-systemd" -> "libpam0g" [color=blue,label="(>= 0.99.7.1)"];
+	"libpam0g" -> "libaudit1" [color=blue,label="(>= 1:2.2.1)"];
+	"libaudit1" -> "libaudit-common" [color=blue,label="(>= 1:2.8.1-1)"];
+	"libaudit1" -> "libcap-ng0" [color=blue];
+	"libpam0g" -> "alt4":"debconf" [color=blue,label="(>= 0.5)"];
+	"libpam-systemd" -> "libselinux1" [color=blue,label="(>= 2.1.9)"];
+	"libpam-systemd" -> "systemd" [color=blue,label="(= 235-2)"];
+	"systemd" -> "libacl1" [color=blue,label="(>= 2.2.51-8)"];
+	"systemd" -> "libapparmor1" [color=blue,label="(>= 2.9.0-3+exp2)"];
+	"systemd" -> "libaudit1" [color=blue,label="(>= 1:2.2.1)"];
+	"systemd" -> "libblkid1" [color=blue,label="(>= 2.19.1)"];
+	"libblkid1" -> "libuuid1" [color=blue,label="(>= 2.16)"];
+	"systemd" -> "libcap2" [color=blue,label="(>= 1:2.10)"];
+	"systemd" -> "libcryptsetup4" [color=blue,label="(>= 2:1.4.3)"];
+	"libcryptsetup4" -> "libdevmapper1.02.1" [color=blue,label="(>= 2:1.02.97)"];
+	"libdevmapper1.02.1" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"libdevmapper1.02.1" -> "libudev1" [color=blue,label="(>= 183)"];
+	"libdevmapper1.02.1" -> "dmsetup" [color=blue,label="(>= 2:1.02.145-1)"];
+	"dmsetup" -> "libdevmapper1.02.1" [color=blue,label="(>= 2:1.02.138)"];
+	"libdevmapper1.02.1" -> "libdevmapper1.02" [color=red];
+	"libcryptsetup4" -> "libgcrypt20" [color=blue,label="(>= 1.7.0)"];
+	"libcryptsetup4" -> "libuuid1" [color=blue,label="(>= 2.16)"];
+	"libcryptsetup4" -> "libgpg-error0" [color=blue,label="(>= 1.10-0.1)"];
+	"systemd" -> "libgcrypt20" [color=blue,label="(>= 1.7.0)"];
+	"systemd" -> "libgpg-error0" [color=blue,label="(>= 1.14)"];
+	"systemd" -> "libidn11" [color=blue,label="(>= 1.13)"];
+	"libidn11" -> "libidn9-dev" [color=red];
+	"systemd" -> "libip4tc0" [color=blue,label="(>= 1.6.0+snapshot20161117)"];
+	"systemd" -> "libkmod2" [color=blue,label="(>= 5~)"];
+	"systemd" -> "liblz4-1" [color=blue,label="(>= 0.0~r130)"];
+	"systemd" -> "liblzma5" [color=blue,label="(>= 5.1.1alpha+20120614)"];
+	"systemd" -> "libmount1" [color=blue,label="(>= 2.26.2)"];
+	"libmount1" -> "libblkid1" [color=blue,label="(>= 2.17.2)"];
+	"libmount1" -> "libselinux1" [color=blue,label="(>= 2.6-3~)"];
+	"systemd" -> "libpam0g" [color=blue,label="(>= 0.99.7.1)"];
+	"systemd" -> "libseccomp2" [color=blue,label="(>= 2.3.1)"];
+	"systemd" -> "libselinux1" [color=blue,label="(>= 2.1.9)"];
+	"systemd" -> "libsystemd0" [color=blue,label="(= 235-2)"];
+	"systemd" -> "util-linux" [color=blue,label="(>= 2.27.1)"];
+	"util-linux" -> "libblkid1" [color=purple,style=bold,label="(>= 2.30.2)"];
+	"util-linux" -> "libmount1" [color=purple,style=bold,label="(>= 2.25)"];
+	"util-linux" -> "libpam0g" [color=purple,style=bold,label="(>= 0.99.7.1)"];
+	"util-linux" -> "libselinux1" [color=purple,style=bold,label="(>= 2.6-3~)"];
+	"util-linux" -> "libsmartcols1" [color=purple,style=bold,label="(>= 2.30.2)"];
+	"util-linux" -> "libsystemd0" [color=purple,style=bold];
+	"util-linux" -> "libtinfo5" [color=purple,style=bold,label="(>= 6)"];
+	"util-linux" -> "libudev1" [color=purple,style=bold,label="(>= 183)"];
+	"util-linux" -> "libuuid1" [color=purple,style=bold,label="(>= 2.16)"];
+	"util-linux" -> "fdisk" [color=blue];
+	"fdisk" -> "libfdisk1" [color=blue,label="(>= 2.30.2)"];
+	"libfdisk1" -> "libblkid1" [color=blue,label="(>= 2.24.2)"];
+	"libfdisk1" -> "libuuid1" [color=blue,label="(>= 2.16)"];
+	"fdisk" -> "libmount1" [color=blue,label="(>= 2.24.2)"];
+	"fdisk" -> "libncursesw5" [color=blue,label="(>= 6)"];
+	"fdisk" -> "libsmartcols1" [color=blue,label="(>= 2.28~rc1)"];
+	"fdisk" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"systemd" -> "mount" [color=blue,label="(>= 2.26)"];
+	"mount" -> "libblkid1" [color=purple,style=bold,label="(>= 2.17.2)"];
+	"mount" -> "libmount1" [color=purple,style=bold,label="(>= 2.30.2)"];
+	"mount" -> "libselinux1" [color=purple,style=bold,label="(>= 2.6-3~)"];
+	"mount" -> "libsmartcols1" [color=purple,style=bold,label="(>= 2.27~rc1)"];
+	"mount" -> "util-linux" [color=blue,label="(>= 2.29.2-3~)"];
+	"systemd" -> "adduser" [color=blue];
+	"systemd" -> "procps" [color=blue];
+	"procps" -> "libncurses5" [color=blue,label="(>= 6)"];
+	"procps" -> "libncursesw5" [color=blue,label="(>= 6)"];
+	"procps" -> "libprocps6" [color=blue];
+	"libprocps6" -> "libsystemd0" [color=blue,label="(>= 209)"];
+	"procps" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"procps" -> "lsb-base" [color=blue,label="(>= 3.0-10)"];
+	"procps" -> "init-system-helpers" [color=blue,label="(>= 1.29~)"];
+	"procps" -> "psmisc";
+	"psmisc" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"psmisc" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"systemd" -> "libpam-systemd";
+	"systemd" -> "dbus";
+	"libpam-systemd" -> "libpam-runtime" [color=blue,label="(>= 1.0.1-6)"];
+	"libpam-runtime" -> "alt4":"debconf" [color=blue,label="(>= 0.5)"];
+	"libpam-runtime" -> "alt8":"debconf" [color=blue,label="(>= 1.5.19)"];
+	"libpam-runtime" -> "libpam-modules" [color=blue,label="(>= 1.0.1-6)"];
+	"libpam-modules" -> "libaudit1" [color=purple,style=bold,label="(>= 1:2.2.1)"];
+	"libpam-modules" -> "libdb5.3" [color=purple,style=bold];
+	"libpam-modules" -> "libpam0g" [color=purple,style=bold,label="(>= 1.1.3-2)"];
+	"libpam-modules" -> "libselinux1" [color=purple,style=bold,label="(>= 2.1.9)"];
+	"libpam-modules" -> "alt4":"debconf" [color=purple,style=bold,label="(>= 0.5)"];
+	"libpam-modules" -> "libpam-modules-bin" [color=purple,style=bold,label="(= 1.1.8-3.6)"];
+	"libpam-modules-bin" -> "libaudit1" [color=blue,label="(>= 1:2.2.1)"];
+	"libpam-modules-bin" -> "libpam0g" [color=blue,label="(>= 0.99.7.1)"];
+	"libpam-modules-bin" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"libpam-modules" -> "libpam-mkhomedir" [color=red];
+	"libpam-modules" -> "libpam-motd" [color=red];
+	"libpam-modules" -> "libpam-umask" [color=red];
+	"libpam-runtime" -> "libpam0g-util" [color=red];
+	"libpam-systemd" -> "dbus" [color=blue];
+	"libpam-systemd" -> "alt9":"systemd-shim" [color=blue,label="(>= 10-3~)"];
+	"alt9":"systemd-shim" -> "libglib2.0-0" [color=blue,label="(>= 2.39.4)"];
+	"alt9":"systemd-shim" -> "cgmanager" [color=blue,label="(>= 0.32)"];
+	"cgmanager" -> "libcgmanager0" [color=blue,label="(>= 0.33)"];
+	"libcgmanager0" -> "libdbus-1-3" [color=blue,label="(>= 1.9.14)"];
+	"libdbus-1-3" -> "libsystemd0" [color=blue];
+	"libdbus-1-3" -> "dbus";
+	"libcgmanager0" -> "libnih-dbus1" [color=blue,label="(>= 1.0.0)"];
+	"libnih-dbus1" -> "libnih1" [color=blue,label="(= 1.0.3-8)"];
+	"libnih-dbus1" -> "libdbus-1-3" [color=blue,label="(>= 1.9.14)"];
+	"libcgmanager0" -> "libnih1" [color=blue,label="(>= 1.0.0)"];
+	"cgmanager" -> "libdbus-1-3" [color=blue,label="(>= 1.9.14)"];
+	"cgmanager" -> "libnih-dbus1" [color=blue,label="(>= 1.0.0)"];
+	"cgmanager" -> "libnih1" [color=blue,label="(>= 1.0.0)"];
+	"cgmanager" -> "init-system-helpers" [color=blue,label="(>= 1.18~)"];
+	"cgmanager" -> "cgmanager-utils" [color=red];
+	"alt9":"systemd-sysv" -> "systemd" [color=purple,style=bold];
+	"alt9":"systemd-sysv" -> "file-rc" [color=red];
+	"alt9":"systemd-sysv" -> "alt9":"systemd-shim" [color=red];
+	"alt9":"systemd-sysv" -> "sysvinit-core" [color=red];
+	"alt9":"systemd-sysv" -> "upstart-sysv" [color=red];
+	"dbus-user-session" -> "systemd" [color=blue];
+	"dbus-user-session" -> "alt9":"systemd-sysv";
+	"alt7":"dbus-session-bus" -> virt2 [dir=back,arrowtail=inv,color=green];
+	"dconf-service" -> "alt6":"dconf-gsettings-backend";
+	"alt6":"dconf-gsettings-backend" -> "dconf-service" [color=blue,label="(<< 0.26.1-1.1~)"];
+	"alt6":"dconf-gsettings-backend" -> "libdconf1" [color=blue,label="(= 0.26.1-1)"];
+	"alt6":"gsettings-backend" -> virt3 [dir=back,arrowtail=inv,color=green];
+	"libgtk-3-common" -> "libgtk-3-0";
+	"libgtk-3-0" -> "libatk-bridge2.0-0" [color=blue,label="(>= 2.5.3)"];
+	"libatk-bridge2.0-0" -> "libatk1.0-0" [color=blue,label="(>= 2.25.2)"];
+	"libatk1.0-0" -> "libglib2.0-0" [color=blue,label="(>= 2.49.3)"];
+	"libatk1.0-0" -> "libatk1.0-data" [color=blue,label="(>= 2.26.0-2)"];
+	"libatk-bridge2.0-0" -> "libatspi2.0-0" [color=blue,label="(>= 2.9.90)"];
+	"libatspi2.0-0" -> "libdbus-1-3" [color=blue,label="(>= 1.9.14)"];
+	"libatspi2.0-0" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"libatspi2.0-0" -> "libxi6" [color=blue];
+	"libxi6" -> "libxext6" [color=blue];
+	"libatspi2.0-0" -> "libxtst6" [color=blue];
+	"libxtst6" -> "libxext6" [color=blue];
+	"libxtst6" -> "libxi6" [color=blue];
+	"libxtst6" -> "x11-common" [color=blue];
+	"libatspi2.0-0" -> "at-spi2-core" [label="(= 2.26.0-2)"];
+	"at-spi2-core" -> "libatspi2.0-0" [color=blue,label="(>= 2.9.90)"];
+	"at-spi2-core" -> "libdbus-1-3" [color=blue,label="(>= 1.9.14)"];
+	"at-spi2-core" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"at-spi2-core" -> "libxi6" [color=blue];
+	"at-spi2-core" -> "libxtst6" [color=blue];
+	"libatk-bridge2.0-0" -> "libdbus-1-3" [color=blue,label="(>= 1.9.14)"];
+	"libatk-bridge2.0-0" -> "libglib2.0-0" [color=blue,label="(>= 2.41.1)"];
+	"libgtk-3-0" -> "libatk1.0-0" [color=blue,label="(>= 2.15.1)"];
+	"libgtk-3-0" -> "libcairo-gobject2" [color=blue,label="(>= 1.10.0)"];
+	"libcairo-gobject2" -> "libcairo2" [color=blue,label="(>= 1.10.0)"];
+	"libcairo-gobject2" -> "libglib2.0-0" [color=blue,label="(>= 2.14.0)"];
+	"libgtk-3-0" -> "libcairo2" [color=blue,label="(>= 1.14.0)"];
+	"libgtk-3-0" -> "libcolord2" [color=blue,label="(>= 0.1.29)"];
+	"libcolord2" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"libcolord2" -> "liblcms2-2" [color=blue,label="(>= 2.6)"];
+	"libcolord2" -> "libudev1" [color=blue,label="(>= 196)"];
+	"libgtk-3-0" -> "libcups2" [color=blue,label="(>= 1.6.0)"];
+	"libcups2" -> "libavahi-client3" [color=blue,label="(>= 0.6.16)"];
+	"libavahi-client3" -> "libavahi-common3" [color=blue,label="(>= 0.6.22)"];
+	"libavahi-common3" -> "libavahi-common-data" [color=blue];
+	"libavahi-client3" -> "libdbus-1-3" [color=blue,label="(>= 1.9.14)"];
+	"libcups2" -> "libavahi-common3" [color=blue,label="(>= 0.6.16)"];
+	"libcups2" -> "libgnutls30" [color=blue,label="(>= 3.5.6)"];
+	"libgnutls30" -> "libgmp10" [color=blue,label="(>= 2:6)"];
+	"libgnutls30" -> "libhogweed4" [color=blue];
+	"libhogweed4" -> "libgmp10" [color=blue,label="(>= 2:6.0.0)"];
+	"libhogweed4" -> "libnettle6" [color=blue,label="(= 3.3-2)"];
+	"libgnutls30" -> "libidn2-0" [color=blue,label="(>= 0.6)"];
+	"libidn2-0" -> "libunistring2" [color=blue,label="(>= 0.9.7)"];
+	"libgnutls30" -> "libnettle6" [color=blue];
+	"libgnutls30" -> "libp11-kit0" [color=blue,label="(>= 0.23.1)"];
+	"libp11-kit0" -> "libffi6" [color=blue,label="(>= 3.0.4)"];
+	"libgnutls30" -> "libtasn1-6" [color=blue,label="(>= 4.12)"];
+	"libgnutls30" -> "libunistring2" [color=blue,label="(>= 0.9.7)"];
+	"libcups2" -> "libgssapi-krb5-2" [color=blue,label="(>= 1.14+dfsg)"];
+	"libgssapi-krb5-2" -> "libcomerr2" [color=blue,label="(>= 1.34)"];
+	"libgssapi-krb5-2" -> "libk5crypto3" [color=blue,label="(>= 1.8+dfsg)"];
+	"libk5crypto3" -> "libkeyutils1" [color=blue,label="(>= 1.4)"];
+	"libk5crypto3" -> "libkrb5support0" [color=blue,label="(>= 1.15~beta1)"];
+	"libkrb5support0" -> "libkeyutils1" [color=blue,label="(>= 1.4)"];
+	"libgssapi-krb5-2" -> "libkeyutils1" [color=blue,label="(>= 1.4)"];
+	"libgssapi-krb5-2" -> "libkrb5-3" [color=blue,label="(= 1.15.2-2)"];
+	"libkrb5-3" -> "libcomerr2" [color=blue,label="(>= 1.34)"];
+	"libkrb5-3" -> "libk5crypto3" [color=blue,label="(>= 1.15~beta1)"];
+	"libkrb5-3" -> "libkeyutils1" [color=blue,label="(>= 1.5.9)"];
+	"libkrb5-3" -> "libkrb5support0" [color=blue,label="(= 1.15.2-2)"];
+	"libkrb5-3" -> "krb5-locales";
+	"libgssapi-krb5-2" -> "libkrb5support0" [color=blue,label="(>= 1.15~beta1)"];
+	"libgtk-3-0" -> "libepoxy0" [color=blue,label="(>= 1.0)"];
+	"libgtk-3-0" -> "libfontconfig1" [color=blue,label="(>= 2.12)"];
+	"libgtk-3-0" -> "libfreetype6" [color=blue,label="(>= 2.2.1)"];
+	"libgtk-3-0" -> "libgdk-pixbuf2.0-0" [color=blue,label="(>= 2.30.1)"];
+	"libgtk-3-0" -> "libglib2.0-0" [color=blue,label="(>= 2.49.5)"];
+	"libgtk-3-0" -> "libjson-glib-1.0-0" [color=blue,label="(>= 0.12.0)"];
+	"libjson-glib-1.0-0" -> "libglib2.0-0" [color=blue,label="(>= 2.41.1)"];
+	"libjson-glib-1.0-0" -> "libjson-glib-1.0-common" [color=blue,label="(>= 1.4.2-2)"];
+	"libgtk-3-0" -> "libpango-1.0-0" [color=blue,label="(>= 1.40.5)"];
+	"libpango-1.0-0" -> "fontconfig" [color=blue,label="(>= 2.1.91)"];
+	"libpango-1.0-0" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"libpango-1.0-0" -> "libthai0" [color=blue,label="(>= 0.1.22-3~)"];
+	"libthai0" -> "libthai-data" [color=blue,label="(>= 0.1.10)"];
+	"libthai0" -> "libdatrie1" [color=blue,label="(>= 0.2.0)"];
+	"libgtk-3-0" -> "libpangocairo-1.0-0" [color=blue,label="(>= 1.40.5)"];
+	"libpangocairo-1.0-0" -> "libcairo2" [color=blue,label="(>= 1.12.10)"];
+	"libpangocairo-1.0-0" -> "libfontconfig1" [color=blue,label="(>= 2.12)"];
+	"libpangocairo-1.0-0" -> "libfreetype6" [color=blue,label="(>= 2.2.1)"];
+	"libpangocairo-1.0-0" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"libpangocairo-1.0-0" -> "libpango-1.0-0" [color=blue,label="(>= 1.37.5)"];
+	"libpangocairo-1.0-0" -> "libpangoft2-1.0-0" [color=blue,label="(>= 1.28.1)"];
+	"libpangoft2-1.0-0" -> "libfontconfig1" [color=blue,label="(>= 2.12)"];
+	"libpangoft2-1.0-0" -> "libfreetype6" [color=blue,label="(>= 2.3.5)"];
+	"libpangoft2-1.0-0" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"libpangoft2-1.0-0" -> "libharfbuzz0b" [color=blue,label="(>= 1.2.6)"];
+	"libharfbuzz0b" -> "libfreetype6" [color=blue,label="(>= 2.7.1)"];
+	"libharfbuzz0b" -> "libglib2.0-0" [color=blue,label="(>= 2.31.8)"];
+	"libharfbuzz0b" -> "libgraphite2-3" [color=blue,label="(>= 1.2.2)"];
+	"libharfbuzz0b" -> "libharfbuzz0" [color=red];
+	"libharfbuzz0b" -> "libharfbuzz0a" [color=red];
+	"libpangoft2-1.0-0" -> "libpango-1.0-0" [color=blue,label="(>= 1.37.2)"];
+	"libgtk-3-0" -> "libpangoft2-1.0-0" [color=blue,label="(>= 1.40.5)"];
+	"libgtk-3-0" -> "librest-0.7-0" [color=blue,label="(>= 0.7)"];
+	"librest-0.7-0" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"librest-0.7-0" -> "libsoup-gnome2.4-1" [color=blue,label="(>= 2.27.4)"];
+	"libsoup-gnome2.4-1" -> "libglib2.0-0" [color=blue,label="(>= 2.39.90)"];
+	"libsoup-gnome2.4-1" -> "libsoup2.4-1" [color=blue,label="(>= 2.41.90)"];
+	"libsoup2.4-1" -> "libglib2.0-0" [color=blue,label="(>= 2.39.90)"];
+	"libsoup2.4-1" -> "libgssapi-krb5-2" [color=blue,label="(>= 1.14+dfsg)"];
+	"libsoup2.4-1" -> "libsqlite3-0" [color=blue,label="(>= 3.5.9)"];
+	"libsoup2.4-1" -> "libxml2" [color=blue,label="(>= 2.7.4)"];
+	"libsoup2.4-1" -> "glib-networking" [color=blue,label="(>= 2.32.0)"];
+	"glib-networking" -> "libglib2.0-0" [color=blue,label="(>= 2.46.0)"];
+	"glib-networking" -> "libgnutls30" [color=blue,label="(>= 3.5.6)"];
+	"glib-networking" -> "libp11-kit0" [color=blue,label="(>= 0.11)"];
+	"glib-networking" -> "libproxy1v5" [color=blue,label="(>= 0.4.14)"];
+	"libproxy1v5" -> "libproxy1" [color=red];
+	"glib-networking" -> "glib-networking-services" [color=blue,label="(>= 2.54.1-1)"];
+	"glib-networking-services" -> "libglib2.0-0" [color=blue,label="(>= 2.46.0)"];
+	"glib-networking-services" -> "libproxy1v5" [color=blue,label="(>= 0.4.14)"];
+	"glib-networking-services" -> "glib-networking-common" [color=blue,label="(= 2.54.1-1)"];
+	"glib-networking-common" -> "glib-networking";
+	"glib-networking-services" -> "glib-networking";
+	"glib-networking" -> "glib-networking-services" [color=blue,label="(<< 2.54.1-1.1~)"];
+	"glib-networking" -> "glib-networking-common" [color=blue,label="(= 2.54.1-1)"];
+	"glib-networking" -> "gsettings-desktop-schemas" [color=blue];
+	"gsettings-desktop-schemas" -> "alt6" [color=blue];
+	"librest-0.7-0" -> "libsoup2.4-1" [color=blue,label="(>= 2.30)"];
+	"librest-0.7-0" -> "libxml2" [color=blue,label="(>= 2.7.4)"];
+	"libgtk-3-0" -> "libsoup2.4-1" [color=blue,label="(>= 2.4.0)"];
+	"libgtk-3-0" -> "libwayland-client0" [color=blue,label="(>= 1.9.91)"];
+	"libwayland-client0" -> "libffi6" [color=blue,label="(>= 3.0.4)"];
+	"libgtk-3-0" -> "libwayland-cursor0" [color=blue,label="(>= 1.9.91)"];
+	"libwayland-cursor0" -> "libwayland-client0" [color=blue,label="(>= 1.3.92)"];
+	"libgtk-3-0" -> "alt10":"libwayland-egl1-mesa" [color=blue,label="(>= 10.0.2)"];
+	"alt10":"libwayland-egl1-mesa" -> "libegl1" [color=blue];
+	"libegl1" -> "libglvnd0" [color=blue,label="(= 1.0.0-1)"];
+	"libegl1" -> "alt11" [color=blue];
+	"alt11":"libegl-mesa0" -> "libdrm2" [color=blue,label="(>= 2.4.75)"];
+	"libdrm2" -> "libdrm-common" [color=blue,label="(>= 2.4.85-1)"];
+	"alt11":"libegl-mesa0" -> "libexpat1" [color=blue,label="(>= 2.0.1)"];
+	"alt11":"libegl-mesa0" -> "libgbm1" [color=blue,label="(= 17.2.4-1+b1)"];
+	"libgbm1" -> "libdrm2" [color=blue,label="(>= 2.4.75)"];
+	"libgbm1" -> "libexpat1" [color=blue,label="(>= 2.0.1)"];
+	"libgbm1" -> "libwayland-client0" [color=blue,label="(>= 1.11.0)"];
+	"libgbm1" -> "libwayland-server0" [color=blue,label="(>= 1.11.0)"];
+	"libwayland-server0" -> "libffi6" [color=blue,label="(>= 3.0.4)"];
+	"alt11":"libegl-mesa0" -> "libwayland-client0" [color=blue,label="(>= 1.11.0)"];
+	"alt11":"libegl-mesa0" -> "libwayland-server0" [color=blue,label="(>= 1.11.0)"];
+	"alt11":"libegl-mesa0" -> "libx11-xcb1" [color=blue];
+	"alt11":"libegl-mesa0" -> "libxcb-dri2-0" [color=blue,label="(>= 1.8)"];
+	"libxcb-dri2-0" -> "libxcb1" [color=blue];
+	"alt11":"libegl-mesa0" -> "libxcb-dri3-0" [color=blue];
+	"libxcb-dri3-0" -> "libxcb1" [color=blue,label="(>= 1.12)"];
+	"alt11":"libegl-mesa0" -> "libxcb-present0" [color=blue];
+	"libxcb-present0" -> "libxcb1" [color=blue];
+	"alt11":"libegl-mesa0" -> "libxcb-sync1" [color=blue];
+	"libxcb-sync1" -> "libxcb1" [color=blue];
+	"alt11":"libegl-mesa0" -> "libxcb-xfixes0" [color=blue];
+	"libxcb-xfixes0" -> "libxcb1" [color=blue];
+	"alt11":"libegl-mesa0" -> "libxcb1" [color=blue,label="(>= 1.9.2)"];
+	"alt11":"libegl-mesa0" -> "libxshmfence1" [color=blue];
+	"alt11":"libegl-vendor" -> virt4 [dir=back,arrowtail=inv,color=green];
+	"alt10":"libwayland-egl1-mesa" -> "alt10":"libwayland-egl1" [color=red];
+	"alt10":"libwayland-egl1" -> "alt10":"libwayland-egl1-mesa" [dir=back,arrowtail=inv,color=green];
+	"libgtk-3-0" -> "libxcomposite1" [color=blue,label="(>= 1:0.3-1)"];
+	"libgtk-3-0" -> "libxcursor1" [color=blue,label="(>> 1.1.2)"];
+	"libxcursor1" -> "libxfixes3" [color=blue];
+	"libxcursor1" -> "libxrender1" [color=blue];
+	"libgtk-3-0" -> "libxdamage1" [color=blue,label="(>= 1:1.1)"];
+	"libxdamage1" -> "libxfixes3" [color=blue];
+	"libgtk-3-0" -> "libxext6" [color=blue];
+	"libgtk-3-0" -> "libxfixes3" [color=blue];
+	"libgtk-3-0" -> "libxi6" [color=blue,label="(>= 2:1.2.99.4)"];
+	"libgtk-3-0" -> "libxinerama1" [color=blue];
+	"libxinerama1" -> "libxext6" [color=blue];
+	"libgtk-3-0" -> "libxkbcommon0" [color=blue,label="(>= 0.5.0)"];
+	"libxkbcommon0" -> "xkb-data" [color=blue];
+	"libgtk-3-0" -> "libxml2" [color=blue,label="(>= 2.6.27)"];
+	"libgtk-3-0" -> "libxrandr2" [color=blue,label="(>= 2:1.5.0)"];
+	"libxrandr2" -> "libxext6" [color=blue];
+	"libxrandr2" -> "libxrender1" [color=blue];
+	"libgtk-3-0" -> "hicolor-icon-theme" [color=blue];
+	"libgtk-3-0" -> "adwaita-icon-theme" [color=blue];
+	"adwaita-icon-theme" -> "hicolor-icon-theme" [color=blue];
+	"adwaita-icon-theme" -> "gtk-update-icon-cache" [color=blue];
+	"gtk-update-icon-cache" -> "libgdk-pixbuf2.0-0" [color=blue,label="(>= 2.22.0)"];
+	"gtk-update-icon-cache" -> "libglib2.0-0" [color=blue,label="(>= 2.49.4)"];
+	"adwaita-icon-theme" -> "librsvg2-common" [color=blue];
+	"librsvg2-common" -> "libgdk-pixbuf2.0-0" [color=blue,label="(>= 2.22.0)"];
+	"librsvg2-common" -> "libglib2.0-0" [color=blue,label="(>= 2.24.0)"];
+	"librsvg2-common" -> "librsvg2-2" [color=blue,label="(= 2.40.18-2)"];
+	"librsvg2-2" -> "libcairo2" [color=blue,label="(>= 1.10.0)"];
+	"librsvg2-2" -> "libcroco3" [color=blue,label="(>= 0.6.2)"];
+	"libcroco3" -> "libglib2.0-0" [color=blue,label="(>= 2.16.0)"];
+	"libcroco3" -> "libxml2" [color=blue,label="(>= 2.7.4)"];
+	"librsvg2-2" -> "libgdk-pixbuf2.0-0" [color=blue,label="(>= 2.22.0)"];
+	"librsvg2-2" -> "libglib2.0-0" [color=blue,label="(>= 2.37.3)"];
+	"librsvg2-2" -> "libpango-1.0-0" [color=blue,label="(>= 1.36.0)"];
+	"librsvg2-2" -> "libpangocairo-1.0-0" [color=blue,label="(>= 1.36.0)"];
+	"librsvg2-2" -> "libxml2" [color=blue,label="(>= 2.8.0)"];
+	"librsvg2-2" -> "librsvg2-common";
+	"libgtk-3-0" -> "shared-mime-info" [color=blue];
+	"libgtk-3-0" -> "libgtk-3-bin";
+	"libgtk-3-bin" -> "libatk-bridge2.0-0" [color=blue,label="(>= 2.5.3)"];
+	"libgtk-3-bin" -> "libatk1.0-0" [color=blue,label="(>= 2.15.1)"];
+	"libgtk-3-bin" -> "libcairo-gobject2" [color=blue,label="(>= 1.10.0)"];
+	"libgtk-3-bin" -> "libcairo2" [color=blue,label="(>= 1.14.0)"];
+	"libgtk-3-bin" -> "libepoxy0" [color=blue,label="(>= 1.0)"];
+	"libgtk-3-bin" -> "libfontconfig1" [color=blue,label="(>= 2.12)"];
+	"libgtk-3-bin" -> "libfreetype6" [color=blue,label="(>= 2.2.1)"];
+	"libgtk-3-bin" -> "libgdk-pixbuf2.0-0" [color=blue,label="(>= 2.22.0)"];
+	"libgtk-3-bin" -> "libglib2.0-0" [color=blue,label="(>= 2.49.4)"];
+	"libgtk-3-bin" -> "libgtk-3-0" [color=blue,label="(>= 3.22.24-3)"];
+	"libgtk-3-bin" -> "libpango-1.0-0" [color=blue,label="(>= 1.40.5)"];
+	"libgtk-3-bin" -> "libpangocairo-1.0-0" [color=blue,label="(>= 1.40.5)"];
+	"libgtk-3-bin" -> "libpangoft2-1.0-0" [color=blue,label="(>= 1.40.5)"];
+	"libgtk-3-bin" -> "libwayland-client0" [color=blue,label="(>= 1.9.91)"];
+	"libgtk-3-bin" -> "libwayland-cursor0" [color=blue,label="(>= 1.9.91)"];
+	"libgtk-3-bin" -> "alt10":"libwayland-egl1-mesa" [color=blue,label="(>= 10.0.2)"];
+	"libgtk-3-bin" -> "libxcomposite1" [color=blue,label="(>= 1:0.3-1)"];
+	"libgtk-3-bin" -> "libxcursor1" [color=blue,label="(>> 1.1.2)"];
+	"libgtk-3-bin" -> "libxdamage1" [color=blue,label="(>= 1:1.1)"];
+	"libgtk-3-bin" -> "libxext6" [color=blue];
+	"libgtk-3-bin" -> "libxfixes3" [color=blue];
+	"libgtk-3-bin" -> "libxi6" [color=blue];
+	"libgtk-3-bin" -> "libxinerama1" [color=blue];
+	"libgtk-3-bin" -> "libxkbcommon0" [color=blue,label="(>= 0.5.0)"];
+	"libgtk-3-bin" -> "libxrandr2" [color=blue];
+	"libgtk-3-bin" -> "libgtk-3-common" [color=blue,label="(>= 3.22.24-3)"];
+	"libgtk-3-bin" -> "gtk-update-icon-cache" [color=blue];
+	"alt2":"vim-gtk3" -> "libice6" [color=blue,label="(>= 1:1.0.0)"];
+	"alt2":"vim-gtk3" -> "liblua5.2-0" [color=blue];
+	"alt2":"vim-gtk3" -> "libpango-1.0-0" [color=blue,label="(>= 1.37.5)"];
+	"alt2":"vim-gtk3" -> "libpangocairo-1.0-0" [color=blue,label="(>= 1.14.0)"];
+	"alt2":"vim-gtk3" -> "libperl5.26" [color=blue,label="(>= 5.26.0~rc1)"];
+	"alt2":"vim-gtk3" -> "libpython3.6" [color=blue,label="(>= 3.6.0~b2)"];
+	"alt2":"vim-gtk3" -> "libruby2.3" [color=blue,label="(>= 2.3.0~preview2)"];
+	"alt2":"vim-gtk3" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"alt2":"vim-gtk3" -> "libsm6" [color=blue];
+	"alt2":"vim-gtk3" -> "libtcl8.6" [color=blue,label="(>= 8.6.0)"];
+	"alt2":"vim-gtk3" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"alt2":"vim-gtk3" -> "libxt6" [color=blue];
+	"alt1":"vim-gtk" -> "vim-runtime" [color=blue,label="(= 2:8.0.1144-1)"];
+	"alt1":"vim-gtk" -> "libacl1" [color=blue,label="(>= 2.2.51-8)"];
+	"alt1":"vim-gtk" -> "libgdk-pixbuf2.0-0" [color=blue,label="(>= 2.25.2)"];
+	"alt1":"vim-gtk" -> "libglib2.0-0" [color=blue,label="(>= 2.31.18)"];
+	"alt1":"vim-gtk" -> "libgpm2" [color=blue,label="(>= 1.20.4)"];
+	"alt1":"vim-gtk" -> "libgtk2.0-0" [color=blue,label="(>= 2.24.0)"];
+	"alt1":"vim-gtk" -> "libice6" [color=blue,label="(>= 1:1.0.0)"];
+	"alt1":"vim-gtk" -> "liblua5.2-0" [color=blue];
+	"alt1":"vim-gtk" -> "libpango-1.0-0" [color=blue,label="(>= 1.32.4)"];
+	"alt1":"vim-gtk" -> "libperl5.26" [color=blue,label="(>= 5.26.0~rc1)"];
+	"alt1":"vim-gtk" -> "libpython3.6" [color=blue,label="(>= 3.6.0~b2)"];
+	"alt1":"vim-gtk" -> "libruby2.3" [color=blue,label="(>= 2.3.0~preview2)"];
+	"alt1":"vim-gtk" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"alt1":"vim-gtk" -> "libsm6" [color=blue];
+	"alt1":"vim-gtk" -> "libtcl8.6" [color=blue,label="(>= 8.6.0)"];
+	"alt1":"vim-gtk" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"alt1":"vim-gtk" -> "libxt6" [color=blue];
+	"vim" -> "vim-runtime" [color=blue,label="(= 2:8.0.1144-1)"];
+	"vim" -> "libacl1" [color=blue,label="(>= 2.2.51-8)"];
+	"vim" -> "libgpm2" [color=blue,label="(>= 1.20.4)"];
+	"vim" -> "libselinux1" [color=blue,label="(>= 1.32)"];
+	"vim" -> "libtinfo5" [color=blue,label="(>= 6)"];
+	"vim" -> "editor" [arrowhead=inv,color=green];
+	"editor" -> "Pr_editor" [label="-30-",dir=back,arrowtail=inv,color=green];
+	"Pr_editor" [label="...",style=rounded];
+	"editor" [shape=octagon];
+	"vim" [style="setlinewidth(2)"]
+	"cgmanager-utils" -> "cgmanager" [dir=back,arrowtail=inv,color=green];
+	"cgmanager-utils" [shape=octagon];
+	"jquery" [style=filled,fillcolor=oldlace];
+	"libacl1-kerberos4kth" [style=filled,fillcolor=oldlace];
+	"libdevmapper1.02" [style=filled,fillcolor=oldlace];
+	"libharfbuzz0" [style=filled,fillcolor=oldlace];
+	"libharfbuzz0a" [style=filled,fillcolor=oldlace];
+	"libidn9-dev" [style=filled,fillcolor=oldlace];
+	"libjpeg62" -> "libjpeg62-turbo" [dir=back,arrowtail=inv,color=green];
+	"libjpeg62" [shape=octagon];
+	"libpam-mkhomedir" -> "libpam-modules" [dir=back,arrowtail=inv,color=green];
+	"libpam-mkhomedir" [shape=octagon];
+	"libpam-motd" -> "libpam-modules" [dir=back,arrowtail=inv,color=green];
+	"libpam-motd" [shape=octagon];
+	"libpam-umask" -> "libpam-modules" [dir=back,arrowtail=inv,color=green];
+	"libpam-umask" [shape=octagon];
+	"libpam0g-util" [style=filled,fillcolor=oldlace];
+	"libreadline-common" [style=filled,fillcolor=oldlace];
+	"ruby-activesupport-3.2" [style=filled,fillcolor=oldlace];
+	"upstart-sysv" [style=filled,fillcolor=oldlace];
+	"xz-lzma" [style=filled,fillcolor=oldlace];
+	alt1 [
+		shape = "record"
+		label = "<vim> [vim] | <vim-gtk> vim-gtk | <vim-gtk3> vim-gtk3 | <vim-athena> vim-athena | <vim-nox> vim-nox | <vim-tiny> vim-tiny"
+	]
+	alt10 [
+		shape = "record"
+		label = "<libwayland-egl1-mesa> libwayland-egl1-mesa | <libwayland-egl1> libwayland-egl1"
+	]
+	alt11 [
+		shape = "record"
+		label = "<libegl-mesa0> libegl-mesa0 | <libegl-vendor> libegl-vendor"
+	]
+	alt2 [
+		shape = "record"
+		label = "<vim-gtk> [vim-gtk] | <vim-gtk3> [vim-gtk3] | <vim-athena> [vim-athena]"
+	]
+	alt3 [
+		shape = "record"
+		label = "<dpkg> \{dpkg\} | <install-info> install-info"
+	]
+	alt4 [
+		shape = "record"
+		label = "<debconf> \{debconf\} | <debconf-2.0> debconf-2.0"
+	]
+	alt5 [
+		shape = "record"
+		label = "<ruby> ruby | <ruby-interpreter> ruby-interpreter"
+	]
+	alt6 [
+		shape = "record"
+		label = "<dconf-gsettings-backend> dconf-gsettings-backend | <gsettings-backend> gsettings-backend"
+	]
+	alt7 [
+		shape = "record"
+		label = "<default-dbus-session-bus> default-dbus-session-bus | <dbus-session-bus> dbus-session-bus"
+	]
+	alt8 [
+		shape = "record"
+		label = "<debconf> \{debconf\} | <cdebconf> \{cdebconf\}"
+	]
+	alt9 [
+		shape = "record"
+		label = "<systemd-shim> systemd-shim | <systemd-sysv> systemd-sysv"
+	]
+	virt1 [
+		shape = "record"
+		style = "rounded"
+		label = "<debconf> [debconf] | <cdebconf> [cdebconf]"
+	]
+	virt2 [
+		shape = "record"
+		style = "rounded"
+		label = "<dbus-x11> \{dbus-x11\} | <dbus-user-session> [dbus-user-session]"
+	]
+	virt3 [
+		shape = "record"
+		style = "rounded"
+		label = "<gconf-gsettings-backend> \{gconf-gsettings-backend\} | <dconf-gsettings-backend> [dconf-gsettings-backend]"
+	]
+	virt4 [
+		shape = "record"
+		style = "rounded"
+		label = "<nvidia-egl-icd> \{nvidia-egl-icd\} | <libegl-mesa0> [libegl-mesa0]"
+	]
+	"dbus" [shape=diamond];
+	"fontconfig" [shape=diamond];
+	"libfontconfig1" [shape=diamond];
+	"libglib2.0-0" [shape=diamond];
+	"libgtk2.0-0" [shape=diamond];
+	"passwd" [shape=diamond];
+	"perl" [shape=diamond];
+	"x11-common" [shape=diamond];
+}
+// Excluded dependencies:
+// libc6 libgcc1 libstdc++6 libx11-6 multiarch-support zlib1g
+// total size of all shown packages: 371093504
+// download size of all shown packages: 79628844
