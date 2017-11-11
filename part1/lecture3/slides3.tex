@@ -181,7 +181,8 @@ Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多�
 \end{minipage}
 \end{frame}
 \begin{frame}[t]{Debian}
-	\includegraphics[width=0.9\textwidth]{understanding-debian.png}
+    \centering
+	\includegraphics[width=0.7\textwidth]{debian-toystory.jpg}
 \end{frame}
 \begin{frame}[t]{典型Linux发行版}
 	\begin{block}{Ubuntu}
@@ -271,17 +272,17 @@ Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多�
 		\includegraphics[width=0.25\textwidth]{gentoo.png}
 \end{frame}
 \begin{frame}[t]{特定语言仓库}
-	\begin{block}{Pypi}
-		\url{http://kgullikson88.github.io/blog/pypi-analysis.html}
+    \begin{block}{Pypi\footnote{\url{http://kgullikson88.github.io/blog/pypi-analysis.html}}}
 	\end{block}
-	\includegraphics[width=0.8\textwidth]{pypi2.png}
+	\includegraphics[width=0.45\textwidth]{pypi2.png}
 \end{frame}
 \begin{frame}[t]{特定语言仓库}
 	\begin{block}{CRAN}
-		Knowledge Flows in Open Source Software Supply Chains
-		NASAC 2017 Keynote Audris Mockus
+        \scriptsize
+		NASAC 2017 Keynote: Knowledge Flows in Open Source Software Supply Chains
+		-- Audris Mockus
 	\end{block}
-	\includegraphics[width=0.8\textwidth]{r.png}
+	\includegraphics[width=0.5\textwidth]{r.png}
 \end{frame}
 \begin{frame}[t]{特定语言仓库}
 	\begin{block}{CPAN}
@@ -299,10 +300,125 @@ Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多�
 \end{frame}
 
 \begin{frame}[t]{以Debian为例}
-	\begin{block}{Debian社会契约}
+    \begin{block}{Debian社群契约\footnote{\url{https://www.debian.org/social_contract.zh-cn.html}}}
+        \begin{enumerate}
+            \item Debian 将始终是 100\% 的自由软件
+            \item 我们将回报自由软件社群
+            \item 我们绝不隐瞒问题
+            \item 我们将优先考虑我们的用户及自由软件
+            \item 哪些作品不符合我们的自由软件规范
+        \end{enumerate}
+	\end{block}
+\end{frame}
 
+\begin{frame}[t]{以Debian为例}
+	\begin{block}{Debian 将始终是 100\% 的自由软件}
+    我们制订一个名为"Debian 自由软件指导方针"的标准便于我 们判定某项作品"自由"与否。我们保证 Debian 系统机器附带的软件包遵循这些自由软件的方针。我们将同时支持在 Debian 上开 发及使用自由或者非自由软件的用户。但是，我们决不让这个系统依赖于任何非自 由软件。
 	\end{block}
 	
+\end{frame}
+\begin{frame}[t]{以Debian为例}
+	\begin{block}{我们将回报自由软件社群}
+
+    当我们编写 Debian 系统的新的部件之时，我们将使其遵循 Debian 自由软件指导 方针的理念。我们将尽最大努力，打造最优秀的系统，以 利自由软件得到最广泛的使用及传播。我们将反馈那些作品被 我们系统收录的"上游"作者，例如缺陷的修正 、改良的意见以及用户的需求等这些信息。
+	\end{block}
+	
+\end{frame}
+\begin{frame}[t]{以Debian为例}
+	\begin{block}{我们绝不隐瞒问题}
+
+    我们将始终把我们整个的缺陷报告数据库开放给公众阅读。 由用户在线提交的报告，将会很快的出现在其他人的眼前。
+	\end{block}
+	
+\end{frame}
+\begin{frame}[t]{以Debian为例}
+	\begin{block}{我们将优先考虑我们的用户及自由软件}
+    我们由我们的用户及自由软件社群的需要所导向。我们将优先考虑他们的利益。我 们将在多种计算环境中支持我们的用户的操作需要。我们不反对在 Debian 系统上 使用非自由软件，我们也不会尝试向创建和使用这部分软件的用户索取费用。我们 允许他人，在没有我们的资金的参与下，制造包括 Debian 以及商业软件的增值套 件。为了达成这些目标，我们将提供一集成的、高质量的、100\% 自由的软件，而 不附加任何可能阻止在这些方面使用的法律限制。
+	\end{block}
+	
+\end{frame}
+\begin{frame}[t]{以Debian为例}
+	\begin{block}{哪些作品不符合我们的自由软件规范}
+    我们明了，某些我们的用户需要使用不符合 Debian 自由软件指导方针的作品。 我们为这些作品，在我们的 FTP 库中留出了"contrib"以及 "non-free"目录。在这些目录下的软件包，并不属于 Debian 系统 尽管它们已被配置成可以在 Debian 下使用。我们鼓励光盘制造商阅读这些目录下 的软件的许可证，以判断他们是否可以在光盘中发行这些软件 。所以，尽管非自由软件并非 Debian 系统的一部分，我们仍支持它们的使用，并 且我们为非自由软件提供了公共资源 (诸如我们的缺陷跟踪系统以及邮件列表)。
+	\end{block}
+\end{frame}
+\begin{frame}[t]{以Debian为例}
+    \begin{block}
+        \scriptsize
+        {Debian 自由软件指导方针 (DFSG)}
+\begin{itemize}
+    \item 自由的再次发行
+
+    Debian 组件的许可证不得限制任何一方将此软件作为含有 若干不同来源的程序的一套软件集合中的一个组件 用于销售或者捐赠。该许可证不得向诸如此类销售行为的销售方索取 专利费或者其它费用。
+
+    \item 源代码
+
+    程序必须包括源代码，而且必须允许以源代码以及预先编译好的形式发行 。
+
+\item 作品的衍生
+
+    许可证必须允许对其所属作品的修改以及衍生，而且必须允许这些作品在原始 软件的许可证条款下发行。
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}[t]{以Debian为例}
+    \begin{block}
+        \scriptsize
+        {Debian 自由软件指导方针 (DFSG)}
+\begin{itemize}
+
+\item 作者源代码的完整性
+
+    许可证只有在允许"补丁文件"随其所属作品的源代码一同发行，以便在编译时修改程序 的情况之下，方可限制对其所属作品的源代码在发行时的修改行为。 许可证必须清楚表明用已修改的源代码编译而成的软件，是允许发行的。 许可证可要求衍生软件使用有别于原来软件的名称或者版本号。( 这是一种妥协，Debian 组织鼓励所有作者不要限制任何源代码文件或者二进制文件的修改。)
+
+\item 禁止歧视人士或者组织
+
+    许可证不能歧视任何人士或者由多人组成的组织。
+
+\item 禁止歧视用途
+
+    许可证不能歧视程序可以被用于的任何特定领域。例如， 许可证不得限制程序用于商业或者基因研究。
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}[t]{以Debian为例}
+    \begin{block}
+        \scriptsize
+        {Debian 自由软件指导方针 (DFSG)}
+\begin{itemize}
+
+\item 许可证的发行
+
+    程序附带的权利必须适用于程序再次 发行的每一个受众，无需他们再执行一个附加的许可证。
+
+\item 许可证不能特定于 Debian
+
+    程序附带的权利不能由该程序是否为 Debian 的一部分来决定。如果这个程序从 Debian 中摘取出 来，即使在 Debian 之外但仍然在该程序的许可证条款下使用 或者发行，那么它再次发行的每一个受众都将拥有和那些在该 程序与 Debian 系统结合时被授予的完全相同的权利。
+
+\item 许可证的规定不得污染其他软件
+
+    许可证不得对其他与此软件一同分发的软件作出任何限制的规定。例如，许可 证不得要求所有与它在同一媒体中一同分发的软件都是自由软件。
+
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}[t]{以Debian为例}
+    \begin{block}
+        \scriptsize
+        {Debian 自由软件指导方针 (DFSG)}
+\begin{itemize}
+\item 许可证示例
+
+    "GPL"、 "BSD" 和 "Artistic" 均是我们视为"自由"的许可证的示例。
+
+我们"与自由软件社群订立"社群契约""的这个概念是由 Ean Schuessler 提出的。本文是由 Bruce Perens 写成初稿，并由其他 Debian 开发者在 1997 年 6 月起长达一个月的电子邮件会议中精炼而成。后来被 收录 作为 Debian 项目所公布的政策。
+
+此后，Bruce Perens 从 Debian 自由软件指导方针中删除特别提到 Debian 的部份，制成了 "开放源码定义"。
+
+欢迎其他组织以这份文档为基础进行衍生和扩写。若您这样做，请注明原文出处 "Debian 计划"，以表达对我们工作的赞赏和肯定。
+\end{itemize}
+    \end{block}
+    
 \end{frame}
 \begin{frame}[t]{以Debian为例}
 	\begin{block}{Debian的发布周期}
