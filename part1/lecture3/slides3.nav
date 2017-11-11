@@ -1,4 +1,6 @@
 \defcounter {refsection}{0}\relax 
+\beamer@endinputifotherversion {3.36pt}
+\defcounter {refsection}{0}\relax 
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {1}{1}}
@@ -130,8 +132,12 @@
 \headcommand {\slideentry {2}{0}{9}{30/30}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\beamer@partpages {1}{30}}
-\headcommand {\beamer@subsectionpages {22}{30}}
-\headcommand {\beamer@sectionpages {22}{30}}
-\headcommand {\beamer@documentpages {30}}
-\headcommand {\def \inserttotalframenumber {30}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{0}{10}{31/31}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\beamer@partpages {1}{31}}
+\headcommand {\beamer@subsectionpages {22}{31}}
+\headcommand {\beamer@sectionpages {22}{31}}
+\headcommand {\beamer@documentpages {31}}
+\headcommand {\def \inserttotalframenumber {31}}

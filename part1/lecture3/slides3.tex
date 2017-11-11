@@ -142,7 +142,8 @@ $ apt |tail -n 1
 \end{frame}
 \begin{frame}[t]{Linux发行版}
 	\centering
-	\includegraphics[width=0.25\textwidth,angle=90]{distro-timeline.png}
+	placeholder for timeline
+	%\includegraphics[width=0.25\textwidth,angle=90]{distro-timeline.png}
 \end{frame}
 \begin{frame}[t]{典型Linux发行版}
 	\begin{block}{Debian}
@@ -167,7 +168,7 @@ Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多�
 		\begin{itemize}
 			\item Debian名字来源于发起人Ian Murdock和当时的女友Debra Lynn
 			\item Debian的版本号昵称来自玩具总动员
-			\item Debian的logo来自玩具总动员角色巴斯光年的胡子（存疑）\footfullcite{krafft2005debian}
+			\item Debian的logo来自玩具总动员角色巴斯光年的胡子（存疑）%\footfullcite{krafft2005debian}
 		\end{itemize}
 \end{block}
 \begin{minipage}{.5\textwidth}
@@ -317,15 +318,59 @@ Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多�
 \end{frame}
 \begin{frame}[t,fragile]{以Debian为例}
 	\begin{block}{Debian的依赖管理}
+		\scriptsize
 		\begin{verbatim}
 $debtree nano | dot -Tpng > nano.png
+digraph "nano" {
+  rankdir=LR;
+  node [shape=box];
+  "nano" -> "libncursesw5" [color=blue,label="(>= 6)"];
+  "libncursesw5" -> "libtinfo5" [color=blue,label="(= 6.0+20170902-1)"];
+  "libncursesw5" -> "libgpm2";
+  "nano" -> "libtinfo5" [color=blue,label="(>= 6)"];
+  "nano" -> "pico" [color=red];
+  "nano" [style="setlinewidth(2)"]
+  "pico" [style=filled,fillcolor=oldlace];
+}
+// Excluded dependencies:
+// libc6 zlib1g
+// total size of all shown packages: 3093504
+// download size of all shown packages: 976236
 \end{verbatim}
 	\end{block}
-	\includegraphics[width=0.25\textwidth]{nano.png}
+	
+\end{frame}
+\begin{frame}[t,fragile]{以Debian为例}
+	\begin{minipage}{0.5\textwidth}
+		\scriptsize
+\begin{verbatim}
+Package: nano
+Priority: standard
+Section: editors
+Installed-Size: 716
+Architecture: amd64
+Version: 2.6.3-1
+Replaces: pico
+Provides: editor
+Depends: libc6 (>= 2.14), libncursesw5 (>= 6), libtinfo5 (>= 6)
+Suggests: spell
+Conflicts: pico
+Description-en: small, friendly text editor inspired by Pico
+ GNU nano is an easy-to-use text editor originally designed 
+ as a replacement for Pico, the ncurses-based editor from 
+the non-free mailer package Pine (itself now available under 
+the Apache License as Alpine).
+\end{verbatim}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\vspace{-1in}
+	\includegraphics[width=0.8\textwidth]{nano.png}
+	\end{minipage}
 	
 \end{frame}
 \begin{frame}[t]{以Debian为例}
-	\includegraphics[width=0.8\textwidth]{vim.png}
+	placeholder for vim
+	%\includegraphics[width=0.8\textwidth]{vim.png}
 	
 \end{frame}
 \begin{frame}[t]{以Debian为例}

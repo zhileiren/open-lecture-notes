@@ -1,8 +1,27 @@
 \frametitle{以Debian为例}
-\begin{block}{Debian的依赖管理}
-^^I^^I\begin{verbatim}
-$debtree nano | dot -Tpng > nano.png
+\begin{minipage}{0.5\textwidth}
+^^I^^I\scriptsize
+\begin{verbatim}
+Package: nano
+Priority: standard
+Section: editors
+Installed-Size: 716
+Architecture: amd64
+Version: 2.6.3-1
+Replaces: pico
+Provides: editor
+Depends: libc6 (>= 2.14), libncursesw5 (>= 6), libtinfo5 (>= 6)
+Suggests: spell
+Conflicts: pico
+Description-en: small, friendly text editor inspired by Pico
+ GNU nano is an easy-to-use text editor originally designed
+ as a replacement for Pico, the ncurses-based editor from
+the non-free mailer package Pine (itself now available under
+the Apache License as Alpine).
 \end{verbatim}
-^^I\end{block}
-^^I\includegraphics[width=0.25\textwidth]{nano.png}
+^^I\end{minipage}
+^^I\begin{minipage}{0.5\textwidth}
+^^I^^I\vspace{-1in}
+^^I\includegraphics[width=0.8\textwidth]{nano.png}
+^^I\end{minipage}
 
