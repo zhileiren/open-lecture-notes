@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  14 NOV 2017 00:26
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  14 NOV 2017 06:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2326,7 +2326,7 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  <use  "../../utils/logo.jpg" > [35
 
 ]
-Overfull \vbox (4.92206pt too high) detected at line 476
+Overfull \vbox (4.92206pt too high) detected at line 487
  []
 
 File: ../../utils/logo.jpg Graphic file (type QTm)
@@ -2424,7 +2424,7 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 ]
 File: vim.png Graphic file (type QTm)
  <use  "vim.png" >
-Overfull \vbox (12.75974pt too high) detected at line 592
+Overfull \vbox (12.75974pt too high) detected at line 600
  []
 
 File: ../../utils/logo.jpg Graphic file (type QTm)
@@ -2433,7 +2433,7 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 ]
 File: framework.png Graphic file (type QTm)
  <use  "framework.png" >
-Overfull \hbox (7.26933pt too wide) in paragraph at lines 604--604
+Overfull \hbox (7.26933pt too wide) in paragraph at lines 612--612
 []$[]$ $[]$[] 
  []
 
@@ -2443,12 +2443,23 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 ]
 File: Bug-Life-Cycle.jpg Graphic file (type QTm)
  <use  "Bug-Life-Cycle.jpg" >
-Overfull \hbox (2.32138pt too wide) in paragraph at lines 619--619
+Overfull \hbox (2.32138pt too wide) in paragraph at lines 627--627
 []$[]$ $[]$ 
  []
 
 File: ../../utils/logo.jpg Graphic file (type QTm)
 <use  "../../utils/logo.jpg" > [47
+
+]
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [48
+
+]
+File: bugs-all.png Graphic file (type QTm)
+
+<use  "bugs-all.png" >
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [49
 
 ]
 \tf@nav=\write8
@@ -2460,11 +2471,11 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 \tf@snm=\write10
 \openout10 = `slides3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 620.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 620.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 650.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 650.
  (./slides3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 620.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 620.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 650.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 650.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2472,15 +2483,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package logreq Info: Writing requests to 'slides3.run.xml'.
 \openout1 = `slides3.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 620.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 650.
  ) 
 Here is how much of TeX's memory you used:
- 41650 strings out of 495232
- 814508 string characters out of 6180489
- 1175798 words of memory out of 5000000
- 44298 multiletter control sequences out of 15000+600000
+ 41656 strings out of 495232
+ 814568 string characters out of 6180489
+ 1175847 words of memory out of 5000000
+ 44303 multiletter control sequences out of 15000+600000
  35448 words of font info for 70 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  56i,17n,72p,10441b,3662s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides3.pdf (47 pages).
+Output written on slides3.pdf (49 pages).

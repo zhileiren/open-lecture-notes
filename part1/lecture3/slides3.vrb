@@ -1,4 +1,4 @@
-\frametitle{以Debian为例}
+\frametitle{Debian依赖管理}
 \begin{minipage}{0.5\textwidth}
 ^^I^^I\scriptsize
 \begin{verbatim}
