@@ -33,8 +33,8 @@
 \renewcommand*{\footnotesize}{\oldfootnotesize\tiny}
 
 \title[开源软件基础] 
-{开源软件仓库与开源软件生态}
-\subtitle{概念与历史}
+{开源软件基础}
+\subtitle{开源软件仓库与典型软件仓库结构}
 
 \author[Zhilei Ren] 
 {Zhilei Ren}
@@ -98,6 +98,24 @@ Dalian University of Technology
  \tableofcontents[currentsection]
  \end{frame}
 }
+\begin{frame}
+  \frametitle{温故知新}
+	\begin{block}
+		{}
+		\begin{itemize}
+			\item 开源软件许可证制度
+				\begin{itemize}
+					\item GPL、BSD、MIT等许可证协议
+					\item 许可证典型案例
+				\end{itemize}
+			\item 开源软件生态系统
+				\begin{itemize}
+					\item 全栈
+					\item 开源软件生态系统典型例子
+				\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
 \section{开源软件仓库介绍}
 \begin{frame}[t]{软件仓库}
 	\begin{block}{定义}
@@ -118,7 +136,8 @@ Many software publishers and other organizations maintain servers on the Interne
 
 \begin{frame}[t]{软件仓库}
 	\begin{block}{软件仓库的操作}
-Operators of such repositories typically provide a package management system, tools intended to search for, install and otherwise manipulate software packages from the repositories. For example, many Linux distributions use Advanced Packaging Tool (APT), commonly found in Debian based distributions, or yum found in Red Hat based distributions. There are also multiple independent package management systems, such as pacman, used in Arch Linux and equo, found in Sabayon Linux.
+		用户通过包管理器与软件仓库进行交互，功能包括搜索、安装、卸载、升级等功能。例如Debian及其衍生发行版的包管理器APT（Advanced Packaging Tool）、Red Hat及其衍生发行版的yum、Arch Linux的Pacman等等。
+%Operators of such repositories typically provide a package management system, tools intended to search for, install and otherwise manipulate software packages from the repositories. For example, many Linux distributions use Advanced Packaging Tool (APT), commonly found in Debian based distributions, or yum found in Red Hat based distributions. There are also multiple independent package management systems, such as pacman, used in Arch Linux and equo, found in Sabayon Linux.
 	\end{block}
 \end{frame}
 \begin{frame}[t,fragile]{今天就能开始用的小知识}
@@ -157,10 +176,28 @@ $ apt |tail -n 1
     \end{block}
 \end{frame}
 
-\begin{frame}[t]{Linux发行版}
+\begin{frame}
+  \frametitle{微观开源软件仓库}
+	微观角度，针对某个特定功能的软件所对应的所有信息，组织在一起构成的软件仓库，一般包括的信息包括：
+	\begin{itemize}
+		\item 源代码
+		\item 构建脚本，如Makefile、build.xml等
+		\item 帮助文档
+		\item 版本信息：如.git/，.hg/内用于版本控制的信息
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{以Python仓库为例}
+	\includegraphics[width=0.9\textwidth]{python.png}
+	
+\end{frame}
+
+\begin{frame}[t]{宏观开源软件仓库（Linux发行版为例）}
 	\centering
-	placeholder for timeline
-	%\includegraphics[width=0.25\textwidth,angle=90]{distro-timeline.png}
+	%placeholder for timeline
+	\includegraphics[width=0.25\textwidth,angle=90]{distro-timeline.png}
 \end{frame}
 \begin{frame}[t]{典型Linux发行版}
 	\begin{block}{Debian}
@@ -455,16 +492,45 @@ PyPI(Python Package Index)是python官方的第三方库的仓库，所有人都
     \end{block}
     
 \end{frame}
+
+\begin{frame}[t]{以Debian为例}
+	\begin{block}{Debian的基本结构}
+
+	\end{block}
+	\includegraphics[width=0.7\textwidth]{debian-dir.png}
+	
+\end{frame}
+
 \begin{frame}[t]{以Debian为例}
 	\begin{block}{Debian的发布周期}
+Debian主要分三个版本：稳定版本（stable）、测试版本（testing）、不稳定版本（unstable）。 目前的稳定版本为Debian Stretch，上一个稳定版本是 Jessie，不稳定版本永远为Debian sid。
+
+Debian 稳定版通常每隔两年发布一个版本，自发行后会得到为期约三年的正式支持，期间会不定期得到小版本更新与持续的安全更新以修复发现的重要问题。
+
+自Debian 6开始，Debian开始了长期支持计划，在每个稳定版三年支持期结束后由长期支持团队提供额外的两年安全更新支持，但不会发布小版本。故目前的稳定版可以得到总计五年的安全更新支持。
 
 	\end{block}
 	
 \end{frame}
 \begin{frame}[t]{以Debian为例}
+	\includegraphics[width=0.8\textwidth]{debian-timeline.png}
+	
+\end{frame}
+
+\begin{frame}[t]{以Debian为例}
 	\begin{block}{Debian的发布流程}
+正在开发中的软件会被上传到名为“不稳定”（unstable，代号sid）和“实验性”（experimental）的项目分支上。上传至“不稳定”分支上的软件通常是由软件的原开发者发布的稳定版本，但包含了一些未经测试的Debian内部的修改（例如软件的打包）。而未达到“不稳定”分支要求的软件会被置于“实验性”分支。
+
+一套软件在置于“不稳定”分支一段时间后（关乎软件修改的紧急性），该软件会自动被移至“测试”分支。但如果软件有严重错误被报告，或其所依存的软件未合乎“测试”分支的要求，该软件则不会被移至“测试”分支。
+
+当在“测试”分支中的软件Bug总数低于一特定数量后，“测试”分支会成为下一个稳定版本。
 
 	\end{block}
+	
+\end{frame}
+
+\begin{frame}[t]{以Debian为例}
+	\includegraphics[width=0.8\textwidth]{debian-package-cycle.png}
 	
 \end{frame}
 \begin{frame}[t,fragile]{以Debian为例}
@@ -520,14 +586,28 @@ the Apache License as Alpine).
 	
 \end{frame}
 \begin{frame}[t]{以Debian为例}
-	placeholder for vim
-	%\includegraphics[width=0.8\textwidth]{vim.png}
+	%placeholder for vim
+	\includegraphics[width=0.8\textwidth]{vim.png}
 	
 \end{frame}
+
+\begin{frame}[t]{以Debian为例}
+	\begin{minipage}
+		{0.5\textwidth}
+		Debian软件包的安装、升级和卸载可以建模为经典的可满足问题（Satisfiability），并且是多目标问题，如最小化安装文件数、最小化无法升级软件数、最小化新软件包个数等等。这些目标之间可能存在冲突。
+	\end{minipage}
+	\begin{minipage}
+		{0.5\textwidth}
+		\includegraphics[width=\textwidth]{framework.png}
+	\end{minipage}\footnote{Zhilei Ren, He Jiang, Jifeng Xuan, Yan Hu. Analyzing Inter-objective Relationships: A Case Study of Software Upgradability. Proceedings of PPSN 2016, Edinburgh, Scotland, UK. September 17-21, 2016, pp. 442-452.}
+	
+\end{frame}
+
 \begin{frame}[t]{以Debian为例}
     \begin{minipage}
         {0.5\textwidth}
 	\begin{block}{Debian的Bug管理}
+		Debian的缺陷使用BTS系统（Bug Tracking System）进行管理。一个新的缺陷在报告后会经历NEW、ACCEPT、RESOLVED等流转状态，直至最终修复并且验证。
 
 	\end{block}
     \end{minipage}
@@ -535,12 +615,6 @@ the Apache License as Alpine).
         {0.5\textwidth}
     \includegraphics[width=\textwidth]{Bug-Life-Cycle.jpg}
     \end{minipage}
-	
-\end{frame}
-\begin{frame}[t]{以Debian为例}
-	\begin{block}{Debian的基本结构}
-
-	\end{block}
 	
 \end{frame}
 \end{document}
