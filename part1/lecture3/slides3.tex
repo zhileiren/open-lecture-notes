@@ -121,8 +121,8 @@ Many software publishers and other organizations maintain servers on the Interne
 Operators of such repositories typically provide a package management system, tools intended to search for, install and otherwise manipulate software packages from the repositories. For example, many Linux distributions use Advanced Packaging Tool (APT), commonly found in Debian based distributions, or yum found in Red Hat based distributions. There are also multiple independent package management systems, such as pacman, used in Arch Linux and equo, found in Sabayon Linux.
 	\end{block}
 \end{frame}
-\begin{frame}[t,fragile]{APT梗}
-	\begin{block}{今天就能开始用的小知识}
+\begin{frame}[t,fragile]{今天就能开始用的小知识}
+	\begin{block}{APT梗}
 	\scriptsize
 	\begin{verbatim}
 $apt moo
@@ -140,6 +140,23 @@ $ apt |tail -n 1
 \end{verbatim}
 \end{block}
 \end{frame}
+\begin{frame}[t]{软件仓库分类}
+    \begin{block}
+        {按类型分}
+        \begin{itemize}
+            \item 综合类：如Apache、Mozilla等基金会主导的仓库
+            \item 针对特定语言：如CRAN、CPAN、Pypi
+        \end{itemize}
+    \end{block}
+    \begin{block}
+        {按粒度分}
+        \begin{itemize}
+            \item 微观：Pypi中的某个包、Apache下的子项目
+            \item 宏观：GNU/Linux发行版，如Debian、Ubuntu
+        \end{itemize}
+    \end{block}
+\end{frame}
+
 \begin{frame}[t]{Linux发行版}
 	\centering
 	placeholder for timeline
@@ -246,35 +263,53 @@ Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多�
 \end{frame}
 \begin{frame}[t]{典型Linux发行版}
 	\begin{block}{ArchLinux}
+        Arch Linux是朝向轻量以及简单的Linux发行版。其中“简单”被定义为“避免不必要或复杂的修改”，也就是说，是由开发者角度定义，而非用户角度思考。\footnote{\url{https://zh.wikipedia.org/zh-cn/Arch_Linux}}
+        \scriptsize
+        \begin{itemize}
+            \item 简洁：避免任何不必要的添加、修改和复杂增加。
+\item 现代：尽全力保持软件处于最新的稳定版本，采用滚动升级策略，安装之后可以持续升级。
+\item 实用：开发者依赖基于事实的技术分析和讨论，避免政治因素，不会被流行观点左右。仓库中既提供了开源、自由的软件，也提供了闭源软件。实用性大于意识形态。
+\item 以用户为中心：Arch Linux 适用于乐于自己动手的用户，他们愿意花时间阅读文档，解决自己的问题。
+        \end{itemize}
 	\end{block}
 		\centering
-		\includegraphics[width=0.25\textwidth]{archlinux.png}
+		\includegraphics[width=0.2\textwidth]{archlinux.png}
 \end{frame}
 \begin{frame}[t]{典型Linux发行版}
 	\begin{block}{Red Hat}
+Red Hat Linux是由Red Hat公司发行的一个Linux发行包。其1.0版本于1994年11月3日发行。虽然其历史不及Slackware般悠久，但比起很多的Linux发行包，Red Hat的历史悠久得多。Red Hat Linux中的RPM软件包格式可以说是Linux社区的一个事实标准，被广泛使用于其他Linux发行包中。
 
 	\end{block}
 		\centering
-		\includegraphics[width=0.25\textwidth]{redhat.jpg}
+		\includegraphics[width=0.2\textwidth]{redhat.jpg}
 \end{frame}
 \begin{frame}[t]{典型Linux发行版}
 	\begin{block}{Fedora}
+Fedora Linux是较具知名度的Linux发行包之一，由Fedora项目社区开发、红帽公司赞助，目标是创建一套新颖、多功能并且自由（开放源代码）的操作系统。
 
+Fedora对于用户而言，是一套功能完备、更新快速的免费操作系统；而对赞助者Red Hat公司而言，它是许多新技术的测试平台，被认为可用的技术最终会加入到Red Hat Enterprise Linux中。\footnote{\url{https://zh.wikipedia.org/zh-cn/Fedora}}
 	\end{block}
-		\centering
-		\includegraphics[width=0.25\textwidth]{fedora.jpg}
+    \begin{minipage}
+        {0.5\textwidth}
+		\includegraphics[width=0.5\textwidth]{fedora.jpg}
+    \end{minipage}
+    \begin{minipage}
+        {0.5\textwidth}
+		\includegraphics[width=0.5\textwidth]{Hat-Fedora.jpg}
+    \end{minipage}
 \end{frame}
 \begin{frame}[t]{典型Linux发行版}
 	\begin{block}{Gentoo}
-
+Gentoo Linux是一种Linux操作系统，基于Portage包管理系统，而拥有几乎无限制的适应性特性，被官方称作元发行版（meta-distribution），支持多达10种以上的电脑系统结构平台。此项目和它的产品以巴布亚企鹅命名。Gentoo包管理系统的设计是模块化、可移植、易维护、灵活以及针对用户机器优化的。
 	\end{block}
 		\centering
 		\includegraphics[width=0.25\textwidth]{gentoo.png}
 \end{frame}
 \begin{frame}[t]{特定语言仓库}
-    \begin{block}{Pypi\footnote{\url{http://kgullikson88.github.io/blog/pypi-analysis.html}}}
+    \begin{block}{Pypi}
+PyPI(Python Package Index)是python官方的第三方库的仓库，所有人都可以下载第三方库或上传自己开发的库到PyPI。PyPI推荐使用pip包管理器来下载第三方库。\footnote{\url{http://kgullikson88.github.io/blog/pypi-analysis.html}}
 	\end{block}
-	\includegraphics[width=0.45\textwidth]{pypi2.png}
+	\includegraphics[width=0.35\textwidth]{pypi2.png}
 \end{frame}
 \begin{frame}[t]{特定语言仓库}
 	\begin{block}{CRAN}
@@ -490,9 +525,16 @@ the Apache License as Alpine).
 	
 \end{frame}
 \begin{frame}[t]{以Debian为例}
+    \begin{minipage}
+        {0.5\textwidth}
 	\begin{block}{Debian的Bug管理}
 
 	\end{block}
+    \end{minipage}
+    \begin{minipage}
+        {0.5\textwidth}
+    \includegraphics[width=\textwidth]{Bug-Life-Cycle.jpg}
+    \end{minipage}
 	
 \end{frame}
 \begin{frame}[t]{以Debian为例}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  11 NOV 2017 21:14
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  13 NOV 2017 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2166,16 +2166,21 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [7
 
 ]
-File: debian.png Graphic file (type bmp)
-<debian.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [8
 
 ]
+File: debian.png Graphic file (type bmp)
+<debian.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [9
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [10
 
 ]
 File: buzz.jpg Graphic file (type bmp)
@@ -2183,29 +2188,24 @@ File: buzz.jpg Graphic file (type bmp)
 File: officiallogo-100.jpg Graphic file (type bmp)
 <officiallogo-100.jpg>
 
-Overfull \hbox (2.32138pt too wide) in paragraph at lines 182--182
+Overfull \hbox (2.32138pt too wide) in paragraph at lines 199--199
 []$[]$ $[]$ 
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[10
+[11
 
 ]
 File: debian-toystory.jpg Graphic file (type bmp)
 <debian-toystory.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [11
+ [12
 
 ]
 File: ubuntu.png Graphic file (type bmp)
 <ubuntu.png>
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [12
-
-]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [13
@@ -2216,64 +2216,75 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [14
 
 ]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [15
+
+]
 File: archlinux.png Graphic file (type bmp)
 <archlinux.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [15
+ [16
 
 ]
 File: redhat.jpg Graphic file (type bmp)
 <redhat.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [16
+ [17
 
 ]
 File: fedora.jpg Graphic file (type bmp)
 <fedora.jpg>
+File: Hat-Fedora.jpg Graphic file (type bmp)
+<Hat-Fedora.jpg>
+
+Overfull \hbox (2.32138pt too wide) in paragraph at lines 300--300
+[]$[]$ $[]$ 
+ []
+
+
+Overfull \vbox (4.85863pt too high) detected at line 300
+ []
+
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [17
+[18
 
 ]
 File: gentoo.png Graphic file (type bmp)
 <gentoo.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [18
+ [19
 
 ]
 File: pypi2.png Graphic file (type bmp)
 <pypi2.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [19
+ [20
 
 ]
 File: r.png Graphic file (type bmp)
 <r.png>
 
-Overfull \vbox (7.11047pt too high) detected at line 286
+Overfull \vbox (7.11047pt too high) detected at line 321
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[20
+[21
 
 ]
 File: map-of-cpan.png Graphic file (type bmp)
 <map-of-cpan.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [21
-
-] (./slides3.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [22
 
-]
+] (./slides3.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [23
@@ -2319,17 +2330,17 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [31
 
 ]
-Overfull \vbox (1.92206pt too high) detected at line 404
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [32
+
+]
+Overfull \vbox (1.92206pt too high) detected at line 439
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[32
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [33
+[33
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2340,6 +2351,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [35
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [36
 
 ]
 \openout4 = `slides3.vrb'.
@@ -2353,7 +2369,7 @@ Overfull \hbox (3.30486pt too wide) in paragraph at lines 10--10
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [36
+ [37
 
 ]
 \openout4 = `slides3.vrb'.
@@ -2396,11 +2412,6 @@ Overfull \hbox (2.32138pt too wide) in paragraph at lines 2--27
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [37
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [38
 
 ]
@@ -2409,9 +2420,21 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [39
 
 ]
+File: Bug-Life-Cycle.jpg Graphic file (type bmp)
+<Bug-Life-Cycle.jpg>
+
+Overfull \hbox (2.32138pt too wide) in paragraph at lines 539--539
+[]$[]$ $[]$ 
+ []
+
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [40
+[40
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [41
 
 ]
 \tf@nav=\write8
@@ -2423,11 +2446,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write10
 \openout10 = `slides3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 504.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 504.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 546.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 546.
  (./slides3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 504.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 504.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 546.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 546.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2437,12 +2460,12 @@ Package logreq Info: Writing requests to 'slides3.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42239 strings out of 494499
- 828003 string characters out of 6165137
- 1276881 words of memory out of 5000000
- 45521 multiletter control sequences out of 15000+600000
+ 42327 strings out of 494499
+ 833824 string characters out of 6165137
+ 1277905 words of memory out of 5000000
+ 45607 multiletter control sequences out of 15000+600000
  561531 words of font info for 74 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  50i,15n,62p,10441b,3660s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides3.pdf (40 pages).
+Output written on slides3.pdf (41 pages).
