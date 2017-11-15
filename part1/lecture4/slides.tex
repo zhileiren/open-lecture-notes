@@ -29,7 +29,7 @@
 
 \title[开源软件基础] 
 {开源软件基础}
-\subtitle{概念与历史}
+\subtitle{Python基础}
 
 \author[Zhilei Ren] 
 {Zhilei Ren}
@@ -132,9 +132,9 @@ Dalian University of Technology
 	\frametitle{第一个Python程序}
 	\scriptsize
 \begin{verbatim}
-$ipython
-Python 2.7.13 (default, Jan 19 2017, 14:48:08)
-Type "copyright", "credits" or "license" for more information.
+$ipython3
+ython 3.5.2+ (default, Sep 22 2016, 12:18:14)
+Type ``copyright'', ``credits'' or ``license'' for more information.
 
 IPython 5.1.0 -- An enhanced Interactive Python.
 ?         -> Introduction and overview of IPython's features.
@@ -143,6 +143,7 @@ help      -> Python's own help system.
 object?   -> Details about 'object', use 'object??' for extra details.
 
 In [1]:
+
 \end{verbatim}
 
 
@@ -152,7 +153,7 @@ In [1]:
 	\frametitle{第一个Python程序}
 	\scriptsize
 \begin{verbatim}
-In [1]: print "Hello world"
+In [1]: print("Hello world")
 Hello world
 
 In [2]: print 1 + 2
@@ -164,4 +165,52 @@ In [3]:
 \end{frame}
 
 
+\section{变量、类型、基本流程控制} % (fold)
+\label{sec:变量、类型、基本流程控制}
+
+% section 变量、类型、基本流程控制 (end)
+\section{函数} % (fold)
+\label{sec:函数}
+
+% section 函数 (end)
+\section{递归} % (fold)
+\label{sec:递归}
+\begin{frame}
+  \frametitle{递归}
+	\huge
+	To understand recursion, first you have to understand recursion.
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{阶乘}
+\begin{verbatim}
+def factorial(n):
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{}
+\begin{verbatim}
+import turtle
+
+def tree(length,n):
+    """ paints a branch of a tree """
+    if length < (length/n):
+           return                 # 边界条件
+    turtle.forward(length)        # 主干
+    turtle.left(45)               # 左转分叉 
+    tree(length * 0.5,length/n)   # 左子树
+    turtle.right(90)              # 右转分叉
+    tree(length * 0.5,length/n)   # 右子树
+    turtle.left(45)               # 转回
+    turtle.backward(length)       # 回到起点
+    return                        # 返回
+\end{verbatim}
+\end{frame}
+
+% section 递归 (end)
 \end{document}
