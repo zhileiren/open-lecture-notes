@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  15 NOV 2017 15:38
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  15 NOV 2017 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1857,6 +1857,14 @@ File: logo.jpg Graphic file (type bmp)
  [2
 
 ]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 106.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [3
@@ -1867,19 +1875,13 @@ File: logo.jpg Graphic file (type bmp)
  [4
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 113.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [5
 
 ]
+File: jupyter.png Graphic file (type bmp)
+<jupyter.png>
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [6
@@ -1887,10 +1889,10 @@ File: logo.jpg Graphic file (type bmp)
 ]
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
- [7
 
-]
-(./slides.toc)
+[7
+
+] (./slides.toc)
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [8
@@ -1926,28 +1928,28 @@ File: logo.jpg Graphic file (type bmp)
 ]
 File: Ucblogo.png Graphic file (type bmp)
 <Ucblogo.png>
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 181.
-LaTeX Font Info:    No file TUptm.fd. on input line 181.
+LaTeX Font Info:    Try loading font information for TU+ptm on input line 197.
+LaTeX Font Info:    No file TUptm.fd. on input line 197.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 181.
+(Font)              using `TU/lmr/m/n' instead on input line 197.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 181.
+LaTeX Font Info:    Try loading font information for U+msa on input line 197.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 181.
+LaTeX Font Info:    Try loading font information for U+msb on input line 197.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 181.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 197.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 181.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 197.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 181.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 197.
 File: ucblogo-gui.png Graphic file (type bmp)
 <ucblogo-gui.png>
 File: logo.jpg Graphic file (type bmp)
@@ -2010,21 +2012,21 @@ File: logo.jpg Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 247.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 247.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 263.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 263.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 36387 strings out of 492998
- 717806 string characters out of 6136604
- 801396 words of memory out of 5000000
- 39802 multiletter control sequences out of 15000+600000
+ 36419 strings out of 492998
+ 719945 string characters out of 6136604
+ 801852 words of memory out of 5000000
+ 39833 multiletter control sequences out of 15000+600000
  557021 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  56i,17n,62p,10440b,661s stack positions out of 5000i,500n,10000p,200000b,80000s
