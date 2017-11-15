@@ -96,9 +96,23 @@ Dalian University of Technology
 \section{Python环境安装}
 \begin{frame}
 	\frametitle{为什么选择Python}
+	\begin{itemize}
+		\item 流行
+		\item 简单（？）
+		\item 丰富的生态系统
+		\item 交互界面友好
+	\end{itemize}
+	
 \end{frame}
 \begin{frame}
 	\frametitle{Python版本}
+	\begin{itemize}
+		\item Python存在两个用途广泛的版本：2.x和3.x
+		\item 两者不完全兼容
+		\item Python 2.x分支版本在2020年将停止更新
+		\item Python 3对UTF-8支持更好
+		\item 很多公司/开源社区仍默认选择Python 2
+	\end{itemize}
 \end{frame}
 \begin{frame}
 	\frametitle{Python发行版}
@@ -113,6 +127,8 @@ Dalian University of Technology
 \end{frame}
 \begin{frame}
 	\frametitle{Jupyter Notebook}
+	\centering
+	\includegraphics[width=\linewidth]{jupyter.png}
 \end{frame}
 \begin{frame}
 	\frametitle{本学期将涉及的Python知识}
@@ -165,6 +181,37 @@ In [3]:
 \end{frame}
 
 
+\begin{frame}[t]{Python Turtle}
+	\begin{block}{Logo}
+Python Turtle受Logo语言启发而来。
+	\end{block}
+	\begin{minipage}
+		{0.45\textwidth}
+		\includegraphics[width=0.4\linewidth]{Ucblogo.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}
+		{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ucblogo-gui.png}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}[t,fragile]{Python Turtle}
+	\begin{verbatim}
+to tree :len :n
+  if :n < 1 [stop]
+  forward :len
+  left 45
+  tree (:len / 2) (:n - 1)
+  right 90
+  tree (:len / 2) (:n - 1)
+  left 45
+  back :len
+end
+
+\end{verbatim}
+	
+\end{frame}
 \section{变量、类型、基本流程控制} % (fold)
 \label{sec:变量、类型、基本流程控制}
 
@@ -200,7 +247,7 @@ import turtle
 def tree(length,n):
     """ paints a branch of a tree """
     if length < (length/n):
-           return                 # 边界条件
+        return                    # 边界条件
     turtle.forward(length)        # 主干
     turtle.left(45)               # 左转分叉 
     tree(length * 0.5,length/n)   # 左子树

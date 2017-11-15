@@ -5,7 +5,7 @@ import turtle
 def tree(length,n):
     """ paints a branch of a tree """
     if length < (length/n):
-           return                 # 边界条件
+        return                    # 边界条件
     turtle.forward(length)        # 主干
     turtle.left(45)               # 左转分叉
     tree(length * 0.5,length/n)   # 左子树
