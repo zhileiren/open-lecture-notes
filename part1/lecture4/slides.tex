@@ -165,6 +165,37 @@ In [3]:
 \end{frame}
 
 
+\begin{frame}[t]{Python Turtle}
+	\begin{block}{Logo}
+Python Turtle受Logo语言启发而来。
+	\end{block}
+	\begin{minipage}
+		{0.45\textwidth}
+		\includegraphics[width=0.4\linewidth]{Ucblogo.png}
+	\end{minipage}
+	\hfill
+	\begin{minipage}
+		{0.5\textwidth}
+		\includegraphics[width=0.9\linewidth]{ucblogo-gui.png}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}[t,fragile]{Python Turtle}
+	\begin{verbatim}
+to tree :len :n
+  if :n < 1 [stop]
+  forward :len
+  left 45
+  tree (:len / 2) (:n - 1)
+  right 90
+  tree (:len / 2) (:n - 1)
+  left 45
+  back :len
+end
+
+\end{verbatim}
+	
+\end{frame}
 \section{变量、类型、基本流程控制} % (fold)
 \label{sec:变量、类型、基本流程控制}
 
@@ -200,7 +231,7 @@ import turtle
 def tree(length,n):
     """ paints a branch of a tree """
     if length < (length/n):
-           return                 # 边界条件
+        return                    # 边界条件
     turtle.forward(length)        # 主干
     turtle.left(45)               # 左转分叉 
     tree(length * 0.5,length/n)   # 左子树
