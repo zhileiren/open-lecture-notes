@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  15 NOV 2017 19:53
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  16 NOV 2017 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1938,35 +1938,713 @@ File: logo.jpg Graphic file (type QTm)
 
 <use  "logo.jpg" > [14
 
-] (./slides.toc)
+]
 File: logo.jpg Graphic file (type QTm)
  <use  "logo.jpg" > [15
 
 ]
-File: logo.jpg Graphic file (type QTm)
-
-<use  "logo.jpg" > [16
-
-]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
+ (./slides.vrb
+Overfull \hbox (51.90422pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 >>> 8 / 5  # division always returns a floating point numbe
+r[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [16
+
+]
 File: logo.jpg Graphic file (type QTm)
  <use  "logo.jpg" > [17
 
 ]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [18
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb
+Overfull \hbox (38.76424pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 >>> 17 // 3  # floor division discards the fractional part[
+] 
+ []
+
+
+Overfull \hbox (91.32417pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 >>> 17 % 3  # the % operator returns the remainder of the d
+ivision[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [19
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [20
+
+]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
 File: logo.jpg Graphic file (type QTm)
 
-<use  "logo.jpg" > [18
+<use  "logo.jpg" > [21
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [22
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [23
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [24
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [25
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [26
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [27
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [28
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [29
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [30
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [31
+
+]
+(./slides.toc)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [32
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [33
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (12.48427pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 >>> 'doesn\'t'  # use \' to escape the single quote...[] 
+ []
+
+)
+Overfull \vbox (17.51201pt too high) detected at line 480
+ []
+
+File: logo.jpg Graphic file (type QTm)
+<use  "logo.jpg" > [34
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [35
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (19.05426pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 >>> s = 'First line.\nSecond line.'  # \n means newline[] 
+ []
+
+
+Overfull \hbox (12.48427pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 >>> s  # without print(), \n is included in the output[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [36
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [37
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (32.19424pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 >>> print(r'C:\some\name')  # note the r before the quote[]
+ 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [38
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [39
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (32.19424pt too wide) in paragraph at lines 9--9
+[]     \T1/pcr/m/n/10.95 -h                        Display this usage message[]
+ 
+ []
+
+
+Overfull \hbox (5.91428pt too wide) in paragraph at lines 10--10
+[]     \T1/pcr/m/n/10.95 -H hostname               Hostname to connect to[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [40
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [41
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (32.19424pt too wide) in paragraph at lines 8--8
+[]     \T1/pcr/m/n/10.95 -h                        Display this usage message[]
+ 
+ []
+
+
+Overfull \hbox (5.91428pt too wide) in paragraph at lines 9--9
+[]     \T1/pcr/m/n/10.95 -H hostname               Hostname to connect to[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [42
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [43
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [44
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [45
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [46
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [47
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (117.60414pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 >>> prefix 'thon'  # can't concatenate a variable and a str
+ing literal[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [48
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [49
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [50
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [51
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (5.91428pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 >>> text = ('Put several strings within parentheses '[] 
+ []
+
+
+Overfull \hbox (117.60414pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 'Put several strings within parentheses to have them joined
+ together.'[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [52
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [53
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [54
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [55
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [56
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [57
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [58
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb
+Overfull \hbox (117.60414pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 >>> word[0:2]  # characters from position 0 (included) to 2
+ (excluded)[] 
+ []
+
+
+Overfull \hbox (117.60414pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 >>> word[2:5]  # characters from position 2 (included) to 5
+ (excluded)[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [59
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [60
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [61
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [62
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (117.60414pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 >>> word[:2]   # character from the beginning to position 2
+ (excluded)[] 
+ []
+
+
+Overfull \hbox (84.75418pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 >>> word[4:]   # characters from position 4 (included) to t
+he end[] 
+ []
+
+
+Overfull \hbox (117.60414pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 >>> word[-2:]  # characters from the second-last (included)
+ to the end[] 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [63
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [64
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [65
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [66
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [67
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [68
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [69
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [70
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [71
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [72
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (25.62425pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 TypeError: 'str' object does not support item assignment[] 
+
+ []
+
+
+Overfull \hbox (25.62425pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 TypeError: 'str' object does not support item assignment[] 
+
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [73
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [74
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [75
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [76
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [77
+
+] (./slides.toc)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [78
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [79
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [80
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [81
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [82
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [83
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [84
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [85
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [86
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [87
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (32.19424pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 >>> cubes = [1, 8, 27, 65, 125]  # something's wrong here[]
+ 
+ []
+
+)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [88
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [89
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [90
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [91
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (111.03415pt too wide) in paragraph at lines 18--18
+[]\T1/pcr/m/n/10.95 >>> # clear the list by replacing all the elements with an 
+empty list[] 
+ []
+
+)
+Overfull \vbox (58.31203pt too high) detected at line 1235
+ []
+
+File: logo.jpg Graphic file (type QTm)
+<use  "logo.jpg" > [92
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [93
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [94
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [95
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [96
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [97
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+Overfull \vbox (31.11201pt too high) detected at line 1326
+ []
+
+File: logo.jpg Graphic file (type QTm)
+<use  "logo.jpg" > [98
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [99
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [100
+
+]
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [101
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [102
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [103
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [104
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [105
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+<use  "logo.jpg" > [106
+
+] (./slides.toc)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [107
+
+] (./slides.toc)
+File: logo.jpg Graphic file (type QTm)
+<use  "logo.jpg" > [108
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [109
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+
+<use  "logo.jpg" > [110
+
+]
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [111
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1468.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1468.
+Missing character: There is no 分 in font pcrr8t!
+Missing character: There is no 形 in font pcrr8t!
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [112
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb)
+File: logo.jpg Graphic file (type QTm)
+ <use  "logo.jpg" > [113
 
 ]
 File: tree.png Graphic file (type QTm)
  <use  "tree.png" >
 File: logo.jpg Graphic file (type QTm)
- <use  "logo.jpg" > [19
+ <use  "logo.jpg" >
+[114
 
 ]
 \tf@nav=\write6
@@ -1978,25 +2656,24 @@ File: logo.jpg Graphic file (type QTm)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 269.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 269.
-
-(./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 269.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 269.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1495.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1495.
+ (./slides.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1495.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1495.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 269.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1495.
  ) 
 Here is how much of TeX's memory you used:
- 35640 strings out of 495232
- 698766 string characters out of 6180489
- 710362 words of memory out of 5000000
- 38361 multiletter control sequences out of 15000+600000
- 30930 words of font info for 62 fonts, out of 8000000 for 9000
+ 36056 strings out of 495232
+ 706674 string characters out of 6180489
+ 718158 words of memory out of 5000000
+ 38681 multiletter control sequences out of 15000+600000
+ 42264 words of font info for 79 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 56i,17n,72p,10440b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,72p,10440b,675s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (19 pages).
+Output written on slides.pdf (114 pages).

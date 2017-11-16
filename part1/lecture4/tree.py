@@ -16,7 +16,7 @@ def tree(len, n):
         turtle.backward(len)
 
 turtle.speed(0)
-tree(100, 9)
+tree(200, 9)
 turtle.hideturtle()
 ts = turtle.getscreen().getcanvas()
 canvasvg.saveall("tree.svg", ts)
