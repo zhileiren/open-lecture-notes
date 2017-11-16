@@ -1,10 +1,9 @@
-\beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {1}{Python环境安装}{2}{0}{1}
 \beamer@sectionintoc {2}{Hello world}{8}{0}{2}
 \beamer@sectionintoc {3}{变量、类型、基本流程控制}{13}{0}{3}
-\beamer@subsectionintoc {3}{1}{Numbers}{14}{0}{3}
-\beamer@subsectionintoc {3}{2}{Strings}{32}{0}{3}
-\beamer@subsectionintoc {3}{3}{Lists}{78}{0}{3}
-\beamer@sectionintoc {4}{函数}{107}{0}{4}
-\beamer@sectionintoc {5}{递归}{108}{0}{5}
+\beamer@subsectionintoc {3}{1}{数值}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{字符串}{26}{0}{3}
+\beamer@subsectionintoc {3}{3}{列表}{51}{0}{3}
+\beamer@sectionintoc {4}{函数}{63}{0}{4}
+\beamer@sectionintoc {5}{递归}{64}{0}{5}

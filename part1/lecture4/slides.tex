@@ -258,12 +258,14 @@ end
 \begin{frame}[t]{数值}
 
 	\begin{itemize}
-		\item 除法
+		\item 除法/返回浮点型
+        \item 整数除法用//
+        \item 求模用\%
+        \item 幂运算用 **
+        \item 赋值用=
+        \item 不赋值直接用报错
+        \item 混用整数浮点数类型提升
 	\end{itemize}
-
-Division (/) always returns a float.  To do floor division and
-get an integer result (discarding any fractional result) you can use the //
-operator; to calculate the remainder you can use \%:
 
 \end{frame}
 
@@ -291,13 +293,6 @@ operator; to calculate the remainder you can use \%:
 \end{frame}
 
 
-\begin{frame}[t]{数值}
-
-With Python, it is possible to use the ** operator to calculate powers [1]:
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{数值}
 
 
@@ -316,12 +311,6 @@ With Python, it is possible to use the ** operator to calculate powers [1]:
 \end{frame}
 
 
-\begin{frame}[t]{数值}
-
-The equal sign (=) is used to assign a value to a variable. Afterwards, no
-result is displayed before the next interactive prompt:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{数值}
@@ -342,12 +331,6 @@ result is displayed before the next interactive prompt:
 \end{frame}
 
 
-\begin{frame}[t]{数值}
-
-If a variable is not "defined" (assigned a value), trying to use it will
-give you an error:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{数值}
@@ -368,12 +351,6 @@ NameError: name 'n' is not defined
 \end{frame}
 
 
-\begin{frame}[t]{数值}
-
-There is full support for floating point; operators with mixed type operands
-convert the integer operand to floating point:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{数值}
@@ -394,9 +371,15 @@ convert the integer operand to floating point:
 
 \begin{frame}[t]{数值}
 
-In interactive mode, the last printed expression is assigned to the variable
-\_.  This means that when you are using Python as a desk calculator, it is
-somewhat easier to continue calculations, for example:
+\begin{itemize}
+    \item 交互模式下\_是特殊变量
+    \item 上一次计算的结果
+    \item 类似bash的\$?或cmd的\%errorlevel\%
+    \item 做计算器很方便
+    \item 非交互模式不能用
+    \item 默认交互环境（非ipython）下赋值会覆盖
+    \item 除了整数、浮点数，也支持复数
+\end{itemize}
 
 \end{frame}
 
@@ -423,32 +406,42 @@ somewhat easier to continue calculations, for example:
 \end{frame}
 
 
-\begin{frame}[t]{数值}
-
-This variable should be treated as read-only by the user.  Don't explicitly
-assign a value to it --- you would create an independent local variable with the
-same name masking the built-in variable with its magic behavior.
-
-\end{frame}
+\begin{frame}[t,fragile]{数值}
 
 
-\begin{frame}[t]{数值}
+\begin{verbatim}
+ $cat b.py
+ #!/usr/bin/python3
+ def foo():
+     return 3
+     
+ foo()
+ print(_)
+     
+$ python3 b.py
+Traceback (most recent call last):
+  File ``b.py'', line 7, in <module>
+    print(_)
+NameError: name '_' is not defined
 
-In addition to int and float, Python supports other types of
-numbers, such as ~decimal.Decimal and ~fractions.Fraction.
-Python also has built-in support for complex numbers <typesnumeric>,
-and uses the j or J suffix to indicate the imaginary part
-(e.g. 3+5j).
+\end{verbatim}
+
 
 \end{frame}
 \subsection{字符串}
 
 \begin{frame}[t]{字符串}
 
-Besides numbers, Python can also manipulate strings, which can be expressed
-in several ways.  They can be enclosed in single quotes ('...') or
-double quotes ("...") with the same result [2].  \textbackslash  can be used
-to escape quotes:
+    \begin{itemize}
+        \item 除了数值，Python同样支持字符串
+        \item 可以用单引号
+        \item 也可以用双引号
+        \item 没有区别
+        \item \textbackslash{} 用于转义
+        \item 用r省去转义（raw）
+        \item """...""" 或 '{}'{}'...'{}'{}'支持换行 
+        \item \textbackslash{} 忽略回车
+    \end{itemize}
 
 \end{frame}
 
@@ -479,18 +472,6 @@ to escape quotes:
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-In the interactive interpreter, the output string is enclosed in quotes and
-special characters are escaped with backslashes.  While this might sometimes
-look different from the input (the enclosing quotes could change), the two
-strings are equivalent.  The string is enclosed in double quotes if
-the string contains a single quote and no double quotes, otherwise it is
-enclosed in single quotes.  The print function produces a more
-readable output, by omitting the enclosing quotes and by printing escaped
-and special characters:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{字符串}
@@ -517,15 +498,6 @@ Second line.
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-If you don't want characters prefaced by \textbackslash  to be interpreted as
-special characters, you can use raw strings by adding an r before
-the first quote:
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{字符串}
 
 
@@ -544,15 +516,6 @@ C:\some\name
 
 \end{frame}
 
-
-\begin{frame}[t]{字符串}
-
-String literals can span multiple lines.  One way is using triple-quotes:
-"""...""" or '''...'''.  End of lines are automatically
-included in the string, but it's possible to prevent this by adding a \textbackslash  at
-the end of the line.  The following example:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{字符串}
@@ -573,35 +536,16 @@ Usage: thingy [OPTIONS]
 
 \end{frame}
 
-
 \begin{frame}[t]{字符串}
 
-produces the following output (note that the initial newline is not included):
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{字符串}
-
-
-\begin{verbatim}
-
-
-Usage: thingy [OPTIONS]
-     -h                        Display this usage message
-     -H hostname               Hostname to connect to
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{字符串}
-
-Strings can be concatenated (glued together) with the + operator, and
-repeated with *:
+\begin{itemize}
+    \item 加号拼接字符串
+    \item 乘号重复字符串
+    \item 字符串常量直接拼接
+    \item 字符串可下标
+    \item 0起始，-1最后
+    \item :用于切片，左闭右开
+\end{itemize}
 
 \end{frame}
 
@@ -623,13 +567,6 @@ repeated with *:
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-Two or more string literals (i.e. the ones enclosed between quotes) next
-to each other are automatically concatenated.
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{字符串}
 
@@ -643,13 +580,6 @@ to each other are automatically concatenated.
 
 \end{verbatim}
 
-
-\end{frame}
-
-
-\begin{frame}[t]{字符串}
-
-This only works with two literals though, not with variables or expressions:
 
 \end{frame}
 
@@ -675,13 +605,6 @@ SyntaxError: invalid syntax
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-If you want to concatenate variables or a variable and a literal, use +:
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{字符串}
 
 
@@ -694,13 +617,6 @@ If you want to concatenate variables or a variable and a literal, use +:
 
 \end{verbatim}
 
-
-\end{frame}
-
-
-\begin{frame}[t]{字符串}
-
-This feature is particularly useful when you want to break long strings:
 
 \end{frame}
 
@@ -723,14 +639,6 @@ This feature is particularly useful when you want to break long strings:
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-Strings can be indexed (subscripted), with the first character having index 0.
-There is no separate character type; a character is simply a string of size
-one:
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{字符串}
 
@@ -750,12 +658,6 @@ one:
 
 \end{frame}
 
-
-\begin{frame}[t]{字符串}
-
-Indices may also be negative numbers, to start counting from the right:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{字符串}
@@ -778,20 +680,6 @@ Indices may also be negative numbers, to start counting from the right:
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-Note that since -0 is the same as 0, negative indices start from -1.
-
-\end{frame}
-
-
-\begin{frame}[t]{字符串}
-
-In addition to indexing, slicing is also supported.  While indexing is used
-to obtain individual characters, slicing allows you to obtain substring:
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{字符串}
 
@@ -811,12 +699,6 @@ to obtain individual characters, slicing allows you to obtain substring:
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-Note how the start is always included, and the end always excluded.  This
-makes sure that s[:i] + s[i:] is always equal to s:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{字符串}
@@ -837,12 +719,6 @@ makes sure that s[:i] + s[i:] is always equal to s:
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-Slice indices have useful defaults; an omitted first index defaults to zero, an
-omitted second index defaults to the size of the string being sliced.
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{字符串}
@@ -865,15 +741,6 @@ omitted second index defaults to the size of the string being sliced.
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-One way to remember how slices work is to think of the indices as pointing
-between characters, with the left edge of the first character numbered 0.
-Then the right edge of the last character of a string of n characters has
-index n, for example:
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{字符串}
 
@@ -894,30 +761,7 @@ index n, for example:
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
 
-The first row of numbers gives the position of the indices 0...6 in the string;
-the second row gives the corresponding negative indices. The slice from i to
-j consists of all characters between the edges labeled i and j,
-respectively.
-
-\end{frame}
-
-
-\begin{frame}[t]{字符串}
-
-For non-negative indices, the length of a slice is the difference of the
-indices, if both are within bounds.  For example, the length of word[1:3] is
-2.
-
-\end{frame}
-
-
-\begin{frame}[t]{字符串}
-
-Attempting to use an index that is too large will result in an error:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{字符串}
@@ -937,13 +781,6 @@ IndexError: string index out of range
 
 \end{frame}
 
-
-\begin{frame}[t]{字符串}
-
-However, out of range slice indexes are handled gracefully when used for
-slicing:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{字符串}
@@ -966,8 +803,10 @@ slicing:
 
 \begin{frame}[t]{字符串}
 
-Python strings cannot be changed --- they are immutable.
-Therefore, assigning to an indexed position in the string results in an error:
+    \begin{itemize}
+        \item Python字符串是不可变的，与Java类似
+        \item len返回长度，类比strlen
+    \end{itemize}
 
 \end{frame}
 
@@ -991,12 +830,6 @@ TypeError: 'str' object does not support item assignment
 
 \end{frame}
 
-
-\begin{frame}[t]{字符串}
-
-If you need a different string, you should create a new one:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{字符串}
@@ -1043,10 +876,20 @@ The built-in function len returns the length of a string:
 
 \begin{frame}[t]{列表}
 
-Python knows a number of compound data types, used to group together other
-values.  The most versatile is the list, which can be written as a list of
-comma-separated values (items) between square brackets.  Lists might contain
-items of different types, but usually the items all have the same type.
+\begin{itemize}
+    \item Python支持若干数据类型
+    \item 最常见的是列表
+    \item 与数组类似
+    \item 允许元素类型不同
+    \item 和字符串类似，可下标可切片
+    \item 加法和乘法也和字符串类似
+    \item len返回长度
+    \item 与字符串不同的，列表是可变的
+    \item append方法用于追加
+    \item 多维数组用嵌套列表实现
+        
+\end{itemize}
+
 
 \end{frame}
 
@@ -1064,14 +907,6 @@ items of different types, but usually the items all have the same type.
 
 \end{verbatim}
 
-
-\end{frame}
-
-
-\begin{frame}[t]{列表}
-
-Like strings (and all other built-in sequence type), lists can be
-indexed and sliced:
 
 \end{frame}
 
@@ -1095,15 +930,6 @@ indexed and sliced:
 
 \end{frame}
 
-
-\begin{frame}[t]{列表}
-
-All slice operations return a new list containing the requested elements.  This
-means that the following slice returns a new (shallow) copy of the list:
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{列表}
 
 
@@ -1120,11 +946,6 @@ means that the following slice returns a new (shallow) copy of the list:
 \end{frame}
 
 
-\begin{frame}[t]{列表}
-
-Lists also support operations like concatenation:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{列表}
@@ -1142,13 +963,6 @@ Lists also support operations like concatenation:
 
 \end{frame}
 
-
-\begin{frame}[t]{列表}
-
-Unlike strings, which are immutable, lists are a mutable
-type, i.e. it is possible to change their content:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{列表}
@@ -1171,12 +985,6 @@ type, i.e. it is possible to change their content:
 \end{frame}
 
 
-\begin{frame}[t]{列表}
-
-You can also add new items at the end of the list, by using
-the ~list.append method (we will see more about methods later):
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{列表}
@@ -1197,50 +1005,6 @@ the ~list.append method (we will see more about methods later):
 \end{frame}
 
 
-\begin{frame}[t]{列表}
-
-Assignment to slices is also possible, and this can even change the size of the
-list or clear it entirely:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{列表}
-
-
-\begin{verbatim}
-
-
->>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
->>> letters
-['a', 'b', 'c', 'd', 'e', 'f', 'g']
->>> # replace some values
->>> letters[2:5] = ['C', 'D', 'E']
->>> letters
-['a', 'b', 'C', 'D', 'E', 'f', 'g']
->>> # now remove them
->>> letters[2:5] = []
->>> letters
-['a', 'b', 'f', 'g']
->>> # clear the list by replacing all the elements with an empty list
->>> letters[:] = []
->>> letters
-[]
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{列表}
-
-The built-in function len also applies to lists:
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{列表}
 
 
@@ -1254,14 +1018,6 @@ The built-in function len also applies to lists:
 
 \end{verbatim}
 
-
-\end{frame}
-
-
-\begin{frame}[t]{列表}
-
-It is possible to nest lists (create lists containing other lists), for
-example:
 
 \end{frame}
 
@@ -1289,7 +1045,7 @@ example:
 \end{frame}
 
 
-\begin{frame}[t]{First Steps Towards Programming}
+\begin{frame}[t]{流程控制初步}
 
 Of course, we can use Python for more complicated tasks than adding two and two
 together.  For instance, we can write an initial sub-sequence of the Fibonacci
@@ -1298,7 +1054,7 @@ series as follows:
 \end{frame}
 
 
-\begin{frame}[t,fragile]{First Steps Towards Programming}
+\begin{frame}[t,fragile]{流程控制初步}
 
 
 \begin{verbatim}
@@ -1323,111 +1079,6 @@ series as follows:
 
 
 \end{frame}
-
-
-\begin{frame}[t]{First Steps Towards Programming}
-
-This example introduces several new features.
-
-\end{frame}
-
-
-\begin{frame}[t]{First Steps Towards Programming}
-
-The first line contains a multiple assignment: the variables a and b
-simultaneously get the new values 0 and 1.  On the last line this is used again,
-demonstrating that the expressions on the right-hand side are all evaluated
-first before any of the assignments take place.  The right-hand side expressions
-are evaluated  from the left to the right.
-
-\end{frame}
-
-
-\begin{frame}[t]{First Steps Towards Programming}
-
-The while loop executes as long as the condition (here: b < 10)
-remains true.  In Python, like in C, any non-zero integer value is true; zero is
-false.  The condition may also be a string or list value, in fact any sequence;
-anything with a non-zero length is true, empty sequences are false.  The test
-used in the example is a simple comparison.  The standard comparison operators
-are written the same as in C: < (less than), > (greater than), ==
-(equal to), <= (less than or equal to), >= (greater than or equal to)
-and != (not equal to).
-
-\end{frame}
-
-
-\begin{frame}[t]{First Steps Towards Programming}
-
-The body of the loop is indented: indentation is Python's way of grouping
-statements.  At the interactive prompt, you have to type a tab or space(s) for
-each indented line.  In practice you will prepare more complicated input
-for Python with a text editor; all decent text editors have an auto-indent
-facility.  When a compound statement is entered interactively, it must be
-followed by a blank line to indicate completion (since the parser cannot
-guess when you have typed the last line).  Note that each line within a basic
-block must be indented by the same amount.
-
-\end{frame}
-
-
-\begin{frame}[t]{First Steps Towards Programming}
-
-The print function writes the value of the argument(s) it is given.
-It differs from just writing the expression you want to write (as we did
-earlier in the calculator examples) in the way it handles multiple arguments,
-floating point quantities, and strings.  Strings are printed without quotes,
-and a space is inserted between items, so you can format things nicely, like
-this:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{First Steps Towards Programming}
-
-
-\begin{verbatim}
-
-
->>> i = 256*256
->>> print('The value of i is', i)
-The value of i is 65536
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{First Steps Towards Programming}
-
-The keyword argument end can be used to avoid the newline after the output,
-or end the output with a different string:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{First Steps Towards Programming}
-
-
-\begin{verbatim}
-
-
->>> a, b = 0, 1
->>> while b < 1000:
-...     print(b, end=',')
-...     a, b = b, a+b
-...
-1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
 
 % section 变量、类型、基本流程控制 (end)
 \section{函数} % (fold)
