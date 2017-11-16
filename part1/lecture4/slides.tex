@@ -102,7 +102,61 @@ Dalian University of Technology
 		\item 丰富的生态系统
 		\item 交互界面友好
 	\end{itemize}
+\end{frame}
+\begin{frame}[t,fragile]
+  \frametitle{所谓Zen of Python}
+	\scriptsize
+\begin{verbatim}
+In [1]: import this
+The Zen of Python, by Tim Peters
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+\end{verbatim}
 	
+\end{frame}
+\begin{frame}
+  \frametitle{Python之禅}
+	\scriptsize
+	\begin{block}
+		　　{Python之禅 by Tim Peters}
+		\begin{itemize}
+\item    优美胜于丑陋（Python 以编写优美的代码为目标）
+\item    明了胜于晦涩（优美的代码应当是明了的，命名规范，风格相似）
+\item    简洁胜于复杂（优美的代码应当是简洁的，不要有复杂的内部实现）
+\item    复杂胜于凌乱（如果复杂不可避免，那代码间也不能有难懂的关系，要保持接口简洁）
+\item    扁平胜于嵌套（优美的代码应当是扁平的，不能有太多的嵌套）
+\item    间隔胜于紧凑（优美的代码有适当的间隔，不要奢望一行代码解决问题）
+\item    可读性很重要（优美的代码是可读的）
+\item    即便假借特例的实用性之名，也不可违背这些规则（这些规则至高无上）
+\item    不要包容所有错误，除非你确定需要这样做（精准地捕获异常，不写 except:pass）
+\item    当存在多种可能，不要尝试去猜测
+\item    而是尽量找一种，最好是唯一一种明显的解决方案（如果不确定，就用穷举法）
+\item    虽然这并不容易，因为你不是 Python 之父（这里的 Dutch 是指 Guido ）
+\item    做也许好过不做，但不假思索就动手还不如不做（动手之前要细思量）
+\item    如果你无法向人描述你的方案，那肯定不是一个好方案；反之亦然（方案测评标准）
+\item    命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）
+\item \url{http://blog.csdn.net/gzlaiyonghao}
+		\end{itemize}
+		
+	\end{block}
+
 \end{frame}
 \begin{frame}
 	\frametitle{Python版本}
@@ -850,12 +904,6 @@ TypeError: 'str' object does not support item assignment
 \end{frame}
 
 
-\begin{frame}[t]{字符串}
-
-The built-in function len returns the length of a string:
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{字符串}
 
@@ -1045,34 +1093,101 @@ The built-in function len returns the length of a string:
 \end{frame}
 
 
-\begin{frame}[t]{流程控制初步}
 
-Of course, we can use Python for more complicated tasks than adding two and two
-together.  For instance, we can write an initial sub-sequence of the Fibonacci
-series as follows:
+\subsection{基本流程控制}
+\begin{frame}[t]{if Statements}
+
+
+	\begin{itemize}
+		\item if用于分支
+		\item True/False表示真假
+		\item None/False/0/''/()/[]/\{\}会判定为假
+		\item 可以有任意多个elif分支
+		\item 缩进代表嵌套深度
+	\end{itemize}
 
 \end{frame}
 
 
-\begin{frame}[t,fragile]{流程控制初步}
+\begin{frame}[t,fragile]{if Statements}
 
 
 \begin{verbatim}
 
 
->>> # Fibonacci series:
-... # the sum of two elements defines the next
-... a, b = 0, 1
->>> while b < 10:
-...     print(b)
-...     a, b = b, a+b
+>>> x = int(input("Please enter an integer: "))
+Please enter an integer: 42
+>>> if x < 0:
+...     x = 0
+...     print('Negative changed to zero')
+... elif x == 0:
+...     print('Zero')
+... elif x == 1:
+...     print('Single')
+... else:
+...     print('More')
 ...
-1
+More
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{for Statements}
+
+	\begin{itemize}
+		\item for用于循环
+		\item 可以在列表、字符串上遍历
+		\item 可以用range生成遍历序列
+		\item range左闭右开
+		\item range在Python3中不返回列表，可用list(range())习语
+		\item 缩进代表嵌套深度
+	\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{for Statements}
+
+
+\begin{verbatim}
+
+
+>>> # Measure some strings:
+... words = ['cat', 'window', 'defenestrate']
+>>> for w in words:
+...     print(w, len(w))
+...
+cat 3
+window 6
+defenestrate 12
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}[t,fragile]{The range Function}
+
+
+\begin{verbatim}
+
+
+>>> for i in range(5):
+...     print(i)
+...
+0
 1
 2
 3
-5
-8
+4
 
 
 \end{verbatim}
@@ -1083,6 +1198,37 @@ series as follows:
 % section 变量、类型、基本流程控制 (end)
 \section{函数} % (fold)
 \label{sec:函数}
+
+\begin{frame}
+  \frametitle{函数定义}
+	\begin{itemize}
+		\item def开头，代表定义函数
+		\item def和函数名中间要敲一个空格
+		\item 之后是函数名，这个名字用户自己起的，方便自己使用就好
+		\item 函数名后跟圆括号()，代表定义的是函数，里边可加参数
+		\item 圆括号()后一定要加冒号: 这个很重要，不要忘记了
+		\item 代码块部分，是由语句组成，要有缩进
+		\item 函数要有返回值return
+		\item 调用时使用函数名(参数)方式
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[t,fragile]{函数}
+
+
+\begin{verbatim}
+
+def foo():
+    print("hello world")
+
+def add(x, y):
+    return x + y
+
+print(add(3, 4))
+\end{verbatim}
+
+
+\end{frame}
 
 % section 函数 (end)
 \section{递归} % (fold)
