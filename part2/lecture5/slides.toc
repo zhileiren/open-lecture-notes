@@ -1,0 +1,5 @@
+\select@language {english}
+\beamer@sectionintoc {1}{Python面向对象}{2}{0}{1}
+\beamer@sectionintoc {2}{函数式特性}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{Lisp Comprehension}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Map-Reduce}{7}{0}{2}
