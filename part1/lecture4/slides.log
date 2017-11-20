@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  20 NOV 2017 16:47
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  20 NOV 2017 18:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2616,11 +2616,18 @@ File: logo.jpg Graphic file (type bmp)
  [86
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [87
 
 ]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb)
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [88
@@ -2636,22 +2643,46 @@ File: logo.jpg Graphic file (type bmp)
  [90
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [91
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
-
-[92
+ [92
 
 ]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb
+Overfull \hbox (65.04414pt too wide) in paragraph at lines 9--9
+[]    \T1/pcr/m/n/10.95 tricks = []             # mistaken use of a class varia
+ble[] 
+ []
+
+
+Overfull \hbox (58.47415pt too wide) in paragraph at lines 21--21
+[]\T1/pcr/m/n/10.95 >>> d.tricks                # unexpectedly shared by all do
+gs[] 
+ []
+
+)
+Overfull \vbox (71.91203pt too high) detected at line 1466
+ []
+
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
- [93
+[93
 
-] (./slides.toc)
+]
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [94
@@ -2662,17 +2693,11 @@ File: logo.jpg Graphic file (type bmp)
  [95
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1402.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1402.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1402.
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [96
 
-]
+] (./slides.toc)
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [97
@@ -2683,6 +2708,12 @@ File: logo.jpg Graphic file (type bmp)
  [98
 
 ]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1497.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1497.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1497.
 File: logo.jpg Graphic file (type bmp)
 <logo.jpg>
  [99
@@ -2698,6 +2729,22 @@ File: logo.jpg Graphic file (type bmp)
  [101
 
 ]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+ [102
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+ [103
+
+]
+File: logo.jpg Graphic file (type bmp)
+<logo.jpg>
+
+[104
+
+]
 \tf@nav=\write6
 \openout6 = `slides.nav'.
 
@@ -2707,24 +2754,26 @@ File: logo.jpg Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1423.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1423.
-
-(./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1423.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1423.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1518.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1518.
+ (./slides.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1518.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1518.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 36962 strings out of 492998
- 734658 string characters out of 6136604
- 823068 words of memory out of 5000000
- 40255 multiletter control sequences out of 15000+600000
+ 36974 strings out of 492998
+ 734786 string characters out of 6136604
+ 822966 words of memory out of 5000000
+ 40257 multiletter control sequences out of 15000+600000
  578119 words of font info for 103 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  56i,17n,65p,10440b,663s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (101 pages).
+Output written on slides.pdf (104 pages).

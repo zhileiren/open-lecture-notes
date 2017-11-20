@@ -1350,24 +1350,119 @@ def tree(length,n):
 	\begin{block}
 		{面向对象三要素}
 		\begin{itemize}
-			\item 继承
-			\item 封装
-			\item 多态
+			\item 继承：儿子点出父亲成员
+			\item 封装：点号能点出成员
+			\item 多态：儿子点出和父亲不同的行为
 		\end{itemize}
 	\end{block}
 \end{frame}
 
-\begin{frame}[t]{类的声明}
+\begin{frame}[t,fragile]{类的声明}
+\begin{verbatim}
+
+
+class ClassName:
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+
+
+\end{verbatim}
 	
+\end{frame}
+\begin{frame}[t,fragile]{Class Objects}
+
+
+\begin{verbatim}
+
+
+class MyClass:
+    """A simple example class"""
+    i = 12345
+
+    def f(self):
+        return 'hello world'
+
+
+\end{verbatim}
+
+
 \end{frame}
 \begin{frame}[t]{类的成员}
 	
 \end{frame}
 \begin{frame}[t]{成员可见性}
+	\begin{block}{成员可见性}
+\begin{itemize}
+	\item 不存在类似C++的私有
+	\item 约定：下划线前缀的是实现细节
+	\item ipython/Jupyter默认不会补全
+	\item 类似*nix下的dotfiles
+\end{itemize}
+	\end{block}
 	
 \end{frame}
-\begin{frame}[t]{\_\_init\_\_函数}
+\begin{frame}[t,fragile]{\_\_init\_\_函数}
+\begin{verbatim}
+
+
+def __init__(self):
+    self.data = []
+
+
+\end{verbatim}
 	
+\end{frame}
+
+\begin{frame}[t,fragile]{Class Objects}
+
+
+\begin{verbatim}
+
+
+>>> class Complex:
+...     def __init__(self, realpart, imagpart):
+...         self.r = realpart
+...         self.i = imagpart
+...
+>>> x = Complex(3.0, -4.5)
+>>> x.r, x.i
+(3.0, -4.5)
+
+
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[t,fragile]{成员变量和实例变量}
+
+
+\begin{verbatim}
+
+
+class Dog:
+
+    tricks = []             # mistaken use of a class variable
+
+    def __init__(self, name):
+        self.name = name
+
+    def add_trick(self, trick):
+        self.tricks.append(trick)
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.add_trick('roll over')
+>>> e.add_trick('play dead')
+>>> d.tricks                # unexpectedly shared by all dogs
+['roll over', 'play dead']
+
+
+\end{verbatim}
+
+
 \end{frame}
 
 \begin{frame}[t]{鸭子类型}
