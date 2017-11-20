@@ -1,27 +1,17 @@
-\frametitle{成员变量和实例变量}
-
-
+\frametitle{Turtle}
 \begin{verbatim}
+import turtle
 
-
-class Dog:
-
-    tricks = []             # mistaken use of a class variable
-
-    def __init__(self, name):
-        self.name = name
-
-    def add_trick(self, trick):
-        self.tricks.append(trick)
-
->>> d = Dog('Fido')
->>> e = Dog('Buddy')
->>> d.add_trick('roll over')
->>> e.add_trick('play dead')
->>> d.tricks                # unexpectedly shared by all dogs
-['roll over', 'play dead']
-
-
+def tree(length,n):
+    """ paints a branch of a tree """
+    if length < (length/n):
+        return                    # 边界条件
+    turtle.forward(length)        # 主干
+    turtle.left(45)               # 左转分叉
+    tree(length * 0.5,length/n)   # 左子树
+    turtle.right(90)              # 右转分叉
+    tree(length * 0.5,length/n)   # 右子树
+    turtle.left(45)               # 转回
+    turtle.backward(length)       # 回到起点
+    return                        # 返回
 \end{verbatim}
-
-

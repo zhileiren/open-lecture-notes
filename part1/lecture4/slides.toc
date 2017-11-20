@@ -8,5 +8,3 @@
 \beamer@subsectionintoc {3}{4}{基本流程控制}{62}{0}{3}
 \beamer@sectionintoc {4}{函数}{68}{0}{4}
 \beamer@sectionintoc {5}{递归}{75}{0}{5}
-\beamer@sectionintoc {6}{面向对象}{85}{0}{6}
-\beamer@sectionintoc {7}{函数式特性}{97}{0}{7}

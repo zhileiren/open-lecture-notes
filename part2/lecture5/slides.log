@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  19 NOV 2017 01:00
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  20 NOV 2017 21:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1861,60 +1861,214 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [2
 
-] (./slides.toc)
+]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 107.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [3
 
 ]
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 106.
-LaTeX Font Info:    No file TUptm.fd. on input line 106.
+\openout4 = `slides.vrb'.
 
-
-LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 106.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 106.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 106.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 106.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 106.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 106.
+ (./slides.vrb
+*************************************************
+* xeCJK warning: "CJKfamily-Unknown"
+* 
+* Unknown CJK family `\CJKttdefault' is being ignored.
+* 
+* Try to use `\setCJKmonofont[...]{...}' to define it.
+*************************************************
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 2.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+))
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [4
 
 ]
-Missing character: There is no λ in font phvr8t!
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 110.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 110.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 110.
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [5
+
+[5
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [6
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [7
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [8
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [9
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (65.04414pt too wide) in paragraph at lines 9--9
+[]    \T1/pcr/m/n/10.95 tricks = []             # mistaken use of a class varia
+ble[] 
+ []
+
+
+Overfull \hbox (58.47415pt too wide) in paragraph at lines 21--21
+[]\T1/pcr/m/n/10.95 >>> d.tricks                # unexpectedly shared by all do
+gs[] 
+ []
+
+)
+Overfull \vbox (71.91203pt too high) detected at line 215
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[10
+
+]
+LaTeX Font Info:    Try loading font information for TU+ptm on input line 227.
+LaTeX Font Info:    No file TUptm.fd. on input line 227.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 227.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 227.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 227.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 227.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 227.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 227.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 227.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 227.
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [11
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [12
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [13
 
 ]
 (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [6
+ [14
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [15
+
+]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 246.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 246.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 246.
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [16
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [17
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [18
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [19
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [20
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [21
 
 ] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [7
+ [22
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[23
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [24
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [25
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [26
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [27
 
 ]
 \tf@nav=\write6
@@ -1926,23 +2080,26 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 121.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 121.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 300.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 300.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 36248 strings out of 494499
- 717777 string characters out of 6165137
- 792877 words of memory out of 5000000
- 39602 multiletter control sequences out of 15000+600000
- 564389 words of font info for 81 fonts, out of 8000000 for 9000
+ 36441 strings out of 494499
+ 723468 string characters out of 6165137
+ 798457 words of memory out of 5000000
+ 39765 multiletter control sequences out of 15000+600000
+ 574309 words of font info for 98 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  50i,15n,65p,10440b,661s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (7 pages).
+Output written on slides.pdf (27 pages).

@@ -93,10 +93,177 @@ Dalian University of Technology
  \tableofcontents[currentsection]
  \end{frame}
 }
-\section{Python面向对象} % (fold)
-\label{sec:Python面向对象}
+\section{面向对象}
+\label{sec:面向对象}
+\begin{frame}[t]{面向对象}
+	\begin{block}
+		{面向对象三要素}
+		\begin{itemize}
+			\item 继承：儿子点出父亲成员
+			\item 封装：点号能点出成员
+			\item 多态：儿子点出和父亲不同的行为
+		\end{itemize}
+	\end{block}
+\end{frame}
 
-% section Python面向对象 (end)
+\begin{frame}[t,fragile]{类的声明}
+\begin{verbatim}
+
+
+class ClassName:
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+
+
+\end{verbatim}
+	
+\end{frame}
+\begin{frame}[t,fragile]{Class Objects}
+
+
+\begin{verbatim}
+
+
+class MyClass:
+    """A simple example class"""
+    i = 12345
+
+    def f(self):
+        return 'hello world'
+
+
+\end{verbatim}
+
+
+\end{frame}
+\begin{frame}[t]{类的成员}
+	
+\end{frame}
+\begin{frame}[t]{成员可见性}
+	\begin{block}{成员可见性}
+\begin{itemize}
+	\item 不存在类似C++的私有
+	\item 约定：下划线前缀的是实现细节
+	\item ipython/Jupyter默认不会补全
+	\item 类似*nix下的dotfiles
+\end{itemize}
+	\end{block}
+	
+\end{frame}
+\begin{frame}[t,fragile]{\_\_init\_\_函数}
+\begin{verbatim}
+
+
+def __init__(self):
+    self.data = []
+
+
+\end{verbatim}
+	
+\end{frame}
+
+\begin{frame}[t,fragile]{Class Objects}
+
+
+\begin{verbatim}
+
+
+>>> class Complex:
+...     def __init__(self, realpart, imagpart):
+...         self.r = realpart
+...         self.i = imagpart
+...
+>>> x = Complex(3.0, -4.5)
+>>> x.r, x.i
+(3.0, -4.5)
+
+
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}[t,fragile]{成员变量和实例变量}
+
+
+\begin{verbatim}
+
+
+class Dog:
+
+    tricks = []             # mistaken use of a class variable
+
+    def __init__(self, name):
+        self.name = name
+
+    def add_trick(self, trick):
+        self.tricks.append(trick)
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.add_trick('roll over')
+>>> e.add_trick('play dead')
+>>> d.tricks                # unexpectedly shared by all dogs
+['roll over', 'play dead']
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+\begin{frame}[t]{鸭子类型}
+在程序设计中，鸭子类型（英语：duck typing）是动态类型的一种风格。在这种风格中，一个对象有效的语义，不是由继承自特定的类或实现特定的接口，而是由"当前方法和属性的集合"决定。这个概念的名字来源于由James Whitcomb Riley提出的鸭子测试，“鸭子测试”可以这样表述：
+\begin{block}{鸭子测试}
+\begin{itemize}
+		\item If it walks like a duck
+		\item It quacks like a duck
+		\item Then it must be a duck
+\end{itemize}
+\end{block}
+“当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”	\footnote{\url{https://en.wikipedia.org/wiki/Duck_typing}}
+\end{frame}
+
+\begin{frame}[t]{继承}
+	
+\end{frame}
+
+\begin{frame}[t]{多态}
+	
+\end{frame}
+
+\section{函数式特性}
+\label{sec:函数式特性}
+
+\begin{frame}[t]{函数一等公民}
+	
+\end{frame}
+
+\begin{frame}[t]{$\lambda$演算}
+	
+\end{frame}
+
+\begin{frame}[t]{List Comprehension}
+	
+\end{frame}
+\begin{frame}[t]{Lisp}
+	
+\end{frame}
+
+\begin{frame}[t]{Haskell}
+	
+\end{frame}
+
+\begin{frame}[t]{生成器}
+	
+\end{frame}
+
+\begin{frame}[t]{Map/Filter/Reduce}
+	
+\end{frame}
+
 \section{函数式特性} % (fold)
 \label{sec:函数式特性}
 \begin{frame}[t]{什么是函数式}
@@ -114,6 +281,8 @@ Dalian University of Technology
         \item Pure function
         \item Recursion
         \item Strict versus non-strict evaluation
+        \item Type system
+        \item Referential transparency
 
             
     \end{itemize}
