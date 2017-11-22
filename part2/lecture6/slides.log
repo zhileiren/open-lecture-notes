@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  22 NOV 2017 20:34
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  22 NOV 2017 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1822,39 +1822,10 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  <use  "../../utils/logo.jpg" >
 [1
 
-] (./slides.toc)
-File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [2
-
 ]
-LaTeX Font Info:    Try loading font information for EU1+ptm on input line 101.
+\openout4 = `slides.vrb'.
 
-LaTeX Font Info:    No file EU1ptm.fd. on input line 101.
-
-
-LaTeX Font Warning: Font shape `EU1/ptm/m/n' undefined
-(Font)              using `EU1/lmr/m/n' instead on input line 101.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
-
+ (./slides.vrb
 *************************************************
 * xeCJK warning: "CJKfamily-Unknown"
 * 
@@ -1862,47 +1833,74 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
 * 
 * Try to use `\setCJKmonofont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 101.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 3.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+))
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
+<use  "../../utils/logo.jpg" > [2
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+Overfull \vbox (18.41191pt too high) detected at line 144
+ []
+
+File: ../../utils/logo.jpg Graphic file (type QTm)
 <use  "../../utils/logo.jpg" > [3
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 113.
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [4
+
+]
+(./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [5
+
+]
+LaTeX Font Info:    Try loading font information for EU1+ptm on input line 156.
+
+LaTeX Font Info:    No file EU1ptm.fd. on input line 156.
+
+
+LaTeX Font Warning: Font shape `EU1/ptm/m/n' undefined
+(Font)              using `EU1/lmr/m/n' instead on input line 156.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 156.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 156.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 156.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 156.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 156.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 156.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 156.
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [6
+
+]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 168.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
-File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [4
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [5
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [6
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 168.
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
 <use  "../../utils/logo.jpg" > [7
@@ -1916,27 +1914,25 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 <use  "../../utils/logo.jpg" > [8
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [9
+
+<use  "../../utils/logo.jpg" > [9
 
 ]
 \openout4 = `slides.vrb'.
 
-
-(./slides.vrb
-Overfull \hbox (196.44405pt too wide) in paragraph at lines 14--14
-[]\T1/pcr/m/n/10.95 >>> rp.can_fetch("*", "http://www.musi-cal.com/cgi-bin/sear
-ch?city=San+Francisco")[] 
- []
-
-)
-Overfull \vbox (4.0817pt too high) detected at line 216
- []
-
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
+
 <use  "../../utils/logo.jpg" > [10
 
-] (./slides.toc)
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
 <use  "../../utils/logo.jpg" > [11
@@ -1946,25 +1942,28 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  <use  "../../utils/logo.jpg" > [12
 
 ]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [13
+
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [13
+<use  "../../utils/logo.jpg" > [14
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [14
+ <use  "../../utils/logo.jpg" > [15
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [15
+<use  "../../utils/logo.jpg" > [16
 
 ]
-File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [16
-
-]
-(./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
  <use  "../../utils/logo.jpg" > [17
 
@@ -1978,13 +1977,27 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  <use  "../../utils/logo.jpg" > [19
 
 ]
+(./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [20
+ <use  "../../utils/logo.jpg" > [20
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [21
+
+<use  "../../utils/logo.jpg" > [21
+
+]
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [22
+
+]
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [23
+
+]
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [24
 
 ]
 \openout4 = `slides.vrb'.
@@ -2003,40 +2016,26 @@ Overfull \hbox (25.62425pt too wide) in paragraph at lines 17--17
  []
 
 )
-Overfull \vbox (3.912pt too high) detected at line 314
+Overfull \vbox (3.912pt too high) detected at line 364
  []
 
 File: ../../utils/logo.jpg Graphic file (type QTm)
-<use  "../../utils/logo.jpg" > [22
+<use  "../../utils/logo.jpg" > [25
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [23
-
-]
-File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [24
-
-]
-File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [25
+ <use  "../../utils/logo.jpg" > [26
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [26
+<use  "../../utils/logo.jpg" > [27
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [27
+ <use  "../../utils/logo.jpg" > [28
 
 ]
-File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [28
-
-] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
 <use  "../../utils/logo.jpg" > [29
@@ -2046,27 +2045,22 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  <use  "../../utils/logo.jpg" > [30
 
 ]
-\openout4 = `slides.vrb'.
-
-
-(./slides.vrb)
-Overfull \vbox (18.41191pt too high) detected at line 400
- []
-
 File: ../../utils/logo.jpg Graphic file (type QTm)
+
 <use  "../../utils/logo.jpg" > [31
 
-]
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [32
+
+<use  "../../utils/logo.jpg" > [32
 
 ]
 \openout4 = `slides.vrb'.
 
-
-(./slides.vrb)
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [33
+
+<use  "../../utils/logo.jpg" > [33
 
 ]
 \openout4 = `slides.vrb'.
@@ -2099,27 +2093,24 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 441.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 441.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 453.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 453.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 441.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 441.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 453.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 453.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 441.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 453.
  ) 
 Here is how much of TeX's memory you used:
- 35763 strings out of 495232
- 702917 string characters out of 6180489
- 716156 words of memory out of 5000000
- 38468 multiletter control sequences out of 15000+600000
+ 35769 strings out of 495232
+ 702971 string characters out of 6180489
+ 716427 words of memory out of 5000000
+ 38472 multiletter control sequences out of 15000+600000
  40536 words of font info for 79 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 56i,17n,72p,10440b,728s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,72p,10440b,729s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on slides.pdf (35 pages).
