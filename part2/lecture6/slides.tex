@@ -1,0 +1,319 @@
+
+\documentclass{beamer}
+
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}
+	\usecolortheme{beaver}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage{xeCJK}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{bibentry}
+\usepackage{verbatim}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\setCJKmainfont{WenQuanYi Micro Hei}
+
+
+\title[开源软件基础] 
+{开源软件基础}
+\subtitle{Python基础}
+
+\author[Zhilei Ren] 
+{Zhilei Ren}
+
+\institute[OSCAR Team] % (optional, but mostly needed)
+{
+\\\includegraphics[width=0.2\textwidth]{../../utils/logo.jpg}\\
+OSCAR Team, School of Software, 
+Dalian University of Technology
+}
+
+
+\subject{Open source software}
+
+
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{../../utils/logo.jpg}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry journal}{}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+%  \tableofcontents[currentsection,currentsubsection, 
+%    hideothersubsections, 
+%    sectionstyle=show,
+%]
+%\end{frame}
+
+\AtBeginSection[]
+{
+ \begin{frame}<beamer>
+ \frametitle{Outline}
+ \tableofcontents[currentsection]
+ \end{frame}
+}
+\section{License} % (fold)
+\label{sec:License}
+\begin{frame}[t]{Philosophy}
+
+All contributions to Requests should keep these important rules in mind.
+
+\end{frame}
+
+
+\begin{frame}[t]{Apache2 License}
+
+A large number of open source projects you find today are GPL Licensed.
+While the GPL has its time and place, it should most certainly not be your
+go-to license for your next open source project.
+
+\end{frame}
+
+
+\begin{frame}[t]{Apache2 License}
+
+A project that is released as GPL cannot be used in any commercial product
+without the product itself also being offered as open source.
+
+\end{frame}
+
+
+\begin{frame}[t]{Apache2 License}
+
+The MIT, BSD, ISC, and Apache2 licenses are great alternatives to the GPL
+that allow your open-source software to be used freely in proprietary,
+closed-source software.
+
+\end{frame}
+
+
+\begin{frame}[t]{Apache2 License}
+
+Requests is released under terms of Apache2 License.
+
+\end{frame}
+
+% section License (end)
+\section{Requests: HTTP for Humans} % (fold)
+\label{sec:Requests: HTTP for Humans}
+\begin{frame}[t]{Requests: HTTP for Humans}
+
+Requests is the only Non-GMO HTTP library for Python, safe for human
+consumption.
+
+\end{frame}
+
+
+\begin{frame}[t]{Requests: HTTP for Humans}
+
+Note
+
+\end{frame}
+
+
+\begin{frame}[t]{Requests: HTTP for Humans}
+
+The use of Python 3 is highly preferred over Python 2. Consider upgrading your applications and infrastructure if you find yourself still using Python 2 in production today. If you are using Python 3, congratulations — you are indeed a person of excellent taste.
+—Kenneth Reitz
+
+\end{frame}
+
+
+\begin{frame}[t]{Requests: HTTP for Humans}
+
+Behold, the power of Requests:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Requests: HTTP for Humans}
+
+
+\begin{verbatim}
+
+
+>>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+>>> r.status_code
+200
+>>> r.headers['content-type']
+'application/json; charset=utf8'
+>>> r.encoding
+'utf-8'
+>>> r.text
+u'{"type":"User"...'
+>>> r.json()
+{u'private_gists': 419, u'total_private_repos': 77, ...}
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Requests: HTTP for Humans}
+
+See similar code, sans Requests.
+
+\end{frame}
+
+
+\begin{frame}[t]{Requests: HTTP for Humans}
+
+Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the
+need for manual labor. There's no need to manually add query strings to your
+URLs, or to form-encode your POST data. Keep-alive and HTTP connection pooling
+are 100\% automatic, thanks to urllib3.
+
+\end{frame}
+
+
+\begin{frame}[t]{User Testimonials}
+
+Twitter, Spotify, Microsoft, Amazon, Lyft, BuzzFeed, Reddit, The NSA, Her Majesty's Government, Google, Twilio, Runscope, Mozilla, Heroku,
+PayPal, NPR, Obama for America, Transifex, Native Instruments, The Washington
+Post, SoundCloud, Kippt, Sony, and Federal U.S.
+Institutions that prefer to be unnamed claim to use Requests internally.
+
+\end{frame}
+
+
+\begin{frame}[t]{User Testimonials}
+
+Requests is one of the most downloaded Python packages of all time, pulling in
+over 13,000,000 downloads every month. All the cool kids are doing it!
+
+\end{frame}
+
+
+\begin{frame}[t]{Beloved Features}
+
+Requests is ready for today's web.
+
+\end{frame}
+
+
+\begin{frame}[t]{Beloved Features}
+
+Requests officially supports Python 2.6–2.7 \& 3.4–3.7, and runs great on PyPy.
+
+\end{frame}
+
+% section Requests: HTTP for Humans (end)
+\section{Tutorial} % (fold)
+\label{sec:Tutorial}
+
+\begin{frame}[t]{数据准备}
+    
+\end{frame}
+\begin{frame}[t,fragile]{本地vs.远程}
+    \scriptsize
+\begin{verbatim}
+$cat index.html # use type in win32
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Title</h1>
+        <p> This is a paragraph</p>
+        <table>
+            <tr>
+                <td>A11</td> <td>A12</td> <td>A13</td>
+            </tr>
+            <tr>
+                <td>A21</td> <td>A22</td> <td>A23</td>
+            </tr>
+            <tr>
+                <td>A31</td> <td>A32</td> <td>A33</td>
+            </tr>
+    </body>
+</html>
+
+$python3 -m http.server 
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ... 
+        
+\end{verbatim}
+    
+\end{frame}
+
+\begin{frame}{本地vs.远程}
+    \Huge
+    我发起疯来，连自己都爬
+    
+\end{frame}
+\begin{frame}[t,fragile]{发起连接}
+\begin{verbatim}
+import requests
+r = requests.get("http://127.0.0.1:8000")
+print(r.text)
+print(r.encoding)
+print(r.url)
+print(r.status_code)
+\end{verbatim}
+    
+\end{frame}
+
+\begin{frame}[t,fragile]{GET参数}
+\begin{verbatim}
+import requests
+import json
+payload = {'key1': 'value1', 'key2': 'value2'}
+r = requests.get('http://httpbin.org/get', params=payload)
+result = json.loads(r.text)
+print(result['args'])
+
+\end{verbatim}
+    
+\end{frame}
+\begin{frame}[t,fragile]{编码问题}
+\begin{verbatim}
+r = requests.get("http://127.0.0.1:8000")
+r.encoding = "UTF-8"
+print(r.text)
+    
+\end{verbatim}
+    
+\end{frame}
+% section Tutorial (end)
+\end{document}

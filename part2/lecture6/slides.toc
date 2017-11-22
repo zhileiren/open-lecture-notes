@@ -1,0 +1,4 @@
+\select@language {english}
+\beamer@sectionintoc {1}{License}{2}{0}{1}
+\beamer@sectionintoc {2}{Requests: HTTP for Humans}{8}{0}{2}
+\beamer@sectionintoc {3}{Tutorial}{20}{0}{3}
