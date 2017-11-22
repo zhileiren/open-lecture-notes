@@ -121,38 +121,7 @@ class ClassName:
 \end{verbatim}
 	
 \end{frame}
-\begin{frame}[t,fragile]{Class Objects}
 
-
-\begin{verbatim}
-
-
-class MyClass:
-    """A simple example class"""
-    i = 12345
-
-    def f(self):
-        return 'hello world'
-
-
-\end{verbatim}
-
-
-\end{frame}
-\begin{frame}[t]{类的成员}
-	
-\end{frame}
-\begin{frame}[t]{成员可见性}
-	\begin{block}{成员可见性}
-\begin{itemize}
-	\item 不存在类似C++的私有
-	\item 约定：下划线前缀的是实现细节
-	\item ipython/Jupyter默认不会补全
-	\item 类似*nix下的dotfiles
-\end{itemize}
-	\end{block}
-	
-\end{frame}
 \begin{frame}[t,fragile]{\_\_init\_\_函数}
 \begin{verbatim}
 
@@ -214,6 +183,80 @@ class Dog:
 
 \end{frame}
 
+\begin{frame}[t,fragile]{Class Objects}
+
+
+\begin{verbatim}
+
+
+class MyClass:
+    """A simple example class"""
+    i = 12345
+
+    def f(self):
+        return 'hello world'
+
+
+\end{verbatim}
+
+
+\end{frame}
+\begin{frame}[t]{实例/类的成员}
+	\begin{itemize}
+		\item 在\_\_init\_\_中用self.初始化的是实例成员
+		\item 在类似C++成员声明处初始化的是类成员（类似静态变量）
+		\item 实例成员可以动态添加和删除
+		\item 必要时用hasattr判断是否包含某成员
+
+	\end{itemize}
+	
+\end{frame}
+\begin{frame}[t]{成员可见性}
+	\begin{block}{成员可见性}
+\begin{itemize}
+	\item 不存在类似C++的私有
+	\item 约定：下划线前缀的是实现细节
+	\item ipython/Jupyter默认不会补全
+	\item 类似*nix下的dotfiles
+\end{itemize}
+	\end{block}
+	
+\end{frame}
+\begin{frame}[t,fragile]{继承}
+\begin{verbatim}
+class A:
+    def foo(self):
+        print("in A::foo")
+
+class B(A):
+    pass
+
+b = B()
+b.foo()
+		
+\end{verbatim}
+	
+\end{frame}
+
+\begin{frame}[t,fragile]{多态}
+\begin{verbatim}
+class A:
+    def foo(self):
+        print("in A::foo")
+
+class B(A):
+    def foo(self):
+        print("in B::foo")
+
+b = B()
+b.foo()
+isinstance(b, B)
+isinstance(b, A)
+		
+\end{verbatim}
+	
+\end{frame}
+
 \begin{frame}[t]{鸭子类型}
 在程序设计中，鸭子类型（英语：duck typing）是动态类型的一种风格。在这种风格中，一个对象有效的语义，不是由继承自特定的类或实现特定的接口，而是由"当前方法和属性的集合"决定。这个概念的名字来源于由James Whitcomb Riley提出的鸭子测试，“鸭子测试”可以这样表述：
 \begin{block}{鸭子测试}
@@ -226,11 +269,31 @@ class Dog:
 “当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”	\footnote{\url{https://en.wikipedia.org/wiki/Duck_typing}}
 \end{frame}
 
-\begin{frame}[t]{继承}
-	
-\end{frame}
+\begin{frame}[t,fragile]{多态}
+\begin{verbatim}
+class A:
+    def foo(self):
+        print("in A::foo")
 
-\begin{frame}[t]{多态}
+class B(A):
+    def foo(self):
+        print("in B::foo")
+
+class C:
+    def foo(self):
+        print("not subclass of A/B")
+
+def test_class(a):
+    a.foo()
+
+if __name__ == "__main__"
+    a = A()
+    b = B()
+    c = C()
+    test_class(a)
+    test_class(b)
+    test_class(c)
+\end{verbatim}
 	
 \end{frame}
 
@@ -238,31 +301,30 @@ class Dog:
 \label{sec:函数式特性}
 
 \begin{frame}[t]{函数一等公民}
-	
+	\begin{itemize}
+		\item 可以被存入变数或其他结构
+		\item 可以被作为参数传递给其他函数
+		\item 可以被作为函数的返回值
+		\item 可以在执行期创造，而无需完全在设计期全部写出
+		\item 即使没有被系结至某一名称，也可以存在	
+	\end{itemize}
 \end{frame}
 
-\begin{frame}[t]{$\lambda$演算}
-	
-\end{frame}
 
-\begin{frame}[t]{List Comprehension}
-	
-\end{frame}
 \begin{frame}[t]{Lisp}
-	
+	\includegraphics[width=.2\textwidth]{GNU-Guile-logo.png}
 \end{frame}
 
 \begin{frame}[t]{Haskell}
+	\begin{itemize}
+		\item 偏学术	
+		\item 号称最纯粹的函数式语言	
+		\item Avoid Haskell at all cost
+	\end{itemize}
+	\includegraphics[width=.2\textwidth]{haskell.png}
 	
 \end{frame}
 
-\begin{frame}[t]{生成器}
-	
-\end{frame}
-
-\begin{frame}[t]{Map/Filter/Reduce}
-	
-\end{frame}
 
 \section{函数式特性} % (fold)
 \label{sec:函数式特性}
@@ -272,28 +334,76 @@ class Dog:
     比起命令式编程，函数式编程更加强调程序执行的结果而非执行的过程，倡导利用若干简单的执行单元让计算结果不断渐进，逐层推导复杂的运算，而不是设计一个复杂的执行过程。
 \end{frame}
 
-\begin{frame}[t]{$\lambda$演算}
-    $\lambda$演算（英语：lambda calculus，$\lambda$-calculus）是一套从数学逻辑中发展，以变量绑定和替换的规则，来研究函数如何抽象化定义、函数如何被应用以及递归的形式系统。它由数学家阿隆佐·邱奇在20世纪30年代首次发表。Lambda演算作为一种广泛用途的计算模型，可以清晰地定义什么是一个可计算函数，而任何可计算函数都能以这种形式表达和求值，它能模拟单一磁带图灵机的计算过程；尽管如此，Lambda演算强调的是变换规则的运用，而非实现它们的具体机器。
-\end{frame}
 \begin{frame}[t]{函数式特性}
     \begin{itemize}
         \item First-class and higher-order functions
         \item Pure function
         \item Recursion
-        \item Strict versus non-strict evaluation
         \item Type system
-        \item Referential transparency
+				\item \ldots
 
             
     \end{itemize}
 \end{frame}
-\subsection{Lisp Comprehension} % (fold)
-\label{sub:Lisp Comprehension}
 
-% subsection Lisp Comprehension (end)
+\begin{frame}[t]{$\lambda$演算}
+    $\lambda$演算（英语：lambda calculus，$\lambda$-calculus）是一套从数学逻辑中发展，以变量绑定和替换的规则，来研究函数如何抽象化定义、函数如何被应用以及递归的形式系统。它由数学家阿隆佐·邱奇在20世纪30年代首次发表。Lambda演算作为一种广泛用途的计算模型，可以清晰地定义什么是一个可计算函数，而任何可计算函数都能以这种形式表达和求值，它能模拟单一磁带图灵机的计算过程；尽管如此，Lambda演算强调的是变换规则的运用，而非实现它们的具体机器。
+\end{frame}
+
+\begin{frame}[t,fragile]{$\lambda$表达式}
+\begin{verbatim}
+inc = lambda x: x + 1
+
+add = lambda x, y: x + y
+
+inc(5)
+add(10, 20)
+
+# 注意：Python的lambda表达式不能换行
+
+
+\end{verbatim}
+	
+\end{frame}
+\subsection{List Comprehension} % (fold)
+\label{sub:List Comprehension}
+
+\begin{frame}[t,fragile]
+  \frametitle{列表推导}
+	\begin{verbatim}
+[i * 2 for i in range(10)]
+
+[i * 2 for i in range(10) if i % 2 == ]
+
+colours = ["red", "green", "yellow", "blue"]
+things = ["house", "car", "tree"]
+combined =  [(x,y) for x in colours for y in things]
+		
+\end{verbatim}
+	
+\end{frame}
+% subsection List Comprehension (end)
 \subsection{Map-Reduce} % (fold)
 \label{sub:Map-Reduce}
 
+\begin{frame}[t,fragile]{Map/Filter/Reduce}
+\begin{verbatim}
+
+map(lambda x: x ** 2, range(10)
+list(map(lambda x: x **2, range(10))
+
+filter(lambda x: x % 2 == 0, 
+         map(lambda x: x ** 2, range(10)))
+
+reduce(lambda x, y: x + y,
+         filter(lambda x: x % 2 == 0, 
+                  map(lambda x: x ** 2, range(10))))
+         
+		
+\end{verbatim}
+
+	
+\end{frame}
 % subsection Map-Reduce (end)
 
 % section 函数式特性 (end)

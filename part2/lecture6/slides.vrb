@@ -1,28 +1,8 @@
-\frametitle{本地vs.远程}
-\scriptsize
+\frametitle{编码问题}
 \begin{verbatim}
-$cat index.html # use type in win32
-<html>
-    <head>
-    </head>
-    <body>
-        <h1>Title</h1>
-        <p> This is a paragraph</p>
-        <table>
-            <tr>
-                <td>A11</td> <td>A12</td> <td>A13</td>
-            </tr>
-            <tr>
-                <td>A21</td> <td>A22</td> <td>A23</td>
-            </tr>
-            <tr>
-                <td>A31</td> <td>A32</td> <td>A33</td>
-            </tr>
-    </body>
-</html>
-
-$python3 -m http.server
-Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+r = requests.get("http://127.0.0.1:8000")
+r.encoding = "UTF-8"
+print(r.text)
 
 \end{verbatim}
 

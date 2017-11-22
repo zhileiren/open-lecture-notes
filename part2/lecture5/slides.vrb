@@ -1,25 +1,15 @@
-\frametitle{成员变量和实例变量}
-
-
+\frametitle{Map/Filter/Reduce}
 \begin{verbatim}
 
+map(lambda x: x ** 2, range(10)
+list(map(lambda x: x **2, range(10))
 
-class Dog:
+filter(lambda x: x % 2 == 0,
+         map(lambda x: x ** 2, range(10)))
 
-    tricks = []             # mistaken use of a class variable
-
-    def __init__(self, name):
-        self.name = name
-
-    def add_trick(self, trick):
-        self.tricks.append(trick)
-
->>> d = Dog('Fido')
->>> e = Dog('Buddy')
->>> d.add_trick('roll over')
->>> e.add_trick('play dead')
->>> d.tricks                # unexpectedly shared by all dogs
-['roll over', 'play dead']
+reduce(lambda x, y: x + y,
+         filter(lambda x: x % 2 == 0,
+                  map(lambda x: x ** 2, range(10))))
 
 
 \end{verbatim}
