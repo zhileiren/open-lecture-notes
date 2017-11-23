@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  21 NOV 2017 15:07
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  23 NOV 2017 13:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1845,28 +1845,20 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 . Redefining command \Pifont with sig. 'm' on line 76.
 .................................................
 (./slides.nav)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [1
 
 ] (./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [2
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 105.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [3
 
 ]
@@ -1880,730 +1872,3716 @@ File: logo.jpg Graphic file (type bmp)
 * 
 * Try to use `\setCJKmonofont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 3.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 4.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-))
-Overfull \vbox (0.64384pt too high) detected at line 133
+)
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 <html><head><title>The Dormouse's story</title></head>[] 
  []
 
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+
+Overfull \hbox (229.29395pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 <p class="story">Once upon a time there were three little s
+isters; and their names were[] 
+ []
+
+
+Overfull \hbox (124.17407pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/elsie" class="sister" id="link1
+">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/lacie" class="sister" id="link2
+">Lacie</a> and[] 
+ []
+
+
+Overfull \hbox (137.31406pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/tillie" class="sister" id="link
+3">Tillie</a>;[] 
+ []
+
+)
+Overfull \vbox (17.51201pt too high) detected at line 128
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 160.
-LaTeX Font Info:    No file TUptm.fd. on input line 160.
-
-
-LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 160.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 160.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 160.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 160.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 160.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 160.
-
-Overfull \vbox (13.51463pt too high) detected at line 160
- []
-
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-[5
-
-]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [6
-
-]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [7
-
-]
-File: jupyter.png Graphic file (type bmp)
-<jupyter.png>
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [8
-
-]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [9
-
-] (./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [10
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [11
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-
-[12
-
-]
-File: Ucblogo.png Graphic file (type bmp)
-<Ucblogo.png>
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 251.
-File: ucblogo-gui.png Graphic file (type bmp)
-<ucblogo-gui.png>
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [13
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [14
-
-] (./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [15
-
-] (./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [16
-
-]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [17
-
-]
-\openout4 = `slides.vrb'.
-
-
-(./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [18
-
-]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [19
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [5
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
-Overfull \hbox (38.76418pt too wide) in paragraph at lines 10--10
-[]\T1/pcr/m/n/10.95 >>> 17 // 3  # floor division discards the fractional part[
-] 
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 23--23
+[]\T1/pcr/m/n/10.95 #    Once upon a time there were three little sisters; and 
+their names were[] 
  []
 
 
-Overfull \hbox (91.32411pt too wide) in paragraph at lines 12--12
-[]\T1/pcr/m/n/10.95 >>> 17 % 3  # the % operator returns the remainder of the d
-ivision[] 
+Overfull \hbox (91.32411pt too wide) in paragraph at lines 24--24
+[]\T1/pcr/m/n/10.95 #    <a class="sister" href="http://example.com/elsie" id="
+link1">[] 
+ []
+
+
+Overfull \hbox (91.32411pt too wide) in paragraph at lines 28--28
+[]\T1/pcr/m/n/10.95 #    <a class="sister" href="http://example.com/lacie" id="
+link2">[] 
+ []
+
+
+Overfull \hbox (97.8941pt too wide) in paragraph at lines 32--32
+[]\T1/pcr/m/n/10.95 #    <a class="sister" href="http://example.com/tillie" id=
+"link2">[] 
  []
 
 )
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+Overfull \vbox (330.31215pt too high) detected at line 184
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[6
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [7
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 25--25
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id="lin
+k1">Elsie</a>[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 28--28
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 29--29
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 30--30
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 33--33
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/tillie" id="li
+nk3">Tillie</a>[] 
+ []
+
+)
+Overfull \vbox (221.5121pt too high) detected at line 232
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[8
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [9
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [10
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [11
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 # Once upon a time there were three little sisters; and the
+ir names were[] 
+ []
+
+)
+Overfull \vbox (3.912pt too high) detected at line 289
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[12
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [13
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [14
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [15
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [16
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [17
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[18
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [19
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [20
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [21
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [22
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+ (./slides.vrb
+Overfull \hbox (58.47415pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 soup = BeautifulSoup('<b class="boldest">Extremely bold</b>
+')[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [23
 
 ]
-\openout4 = `slides.vrb'.
-
-
-(./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [24
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [25
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [26
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [27
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [27
+ (./slides.vrb
+Overfull \hbox (32.19418pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # <blockquote class="boldest">Extremely bold</blockquote>[]
+ 
+ []
 
-] (./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-[28
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [28
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [29
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb
-Overfull \hbox (12.4842pt too wide) in paragraph at lines 9--9
-[]\T1/pcr/m/n/10.95 >>> 'doesn\'t'  # use \' to escape the single quote...[] 
- []
-
-)
-Overfull \vbox (17.51201pt too high) detected at line 526
- []
-
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-[30
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [30
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb
-Overfull \hbox (19.0542pt too wide) in paragraph at lines 11--11
-[]\T1/pcr/m/n/10.95 >>> s = 'First line.\nSecond line.'  # \n means newline[] 
- []
-
-
-Overfull \hbox (12.4842pt too wide) in paragraph at lines 12--12
-[]\T1/pcr/m/n/10.95 >>> s  # without print(), \n is included in the output[] 
- []
-
-)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [31
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb
-Overfull \hbox (32.19418pt too wide) in paragraph at lines 10--10
-[]\T1/pcr/m/n/10.95 >>> print(r'C:\some\name')  # note the r before the quote[]
- 
- []
-
-)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [32
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb
-Overfull \hbox (32.19418pt too wide) in paragraph at lines 9--9
-[]     \T1/pcr/m/n/10.95 -h                        Display this usage message[]
- 
- []
-
-
-Overfull \hbox (5.91422pt too wide) in paragraph at lines 10--10
-[]     \T1/pcr/m/n/10.95 -H hostname               Hostname to connect to[] 
- []
-
-)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [33
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [34
-
-]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+ (./slides.vrb
+Overfull \hbox (84.75412pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 # <blockquote class="verybold" id="1">Extremely bold</block
+quote>[] 
+ []
+
+)
+Overfull \vbox (31.11201pt too high) detected at line 512
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[34
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [35
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [36
-
-]
-\openout4 = `slides.vrb'.
-
  (./slides.vrb
-Overfull \hbox (117.60408pt too wide) in paragraph at lines 8--8
-[]\T1/pcr/m/n/10.95 >>> prefix 'thon'  # can't concatenate a variable and a str
-ing literal[] 
+Overfull \hbox (38.76418pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 css_soup = BeautifulSoup('<p class="body strikeout"></p>')[
+] 
  []
 
 )
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [36
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [37
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [38
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb
-Overfull \hbox (5.91422pt too wide) in paragraph at lines 7--7
-[]\T1/pcr/m/n/10.95 >>> text = ('Put several strings within parentheses '[] 
- []
-
-
-Overfull \hbox (117.60408pt too wide) in paragraph at lines 10--10
-[]\T1/pcr/m/n/10.95 'Put several strings within parentheses to have them joined
- together.'[] 
- []
-
-)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [39
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 rel_soup = BeautifulSoup('<p>Back to the <a rel="index">hom
+epage</a></p>')[] 
+ []
+
+
+Overfull \hbox (32.19418pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 # <p>Back to the <a rel="index contents">homepage</a></p>[]
+ 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [40
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [41
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
-Overfull \hbox (117.60408pt too wide) in paragraph at lines 7--7
-[]\T1/pcr/m/n/10.95 >>> word[0:2]  # characters from position 0 (included) to 2
- (excluded)[] 
- []
-
-
-Overfull \hbox (117.60408pt too wide) in paragraph at lines 9--9
-[]\T1/pcr/m/n/10.95 >>> word[2:5]  # characters from position 2 (included) to 5
- (excluded)[] 
+Overfull \hbox (84.75412pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 
+'xml')[] 
  []
 
 )
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [42
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [43
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb
-Overfull \hbox (117.60408pt too wide) in paragraph at lines 7--7
-[]\T1/pcr/m/n/10.95 >>> word[:2]   # character from the beginning to position 2
- (excluded)[] 
- []
-
-
-Overfull \hbox (84.75412pt too wide) in paragraph at lines 9--9
-[]\T1/pcr/m/n/10.95 >>> word[4:]   # characters from position 4 (included) to t
-he end[] 
- []
-
-
-Overfull \hbox (117.60408pt too wide) in paragraph at lines 11--11
-[]\T1/pcr/m/n/10.95 >>> word[-2:]  # characters from the second-last (included)
- to the end[] 
- []
-
-)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [44
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [45
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [46
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [47
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [48
-
-]
 \openout4 = `slides.vrb'.
 
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
 
-(./slides.vrb
-Overfull \hbox (25.62419pt too wide) in paragraph at lines 9--9
-[]\T1/pcr/m/n/10.95 TypeError: 'str' object does not support item assignment[] 
+[48
 
- []
-
-
-Overfull \hbox (25.62419pt too wide) in paragraph at lines 12--12
-[]\T1/pcr/m/n/10.95 TypeError: 'str' object does not support item assignment[] 
-
- []
-
-)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [49
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [50
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [51
 
-] (./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [52
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [53
 
 ]
-\openout4 = `slides.vrb'.
-
-
-(./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [54
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+ (./slides.vrb
+Overfull \hbox (71.61414pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = "<b><!--Hey, buddy. Want to buy a used parser?--><
+/b>"[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [55
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [56
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-
-[57
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [57
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb
-Overfull \hbox (32.19418pt too wide) in paragraph at lines 7--7
-[]\T1/pcr/m/n/10.95 >>> cubes = [1, 8, 27, 65, 125]  # something's wrong here[]
- 
- []
-
-)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [58
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [59
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [60
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [61
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
 
-]
-(./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+[61
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [62
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [63
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-Overfull \vbox (31.11201pt too high) detected at line 1136
+ (./slides.vrb
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 <html><head><title>The Dormouse's story</title></head>[] 
  []
 
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+
+Overfull \hbox (229.29395pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 <p class="story">Once upon a time there were three little s
+isters; and their names were[] 
+ []
+
+
+Overfull \hbox (124.17407pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/elsie" class="sister" id="link1
+">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/lacie" class="sister" id="link2
+">Lacie</a> and[] 
+ []
+
+
+Overfull \hbox (137.31406pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/tillie" class="sister" id="link
+3">Tillie</a>;[] 
+ []
+
+)
+Overfull \vbox (58.31203pt too high) detected at line 862
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
 [64
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [65
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [66
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [67
 
-] (./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [68
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [69
 
 ]
-\openout4 = `slides.vrb'.
-
-
-(./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [70
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [71
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [72
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+
+(./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id="lin
+k1">Elsie</a>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [73
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [74
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-[74
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
 
-] (./slides.toc)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [75
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [76
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [77
 
 ]
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [78
-
-]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 1303.
-Missing character: There is no 分 in font pcrr8t!
-Missing character: There is no 形 in font pcrr8t!
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
- [79
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
-
-[80
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [79
 
 ]
-File: tree.png Graphic file (type bmp)
-<tree.png>
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [80
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (117.60408pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # AttributeError: 'NavigableString' object has no attribute
+ 'contents'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [81
 
 ]
-File: triangle.png Graphic file (type bmp)
-<triangle.png>
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [82
 
 ]
-File: snowflake.png Graphic file (type bmp)
-<snowflake.png>
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [83
 
 ]
-File: curve.png Graphic file (type bmp)
-<curve.png>
-File: logo.jpg Graphic file (type bmp)
-<logo.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
  [84
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [85
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [86
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[87
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [88
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [89
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [90
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [91
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [92
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[93
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [94
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [95
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [96
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (189.874pt too wide) in paragraph at lines 12--12
+[]    \T1/pcr/m/n/10.95 # u'Once upon a time there were three little sisters; a
+nd their names were\n'[] 
+ []
+
+)
+Overfull \vbox (58.31203pt too high) detected at line 1252
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[97
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [98
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (176.73401pt too wide) in paragraph at lines 10--10
+[]    \T1/pcr/m/n/10.95 # u'Once upon a time there were three little sisters; a
+nd their names were'[] 
+ []
+
+)
+Overfull \vbox (3.912pt too high) detected at line 1284
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[99
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [100
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [101
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [102
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [103
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [104
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [105
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [106
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [107
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [108
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [109
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [110
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id="lin
+k1">Elsie</a>[] 
+ []
+
+)
+Overfull \vbox (17.51201pt too high) detected at line 1423
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[111
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [112
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (97.8941pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 sibling_soup = BeautifulSoup("<a><b>text1</b><c>text2</c></
+b></a>")[] 
+ []
+
+)
+Overfull \vbox (31.11201pt too high) detected at line 1457
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[113
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [114
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [115
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [116
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [117
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [118
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [119
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [120
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [121
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (117.60408pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/elsie" class="sister" id="link1
+">Elsie</a>[] 
+ []
+
+
+Overfull \hbox (117.60408pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/lacie" class="sister" id="link2
+">Lacie</a>[] 
+ []
+
+
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/tillie" class="sister" id="link
+3">Tillie</a>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [122
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [123
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id="lin
+k1">Elsie</a>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [124
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [125
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/lacie" id="lin
+k2">Lacie</a>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [126
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [127
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 9--9
+[]    \T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/lacie" id=
+"link2">Lacie</a>[] 
+ []
+
+
+Overfull \hbox (170.16402pt too wide) in paragraph at lines 11--11
+[]    \T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/tillie" id
+="link3">Tillie</a>[] 
+ []
+
+
+Overfull \hbox (19.0542pt too wide) in paragraph at lines 15--15
+[]\T1/pcr/m/n/10.95 for sibling in soup.find(id="link3").previous_siblings:[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 18--18
+[]    \T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/lacie" id=
+"link2">Lacie</a>[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 20--20
+[]    \T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id=
+"link1">Elsie</a>[] 
+ []
+
+
+Overfull \hbox (189.874pt too wide) in paragraph at lines 21--21
+[]    \T1/pcr/m/n/10.95 # u'Once upon a time there were three little sisters; a
+nd their names were\n'[] 
+ []
+
+)
+Overfull \vbox (71.91203pt too high) detected at line 1645
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[128
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [129
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 <html><head><title>The Dormouse's story</title></head>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [130
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [131
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [132
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [133
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/tillie" id="li
+nk3">Tillie</a>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [134
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [135
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [136
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [137
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [138
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/tillie" id="li
+nk3">Tillie</a>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [139
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [140
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [141
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [142
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [143
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [144
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 <html><head><title>The Dormouse's story</title></head>[] 
+ []
+
+
+Overfull \hbox (229.29395pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 <p class="story">Once upon a time there were three little s
+isters; and their names were[] 
+ []
+
+
+Overfull \hbox (124.17407pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/elsie" class="sister" id="link1
+">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/lacie" class="sister" id="link2
+">Lacie</a> and[] 
+ []
+
+
+Overfull \hbox (137.31406pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/tillie" class="sister" id="link
+3">Tillie</a>;[] 
+ []
+
+)
+Overfull \vbox (58.31203pt too high) detected at line 1832
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[145
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [146
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [147
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [148
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [149
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [150
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [151
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[152
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [153
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [154
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [155
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [156
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [157
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+Overfull \vbox (17.51201pt too high) detected at line 1982
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[158
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [159
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [160
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (45.33417pt too wide) in paragraph at lines 7--7
+[]    \T1/pcr/m/n/10.95 return tag.has_attr('class') and not tag.has_attr('id')
+[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [161
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [162
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (19.0542pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <p class="story">Once upon a time there were...</p>,[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [163
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [164
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [165
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (32.19418pt too wide) in paragraph at lines 8--8
+[]    \T1/pcr/m/n/10.95 return (isinstance(tag.next_element, NavigableString)[]
+ 
+ []
+
+
+Overfull \hbox (91.32411pt too wide) in paragraph at lines 9--9
+[]            \T1/pcr/m/n/10.95 and isinstance(tag.previous_element, NavigableS
+tring))[] 
+ []
+
+)
+Overfull \vbox (3.912pt too high) detected at line 2074
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[166
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [167
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [168
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [169
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 15--15
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 18--18
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>][] 
+ []
+
+
+Overfull \hbox (163.59402pt too wide) in paragraph at lines 22--22
+[]\T1/pcr/m/n/10.95 # u'Once upon a time there were three little sisters; and t
+heir names were\n'[] 
+ []
+
+)
+Overfull \vbox (71.91203pt too high) detected at line 2125
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[170
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [171
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [172
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [173
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [174
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [175
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [176
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [177
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [178
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [179
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [180
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [181
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [182
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [183
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">three</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [184
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [185
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (58.47415pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 data_soup = BeautifulSoup('<div data-foo="value">foo!</div>
+')[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [186
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [187
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [188
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [189
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [190
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [191
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (25.62419pt too wide) in paragraph at lines 10--10
+[]    \T1/pcr/m/n/10.95 return css_class is not None and len(css_class) == 6[] 
+
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 15--15
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [192
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [193
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (38.76418pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 css_soup = BeautifulSoup('<p class="body strikeout"></p>')[
+] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [194
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [195
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [196
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [197
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [198
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [199
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (124.17407pt too wide) in paragraph at lines 16--16
+[]    \T1/pcr/m/n/10.95 ""Return True if this string is the only child of its p
+arent tag.""[] 
+ []
+
+
+Overfull \hbox (255.57391pt too wide) in paragraph at lines 20--20
+[]\T1/pcr/m/n/10.95 # [u"The Dormouse's story", u"The Dormouse's story", u'Elsi
+e', u'Lacie', u'Tillie', u'...'][] 
+ []
+
+)
+Overfull \vbox (31.11201pt too high) detected at line 2470
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[200
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [201
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a href="http://example.com/elsie" class="sister" id="li
+nk1">Elsie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [202
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [203
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [204
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [205
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [206
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [207
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [208
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [209
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [210
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [211
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [212
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [213
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [214
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [215
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [216
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[217
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [218
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [219
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [220
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [221
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [222
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [223
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[224
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [225
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [226
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>][] 
+ []
+
+
+Overfull \hbox (242.43393pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 # <p class="story">Once upon a time there were three little
+ sisters; and their names were[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 15--15
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (163.59402pt too wide) in paragraph at lines 16--16
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a> and[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 17--17
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>;[] 
+ []
+
+)
+Overfull \vbox (44.71202pt too high) detected at line 2766
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[227
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [228
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [229
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [230
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [231
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [232
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id="lin
+k1">Elsie</a>[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [233
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [234
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [235
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [236
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/tillie" id="li
+nk3">Tillie</a>[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [237
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [238
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [239
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [240
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id="lin
+k1">Elsie</a>[] 
+ []
+
+
+Overfull \hbox (137.31406pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 #  u';\nand they lived at the bottom of a well.', u'\n\n', 
+u'...', u'\n'][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [241
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [242
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [243
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [244
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [245
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id="lin
+k1">Elsie</a>[] 
+ []
+
+
+Overfull \hbox (170.16402pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 # [<p class="story">Once upon a time there were three littl
+e sisters; ...</p>,[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [246
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [247
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [248
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [249
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [250
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie"  id="l
+ink2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [251
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [252
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie"  id="l
+ink2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 15--15
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 18--18
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>][] 
+ []
+
+)
+Overfull \vbox (58.31203pt too high) detected at line 3060
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[253
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [254
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (163.59402pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie"  id="
+link3">Tillie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [255
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [256
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [257
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [258
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [259
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [260
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [261
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [262
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/lacie" id="li
+nk2">Lacie</a>,[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 #  <a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 15--15
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/tillie" id="l
+ink3">Tillie</a>][] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 18--18
+[]\T1/pcr/m/n/10.95 # [<a class="sister" href="http://example.com/elsie" id="li
+nk1">Elsie</a>][] 
+ []
+
+)
+Overfull \vbox (17.51201pt too high) detected at line 3197
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[263
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [264
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 multilingual_soup = BeautifulSoup(multilingual_markup)[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [265
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [266
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [267
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [268
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [269
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (58.47415pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 soup = BeautifulSoup('<b class="boldest">Extremely bold</b>
+')[] 
+ []
+
+
+Overfull \hbox (84.75412pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 # <blockquote class="verybold" id="1">Extremely bold</block
+quote>[] 
+ []
+
+)
+Overfull \vbox (17.51201pt too high) detected at line 3276
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[270
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [271
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">I linked to <i>exam
+ple.com</i></a>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [272
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [273
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [274
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 # <html><head></head><body><a>FooBar</a></body></html>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [275
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [276
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [277
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [278
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (38.76418pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 new_comment = soup.new_string("Nice to see you.", Comment)[
+] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [279
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [280
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [281
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (38.76418pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 new_tag = soup.new_tag("a", href="http://www.example.com")[
+] 
+ []
+
+
+Overfull \hbox (25.62419pt too wide) in paragraph at lines 16--16
+[]\T1/pcr/m/n/10.95 # <b><a href="http://www.example.com">Link text.</a></b>[] 
+
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [282
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [283
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [284
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">I linked to <i>exam
+ple.com</i></a>'[] 
+ []
+
+
+Overfull \hbox (222.72395pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 # <a href="http://example.com/">I linked to but did not end
+orse <i>example.com</i></a>[] 
+ []
+
+
+Overfull \hbox (71.61414pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 # [u'I linked to ', u'but did not endorse', <i>example.com<
+/i>][] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [285
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [286
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [287
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [288
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [289
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [290
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">I linked to <i>exam
+ple.com</i></a>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [291
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [292
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">I linked to <i>exam
+ple.com</i></a>'[] 
+ []
+
+)
+Overfull \vbox (31.11201pt too high) detected at line 3579
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[293
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [294
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [295
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [296
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">I linked to <i>exam
+ple.com</i></a>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [297
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [298
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">I linked to <i>exam
+ple.com</i></a>'[] 
+ []
+
+
+Overfull \hbox (91.32411pt too wide) in paragraph at lines 15--15
+[]\T1/pcr/m/n/10.95 # <a href="http://example.com/">I linked to <b>example.net<
+/b></a>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [299
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [300
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [301
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [302
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [303
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [304
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">I linked to <i>exam
+ple.com</i></a>'[] 
+ []
+
+
+Overfull \hbox (45.33417pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 # <a href="http://example.com/">I linked to example.com</a>
+[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [305
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [306
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [307
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [308
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">I linked to <i>exam
+ple.com</i></a>'[] 
+ []
+
+
+Overfull \hbox (163.59402pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 # '<html>\n <head>\n </head>\n <body>\n  <a href="http://ex
+ample.com/">\n...'[] 
+ []
+
+)
+Overfull \vbox (85.51204pt too high) detected at line 3778
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[309
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [310
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [311
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [312
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (360.69379pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # '<html><head></head><body><a href="http://example.com/">I
+ linked to <i>example.com</i></a></body></html>'[] 
+ []
+
+
+Overfull \hbox (111.03409pt too wide) in paragraph at lines 10--10
+[]\T1/pcr/m/n/10.95 # u'<a href="http://example.com/">I linked to <i>example.co
+m</i></a>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [313
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [314
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [315
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [316
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 soup = BeautifulSoup("&ldquo;Dammit!&rdquo; he said.")[] 
+ []
+
+
+Overfull \hbox (130.74406pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # u'<html><head></head><body>\u201cDammit!\u201d he said.</
+body></html>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [317
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [318
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (203.01398pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # '<html><head></head><body>\xe2\x80\x9cDammit!\xe2\x80\x9d
+ he said.</body></html>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [319
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [320
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (176.73401pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = '<a href="http://example.com/">\nI linked to <i>ex
+ample.com</i>\n</a>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [321
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [322
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [323
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [324
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [325
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [326
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [327
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [328
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [329
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [330
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [331
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [332
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [333
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb
+Overfull \hbox (19.0542pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # <html><head></head><body><a><b></b></a></body></html>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [334
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [335
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [336
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [337
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [338
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [339
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [340
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[341
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (19.0542pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # <html><head></head><body><a><p></p></a></body></html>[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [342
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [343
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [344
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [345
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [346
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [347
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [348
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[349
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [350
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [351
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [352
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [353
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [354
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [355
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb
+Missing character: There is no ν in font pcrr8t!
+Missing character: There is no ε in font pcrr8t!
+Missing character: There is no μ in font pcrr8t!
+Missing character: There is no ω in font pcrr8t!
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [356
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [357
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (25.62419pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 soup = BeautifulSoup(markup, from_encoding="iso-8859-8")[] 
+
+ []
+
+Missing character: There is no ם in font pcrr8t!
+Missing character: There is no ו in font pcrr8t!
+Missing character: There is no ל in font pcrr8t!
+Missing character: There is no ש in font pcrr8t!
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [358
+
+]
+Missing character: There is no � in font phvr8t!
+Missing character: There is no � in font phvr8t!
+Missing character: There is no � in font phvr8t!
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [359
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [360
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (176.73401pt too wide) in paragraph at lines 9--9
+[]    \T1/pcr/m/n/10.95 <meta content="text/html; charset=ISO-Latin-1" http-equ
+iv="Content-type" />[] 
+ []
+
+
+Overfull \hbox (137.31406pt too wide) in paragraph at lines 21--21
+[]\T1/pcr/m/n/10.95 #   <meta content="text/html; charset=utf-8" http-equiv="Co
+ntent-type" />[] 
+ []
+
+)
+Overfull \vbox (153.51207pt too high) detected at line 4319
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[361
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [362
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [363
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 #   <meta content="text/html; charset=latin-1" http-equiv="
+Content-type" />[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [364
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [365
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [366
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [367
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [368
+
+]
+Missing character: There is no ☃ in font phvr8t!
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [369
+
+]
+\openout4 = `slides.vrb'.
+
+
+(./slides.vrb
+Missing character: There is no ☃ in font pcrr8t!
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [370
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [371
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [372
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [373
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (97.8941pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 dammit = UnicodeDammit("Sacr\xe9 bleu!", ["latin-1", "iso-8
+859-1"])[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [374
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [375
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [376
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (124.17407pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 markup = b"<p>I just \x93love\x94 Microsoft Word\x92s smart
+ quotes</p>"[] 
+ []
+
+
+Overfull \hbox (170.16402pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 UnicodeDammit(markup, ["windows-1252"], smart_quotes_to="ht
+ml").unicode_markup[] 
+ []
+
+
+Overfull \hbox (137.31406pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/10.95 # u'<p>I just &ldquo;love&rdquo; Microsoft Word&rsquo;s sma
+rt quotes</p>'[] 
+ []
+
+
+Overfull \hbox (163.59402pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 UnicodeDammit(markup, ["windows-1252"], smart_quotes_to="xm
+l").unicode_markup[] 
+ []
+
+
+Overfull \hbox (157.02403pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 # u'<p>I just &#x201C;love&#x201D; Microsoft Word&#x2019;s 
+smart quotes</p>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [377
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [378
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (176.73401pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 UnicodeDammit(markup, ["windows-1252"], smart_quotes_to="as
+cii").unicode_markup[] 
+ []
+
+
+Overfull \hbox (25.62419pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # u'<p>I just "love" Microsoft Word\'s smart quotes</p>'[] 
+
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [379
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [380
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 6--6
+[]\T1/pcr/m/n/10.95 UnicodeDammit(markup, ["windows-1252"]).unicode_markup[] 
+ []
+
+
+Overfull \hbox (117.60408pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 # u'<p>I just \u201clove\u201d Microsoft Word\u2019s smart 
+quotes</p>'[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [381
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [382
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (242.43393pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 quote = (u"\N{LEFT DOUBLE QUOTATION MARK}I like snowmen!\N{
+RIGHT DOUBLE QUOTATION MARK}")[] 
+ []
+
+
+Overfull \hbox (45.33417pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 doc = snowmen.encode("utf8") + quote.encode("windows_1252")
+[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [383
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [384
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Missing character: There is no ☃ in font pcrr8t!
+Missing character: There is no ☃ in font pcrr8t!
+Missing character: There is no ☃ in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no � in font pcrr8t!
+Missing character: There is no ˜ in font pcrr8t!
+Missing character: There is no ƒ in font pcrr8t!
+Missing character: There is no ˜ in font pcrr8t!
+Missing character: There is no ƒ in font pcrr8t!
+Missing character: There is no ˜ in font pcrr8t!
+Missing character: There is no ƒ in font pcrr8t!
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [385
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [386
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Missing character: There is no ☃ in font pcrr8t!
+Missing character: There is no ☃ in font pcrr8t!
+Missing character: There is no ☃ in font pcrr8t!
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [387
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [388
+
+]
+Missing character: There is no ˜ in font phvr8t!
+Missing character: There is no ƒ in font phvr8t!
+Missing character: There is no ˜ in font phvr8t!
+Missing character: There is no ƒ in font phvr8t!
+Missing character: There is no ˜ in font phvr8t!
+Missing character: There is no ƒ in font phvr8t!
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [389
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[390
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [391
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [392
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [393
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (19.0542pt too wide) in paragraph at lines 15--15
+[]\T1/pcr/m/n/10.95 only_short_strings = SoupStrainer(text=is_short_string)[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [394
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [395
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (12.4842pt too wide) in paragraph at lines 7--7
+[]\T1/pcr/m/n/10.95 <html><head><title>The Dormouse's story</title></head>[] 
+ []
+
+
+Overfull \hbox (229.29395pt too wide) in paragraph at lines 11--11
+[]\T1/pcr/m/n/10.95 <p class="story">Once upon a time there were three little s
+isters; and their names were[] 
+ []
+
+
+Overfull \hbox (124.17407pt too wide) in paragraph at lines 12--12
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/elsie" class="sister" id="link1
+">Elsie</a>,[] 
+ []
+
+
+Overfull \hbox (143.88405pt too wide) in paragraph at lines 13--13
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/lacie" class="sister" id="link2
+">Lacie</a> and[] 
+ []
+
+
+Overfull \hbox (137.31406pt too wide) in paragraph at lines 14--14
+[]\T1/pcr/m/n/10.95 <a href="http://example.com/tillie" class="sister" id="link
+3">Tillie</a>;[] 
+ []
+
+
+Overfull \hbox (183.304pt too wide) in paragraph at lines 20--20
+[]\T1/pcr/m/n/10.95 print(BeautifulSoup(html_doc, "html.parser", parse_only=onl
+y_a_tags).prettify())[] 
+ []
+
+
+Overfull \hbox (71.61414pt too wide) in paragraph at lines 21--21
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/elsie" id="lin
+k1">[] 
+ []
+
+
+Overfull \hbox (71.61414pt too wide) in paragraph at lines 24--24
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/lacie" id="lin
+k2">[] 
+ []
+
+
+Overfull \hbox (78.18413pt too wide) in paragraph at lines 27--27
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/tillie" id="li
+nk3">[] 
+ []
+
+
+Overfull \hbox (262.1439pt too wide) in paragraph at lines 31--31
+[]\T1/pcr/m/n/10.95 print(BeautifulSoup(html_doc, "html.parser", parse_only=onl
+y_tags_with_id_link2).prettify())[] 
+ []
+
+
+Overfull \hbox (71.61414pt too wide) in paragraph at lines 32--32
+[]\T1/pcr/m/n/10.95 # <a class="sister" href="http://example.com/lacie" id="lin
+k2">[] 
+ []
+
+
+Overfull \hbox (229.29395pt too wide) in paragraph at lines 36--36
+[]\T1/pcr/m/n/10.95 print(BeautifulSoup(html_doc, "html.parser", parse_only=onl
+y_short_strings).prettify())[] 
+ []
+
+)
+Overfull \vbox (357.51216pt too high) detected at line 4744
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[396
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [397
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (117.60408pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 # [u'\n\n', u'\n\n', u'Elsie', u',\n', u'Lacie', u' and\n',
+ u'Tillie',[] 
+ []
+
+)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [398
 
 ]
 \tf@nav=\write6
@@ -2615,23 +5593,19 @@ File: logo.jpg Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1347.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1347.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4771.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4771.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1347.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1347.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4771.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 4771.
  ) 
 Here is how much of TeX's memory you used:
- 36858 strings out of 492998
- 731370 string characters out of 6136604
- 819448 words of memory out of 5000000
- 40162 multiletter control sequences out of 15000+600000
- 568363 words of font info for 85 fonts, out of 8000000 for 9000
+ 37342 strings out of 492998
+ 726014 string characters out of 6136604
+ 827849 words of memory out of 5000000
+ 40475 multiletter control sequences out of 15000+600000
+ 543158 words of font info for 40 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 56i,17n,65p,10440b,663s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,62p,10440b,661s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (84 pages).
+Output written on slides.pdf (398 pages).

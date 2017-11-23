@@ -1,0 +1,14 @@
+\frametitle{解析部分文档}
+
+
+\begin{verbatim}
+
+soup = BeautifulSoup(html_doc)
+soup.find_all(only_short_strings)
+# [u'\n\n', u'\n\n', u'Elsie', u',\n', u'Lacie', u' and\n', u'Tillie',
+#  u'\n\n', u'...', u'\n']
+
+
+\end{verbatim}
+
+

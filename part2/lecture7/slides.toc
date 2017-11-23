@@ -1,0 +1,11 @@
+\select@language {english}
+\beamer@sectionintoc {1}{快速开始}{2}{0}{1}
+\beamer@sectionintoc {2}{如何使用}{14}{0}{2}
+\beamer@sectionintoc {3}{对象的种类}{20}{0}{3}
+\beamer@sectionintoc {4}{遍历文档树}{62}{0}{4}
+\beamer@sectionintoc {5}{搜索文档树}{142}{0}{5}
+\beamer@sectionintoc {6}{修改文档树}{267}{0}{6}
+\beamer@sectionintoc {7}{输出}{307}{0}{7}
+\beamer@sectionintoc {8}{指定文档解析器}{328}{0}{8}
+\beamer@sectionintoc {9}{编码}{349}{0}{9}
+\beamer@sectionintoc {10}{解析部分文档}{391}{0}{10}

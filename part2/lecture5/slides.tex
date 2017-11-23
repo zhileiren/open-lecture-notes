@@ -99,8 +99,8 @@ Dalian University of Technology
 	\begin{block}
 		{面向对象三要素}
 		\begin{itemize}
-			\item 继承：儿子点出父亲成员
 			\item 封装：点号能点出成员
+			\item 继承：儿子点出父亲成员
 			\item 多态：儿子点出和父亲不同的行为
 		\end{itemize}
 	\end{block}
@@ -311,20 +311,59 @@ if __name__ == "__main__"
 \end{frame}
 
 
-\begin{frame}[t]{Lisp}
+\begin{frame}[t,fragile]{Lisp}
 	\includegraphics[width=.2\textwidth]{GNU-Guile-logo.png}
+	\includegraphics[width=.4\textwidth]{clojure.png}
+	\includegraphics[width=.13\textwidth]{racket.png}
+	\vspace{1cm}
+
+\begin{minipage}{0.45\linewidth}
+	\scriptsize
+\begin{verbatim}
+(+ 1 2)
+(define (foo bar) (+ bar 1))
+(foo 100)
+(define (fib x)
+    (if (<= x 1)
+        1
+        (+ (fib (- x 1))
+             (fib (- x 2)))))
+(display (fib 10))
+	  
+		
+\end{verbatim}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+	\includegraphics[width=\textwidth]{lisp-xkcd.png}
+\end{minipage}
+
+
 \end{frame}
 
 \begin{frame}[t]{Haskell}
 	\begin{itemize}
 		\item 偏学术	
 		\item 号称最纯粹的函数式语言	
-		\item Avoid Haskell at all cost
+		\item Avoid Success at all Cost
 	\end{itemize}
-	\includegraphics[width=.2\textwidth]{haskell.png}
+	\includegraphics[width=.15\textwidth]{haskell.png}
 	
 \end{frame}
+\begin{frame}[t]{今天就能开始用的小知识}
+	\begin{block}
+		{关于Haskell}
+		\begin{itemize}
+			\item Avoid Success at all Cost, or Avoid "Success at all cost"
+			\item 新加坡总理李显龙（会C/C++）称退休后会学习Haskell \footnote{\url{http://www.pmo.gov.sg/newsroom/transcript-speech-prime-minister-lee-hsien-loong-founders-forum-smart-nation-singapore}}
+		\end{itemize}
+	\end{block}
+	\includegraphics[width=.4\linewidth]{sudoku.png}
+	\includegraphics[width=.4\linewidth]{license.png}
+\end{frame}
 
+\begin{frame}[t]{书籍推荐}
+	\includegraphics[width=.4\linewidth]{haskell.jpg}
+\end{frame}
 
 \section{函数式特性} % (fold)
 \label{sec:函数式特性}
@@ -373,7 +412,7 @@ add(10, 20)
 	\begin{verbatim}
 [i * 2 for i in range(10)]
 
-[i * 2 for i in range(10) if i % 2 == ]
+[i * 2 for i in range(10) if i % 2 == 0]
 
 colours = ["red", "green", "yellow", "blue"]
 things = ["house", "car", "tree"]
@@ -407,4 +446,401 @@ reduce(lambda x, y: x + y,
 % subsection Map-Reduce (end)
 
 % section 函数式特性 (end)
+\section{一点更多的数据结构}
+\label{sec:一点更多的数据结构}
+
+\subsection{元组}
+\label{ssub:元组}
+
+\begin{frame}[t]{Tuples and Sequences}
+
+We saw that lists and strings have many common properties, such as indexing and
+slicing operations.  They are two examples of sequence data types (see
+typesseq).  Since Python is an evolving language, other sequence data
+types may be added.  There is also another standard sequence data type: the
+tuple.
+
+\end{frame}
+
+
+\begin{frame}[t]{Tuples and Sequences}
+
+A tuple consists of a number of values separated by commas, for instance:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Tuples and Sequences}
+
+
+\begin{verbatim}
+
+
+>>> t = 12345, 54321, 'hello!'
+>>> t[0]
+12345
+>>> t
+(12345, 54321, 'hello!')
+>>> # Tuples may be nested:
+... u = t, (1, 2, 3, 4, 5)
+>>> u
+((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+>>> # Tuples are immutable:
+... t[0] = 88888
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> # but they can contain mutable objects:
+... v = ([1, 2, 3], [3, 2, 1])
+>>> v
+([1, 2, 3], [3, 2, 1])
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Tuples and Sequences}
+
+As you see, on output tuples are always enclosed in parentheses, so that nested
+tuples are interpreted correctly; they may be input with or without surrounding
+parentheses, although often parentheses are necessary anyway (if the tuple is
+part of a larger expression).  It is not possible to assign to the individual
+items of a tuple, however it is possible to create tuples which contain mutable
+objects, such as lists.
+
+\end{frame}
+
+
+\begin{frame}[t]{Tuples and Sequences}
+
+Though tuples may seem similar to lists, they are often used in different
+situations and for different purposes.
+Tuples are immutable, and usually contain a heterogeneous sequence of
+elements that are accessed via unpacking (see later in this section) or indexing
+(or even by attribute in the case of namedtuples <collections.namedtuple>).
+Lists are mutable, and their elements are usually homogeneous and are
+accessed by iterating over the list.
+
+\end{frame}
+
+
+\begin{frame}[t]{Tuples and Sequences}
+
+A special problem is the construction of tuples containing 0 or 1 items: the
+syntax has some extra quirks to accommodate these.  Empty tuples are constructed
+by an empty pair of parentheses; a tuple with one item is constructed by
+following a value with a comma (it is not sufficient to enclose a single value
+in parentheses). Ugly, but effective.  For example:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Tuples and Sequences}
+
+
+\begin{verbatim}
+
+
+>>> empty = ()
+>>> singleton = 'hello',    # <-- note trailing comma
+>>> len(empty)
+0
+>>> len(singleton)
+1
+>>> singleton
+('hello',)
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Tuples and Sequences}
+
+The statement t = 12345, 54321, 'hello!' is an example of tuple packing:
+the values 12345, 54321 and 'hello!' are packed together in a tuple.
+The reverse operation is also possible:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Tuples and Sequences}
+
+
+\begin{verbatim}
+
+
+>>> x, y, z = t
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Tuples and Sequences}
+
+This is called, appropriately enough, sequence unpacking and works for any
+sequence on the right-hand side.  Sequence unpacking requires that there are as
+many variables on the left side of the equals sign as there are elements in the
+sequence.  Note that multiple assignment is really just a combination of tuple
+packing and sequence unpacking.
+
+\end{frame}
+\subsection{字典}
+\label{sub:字典}
+
+\begin{frame}[t]{Dictionaries}
+
+Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found in other languages as
+"associative memories" or "associative arrays".  Unlike sequences, which are
+indexed by a range of numbers, dictionaries are indexed by keys, which can be
+any immutable type; strings and numbers can always be keys.  Tuples can be used
+as keys if they contain only strings, numbers, or tuples; if a tuple contains
+any mutable object either directly or indirectly, it cannot be used as a key.
+You can't use lists as keys, since lists can be modified in place using index
+assignments, slice assignments, or methods like append and
+extend.
+
+\end{frame}
+
+
+\begin{frame}[t]{Dictionaries}
+
+It is best to think of a dictionary as an unordered set of key: value pairs,
+with the requirement that the keys are unique (within one dictionary). A pair of
+braces creates an empty dictionary: \{\}. Placing a comma-separated list of
+key:value pairs within the braces adds initial key:value pairs to the
+dictionary; this is also the way dictionaries are written on output.
+
+\end{frame}
+
+
+\begin{frame}[t]{Dictionaries}
+
+The main operations on a dictionary are storing a value with some key and
+extracting the value given the key.  It is also possible to delete a key:value
+pair with del. If you store using a key that is already in use, the old
+value associated with that key is forgotten.  It is an error to extract a value
+using a non-existent key.
+
+\end{frame}
+
+
+\begin{frame}[t]{Dictionaries}
+
+Performing list(d.keys()) on a dictionary returns a list of all the keys
+used in the dictionary, in arbitrary order (if you want it sorted, just use
+sorted(d.keys()) instead). [2]  To check whether a single key is in the
+dictionary, use the in keyword.
+
+\end{frame}
+
+
+\begin{frame}[t]{Dictionaries}
+
+Here is a small example using a dictionary:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Dictionaries}
+
+
+\begin{verbatim}
+
+
+>>> tel = {'jack': 4098, 'sape': 4139}
+>>> tel['guido'] = 4127
+>>> tel
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
+>>> tel['jack']
+4098
+>>> del tel['sape']
+>>> tel['irv'] = 4127
+>>> tel
+{'guido': 4127, 'irv': 4127, 'jack': 4098}
+>>> list(tel.keys())
+['irv', 'guido', 'jack']
+>>> sorted(tel.keys())
+['guido', 'irv', 'jack']
+>>> 'guido' in tel
+True
+>>> 'jack' not in tel
+False
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Dictionaries}
+
+The dict constructor builds dictionaries directly from sequences of
+key-value pairs:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Dictionaries}
+
+
+\begin{verbatim}
+
+
+>>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+{'sape': 4139, 'jack': 4098, 'guido': 4127}
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Dictionaries}
+
+In addition, dict comprehensions can be used to create dictionaries from
+arbitrary key and value expressions:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Dictionaries}
+
+
+\begin{verbatim}
+
+
+>>> {x: x**2 for x in (2, 4, 6)}
+{2: 4, 4: 16, 6: 36}
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Dictionaries}
+
+When the keys are simple strings, it is sometimes easier to specify pairs using
+keyword arguments:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Dictionaries}
+
+
+\begin{verbatim}
+
+
+>>> dict(sape=4139, guido=4127, jack=4098)
+{'sape': 4139, 'jack': 4098, 'guido': 4127}
+
+
+\end{verbatim}
+
+
+\end{frame}
+\subsection{集合}
+\label{ssub:集合}
+
+\begin{frame}[t]{Sets}
+
+Python also includes a data type for sets.  A set is an unordered collection
+with no duplicate elements.  Basic uses include membership testing and
+eliminating duplicate entries.  Set objects also support mathematical operations
+like union, intersection, difference, and symmetric difference.
+
+\end{frame}
+
+
+\begin{frame}[t]{Sets}
+
+Curly braces or the set function can be used to create sets.  Note: to
+create an empty set you have to use set(), not \{\}; the latter creates an
+empty dictionary, a data structure that we discuss in the next section.
+
+\end{frame}
+
+
+\begin{frame}[t]{Sets}
+
+Here is a brief demonstration:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Sets}
+
+
+\begin{verbatim}
+
+
+>>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+>>> print(basket)                      # show that duplicates have been removed
+{'orange', 'banana', 'pear', 'apple'}
+>>> 'orange' in basket                 # fast membership testing
+True
+>>> 'crabgrass' in basket
+False
+
+>>> # Demonstrate set operations on unique letters from two words
+...
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a                                  # unique letters in a
+{'a', 'r', 'b', 'c', 'd'}
+>>> a - b                              # letters in a but not in b
+{'r', 'd', 'b'}
+>>> a | b                              # letters in a or b or both
+{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+>>> a & b                              # letters in both a and b
+{'a', 'c'}
+>>> a ^ b                              # letters in a or b but not both
+{'r', 'd', 'b', 'm', 'z', 'l'}
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{Sets}
+
+Similarly to list comprehensions <tut-listcomps>, set comprehensions
+are also supported:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{Sets}
+
+
+\begin{verbatim}
+
+
+>>> a = {x for x in 'abracadabra' if x not in 'abc'}
+>>> a
+{'r', 'd'}
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+
 \end{document}

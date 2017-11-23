@@ -1,15 +1,12 @@
-\frametitle{Map/Filter/Reduce}
+\frametitle{Sets}
+
+
 \begin{verbatim}
 
-map(lambda x: x ** 2, range(10)
-list(map(lambda x: x **2, range(10))
 
-filter(lambda x: x % 2 == 0,
-         map(lambda x: x ** 2, range(10)))
-
-reduce(lambda x, y: x + y,
-         filter(lambda x: x % 2 == 0,
-                  map(lambda x: x ** 2, range(10))))
+>>> a = {x for x in 'abracadabra' if x not in 'abc'}
+>>> a
+{'r', 'd'}
 
 
 \end{verbatim}
