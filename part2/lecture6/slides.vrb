@@ -1,8 +1,4 @@
-\frametitle{编码问题}
+\frametitle{POST参数}
 \begin{verbatim}
-r = requests.get("http://127.0.0.1:8000")
-r.encoding = "UTF-8"
-print(r.text)
-
-\end{verbatim}
-
+    >>> r = requests.post('http://httpbin.org/post', data = {'key':'value'})
+    \end{verbatim}

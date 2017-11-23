@@ -365,8 +365,6 @@ if __name__ == "__main__"
 	\includegraphics[width=.4\linewidth]{haskell.jpg}
 \end{frame}
 
-\section{函数式特性} % (fold)
-\label{sec:函数式特性}
 \begin{frame}[t]{什么是函数式}
     函数式编程（functional programming）或称函数程序设计，是一种编程典范，它将电脑运算视为数学上的函数计算，并且避免使用程序状态以及易变对象。函数编程语言最重要的基础是$\lambda$演算（lambda calculus）。而且$\lambda$演算的函数可以接受函数当作输入（引数）和输出（传出值）。
 
@@ -454,24 +452,20 @@ reduce(lambda x, y: x + y,
 
 \begin{frame}[t]{Tuples and Sequences}
 
-We saw that lists and strings have many common properties, such as indexing and
-slicing operations.  They are two examples of sequence data types (see
-typesseq).  Since Python is an evolving language, other sequence data
-types may be added.  There is also another standard sequence data type: the
-tuple.
+    \begin{itemize}
+        \item 元组与列表类似，都是线性数据结构
+        \item 元组由逗号分割的数据构成
+        \item 元组内容不可变
+        \item 元组可以嵌套
+    \end{itemize}
 
 \end{frame}
 
-
-\begin{frame}[t]{Tuples and Sequences}
-
-A tuple consists of a number of values separated by commas, for instance:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Tuples and Sequences}
 
+    \scriptsize
 
 \begin{verbatim}
 
@@ -497,43 +491,20 @@ TypeError: 'tuple' object does not support item assignment
 
 
 \end{verbatim}
-
-
 \end{frame}
+
+
+
 
 
 \begin{frame}[t]{Tuples and Sequences}
 
-As you see, on output tuples are always enclosed in parentheses, so that nested
-tuples are interpreted correctly; they may be input with or without surrounding
-parentheses, although often parentheses are necessary anyway (if the tuple is
-part of a larger expression).  It is not possible to assign to the individual
-items of a tuple, however it is possible to create tuples which contain mutable
-objects, such as lists.
-
-\end{frame}
-
-
-\begin{frame}[t]{Tuples and Sequences}
-
-Though tuples may seem similar to lists, they are often used in different
-situations and for different purposes.
-Tuples are immutable, and usually contain a heterogeneous sequence of
-elements that are accessed via unpacking (see later in this section) or indexing
-(or even by attribute in the case of namedtuples <collections.namedtuple>).
-Lists are mutable, and their elements are usually homogeneous and are
-accessed by iterating over the list.
-
-\end{frame}
-
-
-\begin{frame}[t]{Tuples and Sequences}
-
-A special problem is the construction of tuples containing 0 or 1 items: the
-syntax has some extra quirks to accommodate these.  Empty tuples are constructed
-by an empty pair of parentheses; a tuple with one item is constructed by
-following a value with a comma (it is not sufficient to enclose a single value
-in parentheses). Ugly, but effective.  For example:
+    \begin{itemize}
+        \item 构造空列表使用()
+        \item 构造单元素列表用(a,)
+        \item 如果元组元素是可变的，则可以修改（有坑）
+        \item 元组也可出现在赋值左部（lhs）
+    \end{itemize}
 
 \end{frame}
 
@@ -560,22 +531,27 @@ in parentheses). Ugly, but effective.  For example:
 \end{frame}
 
 
-\begin{frame}[t]{Tuples and Sequences}
-
-The statement t = 12345, 54321, 'hello!' is an example of tuple packing:
-the values 12345, 54321 and 'hello!' are packed together in a tuple.
-The reverse operation is also possible:
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{Tuples and Sequences}
 
 
+    \scriptsize
 \begin{verbatim}
-
-
 >>> x, y, z = t
+>>> x, y = y, x
+
+>>> x = (1, 2, 3, [4, 5])
+>>> x[3] += [6]
+---------------------------------------------------------------------------
+TypeError                Traceback (most recent call last)
+<ipython-input-34-1b7fadc4e686> in <module>()
+----> 1 x[3] += [6]
+
+TypeError: 'tuple' object does not support item assignment
+
+>>> x
+(1, 2, 3, [4, 5, 6])
+
 
 
 \end{verbatim}
@@ -584,78 +560,26 @@ The reverse operation is also possible:
 \end{frame}
 
 
-\begin{frame}[t]{Tuples and Sequences}
-
-This is called, appropriately enough, sequence unpacking and works for any
-sequence on the right-hand side.  Sequence unpacking requires that there are as
-many variables on the left side of the equals sign as there are elements in the
-sequence.  Note that multiple assignment is really just a combination of tuple
-packing and sequence unpacking.
-
-\end{frame}
 \subsection{字典}
 \label{sub:字典}
 
 \begin{frame}[t]{Dictionaries}
 
-Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found in other languages as
-"associative memories" or "associative arrays".  Unlike sequences, which are
-indexed by a range of numbers, dictionaries are indexed by keys, which can be
-any immutable type; strings and numbers can always be keys.  Tuples can be used
-as keys if they contain only strings, numbers, or tuples; if a tuple contains
-any mutable object either directly or indirectly, it cannot be used as a key.
-You can't use lists as keys, since lists can be modified in place using index
-assignments, slice assignments, or methods like append and
-extend.
+    \begin{itemize}
+        \item 字典类似其他语言中散列表、关联数组，按键值方式组织
+        \item 不像列表元组可以用下标随机访问
+        \item 任何不可变对象均可作为键（元组亦可，但不能包含可变元素）
+        \item 空字典用\{\}构造；非空字典在\{\}内逗号分割的键:值对表示
+        \item list(d.keys())返回所有键。如需有序，使用sorted(d.keys())
+    \end{itemize}
 
 \end{frame}
-
-
-\begin{frame}[t]{Dictionaries}
-
-It is best to think of a dictionary as an unordered set of key: value pairs,
-with the requirement that the keys are unique (within one dictionary). A pair of
-braces creates an empty dictionary: \{\}. Placing a comma-separated list of
-key:value pairs within the braces adds initial key:value pairs to the
-dictionary; this is also the way dictionaries are written on output.
-
-\end{frame}
-
-
-\begin{frame}[t]{Dictionaries}
-
-The main operations on a dictionary are storing a value with some key and
-extracting the value given the key.  It is also possible to delete a key:value
-pair with del. If you store using a key that is already in use, the old
-value associated with that key is forgotten.  It is an error to extract a value
-using a non-existent key.
-
-\end{frame}
-
-
-\begin{frame}[t]{Dictionaries}
-
-Performing list(d.keys()) on a dictionary returns a list of all the keys
-used in the dictionary, in arbitrary order (if you want it sorted, just use
-sorted(d.keys()) instead). [2]  To check whether a single key is in the
-dictionary, use the in keyword.
-
-\end{frame}
-
-
-\begin{frame}[t]{Dictionaries}
-
-Here is a small example using a dictionary:
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{Dictionaries}
 
 
+    \scriptsize
 \begin{verbatim}
-
-
 >>> tel = {'jack': 4098, 'sape': 4139}
 >>> tel['guido'] = 4127
 >>> tel
@@ -674,6 +598,27 @@ Here is a small example using a dictionary:
 True
 >>> 'jack' not in tel
 False
+\end{verbatim}
+
+
+\end{frame}
+
+\begin{frame}[t,fragile]{Dictionaries}
+
+
+\begin{verbatim}
+
+>>> x = {}
+>>> x[(1, 2, 3)] = 4
+>>> x[(1, 2, [3, 4])] = 5
+>>> x[(1, 2, 3, [4, 5])] = 6
+---------------------------------------------------------------------------
+TypeError       Traceback (most recent call last)
+<ipython-input-8-7e134042fef1> in <module>()
+----> 1 x[(1, 2, 3, [4, 5])] = 6
+
+TypeError: unhashable type: 'list'
+
 
 
 \end{verbatim}
@@ -681,11 +626,13 @@ False
 
 \end{frame}
 
-
 \begin{frame}[t]{Dictionaries}
 
-The dict constructor builds dictionaries directly from sequences of
-key-value pairs:
+    \begin{itemize}
+        \item 字典还可以由二元组列表初始化
+        \item 字典推导与列表推导类似
+        \item 字典键为字符串时，可以用关键字参数设定
+    \end{itemize}
 
 \end{frame}
 
@@ -696,7 +643,9 @@ key-value pairs:
 \begin{verbatim}
 
 
->>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+>>> dict([('sape', 4139), 
+          ('guido', 4127), 
+          ('jack', 4098)])
 {'sape': 4139, 'jack': 4098, 'guido': 4127}
 
 
@@ -706,12 +655,6 @@ key-value pairs:
 \end{frame}
 
 
-\begin{frame}[t]{Dictionaries}
-
-In addition, dict comprehensions can be used to create dictionaries from
-arbitrary key and value expressions:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Dictionaries}
@@ -730,12 +673,6 @@ arbitrary key and value expressions:
 \end{frame}
 
 
-\begin{frame}[t]{Dictionaries}
-
-When the keys are simple strings, it is sometimes easier to specify pairs using
-keyword arguments:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Dictionaries}
@@ -757,36 +694,23 @@ keyword arguments:
 
 \begin{frame}[t]{Sets}
 
-Python also includes a data type for sets.  A set is an unordered collection
-with no duplicate elements.  Basic uses include membership testing and
-eliminating duplicate entries.  Set objects also support mathematical operations
-like union, intersection, difference, and symmetric difference.
+    \begin{itemize}
+        \item 集合是无序无重复的数据结构
+        \item 支持成员测试、添加、删除等操作
+        \item 支持交集、并集、差等集合操作
+        \item 初始化用\{\}括住的逗号分割元素序列
+        \item 空集合用set()，而不是\{\}
+        \item 集合推导同样支持
+   \end{itemize}
 
 \end{frame}
 
 
-\begin{frame}[t]{Sets}
-
-Curly braces or the set function can be used to create sets.  Note: to
-create an empty set you have to use set(), not \{\}; the latter creates an
-empty dictionary, a data structure that we discuss in the next section.
-
-\end{frame}
-
-
-\begin{frame}[t]{Sets}
-
-Here is a brief demonstration:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Sets}
-
-
+    \scriptsize
 \begin{verbatim}
-
-
 >>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
 >>> print(basket)                      # show that duplicates have been removed
 {'orange', 'banana', 'pear', 'apple'}
@@ -812,16 +736,6 @@ False
 
 
 \end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Sets}
-
-Similarly to list comprehensions <tut-listcomps>, set comprehensions
-are also supported:
-
 \end{frame}
 
 
@@ -840,7 +754,5 @@ are also supported:
 
 
 \end{frame}
-
-
 
 \end{document}
