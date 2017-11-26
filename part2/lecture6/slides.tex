@@ -29,7 +29,7 @@
 
 \title[开源软件基础] 
 {开源软件基础}
-\subtitle{Python进阶知识}
+\subtitle{Python Requests}
 
 \author[Zhilei Ren] 
 {Zhilei Ren}
@@ -433,4 +433,28 @@ print(r.status_code)
     \end{verbatim}
 \end{frame}
 % section Tutorial (end)
+\section{使用正规式} % (fold)
+\label{sec:使用正规式}
+
+\begin{frame}[t]{正规式}
+    \begin{block}
+        {正规式}
+        正则表达式，又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法（英语：Regular Expression，在代码中常简写为regex、regexp或RE），是计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。\footnote{\url{https://zh.wikipedia.org/zh-cn/正则表达式}}
+    \end{block}
+    
+\end{frame}
+\begin{frame}[t,fragile]{正规式}
+
+    \begin{verbatim}
+>>> import re
+>>> re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
+['foot', 'fell', 'fastest']
+>>> re.sub(r'(\b[a-z]+) \1', r'\1', 'cat in the the hat')
+'cat in the hat'
+        
+    \end{verbatim}
+    
+\end{frame}
+
+% section 使用正规式 (end)
 \end{document}
