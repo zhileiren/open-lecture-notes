@@ -1,4 +1,17 @@
-\frametitle{POST参数}
+\frametitle{分组捕获}
 \begin{verbatim}
-    >>> r = requests.post('http://httpbin.org/post', data = {'key':'value'})
-    \end{verbatim}
+>>> re.match(r'x(\d+) = \1', 'x123 = 123').group()
+'x123 = 123'
+>>> re.match(r'x(\d+) = \1', 'x123 = 123').groups()
+('123',)
+>>> p = re.compile('(a(b)c)d')
+>>> m = p.match('abcd')
+>>> m.group(0)
+'abcd'
+>>> m.group(1)
+'abc'
+>>> m.group(2)
+'b'
+>>> re.findall(r'(.)\1', '明明亮亮蛋蛋')
+['明', '亮', '蛋']
+\end{verbatim}

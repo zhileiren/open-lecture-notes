@@ -147,6 +147,11 @@ Allow:  /oshtml
     
 \end{frame}
 
+\begin{frame}
+  \frametitle{数据准备}
+	\includegraphics[width=0.8\linewidth]{HTML-Tags-Tattoo.jpg}
+\end{frame}
+
 \begin{frame}[t,fragile]{数据准备}
     \scriptsize
 \begin{verbatim}
@@ -444,16 +449,164 @@ print(r.status_code)
     
 \end{frame}
 \begin{frame}[t,fragile]{正规式}
-
+	\scriptsize
     \begin{verbatim}
 >>> import re
 >>> re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
 ['foot', 'fell', 'fastest']
 >>> re.sub(r'(\b[a-z]+) \1', r'\1', 'cat in the the hat')
 'cat in the hat'
-        
-    \end{verbatim}
+\end{verbatim}
     
+\end{frame}
+\begin{frame}[t,fragile]{正规式}
+	\scriptsize
+    \begin{verbatim}
+>>> html = '''\
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Title</h1>
+        <p> This is a paragraph</p>
+        <table>
+            <tr>
+                <td> <a href='a.html'>link a</a> </td>
+            </tr>
+        </table>
+        <a href='b.html'>link b</a>
+    </body>
+</html>
+'''
+>>> re.findall("href='(.*?)'", html)
+['a.html', 'b.html']
+\end{verbatim}
+    
+\end{frame}
+\begin{frame}
+  \frametitle{匹配字符}
+	\begin{block}
+		{字符模式}
+		\begin{itemize}
+			\item [$\bullet$] [a-zA-Z]匹配某个字符
+			\item [$\bullet$] \^{}和\$匹配首尾
+			\item [$\bullet$] \textbackslash \^{}和\textbackslash \$字面值
+			\item [$\bullet$] .匹配任意字符，\textbackslash .匹配点号
+			\item [$\bullet$] \textbackslash b匹配单词边界
+			\item [$\bullet$] \textbackslash w匹配非空字符
+			\item [$\bullet$] \textbackslash s匹配空格
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{匹配重复}
+	\begin{block}
+		{重复}
+		\begin{itemize}
+			\item *表示任意次数，\textbackslash *表示字面值
+			\item +表示1次或多次，textbackslash +表示字面值
+			\item *?和+?表示最短匹配
+			\item \{3\}和\{4,6\}表示重复3次和4--6次
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{匹配重复}
+\begin{verbatim}
+>>> import re
+>>> re.match(r'ab*', 'abbbb').group()
+'abbbb'
+
+>>> re.match(r'ab*?', 'abbbb').group()
+'a'
+
+>>> re.match(r'a\d{3,4}', 'a1234567').group()
+'a1234'
+		
+\end{verbatim}
+\end{frame}
+
+\begin{frame}
+  \frametitle{match与findall}
+	\begin{block}
+		{match vs. findall}
+		\begin{itemize}
+			\item match从首字母开始匹配
+			\item 还有个search，与match类似，从任意处开始匹配
+			\item findall匹配所有子串
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{match与findall}
+\begin{verbatim}
+>>> import re
+>>> p = re.compile('\d+')
+>>> p.findall('12 drummers drumming, 11 pipers piping, 10 lords a-leaping')
+['12', '11', '10']
+		
+>>> p.match('12 drummers drumming, 11 pipers piping, 10 lords a-leaping').group()
+'12'
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}
+  \frametitle{分组捕获}
+	\begin{block}
+		{Grouping}
+		\begin{itemize}
+			\item ()表示分组
+			\item \textbackslash 数字进行引用
+
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}[t,fragile]
+  \frametitle{分组捕获}
+\begin{verbatim}
+>>> re.match(r'x(\d+) = \1', 'x123 = 123').group()
+'x123 = 123'
+>>> re.match(r'x(\d+) = \1', 'x123 = 123').groups()
+('123',)
+>>> p = re.compile('(a(b)c)d')
+>>> m = p.match('abcd')
+>>> m.group(0)
+'abcd'
+>>> m.group(1)
+'abc'
+>>> m.group(2)
+'b'
+>>> re.findall(r'(.)\1', '明明亮亮蛋蛋')
+['明', '亮', '蛋']
+\end{verbatim}
+\end{frame}
+
+\begin{frame}
+  \frametitle{正规式的局限}
+	\begin{block}
+		\begin{itemize}
+			\item 无法描述复杂结构
+			\item 回顾编译原理，正规式将文本流转化为记号流
+			\item 还需要语法分析和语义分析构造AST
+			\item HTML中仅用href过滤网址可能无法知道在网页中的位置
+			\item 需要构造DOM树
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{DOM树}
+	\includegraphics[width=0.8\linewidth]{dom.png}
+\end{frame}
+
+\begin{frame}
+  \frametitle{抽象语法树}
+	\includegraphics[width=0.8\linewidth]{ast.png}
 \end{frame}
 
 % section 使用正规式 (end)
