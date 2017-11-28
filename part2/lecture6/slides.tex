@@ -147,6 +147,11 @@ Allow:  /oshtml
     
 \end{frame}
 
+\begin{frame}[t]{数据准备}
+	\centering
+	\includegraphics[width=.4\linewidth]{HTML-Tags-Tattoo.jpg}
+\end{frame}
+
 \begin{frame}[t,fragile]{数据准备}
     \scriptsize
 \begin{verbatim}
@@ -455,6 +460,101 @@ print(r.status_code)
     \end{verbatim}
     
 \end{frame}
+
+\begin{frame}[t]{匹配字符}
+
+	\begin{block}{特殊字符}
+\begin{itemize}
+	\item[$\bullet$] [a-z]表示在范围内选择
+	\item[$\bullet$] \^{} \$表示位置（首尾），\textbackslash \^{}和\textbackslash \$表示字面值
+	\item[$\bullet$] \textbackslash b表示单词边界
+	\item[$\bullet$] \textbackslash w表示字母表中任意字符
+	\item[$\bullet$] \textbackslash s表示空白符
+	\item[$\bullet$] .表示任意字符，\textbackslash .表示点号
+\end{itemize}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}[t]{模式重复}
+	\begin{block}{模式重复}
+		\begin{itemize}
+			\item *表示出现0次或多次
+			\item +表示出现1次或多次
+			\item *?和+?表示最短匹配
+			\item \{5\}和\{3,6\}表示重复5次/3至6次
+			\item ()用于分组，\textbackslash 数字用于引用分组
+		\end{itemize}
+
+	\end{block}
+\end{frame}
+
+\begin{frame}[t,fragile]{匹配模式}
+	\scriptsize
+\begin{verbatim}
+>>> import re
+>>> ret = re.match(r'ab*', 'abbbbbb')
+>>> ret.group()
+>>> ret = re.match(r'.*href="(.*?)".*', '<a href="../../a.jpg" >abc</a>')
+>>> ret.group()
+'<a href="../../a.jpg" >abc</a>'
+>>> ret.groups()
+('../../a.jpg',)
+>>> re.match(r'.*href="(.*?)".*', '<a href="../../a.jpg" >abc</a>')
+['../../a.jpg']
+>>> re.findall(r'(.)\1', '亮亮明明蛋蛋')
+['亮', '明', '蛋']
+
+\end{verbatim}
+\end{frame}
+\begin{frame}[t]{match与findall的区别}
+	\begin{itemize}
+		\item match需要从首位置匹配串
+		\item findall可以匹配子串
+		\item 还有一个search，只返回第一个匹配位置
+	\end{itemize}
+	
+\end{frame}
+\begin{frame}[t]{正规式的局限性}
+	\begin{block}{回顾编译原理}
+\begin{itemize}
+	\item 正规式无法表达复杂语法结构
+	\item 只用于词法分析
+	\item 将文本流转换为记号流
+	\item 需要语法分析，借助上下文无关文法构造语法树
+	\item HTML解析中，当需要知道href字段处于哪个结点时，需要了解DOM树
+\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}[t,fragile]{DOM树}
+	\begin{minipage}
+		{0.4\linewidth}
+\begin{verbatim}
+<html>
+  <head>
+    <title>
+      My title
+    </title>
+  </head>
+  <body>
+    <a href="link.html">My link</a>
+    <h1>My header</h1>
+  </body>
+</html>
+\end{verbatim}
+
+	\end{minipage}
+	\begin{minipage}
+		{0.5\linewidth}
+		\vspace{-1in}
+	\includegraphics[width=1.3\linewidth]{dom-tree.jpg}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}[t]{抽象语法树}
+	\includegraphics[width=.8\linewidth]{ast.png}
+\end{frame}
+
 
 % section 使用正规式 (end)
 \end{document}

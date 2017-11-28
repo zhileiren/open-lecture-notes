@@ -1,4 +1,23 @@
-\frametitle{POST参数}
+\frametitle{DOM树}
+\begin{minipage}
+^^I^^I{0.4\linewidth}
 \begin{verbatim}
-    >>> r = requests.post('http://httpbin.org/post', data = {'key':'value'})
-    \end{verbatim}
+<html>
+  <head>
+    <title>
+      My title
+    </title>
+  </head>
+  <body>
+    <a href="link.html">My link</a>
+    <h1>My header</h1>
+  </body>
+</html>
+\end{verbatim}
+
+^^I\end{minipage}
+^^I\begin{minipage}
+^^I^^I{0.5\linewidth}
+^^I^^I\vspace{-1in}
+^^I\includegraphics[width=1.3\linewidth]{dom-tree.jpg}
+^^I\end{minipage}
