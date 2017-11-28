@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  28 NOV 2017 06:55
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  28 NOV 2017 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1598,7 +1598,7 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 * 
 * Try to use `\setCJKsansfont[...]{...}' to define it.
 *************************************************
-(./slides.aux)
+No file slides.aux.
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
@@ -1621,7 +1621,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 76.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 76.
- (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+(/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 76.
@@ -1679,6 +1679,10 @@ LaTeX Info: Redefining \nameref on input line 76.
 (./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 76.
@@ -1810,22 +1814,22 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  T1/phv/bx/n --> EU1/phv/bx/n on input line 76.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  T1/pcr/bx/n --> EU1/pcr/bx/n on input line 76.
-(./slides.nav)
+No file slides.nav.
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
 . Redefining command \Pifont with sig. 'm' on line 76.
 .................................................
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" >
+<use  "../../utils/logo.jpg" >
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" >
-[1
+ <use  "../../utils/logo.jpg" > [1
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 105.
 
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
@@ -1995,23 +1999,14 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
-Overfull \hbox (143.88411pt too wide) in paragraph at lines 7--7
-[]\T1/pcr/m/n/10.95 >>> r = requests.get('https://api.github.com/user', auth=('
-user', 'pass'))[] 
- []
-
-
-Overfull \hbox (25.62425pt too wide) in paragraph at lines 17--17
-[]\T1/pcr/m/n/10.95 {u'private_gists': 419, u'total_private_repos': 77, ...}[] 
-
+Overfull \hbox (12.90492pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/8 >>> r = requests.get('https://api.github.com/user', auth=('user
+', 'pass'))[] 
  []
 
 )
-Overfull \vbox (3.912pt too high) detected at line 367
- []
-
 File: ../../utils/logo.jpg Graphic file (type QTm)
-<use  "../../utils/logo.jpg" > [23
+ <use  "../../utils/logo.jpg" > [23
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
@@ -2022,10 +2017,14 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 
 <use  "../../utils/logo.jpg" > [25
 
-] (./slides.toc)
+]
 File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [26
 
-<use  "../../utils/logo.jpg" > [26
+]
+(./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [27
 
 ]
 \openout4 = `slides.vrb'.
@@ -2033,20 +2032,7 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [27
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb
-Overfull \hbox (65.0442pt too wide) in paragraph at lines 6--6
-[]    \T1/pcr/m/n/10.95 r = requests.get('http://httpbin.org/get', params=paylo
-ad)[] 
- []
-
-)
-File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [28
+<use  "../../utils/logo.jpg" > [28
 
 ]
 \openout4 = `slides.vrb'.
@@ -2059,20 +2045,28 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 ]
 \openout4 = `slides.vrb'.
 
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [30
+
+]
+\openout4 = `slides.vrb'.
+
  (./slides.vrb
-Overfull \hbox (157.0241pt too wide) in paragraph at lines 3--3
-[]    \T1/pcr/m/n/10.95 >>> r = requests.post('http://httpbin.org/post', data =
- {'key':'value'})[] 
+Overfull \hbox (3.30492pt too wide) in paragraph at lines 4--4
+[]\T1/pcr/m/n/8 >>> r = requests.post('http://httpbin.org/post', data = {'key':
+'value'})[] 
  []
 
 )
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [30
+ <use  "../../utils/logo.jpg" > [31
 
 ] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [31
+<use  "../../utils/logo.jpg" > [32
 
 ]
 Missing character: There is no 正 in font pcrr8t!
@@ -2081,32 +2075,15 @@ Missing character: There is no 表 in font pcrr8t!
 Missing character: There is no 达 in font pcrr8t!
 Missing character: There is no 式 in font pcrr8t!
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [32
-
-]
-\openout4 = `slides.vrb'.
-
-
-(./slides.vrb)
-File: ../../utils/logo.jpg Graphic file (type QTm)
  <use  "../../utils/logo.jpg" > [33
 
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
+
+(./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [34
-
-]
-File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [35
-
-]
-File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [36
+ <use  "../../utils/logo.jpg" > [34
 
 ]
 \openout4 = `slides.vrb'.
@@ -2114,11 +2091,36 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [37
+<use  "../../utils/logo.jpg" > [35
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [38
+ <use  "../../utils/logo.jpg" > [36
+
+]
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [37
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [38
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [39
+
+]
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [40
 
 ]
 \openout4 = `slides.vrb'.
@@ -2126,12 +2128,12 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 
 (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [39
+ <use  "../../utils/logo.jpg" > [41
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [40
+<use  "../../utils/logo.jpg" > [42
 
 ]
 \openout4 = `slides.vrb'.
@@ -2139,25 +2141,25 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [41
+<use  "../../utils/logo.jpg" > [43
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [42
+ <use  "../../utils/logo.jpg" > [44
 
 ]
 File: dom.png Graphic file (type QTm)
 
 <use  "dom.png" >
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [43
+ <use  "../../utils/logo.jpg" > [45
 
 ]
 File: ast.png Graphic file (type QTm)
  <use  "ast.png" >
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [44
+<use  "../../utils/logo.jpg" > [46
 
 ]
 \tf@nav=\write6
@@ -2169,24 +2171,27 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 606.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 606.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 633.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 606.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 606.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 633.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 633.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 606.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 633.
  ) 
 Here is how much of TeX's memory you used:
- 35815 strings out of 495232
- 703709 string characters out of 6180489
- 718177 words of memory out of 5000000
- 38502 multiletter control sequences out of 15000+600000
+ 35705 strings out of 495232
+ 702823 string characters out of 6180489
+ 715744 words of memory out of 5000000
+ 38394 multiletter control sequences out of 15000+600000
  40536 words of font info for 79 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  56i,17n,72p,10440b,729s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (44 pages).
+Output written on slides.pdf (46 pages).

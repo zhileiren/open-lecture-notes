@@ -345,6 +345,8 @@ Requests is released under terms of Apache2 License.
 \begin{frame}[t,fragile]{Requests: HTTP for Humans}
 
 
+    \scriptsize
+
 \begin{verbatim}
 
 
@@ -365,6 +367,16 @@ u'{"type":"User"...'
 
 
 \end{frame}
+
+
+\begin{frame}[t]{Requests: HTTP for Humans}
+
+See similar code, sans Requests.
+
+\end{frame}
+
+
+
 
 \begin{frame}[t]{User Testimonials}
 
@@ -404,13 +416,14 @@ print(r.status_code)
 \end{frame}
 
 \begin{frame}[t,fragile]{GET参数}
+    \scriptsize
     \begin{verbatim}
-    import requests
-    import json
-    payload = {'key1': 'value1', 'key2': 'value2'}
-    r = requests.get('http://httpbin.org/get', params=payload)
-    result = json.loads(r.text)
-    print(result['args'])
+import requests
+import json
+payload = {'key1': 'value1', 'key2': 'value2'}
+r = requests.get('http://httpbin.org/get', params=payload)
+result = json.loads(r.text)
+print(result['args'])
 
     \end{verbatim}
 
@@ -423,8 +436,9 @@ print(r.status_code)
     \end{verbatim}
 \end{frame}
 \begin{frame}[t,fragile]{POST参数}
+    \scriptsize
     \begin{verbatim}
-    >>> r = requests.post('http://httpbin.org/post', data = {'key':'value'})
+>>> r = requests.post('http://httpbin.org/post', data = {'key':'value'})
     \end{verbatim}
 \end{frame}
 % section Tutorial (end)
@@ -495,7 +509,7 @@ print(r.status_code)
 		{匹配重复}
 		\begin{itemize}
 			\item *表示任意次数，\textbackslash *表示字面值
-			\item +表示1次或多次，textbackslash +表示字面值
+			\item +表示1次或多次，\textbackslash +表示字面值
 			\item *?和+?表示最短匹配
 			\item \{3\}和\{4,6\}表示重复3次和4--6次
 		\end{itemize}
@@ -516,6 +530,19 @@ print(r.status_code)
 'a1234'
 		
 \end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{模式选择}
+\begin{verbatim}
+>>> #使用|表示或，\|表示字面值
+>>> import re
+>>> re.match(r'(abc)|(def)', 'abc').group()
+'abc'
+        
+\end{verbatim}
+
+        
 \end{frame}
 
 \begin{frame}
