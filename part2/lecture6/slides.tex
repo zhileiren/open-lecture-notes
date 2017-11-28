@@ -175,7 +175,6 @@ $cat index.html # use type in win32
         </table>
     </body>
 </html>
-
 $python3 -m http.server 
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ... 
         
@@ -533,13 +532,15 @@ print(r.status_code)
 
 \begin{frame}[t,fragile]
   \frametitle{match与findall}
+	\scriptsize
 \begin{verbatim}
 >>> import re
 >>> p = re.compile('\d+')
->>> p.findall('12 drummers drumming, 11 pipers piping, 10 lords a-leaping')
+>>> txt = '12 drummers drumming, 11 pipers piping, 10 lords a-leaping'
+>>> p.findall(txt)
 ['12', '11', '10']
 		
->>> p.match('12 drummers drumming, 11 pipers piping, 10 lords a-leaping').group()
+>>> p.match(txt).group()
 '12'
 
 \end{verbatim}
