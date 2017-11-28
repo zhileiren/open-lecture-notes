@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  27 NOV 2017 16:24
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  28 NOV 2017 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1905,7 +1905,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 
 
 (./slides.vrb)
-Overfull \vbox (18.41191pt too high) detected at line 183
+Overfull \vbox (27.91191pt too high) detected at line 184
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -1923,32 +1923,32 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [9
 
 ]
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 195.
-LaTeX Font Info:    No file TUptm.fd. on input line 195.
+LaTeX Font Info:    Try loading font information for TU+ptm on input line 196.
+LaTeX Font Info:    No file TUptm.fd. on input line 196.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 195.
+(Font)              using `TU/lmr/m/n' instead on input line 196.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 195.
+LaTeX Font Info:    Try loading font information for U+msa on input line 196.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 195.
+LaTeX Font Info:    Try loading font information for U+msb on input line 196.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 195.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 196.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 195.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 196.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 195.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 196.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 195.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 196.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 195.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 196.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [10
@@ -2034,24 +2034,15 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
-Overfull \hbox (143.88405pt too wide) in paragraph at lines 7--7
-[]\T1/pcr/m/n/10.95 >>> r = requests.get('https://api.github.com/user', auth=('
-user', 'pass'))[] 
- []
-
-
-Overfull \hbox (25.62419pt too wide) in paragraph at lines 17--17
-[]\T1/pcr/m/n/10.95 {u'private_gists': 419, u'total_private_repos': 77, ...}[] 
-
+Overfull \hbox (12.90486pt too wide) in paragraph at lines 9--9
+[]\T1/pcr/m/n/8 >>> r = requests.get('https://api.github.com/user', auth=('user
+', 'pass'))[] 
  []
 
 )
-Overfull \vbox (3.912pt too high) detected at line 367
- []
-
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[23
+ [23
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2084,16 +2075,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb
-Overfull \hbox (65.04414pt too wide) in paragraph at lines 6--6
-[]    \T1/pcr/m/n/10.95 r = requests.get('http://httpbin.org/get', params=paylo
-ad)[] 
- []
-
-)
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [29
+
+[29
 
 ]
 \openout4 = `slides.vrb'.
@@ -2107,9 +2093,9 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
-Overfull \hbox (157.02403pt too wide) in paragraph at lines 3--3
-[]    \T1/pcr/m/n/10.95 >>> r = requests.post('http://httpbin.org/post', data =
- {'key':'value'})[] 
+Overfull \hbox (3.30486pt too wide) in paragraph at lines 4--4
+[]\T1/pcr/m/n/8 >>> r = requests.post('http://httpbin.org/post', data = {'key':
+'value'})[] 
  []
 
 )
@@ -2135,24 +2121,15 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb
-Overfull \hbox (71.61414pt too wide) in paragraph at lines 5--5
-[]\T1/pcr/m/n/10.95 >>> re.findall(r'\bf[a-z]*', 'which foot or hand fell faste
-st')[] 
- []
-
-
-Overfull \hbox (32.19418pt too wide) in paragraph at lines 7--7
-[]\T1/pcr/m/n/10.95 >>> re.sub(r'(\b[a-z]+) \1', r'\1', 'cat in the the hat')[]
- 
- []
-
-)
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [34
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [35
@@ -2160,63 +2137,86 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [36
+
+[36
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb
-Overfull \hbox (8.10486pt too wide) in paragraph at lines 7--7
-[]\T1/pcr/m/n/8 >>> ret = re.match(r'.*href="(.*?)".*', '<a href="../../a.jpg" 
->abc</a>')[] 
- []
-
-)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [37
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [38
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [39
 
 ]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [40
+
+]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
-Overfull \hbox (93.03368pt too wide) in paragraph at lines 12--12
-[]    \T1/pcr/m/n/10.95 <a href="link.html">My link</a>[] 
+Overfull \hbox (150.45404pt too wide) in paragraph at lines 5--5
+[]\T1/pcr/m/n/10.95 >>> p.findall('12 drummers drumming, 11 pipers piping, 10 l
+ords a-leaping')[] 
  []
 
 
-Overfull \hbox (7.62378pt too wide) in paragraph at lines 13--13
-[]    \T1/pcr/m/n/10.95 <h1>My header</h1>[] 
- []
-
-File: dom-tree.jpg Graphic file (type bmp)
-<dom-tree.jpg>
-
-Overfull \hbox (51.34482pt too wide) in paragraph at lines 22--23
-[][] 
+Overfull \hbox (189.874pt too wide) in paragraph at lines 8--8
+[]\T1/pcr/m/n/10.95 >>> p.match('12 drummers drumming, 11 pipers piping, 10 lor
+ds a-leaping').group()[] 
  []
 
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [40
+ [41
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [42
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [43
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [44
+
+]
+File: dom.png Graphic file (type bmp)
+<dom.png>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [45
 
 ]
 File: ast.png Graphic file (type bmp)
 <ast.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [41
+ [46
 
 ]
 \tf@nav=\write6
@@ -2228,23 +2228,23 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 560.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 560.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 632.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 632.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 560.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 560.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 632.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 632.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 36588 strings out of 492998
- 724861 string characters out of 6136604
- 808322 words of memory out of 5000000
- 39971 multiletter control sequences out of 15000+600000
+ 36604 strings out of 492998
+ 724997 string characters out of 6136604
+ 808562 words of memory out of 5000000
+ 39981 multiletter control sequences out of 15000+600000
  566627 words of font info for 84 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  56i,17n,62p,10440b,740s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (41 pages).
+Output written on slides.pdf (46 pages).
