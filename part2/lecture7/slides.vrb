@@ -1,14 +1,22 @@
-\frametitle{解析部分文档}
+\frametitle{搜索文档树}
 
+通过属性的值来查找:
+\tiny
 
 \begin{verbatim}
+soup.select('a[href="http://example.com/elsie"]')
+# [<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>]
 
-soup = BeautifulSoup(html_doc)
-soup.find_all(only_short_strings)
-# [u'\n\n', u'\n\n', u'Elsie', u',\n', u'Lacie', u' and\n', u'Tillie',
-#  u'\n\n', u'...', u'\n']
+soup.select('a[href^="http://example.com/"]')
+# [<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>,
+#  <a class="sister" href="http://example.com/lacie" id="link2">Lacie</a>,
+#  <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>]
+
+soup.select('a[href$="tillie"]')
+# [<a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>]
+
+soup.select('a[href*=".com/el"]')
+# [<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>]
 
 
 \end{verbatim}
-
-
