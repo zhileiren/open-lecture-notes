@@ -275,24 +275,6 @@ tag.name
 
 \end{frame}
 
-
-\begin{frame}[t,fragile]{对象的种类}
-
-如果改变了tag的name,那将影响所有通过当前Beautiful Soup对象生成的HTML文档:
-
-\begin{verbatim}
-
-tag.name = "blockquote"
-tag
-# <blockquote class="boldest">Extremely bold</blockquote>
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{对象的种类}
 
 一个tag可能有很多个属性. tag <b class="boldest"> 有一个 “class” 的属性,值为 “boldest” . tag的属性的操作方法与字典相同:
@@ -326,61 +308,6 @@ tag.attrs
 
 \begin{frame}[t,fragile]{对象的种类}
 
-tag的属性可以被添加,删除或修改.
-
-\begin{verbatim}
-
-tag['class'] = 'verybold'
-tag['id'] = 1
-tag
-# <blockquote class="verybold" id="1">Extremely bold</blockquote>
-
-del tag['class']
-del tag['id']
-tag
-# <blockquote>Extremely bold</blockquote>
-
-tag['class']
-# KeyError: 'class'
-print(tag.get('class'))
-# None
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{对象的种类}
-
-HTML 4定义了一系列可以包含多个值的属性.在HTML5中移除了一些,却增加更多.最常见的多值的属性是 class (一个tag可以有多个CSS的class). 还有一些属性 rel , rev , accept-charset , headers , accesskey . 在Beautiful Soup中多值属性的返回类型是list:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{对象的种类}
-
-
-\begin{verbatim}
-
-css_soup = BeautifulSoup('<p class="body strikeout"></p>')
-css_soup.p['class']
-# ["body", "strikeout"]
-
-css_soup = BeautifulSoup('<p class="body"></p>')
-css_soup.p['class']
-# ["body"]
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{对象的种类}
-
 字符串常被包含在tag内.Beautiful Soup用 NavigableString 类来包装tag中的字符串:
 
 \begin{verbatim}
@@ -395,27 +322,6 @@ type(tag.string)
 
 
 \end{frame}
-
-
-
-\begin{frame}[t,fragile]{对象的种类}
-
-一个 NavigableString 字符串与Python中的Unicode字符串相同,并且还支持包含在 遍历文档树 和 搜索文档树 中的一些特性. 通过 unicode() 方法可以直接将 NavigableString 对象转换成Unicode字符串:
-
-\begin{verbatim}
-
-unicode_string = unicode(tag.string)
-unicode_string
-# u'Extremely bold'
-type(unicode_string)
-# <type 'unicode'>
-
-
-\end{verbatim}
-
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{对象的种类}
 
@@ -794,7 +700,7 @@ soup.find_all('b')
 
 \begin{frame}[t,fragile]{搜索文档树}
 
-如果传入正则表达式作为参数,Beautiful Soup会通过正则表达式的 match() 来匹配内容.下面例子中找出所有以b开头的标签,这表示<body>和<b>标签都应该被找到:
+如果传入正则表达式作为参数,Beautiful Soup会通过正则表达式来匹配内容.下面例子中找出所有以b开头的标签,这表示<body>和<b>标签都应该被找到:
 
 \begin{verbatim}
 import re
