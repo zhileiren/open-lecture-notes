@@ -1,0 +1,145 @@
+body {
+	margin: 0em 0em 0em 0em;
+	background-image:	url(/images/toprowbg.gif);
+     }
+
+h1   {
+        font-size: 130%;
+        font-weight: bold;
+        font-family: georgia, verdana, arial, sans-serif;
+     }
+
+span.daan a   {
+	text-decoration: none;
+	font-size: 0.2em;
+	color: #d8d8d8;
+     }
+
+div.excerpt {
+	padding-left: 10px;
+	border-left: solid;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	border-left-width: 2px;
+	border-color: blue;
+}
+
+div.c	{ background-image: url(/images/bg2.gif);
+	}
+
+.es-jasper-simpleCalendar {
+    font-size: 80%;
+    text-align: center;
+}
+
+.es-jasper-simpleCalendar-title {
+    text-align: center;
+}
+
+.es-jasper-simpleCalendar td a {
+    color: #00007F;
+    text-decoration: none;
+}
+
+.es-jasper-simpleCalendar td a:hover {
+    color: #00007F;
+    text-decoration: underline;
+}
+
+/* remove this in a later stage */
+div.calendar {
+            font-size:80%;
+	    text-align:	center;
+
+        }
+a.cal {
+	     text-decoration: none;
+             color: #00007f;
+}
+
+a.cal:hover {
+	     text-decoration: underline;
+}
+
+td.c       { background-image: url(/images/bg2.gif);
+             color: #000000;
+             padding: 0px 0px;
+           }
+
+td.lm	{
+		font-size:	80%;
+	}
+
+td.lp        {  font-family: courier, monospace;
+                font-weight: bold;
+                padding: 0em 1em 0em 0em;
+                margin:  0em;
+             }
+td.rp        {  font-family: courier, monospace;
+                font-weight: normal;
+             }
+
+td.nb	{
+          font-size: 90%;
+        }
+
+a.nb       { text-decoration: none;
+             color: #00007f;
+           }
+a.nb:hover { text-decoration: underline;
+           }
+
+a.nb:visited { color: #000000;
+	    }
+
+
+tr.c0      {
+                background-color: #e5e5e5;
+           }
+tr.c1      {
+                background-color: #cee5e5;
+           }
+
+div.threadlist {
+		 text-align:	center;
+               }
+
+ul.threadlist	{
+;;		  list-style-position:	outside;
+		  margin-left:		0.75em;
+		  padding-left:		0.75em;
+		  font-size:		80%;
+		}
+
+ul.threadlist ul {
+		  font-size:		100%;
+;;		  list-style-position:	outside;
+		  margin-left:		0.50em;
+		  padding-left:		0em;
+		}
+
+ul.threadlist li.origin > a
+                 {
+;;		   font-weight: 	bold;
+		   font-style:		normal;
+		 }
+
+ul.threadlist li {
+		   list-style: disc;
+		 }
+
+ul.threadlist li.origin {
+		   list-style: square;
+		 }
+
+ul.threadlist li a, td.lm a, td.nb a {
+		     text-decoration:	none;
+		     font-style:	italic;
+		     background-color:	inherit;
+		     color:		#000;
+		   }
+
+ul.threadlist li a:hover, td.lm a:hover, td.nb a:hover {
+		     text-decoration:	underline;
+		   }
