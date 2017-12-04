@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Geert Uytterhoeven: [PATCH v4 1/4] phylib: Add device reset GPIO support
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Geert Uytterhoeven" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/196" onclick="this.href='/lkml/headers'+'/2017/12/4/196';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/196">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/190">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/190">
+        Geert Uytterhoeven
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/191">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/192">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/195">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Geert Uytterhoeven
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/196/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Geert Uytterhoeven &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH v4 1/4] phylib: Add device reset GPIO support
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:34:49 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">From: Sergei Shtylyov &lt;sergei.shtylyov@cogentembedded.com&gt;<br/><br/>The PHY devices sometimes do have their reset signal (maybe even power<br/>supply?) tied to some GPIO and sometimes it also does happen that a boot<br/>loader does not leave it deasserted. So far this issue has been attacked<br/>from (as I believe) a wrong angle: by teaching the MAC driver to manipulate<br/>the GPIO in question; that solution, when applied to the device trees, led<br/>to adding the PHY reset GPIO properties to the MAC device node, with one<br/>exception: Cadence MACB driver which could handle the "reset-gpios" prop<br/>in a PHY device subnode. I believe that the correct approach is to teach<br/>the 'phylib' to get the MDIO device reset GPIO from the device tree node<br/>corresponding to this device -- which this patch is doing...<br/><br/>Note that I had to modify the AT803x PHY driver as it would stop working<br/>otherwise -- it made use of the reset GPIO for its own purposes...<br/><br/>Signed-off-by: Sergei Shtylyov &lt;sergei.shtylyov@cogentembedded.com&gt;<br/>Acked-by: Rob Herring &lt;robh@kernel.org&gt;<br/>[geert: Propagate actual errors from fwnode_get_named_gpiod()]<br/>[geert: Avoid destroying initial setup]<br/>[geert: Consolidate GPIO descriptor acquiring code]<br/>Signed-off-by: Geert Uytterhoeven &lt;geert+renesas@glider.be&gt;<br/>---<br/>v4:<br/>  - Remove Florian's Acked-by,<br/>  - Add missing #include &lt;linux/gpio/consumer.h&gt;,<br/>  - Re-add the gpiod check, as the dummy gpiod_set_value() for !GPIOLIB<br/>    does not ignore NULL, and calls WARN_ON(1),<br/>  - Do not reassert the reset signal if {mdio,phy}_probe() or<br/>    phy_device_register() succeeded, as that may destroy initial setup,<br/>  - Do not deassert the reset signal in {mdio,phy}_remove(), as it<br/>    should already be deasserted,<br/>  - Bring the PHY back into reset state in phy_device_remove(),<br/>  - Move/consolidate GPIO descriptor acquiring code from<br/>    of_mdiobus_register_phy() and of_mdiobus_register_device() to<br/>    mdiobus_register_device().<br/>    Note that this changes behavior slightly, in that the reset signal<br/>    is now also asserted when called from of_mdiobus_register_device().<br/><br/>v3:<br/>  - Fix fwnode_get_named_gpiod() call due to added parameters (which<br/>    allowed to eliminate the gpiod_direction_output() call),<br/>  - Undelete one blank line in the AT803x driver,<br/>  - Resolve rejects, refresh patch,<br/>  - Reword/reformat changelog,<br/>  - Take over from Sergei,<br/>  - Add Acked-by,<br/>  - Remove unneeded gpiod check, as gpiod_set_value() handles NULL fine,<br/>  - Handle fwnode_get_named_gpiod() errors correctly:<br/>      - -ENOENT is ignored (the GPIO is optional), and turned into NULL,<br/>	which allowed to remove all later !IS_ERR() checks,<br/>      - Other errors (incl. -EPROBE_DEFER) are propagated [*],<br/><br/>v2:<br/>  - Reformat changelog,<br/>  - Resolve rejects, refresh patch.<br/>---<br/> Documentation/devicetree/bindings/net/phy.txt |  2 ++<br/> drivers/net/phy/at803x.c                      | 18 +++------------<br/> drivers/net/phy/mdio_bus.c                    | 21 ++++++++++++++++++<br/> drivers/net/phy/mdio_device.c                 | 25 +++++++++++++++++++--<br/> drivers/net/phy/phy_device.c                  | 32 +++++++++++++++++++++++++--<br/> include/linux/mdio.h                          |  3 +++<br/> include/linux/phy.h                           |  5 +++++<br/> 7 files changed, 87 insertions(+), 19 deletions(-)<br/><br/>diff --git a/Documentation/devicetree/bindings/net/phy.txt b/Documentation/devicetree/bindings/net/phy.txt<br/>index 77d0b2a61ffa96fc..c05479f5ac7cc837 100644<br/>--- a/Documentation/devicetree/bindings/net/phy.txt<br/>+++ b/Documentation/devicetree/bindings/net/phy.txt<br/>@@ -53,6 +53,8 @@ Optional Properties:<br/>   to ensure the integrated PHY is used. The absence of this property indicates<br/>   the muxers should be configured so that the external PHY is used.<br/> <br/>+- reset-gpios: The GPIO phandle and specifier for the PHY reset signal.<br/>+<br/> Example:<br/> <br/> ethernet-phy@0 {<br/>diff --git a/drivers/net/phy/at803x.c b/drivers/net/phy/at803x.c<br/>index de7dd6566df7a364..29da7a3c7a3761c0 100644<br/>--- a/drivers/net/phy/at803x.c<br/>+++ b/drivers/net/phy/at803x.c<br/>@@ -71,7 +71,6 @@ MODULE_LICENSE("GPL");<br/> <br/> struct at803x_priv {<br/> 	bool phy_reset:1;<br/>-	struct gpio_desc *gpiod_reset;<br/> };<br/> <br/> struct at803x_context {<br/>@@ -254,22 +253,11 @@ static int at803x_probe(struct phy_device *phydev)<br/> {<br/> 	struct device *dev = &amp;phydev-&gt;mdio.dev;<br/> 	struct at803x_priv *priv;<br/>-	struct gpio_desc *gpiod_reset;<br/> <br/> 	priv = devm_kzalloc(dev, sizeof(*priv), GFP_KERNEL);<br/> 	if (!priv)<br/> 		return -ENOMEM;<br/> <br/>-	if (phydev-&gt;drv-&gt;phy_id != ATH8030_PHY_ID)<br/>-		goto does_not_require_reset_workaround;<br/>-<br/>-	gpiod_reset = devm_gpiod_get_optional(dev, "reset", GPIOD_OUT_LOW);<br/>-	if (IS_ERR(gpiod_reset))<br/>-		return PTR_ERR(gpiod_reset);<br/>-<br/>-	priv-&gt;gpiod_reset = gpiod_reset;<br/>-<br/>-does_not_require_reset_workaround:<br/> 	phydev-&gt;priv = priv;<br/> <br/> 	return 0;<br/>@@ -343,14 +331,14 @@ static void at803x_link_change_notify(struct phy_device *phydev)<br/> 	 * cannot recover from by software.<br/> 	 */<br/> 	if (phydev-&gt;state == PHY_NOLINK) {<br/>-		if (priv-&gt;gpiod_reset &amp;&amp; !priv-&gt;phy_reset) {<br/>+		if (phydev-&gt;mdio.reset &amp;&amp; !priv-&gt;phy_reset) {<br/> 			struct at803x_context context;<br/> <br/> 			at803x_context_save(phydev, &amp;context);<br/> <br/>-			gpiod_set_value(priv-&gt;gpiod_reset, 1);<br/>+			phy_device_reset(phydev, 1);<br/> 			msleep(1);<br/>-			gpiod_set_value(priv-&gt;gpiod_reset, 0);<br/>+			phy_device_reset(phydev, 0);<br/> 			msleep(1);<br/> <br/> 			at803x_context_restore(phydev, &amp;context);<br/>diff --git a/drivers/net/phy/mdio_bus.c b/drivers/net/phy/mdio_bus.c<br/>index 2df7b62c1a36811e..c97d55cd6679412e 100644<br/>--- a/drivers/net/phy/mdio_bus.c<br/>+++ b/drivers/net/phy/mdio_bus.c<br/>@@ -38,6 +38,7 @@<br/> #include &lt;linux/phy.h&gt;<br/> #include &lt;linux/io.h&gt;<br/> #include &lt;linux/uaccess.h&gt;<br/>+#include &lt;linux/gpio/consumer.h&gt;<br/> <br/> #include &lt;asm/irq.h&gt;<br/> <br/>@@ -48,9 +49,26 @@<br/> <br/> int mdiobus_register_device(struct mdio_device *mdiodev)<br/> {<br/>+	struct gpio_desc *gpiod;<br/>+<br/> 	if (mdiodev-&gt;bus-&gt;mdio_map[mdiodev-&gt;addr])<br/> 		return -EBUSY;<br/> <br/>+	/* Deassert the optional reset signal */<br/>+	if (mdiodev-&gt;dev.of_node)<br/>+		gpiod = fwnode_get_named_gpiod(&amp;mdiodev-&gt;dev.of_node-&gt;fwnode,<br/>+					       "reset-gpios", 0, GPIOD_OUT_LOW,<br/>+					       "PHY reset");<br/>+	if (PTR_ERR(gpiod) == -ENOENT)<br/>+		gpiod = NULL;<br/>+	else if (IS_ERR(gpiod))<br/>+		return PTR_ERR(gpiod);<br/>+<br/>+	mdiodev-&gt;reset = gpiod;<br/>+<br/>+	/* Assert the reset signal again */<br/>+	mdio_device_reset(mdiodev, 1);<br/>+<br/> 	mdiodev-&gt;bus-&gt;mdio_map[mdiodev-&gt;addr] = mdiodev;<br/> <br/> 	return 0;<br/>@@ -420,6 +438,9 @@ void mdiobus_unregister(struct mii_bus *bus)<br/> 		if (!mdiodev)<br/> 			continue;<br/> <br/>+		if (mdiodev-&gt;reset)<br/>+			gpiod_put(mdiodev-&gt;reset);<br/>+<br/> 		mdiodev-&gt;device_remove(mdiodev);<br/> 		mdiodev-&gt;device_free(mdiodev);<br/> 	}<br/>diff --git a/drivers/net/phy/mdio_device.c b/drivers/net/phy/mdio_device.c<br/>index e24f28924af8953d..75d97dd9fb281704 100644<br/>--- a/drivers/net/phy/mdio_device.c<br/>+++ b/drivers/net/phy/mdio_device.c<br/>@@ -12,6 +12,8 @@<br/> #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt<br/> <br/> #include &lt;linux/errno.h&gt;<br/>+#include &lt;linux/gpio.h&gt;<br/>+#include &lt;linux/gpio/consumer.h&gt;<br/> #include &lt;linux/init.h&gt;<br/> #include &lt;linux/interrupt.h&gt;<br/> #include &lt;linux/kernel.h&gt;<br/>@@ -114,6 +116,13 @@ void mdio_device_remove(struct mdio_device *mdiodev)<br/> }<br/> EXPORT_SYMBOL(mdio_device_remove);<br/> <br/>+void mdio_device_reset(struct mdio_device *mdiodev, int value)<br/>+{<br/>+	if (mdiodev-&gt;reset)<br/>+		gpiod_set_value(mdiodev-&gt;reset, value);<br/>+}<br/>+EXPORT_SYMBOL(mdio_device_reset);<br/>+<br/> /**<br/>  * mdio_probe - probe an MDIO device<br/>  * @dev: device to probe<br/>@@ -128,8 +137,16 @@ static int mdio_probe(struct device *dev)<br/> 	struct mdio_driver *mdiodrv = to_mdio_driver(drv);<br/> 	int err = 0;<br/> <br/>-	if (mdiodrv-&gt;probe)<br/>+	if (mdiodrv-&gt;probe) {<br/>+		/* Deassert the reset signal */<br/>+		mdio_device_reset(mdiodev, 0);<br/>+<br/> 		err = mdiodrv-&gt;probe(mdiodev);<br/>+		if (err) {<br/>+			/* Assert the reset signal */<br/>+			mdio_device_reset(mdiodev, 1);<br/>+		}<br/>+	}<br/> <br/> 	return err;<br/> }<br/>@@ -140,9 +157,13 @@ static int mdio_remove(struct device *dev)<br/> 	struct device_driver *drv = mdiodev-&gt;dev.driver;<br/> 	struct mdio_driver *mdiodrv = to_mdio_driver(drv);<br/> <br/>-	if (mdiodrv-&gt;remove)<br/>+	if (mdiodrv-&gt;remove) {<br/> 		mdiodrv-&gt;remove(mdiodev);<br/> <br/>+		/* Assert the reset signal */<br/>+		mdio_device_reset(mdiodev, 1);<br/>+	}<br/>+<br/> 	return 0;<br/> }<br/> <br/>diff --git a/drivers/net/phy/phy_device.c b/drivers/net/phy/phy_device.c<br/>index 8154fb706751e8ad..1de5e242b8b4cda3 100644<br/>--- a/drivers/net/phy/phy_device.c<br/>+++ b/drivers/net/phy/phy_device.c<br/>@@ -632,6 +632,9 @@ int phy_device_register(struct phy_device *phydev)<br/> 	if (err)<br/> 		return err;<br/> <br/>+	/* Deassert the reset signal */<br/>+	phy_device_reset(phydev, 0);<br/>+<br/> 	/* Run all of the fixups for this PHY */<br/> 	err = phy_scan_fixups(phydev);<br/> 	if (err) {<br/>@@ -650,6 +653,9 @@ int phy_device_register(struct phy_device *phydev)<br/> 	return 0;<br/> <br/>  out:<br/>+	/* Assert the reset signal */<br/>+	phy_device_reset(phydev, 1);<br/>+<br/> 	mdiobus_unregister_device(&amp;phydev-&gt;mdio);<br/> 	return err;<br/> }<br/>@@ -666,6 +672,10 @@ EXPORT_SYMBOL(phy_device_register);<br/> void phy_device_remove(struct phy_device *phydev)<br/> {<br/> 	device_del(&amp;phydev-&gt;mdio.dev);<br/>+<br/>+	/* Assert the reset signal */<br/>+	phy_device_reset(phydev, 1);<br/>+<br/> 	mdiobus_unregister_device(&amp;phydev-&gt;mdio);<br/> }<br/> EXPORT_SYMBOL(phy_device_remove);<br/>@@ -849,6 +859,9 @@ int phy_init_hw(struct phy_device *phydev)<br/> {<br/> 	int ret = 0;<br/> <br/>+	/* Deassert the reset signal */<br/>+	phy_device_reset(phydev, 0);<br/>+<br/> 	if (!phydev-&gt;drv || !phydev-&gt;drv-&gt;config_init)<br/> 		return 0;<br/> <br/>@@ -1126,6 +1139,9 @@ void phy_detach(struct phy_device *phydev)<br/> 	put_device(&amp;phydev-&gt;mdio.dev);<br/> 	if (ndev_owner != bus-&gt;owner)<br/> 		module_put(bus-&gt;owner);<br/>+<br/>+	/* Assert the reset signal */<br/>+	phy_device_reset(phydev, 1);<br/> }<br/> EXPORT_SYMBOL(phy_detach);<br/> <br/>@@ -1811,8 +1827,16 @@ static int phy_probe(struct device *dev)<br/> 	/* Set the state to READY by default */<br/> 	phydev-&gt;state = PHY_READY;<br/> <br/>-	if (phydev-&gt;drv-&gt;probe)<br/>+	if (phydev-&gt;drv-&gt;probe) {<br/>+		/* Deassert the reset signal */<br/>+		phy_device_reset(phydev, 0);<br/>+<br/> 		err = phydev-&gt;drv-&gt;probe(phydev);<br/>+		if (err) {<br/>+			/* Assert the reset signal */<br/>+			phy_device_reset(phydev, 1);<br/>+		}<br/>+	}<br/> <br/> 	mutex_unlock(&amp;phydev-&gt;lock);<br/> <br/>@@ -1829,8 +1853,12 @@ static int phy_remove(struct device *dev)<br/> 	phydev-&gt;state = PHY_DOWN;<br/> 	mutex_unlock(&amp;phydev-&gt;lock);<br/> <br/>-	if (phydev-&gt;drv &amp;&amp; phydev-&gt;drv-&gt;remove)<br/>+	if (phydev-&gt;drv &amp;&amp; phydev-&gt;drv-&gt;remove) {<br/> 		phydev-&gt;drv-&gt;remove(phydev);<br/>+<br/>+		/* Assert the reset signal */<br/>+		phy_device_reset(phydev, 1);<br/>+	}<br/> 	phydev-&gt;drv = NULL;<br/> <br/> 	return 0;<br/>diff --git a/include/linux/mdio.h b/include/linux/mdio.h<br/>index ca08ab16ecdc9b78..92d4e55ffe675637 100644<br/>--- a/include/linux/mdio.h<br/>+++ b/include/linux/mdio.h<br/>@@ -12,6 +12,7 @@<br/> #include &lt;uapi/linux/mdio.h&gt;<br/> #include &lt;linux/mod_devicetable.h&gt;<br/> <br/>+struct gpio_desc;<br/> struct mii_bus;<br/> <br/> /* Multiple levels of nesting are possible. However typically this is<br/>@@ -39,6 +40,7 @@ struct mdio_device {<br/> 	/* Bus address of the MDIO device (0-31) */<br/> 	int addr;<br/> 	int flags;<br/>+	struct gpio_desc *reset;<br/> };<br/> #define to_mdio_device(d) container_of(d, struct mdio_device, dev)<br/> <br/>@@ -71,6 +73,7 @@ void mdio_device_free(struct mdio_device *mdiodev);<br/> struct mdio_device *mdio_device_create(struct mii_bus *bus, int addr);<br/> int mdio_device_register(struct mdio_device *mdiodev);<br/> void mdio_device_remove(struct mdio_device *mdiodev);<br/>+void mdio_device_reset(struct mdio_device *mdiodev, int value);<br/> int mdio_driver_register(struct mdio_driver *drv);<br/> void mdio_driver_unregister(struct mdio_driver *drv);<br/> int mdio_device_bus_match(struct device *dev, struct device_driver *drv);<br/>diff --git a/include/linux/phy.h b/include/linux/phy.h<br/>index 4962af37722ac2ea..6106ed915841c97e 100644<br/>--- a/include/linux/phy.h<br/>+++ b/include/linux/phy.h<br/>@@ -841,6 +841,11 @@ int phy_aneg_done(struct phy_device *phydev);<br/> int phy_stop_interrupts(struct phy_device *phydev);<br/> int phy_restart_aneg(struct phy_device *phydev);<br/> <br/>+static inline void phy_device_reset(struct phy_device *phydev, int value)<br/>+{<br/>+	mdio_device_reset(&amp;phydev-&gt;mdio, value);<br/>+}<br/>+<br/> #define phydev_err(_phydev, format, args...)	\<br/> 	dev_err(&amp;_phydev-&gt;mdio.dev, format, ##args)<br/> <br/>-- <br/>2.7.4<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:37    [W:0.037 / U:3.704 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

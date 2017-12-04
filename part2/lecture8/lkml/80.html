@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Jiaxun Yang: [PATCH RESEND v3 2/4] MIPS: Loongson64: lemote-2f move ec_kb3310b.h to include dir and clean up
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Jiaxun Yang" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/117" onclick="this.href='/lkml/headers'+'/2017/12/4/117';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/117">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/121">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/121">
+        Jiaxun Yang
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/116">
+          Jiaxun Yang
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Jiaxun Yang
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/118">
+          Jiaxun Yang
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/119">
+          Jiaxun Yang
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/117/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Jiaxun Yang &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH RESEND v3 2/4] MIPS: Loongson64: lemote-2f move ec_kb3310b.h to include dir and clean up
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 17:23:10 +0800
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">To operate EC from platform driver, this head file need able to be include<br/>from anywhere. This patch just move ec_kb3310b.h to include dir and<br/>clean up ec_kb3310b.h.<br/><br/>Signed-off-by: Jiaxun Yang &lt;jiaxun.yang@flygoat.com&gt;<br/>---<br/> arch/mips/include/asm/mach-loongson64/ec_kb3310b.h | 170 +++++++++++++++++++<br/> arch/mips/loongson64/lemote-2f/ec_kb3310b.c        |   2 +-<br/> arch/mips/loongson64/lemote-2f/ec_kb3310b.h        | 188 ---------------------<br/> arch/mips/loongson64/lemote-2f/pm.c                |   4 +-<br/> arch/mips/loongson64/lemote-2f/reset.c             |   4 +-<br/> 5 files changed, 175 insertions(+), 193 deletions(-)<br/> create mode 100644 arch/mips/include/asm/mach-loongson64/ec_kb3310b.h<br/> delete mode 100644 arch/mips/loongson64/lemote-2f/ec_kb3310b.h<br/><br/>diff --git a/arch/mips/include/asm/mach-loongson64/ec_kb3310b.h b/arch/mips/include/asm/mach-loongson64/ec_kb3310b.h<br/>new file mode 100644<br/>index 000000000000..2e8690532ea5<br/>--- /dev/null<br/>+++ b/arch/mips/include/asm/mach-loongson64/ec_kb3310b.h<br/>@@ -0,0 +1,170 @@<br/>+/*<br/>+ * KB3310B Embedded Controller<br/>+ *<br/>+ *  Copyright (C) 2008 Lemote Inc.<br/>+ *  Author: liujl &lt;liujl@lemote.com&gt;, 2008-03-14<br/>+ *  Copyright (C) 2009 Lemote Inc.<br/>+ *  Author: Wu Zhangjin &lt;wuzhangjin@gmail.com&gt;<br/>+ *<br/>+ * This program is free software; you can redistribute it and/or modify<br/>+ * it under the terms of the GNU General Public License as published by<br/>+ * the Free Software Foundation; either version 2 of the License, or<br/>+ * (at your option) any later version.<br/>+ */<br/>+<br/>+#ifndef _EC_KB3310B_H<br/>+#define _EC_KB3310B_H<br/>+<br/>+extern unsigned char ec_read(unsigned short addr);<br/>+extern void ec_write(unsigned short addr, unsigned char val);<br/>+extern int ec_query_seq(unsigned char cmd);<br/>+extern int ec_query_event_num(void);<br/>+extern int ec_get_event_num(void);<br/>+<br/>+typedef int (*sci_handler) (int status);<br/>+extern sci_handler yeeloong_report_lid_status;<br/>+<br/>+#define ON	1<br/>+#define OFF	0<br/>+<br/>+#define SCI_IRQ_NUM 0x0A<br/>+<br/>+/*<br/>+ * The following registers are determined by the EC index configuration.<br/>+ * 1, fill the PORT_HIGH as EC register high part.<br/>+ * 2, fill the PORT_LOW as EC register low part.<br/>+ * 3, fill the PORT_DATA as EC register write data or get the data from it.<br/>+ */<br/>+#define	EC_IO_PORT_HIGH	0x0381<br/>+#define	EC_IO_PORT_LOW	0x0382<br/>+#define	EC_IO_PORT_DATA	0x0383<br/>+<br/>+/*<br/>+ * EC delay time is 500us for register and status access<br/>+ */<br/>+#define	EC_REG_DELAY	500	/* unit : us */<br/>+#define	EC_CMD_TIMEOUT	0x1000<br/>+<br/>+/*<br/>+ * EC access port for SCI communication<br/>+ */<br/>+#define	EC_CMD_PORT		0x66<br/>+#define	EC_STS_PORT		0x66<br/>+#define	EC_DAT_PORT		0x62<br/>+#define	CMD_INIT_IDLE_MODE	0xdd<br/>+#define	CMD_EXIT_IDLE_MODE	0xdf<br/>+#define	CMD_INIT_RESET_MODE	0xd8<br/>+#define	CMD_REBOOT_SYSTEM	0x8c<br/>+#define	CMD_GET_EVENT_NUM	0x84<br/>+#define	CMD_PROGRAM_PIECE	0xda<br/>+<br/>+/* Temperature &amp; Fan registers */<br/>+#define	REG_TEMPERATURE_VALUE	0xF458<br/>+#define	REG_FAN_AUTO_MAN_SWITCH 0xF459<br/>+#define	BIT_FAN_AUTO		0<br/>+#define	BIT_FAN_MANUAL		1<br/>+#define	REG_FAN_CONTROL		0xF4D2<br/>+#define	REG_FAN_STATUS		0xF4DA<br/>+#define	REG_FAN_SPEED_HIGH	0xFE22<br/>+#define	REG_FAN_SPEED_LOW	0xFE23<br/>+#define	REG_FAN_SPEED_LEVEL	0xF4CC<br/>+/* Fan speed divider */<br/>+#define	FAN_SPEED_DIVIDER	480000	/* (60*1000*1000/62.5/2)*/<br/>+<br/>+/* Battery registers */<br/>+#define	REG_BAT_DESIGN_CAP_HIGH		0xF77D<br/>+#define	REG_BAT_DESIGN_CAP_LOW		0xF77E<br/>+#define	REG_BAT_FULLCHG_CAP_HIGH	0xF780<br/>+#define	REG_BAT_FULLCHG_CAP_LOW		0xF781<br/>+#define	REG_BAT_DESIGN_VOL_HIGH		0xF782<br/>+#define	REG_BAT_DESIGN_VOL_LOW		0xF783<br/>+#define	REG_BAT_CURRENT_HIGH		0xF784<br/>+#define	REG_BAT_CURRENT_LOW		0xF785<br/>+#define	REG_BAT_VOLTAGE_HIGH		0xF786<br/>+#define	REG_BAT_VOLTAGE_LOW		0xF787<br/>+#define	REG_BAT_TEMPERATURE_HIGH	0xF788<br/>+#define	REG_BAT_TEMPERATURE_LOW		0xF789<br/>+#define	REG_BAT_RELATIVE_CAP_HIGH	0xF492<br/>+#define	REG_BAT_RELATIVE_CAP_LOW	0xF493<br/>+#define	REG_BAT_VENDOR			0xF4C4<br/>+#define	FLAG_BAT_VENDOR_SANYO		0x01<br/>+#define	FLAG_BAT_VENDOR_SIMPLO		0x02<br/>+#define	REG_BAT_CELL_COUNT		0xF4C6<br/>+#define	FLAG_BAT_CELL_3S1P		0x03<br/>+#define	FLAG_BAT_CELL_3S2P		0x06<br/>+#define	REG_BAT_CHARGE			0xF4A2<br/>+#define	FLAG_BAT_CHARGE_DISCHARGE	0x01<br/>+#define	FLAG_BAT_CHARGE_CHARGE		0x02<br/>+#define	FLAG_BAT_CHARGE_ACPOWER		0x00<br/>+#define	REG_BAT_STATUS			0xF4B0<br/>+#define	BIT_BAT_STATUS_LOW		(1 &lt;&lt; 5)<br/>+#define	BIT_BAT_STATUS_DESTROY		(1 &lt;&lt; 2)<br/>+#define	BIT_BAT_STATUS_FULL		(1 &lt;&lt; 1)<br/>+#define	BIT_BAT_STATUS_IN		(1 &lt;&lt; 0)<br/>+#define	REG_BAT_CHARGE_STATUS		0xF4B1<br/>+#define	BIT_BAT_CHARGE_STATUS_OVERTEMP	(1 &lt;&lt; 2)<br/>+#define	BIT_BAT_CHARGE_STATUS_PRECHG	(1 &lt;&lt; 1)<br/>+#define	REG_BAT_STATE			0xF482<br/>+#define	REG_BAT_POWER			0xF440<br/>+#define	BIT_BAT_POWER_S3		(1 &lt;&lt; 2)<br/>+#define	BIT_BAT_POWER_ON		(1 &lt;&lt; 1)<br/>+#define	BIT_BAT_POWER_ACIN		(1 &lt;&lt; 0)<br/>+<br/>+/* Audio: rd/wr */<br/>+#define	REG_AUDIO_VOLUME	0xF46C<br/>+#define	REG_AUDIO_MUTE		0xF4E7<br/>+#define	REG_AUDIO_BEEP		0xF4D0<br/>+/* USB port power or not: rd/wr */<br/>+#define	REG_USB0_FLAG		0xF461<br/>+#define	REG_USB1_FLAG		0xF462<br/>+#define	REG_USB2_FLAG		0xF463<br/>+/* LID */<br/>+#define	REG_LID_DETECT		0xF4BD<br/>+/* CRT */<br/>+#define	REG_CRT_DETECT		0xF4AD<br/>+/* LCD backlight brightness adjust: 9 levels */<br/>+#define	REG_DISPLAY_BRIGHTNESS	0xF4F5<br/>+/* LCD backlight control: off/restore */<br/>+#define	REG_BACKLIGHT_CTRL	0xF7BD<br/>+/* Reset the machine auto-clear: rd/wr */<br/>+#define	REG_RESET		0xF4EC<br/>+/* Light the led: rd/wr */<br/>+#define	REG_LED			0xF4C8<br/>+#define	BIT_LED_RED_POWER	(1 &lt;&lt; 0)<br/>+#define	BIT_LED_ORANGE_POWER	(1 &lt;&lt; 1)<br/>+#define	BIT_LED_GREEN_CHARGE	(1 &lt;&lt; 2)<br/>+#define	BIT_LED_RED_CHARGE	(1 &lt;&lt; 3)<br/>+#define	BIT_LED_NUMLOCK		(1 &lt;&lt; 4)<br/>+/* Test led mode, all led on/off */<br/>+#define	REG_LED_TEST		0xF4C2<br/>+#define	BIT_LED_TEST_IN		1<br/>+#define	BIT_LED_TEST_OUT	0<br/>+/* Camera on/off */<br/>+#define	REG_CAMERA_STATUS	0xF46A<br/>+#define	REG_CAMERA_CONTROL	0xF7B7<br/>+/* Wlan Status */<br/>+#define	REG_WLAN		0xF4FA<br/>+#define	REG_DISPLAY_LCD		0xF79F<br/>+<br/>+/* SCI Event Number from EC */<br/>+enum {<br/>+	EVENT_LID = 0x23,	/*  Turn on/off LID */<br/>+	EVENT_SWITCHVIDEOMODE,	/*  Fn+F3 for display switch */<br/>+	EVENT_SLEEP,		/*  Fn+F1 for entering sleep mode */<br/>+	EVENT_OVERTEMP,		/*  Over-temperature happened */<br/>+	EVENT_CRT_DETECT,	/*  CRT is connected */<br/>+	EVENT_CAMERA,		/*  Camera on/off */<br/>+	EVENT_USB_OC2,		/*  USB2 Over Current occurred */<br/>+	EVENT_USB_OC0,		/*  USB0 Over Current occurred */<br/>+	EVENT_DISPLAYTOGGLE,	/*  Fn+F2, Turn on/off backlight */<br/>+	EVENT_AUDIO_MUTE,	/*  Fn+F4, Mute on/off */<br/>+	EVENT_DISPLAY_BRIGHTNESS,/* Fn+^/V, LCD backlight brightness adjust */<br/>+	EVENT_AC_BAT,		/*  AC &amp; Battery relative issue */<br/>+	EVENT_AUDIO_VOLUME,	/*  Fn+&lt;|&gt;, Volume adjust */<br/>+	EVENT_WLAN,		/*  Wlan on/off */<br/>+};<br/>+<br/>+#define EVENT_START	EVENT_LID<br/>+#define EVENT_END	EVENT_WLAN<br/>+<br/>+#endif /* !_EC_KB3310B_H */<br/>diff --git a/arch/mips/loongson64/lemote-2f/ec_kb3310b.c b/arch/mips/loongson64/lemote-2f/ec_kb3310b.c<br/>index 321822997e76..6e416d55b42a 100644<br/>--- a/arch/mips/loongson64/lemote-2f/ec_kb3310b.c<br/>+++ b/arch/mips/loongson64/lemote-2f/ec_kb3310b.c<br/>@@ -15,7 +15,7 @@<br/> #include &lt;linux/spinlock.h&gt;<br/> #include &lt;linux/delay.h&gt;<br/> <br/>-#include "ec_kb3310b.h"<br/>+#include &lt;ec_kb3310b.h&gt;<br/> <br/> static DEFINE_SPINLOCK(index_access_lock);<br/> static DEFINE_SPINLOCK(port_access_lock);<br/>diff --git a/arch/mips/loongson64/lemote-2f/ec_kb3310b.h b/arch/mips/loongson64/lemote-2f/ec_kb3310b.h<br/>deleted file mode 100644<br/>index 5a3f1860d4d2..000000000000<br/>--- a/arch/mips/loongson64/lemote-2f/ec_kb3310b.h<br/>+++ /dev/null<br/>@@ -1,188 +0,0 @@<br/>-/*<br/>- * KB3310B Embedded Controller<br/>- *<br/>- *  Copyright (C) 2008 Lemote Inc.<br/>- *  Author: liujl &lt;liujl@lemote.com&gt;, 2008-03-14<br/>- *<br/>- * This program is free software; you can redistribute it and/or modify<br/>- * it under the terms of the GNU General Public License as published by<br/>- * the Free Software Foundation; either version 2 of the License, or<br/>- * (at your option) any later version.<br/>- */<br/>-<br/>-#ifndef _EC_KB3310B_H<br/>-#define _EC_KB3310B_H<br/>-<br/>-extern unsigned char ec_read(unsigned short addr);<br/>-extern void ec_write(unsigned short addr, unsigned char val);<br/>-extern int ec_query_seq(unsigned char cmd);<br/>-extern int ec_query_event_num(void);<br/>-extern int ec_get_event_num(void);<br/>-<br/>-typedef int (*sci_handler) (int status);<br/>-extern sci_handler yeeloong_report_lid_status;<br/>-<br/>-#define SCI_IRQ_NUM 0x0A<br/>-<br/>-/*<br/>- * The following registers are determined by the EC index configuration.<br/>- * 1, fill the PORT_HIGH as EC register high part.<br/>- * 2, fill the PORT_LOW as EC register low part.<br/>- * 3, fill the PORT_DATA as EC register write data or get the data from it.<br/>- */<br/>-#define EC_IO_PORT_HIGH 0x0381<br/>-#define EC_IO_PORT_LOW	0x0382<br/>-#define EC_IO_PORT_DATA 0x0383<br/>-<br/>-/*<br/>- * EC delay time is 500us for register and status access<br/>- */<br/>-#define EC_REG_DELAY	500	/* unit : us */<br/>-#define EC_CMD_TIMEOUT	0x1000<br/>-<br/>-/*<br/>- * EC access port for SCI communication<br/>- */<br/>-#define EC_CMD_PORT		0x66<br/>-#define EC_STS_PORT		0x66<br/>-#define EC_DAT_PORT		0x62<br/>-#define CMD_INIT_IDLE_MODE	0xdd<br/>-#define CMD_EXIT_IDLE_MODE	0xdf<br/>-#define CMD_INIT_RESET_MODE	0xd8<br/>-#define CMD_REBOOT_SYSTEM	0x8c<br/>-#define CMD_GET_EVENT_NUM	0x84<br/>-#define CMD_PROGRAM_PIECE	0xda<br/>-<br/>-/* temperature &amp; fan registers */<br/>-#define REG_TEMPERATURE_VALUE	0xF458<br/>-#define REG_FAN_AUTO_MAN_SWITCH 0xF459<br/>-#define BIT_FAN_AUTO		0<br/>-#define BIT_FAN_MANUAL		1<br/>-#define REG_FAN_CONTROL		0xF4D2<br/>-#define BIT_FAN_CONTROL_ON	(1 &lt;&lt; 0)<br/>-#define BIT_FAN_CONTROL_OFF	(0 &lt;&lt; 0)<br/>-#define REG_FAN_STATUS		0xF4DA<br/>-#define BIT_FAN_STATUS_ON	(1 &lt;&lt; 0)<br/>-#define BIT_FAN_STATUS_OFF	(0 &lt;&lt; 0)<br/>-#define REG_FAN_SPEED_HIGH	0xFE22<br/>-#define REG_FAN_SPEED_LOW	0xFE23<br/>-#define REG_FAN_SPEED_LEVEL	0xF4CC<br/>-/* fan speed divider */<br/>-#define FAN_SPEED_DIVIDER	480000	/* (60*1000*1000/62.5/2)*/<br/>-<br/>-/* battery registers */<br/>-#define REG_BAT_DESIGN_CAP_HIGH		0xF77D<br/>-#define REG_BAT_DESIGN_CAP_LOW		0xF77E<br/>-#define REG_BAT_FULLCHG_CAP_HIGH	0xF780<br/>-#define REG_BAT_FULLCHG_CAP_LOW		0xF781<br/>-#define REG_BAT_DESIGN_VOL_HIGH		0xF782<br/>-#define REG_BAT_DESIGN_VOL_LOW		0xF783<br/>-#define REG_BAT_CURRENT_HIGH		0xF784<br/>-#define REG_BAT_CURRENT_LOW		0xF785<br/>-#define REG_BAT_VOLTAGE_HIGH		0xF786<br/>-#define REG_BAT_VOLTAGE_LOW		0xF787<br/>-#define REG_BAT_TEMPERATURE_HIGH	0xF788<br/>-#define REG_BAT_TEMPERATURE_LOW		0xF789<br/>-#define REG_BAT_RELATIVE_CAP_HIGH	0xF492<br/>-#define REG_BAT_RELATIVE_CAP_LOW	0xF493<br/>-#define REG_BAT_VENDOR			0xF4C4<br/>-#define FLAG_BAT_VENDOR_SANYO		0x01<br/>-#define FLAG_BAT_VENDOR_SIMPLO		0x02<br/>-#define REG_BAT_CELL_COUNT		0xF4C6<br/>-#define FLAG_BAT_CELL_3S1P		0x03<br/>-#define FLAG_BAT_CELL_3S2P		0x06<br/>-#define REG_BAT_CHARGE			0xF4A2<br/>-#define FLAG_BAT_CHARGE_DISCHARGE	0x01<br/>-#define FLAG_BAT_CHARGE_CHARGE		0x02<br/>-#define FLAG_BAT_CHARGE_ACPOWER		0x00<br/>-#define REG_BAT_STATUS			0xF4B0<br/>-#define BIT_BAT_STATUS_LOW		(1 &lt;&lt; 5)<br/>-#define BIT_BAT_STATUS_DESTROY		(1 &lt;&lt; 2)<br/>-#define BIT_BAT_STATUS_FULL		(1 &lt;&lt; 1)<br/>-#define BIT_BAT_STATUS_IN		(1 &lt;&lt; 0)<br/>-#define REG_BAT_CHARGE_STATUS		0xF4B1<br/>-#define BIT_BAT_CHARGE_STATUS_OVERTEMP	(1 &lt;&lt; 2)<br/>-#define BIT_BAT_CHARGE_STATUS_PRECHG	(1 &lt;&lt; 1)<br/>-#define REG_BAT_STATE			0xF482<br/>-#define BIT_BAT_STATE_CHARGING		(1 &lt;&lt; 1)<br/>-#define BIT_BAT_STATE_DISCHARGING	(1 &lt;&lt; 0)<br/>-#define REG_BAT_POWER			0xF440<br/>-#define BIT_BAT_POWER_S3		(1 &lt;&lt; 2)<br/>-#define BIT_BAT_POWER_ON		(1 &lt;&lt; 1)<br/>-#define BIT_BAT_POWER_ACIN		(1 &lt;&lt; 0)<br/>-<br/>-/* other registers */<br/>-/* Audio: rd/wr */<br/>-#define REG_AUDIO_VOLUME	0xF46C<br/>-#define REG_AUDIO_MUTE		0xF4E7<br/>-#define REG_AUDIO_BEEP		0xF4D0<br/>-/* USB port power or not: rd/wr */<br/>-#define REG_USB0_FLAG		0xF461<br/>-#define REG_USB1_FLAG		0xF462<br/>-#define REG_USB2_FLAG		0xF463<br/>-#define BIT_USB_FLAG_ON		1<br/>-#define BIT_USB_FLAG_OFF	0<br/>-/* LID */<br/>-#define REG_LID_DETECT		0xF4BD<br/>-#define BIT_LID_DETECT_ON	1<br/>-#define BIT_LID_DETECT_OFF	0<br/>-/* CRT */<br/>-#define REG_CRT_DETECT		0xF4AD<br/>-#define BIT_CRT_DETECT_PLUG	1<br/>-#define BIT_CRT_DETECT_UNPLUG	0<br/>-/* LCD backlight brightness adjust: 9 levels */<br/>-#define REG_DISPLAY_BRIGHTNESS	0xF4F5<br/>-/* Black screen Status */<br/>-#define BIT_DISPLAY_LCD_ON	1<br/>-#define BIT_DISPLAY_LCD_OFF	0<br/>-/* LCD backlight control: off/restore */<br/>-#define REG_BACKLIGHT_CTRL	0xF7BD<br/>-#define BIT_BACKLIGHT_ON	1<br/>-#define BIT_BACKLIGHT_OFF	0<br/>-/* Reset the machine auto-clear: rd/wr */<br/>-#define REG_RESET		0xF4EC<br/>-#define BIT_RESET_ON		1<br/>-/* Light the led: rd/wr */<br/>-#define REG_LED			0xF4C8<br/>-#define BIT_LED_RED_POWER	(1 &lt;&lt; 0)<br/>-#define BIT_LED_ORANGE_POWER	(1 &lt;&lt; 1)<br/>-#define BIT_LED_GREEN_CHARGE	(1 &lt;&lt; 2)<br/>-#define BIT_LED_RED_CHARGE	(1 &lt;&lt; 3)<br/>-#define BIT_LED_NUMLOCK		(1 &lt;&lt; 4)<br/>-/* Test led mode, all led on/off */<br/>-#define REG_LED_TEST		0xF4C2<br/>-#define BIT_LED_TEST_IN		1<br/>-#define BIT_LED_TEST_OUT	0<br/>-/* Camera on/off */<br/>-#define REG_CAMERA_STATUS	0xF46A<br/>-#define BIT_CAMERA_STATUS_ON	1<br/>-#define BIT_CAMERA_STATUS_OFF	0<br/>-#define REG_CAMERA_CONTROL	0xF7B7<br/>-#define BIT_CAMERA_CONTROL_OFF	0<br/>-#define BIT_CAMERA_CONTROL_ON	1<br/>-/* Wlan Status */<br/>-#define REG_WLAN		0xF4FA<br/>-#define BIT_WLAN_ON		1<br/>-#define BIT_WLAN_OFF		0<br/>-#define REG_DISPLAY_LCD		0xF79F<br/>-<br/>-/* SCI Event Number from EC */<br/>-enum {<br/>-	EVENT_LID = 0x23,	/*  LID open/close */<br/>-	EVENT_DISPLAY_TOGGLE,	/*  Fn+F3 for display switch */<br/>-	EVENT_SLEEP,		/*  Fn+F1 for entering sleep mode */<br/>-	EVENT_OVERTEMP,		/*  Over-temperature happened */<br/>-	EVENT_CRT_DETECT,	/*  CRT is connected */<br/>-	EVENT_CAMERA,		/*  Camera on/off */<br/>-	EVENT_USB_OC2,		/*  USB2 Over Current occurred */<br/>-	EVENT_USB_OC0,		/*  USB0 Over Current occurred */<br/>-	EVENT_BLACK_SCREEN,	/*  Turn on/off backlight */<br/>-	EVENT_AUDIO_MUTE,	/*  Mute on/off */<br/>-	EVENT_DISPLAY_BRIGHTNESS,/* LCD backlight brightness adjust */<br/>-	EVENT_AC_BAT,		/*  AC &amp; Battery relative issue */<br/>-	EVENT_AUDIO_VOLUME,	/*  Volume adjust */<br/>-	EVENT_WLAN,		/*  Wlan on/off */<br/>-	EVENT_END<br/>-};<br/>-<br/>-#endif /* !_EC_KB3310B_H */<br/>diff --git a/arch/mips/loongson64/lemote-2f/pm.c b/arch/mips/loongson64/lemote-2f/pm.c<br/>index 6859e934862d..0768739155f6 100644<br/>--- a/arch/mips/loongson64/lemote-2f/pm.c<br/>+++ b/arch/mips/loongson64/lemote-2f/pm.c<br/>@@ -88,7 +88,7 @@ EXPORT_SYMBOL(yeeloong_report_lid_status);<br/> static void yeeloong_lid_update_task(struct work_struct *work)<br/> {<br/> 	if (yeeloong_report_lid_status)<br/>-		yeeloong_report_lid_status(BIT_LID_DETECT_ON);<br/>+		yeeloong_report_lid_status(ON);<br/> }<br/> <br/> int wakeup_loongson(void)<br/>@@ -118,7 +118,7 @@ int wakeup_loongson(void)<br/> 			/* check the LID status */<br/> 			lid_status = ec_read(REG_LID_DETECT);<br/> 			/* wakeup cpu when people open the LID */<br/>-			if (lid_status == BIT_LID_DETECT_ON) {<br/>+			if (lid_status == ON) {<br/> 				/* If we call it directly here, the WARNING<br/> 				 * will be sent out by getnstimeofday<br/> 				 * via "WARN_ON(timekeeping_suspended);"<br/>diff --git a/arch/mips/loongson64/lemote-2f/reset.c b/arch/mips/loongson64/lemote-2f/reset.c<br/>index a26ca7fcd7e0..2b72b197c51d 100644<br/>--- a/arch/mips/loongson64/lemote-2f/reset.c<br/>+++ b/arch/mips/loongson64/lemote-2f/reset.c<br/>@@ -20,7 +20,7 @@<br/> #include &lt;loongson.h&gt;<br/> <br/> #include &lt;cs5536/cs5536.h&gt;<br/>-#include "ec_kb3310b.h"<br/>+#include &lt;ec_kb3310b.h&gt;<br/> <br/> static void reset_cpu(void)<br/> {<br/>@@ -81,7 +81,7 @@ static void ml2f_reboot(void)<br/> 	reset_cpu();<br/> <br/> 	/* sending an reset signal to EC(embedded controller) */<br/>-	ec_write(REG_RESET, BIT_RESET_ON);<br/>+	ec_write(REG_RESET, ON);<br/> }<br/> <br/> #define yl2f89_reboot ml2f_reboot<br/>-- <br/>2.15.0<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:25    [W:0.061 / U:3.784 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

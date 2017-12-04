@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: LinuxPatchCommit: [PATCH 1/3] mmc: sdhci-pci-o2micro: Add hardware tuning for eMMC
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by LinuxPatchCommit" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/130" onclick="this.href='/lkml/headers'+'/2017/12/4/130';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/130">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/130">
+        First message in thread
+       </a>
+      </li>
+      <li class="origin">
+       <a href="">
+        LinuxPatchCommit
+       </a>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patches in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/130/1">
+        Get diff 1
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/diff/2017/12/4/130/2">
+        Get diff 2
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1305798">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           LinuxPatchCommit &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH 1/3] mmc: sdhci-pci-o2micro: Add hardware tuning for eMMC
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 09:39:30 +0000
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">Dear All,<br/><br/>For O2micro/Bayhubtech SD Host DeviceID 8620, eMMC HS200 mode is working at 1.8v and it uses hardware tuning. The hardware tuning only needs to send one tuning command instead of multiple tuning commands with software tuning.<br/><br/>Signed-off-by: ernest.zhang &lt;ernest.zhang@bayhubtech.com&gt;<br/>---<br/> drivers/mmc/host/sdhci-pci-o2micro.c | 276 ++++++++++++++++++++++++++++++-----<br/> 1 file changed, 239 insertions(+), 37 deletions(-)<br/><br/>diff --git a/drivers/mmc/host/sdhci-pci-o2micro.c b/drivers/mmc/host/sdhci-pci-o2micro.c<br/>index 14273ca00641..2a7ffd240497 100644<br/>--- a/drivers/mmc/host/sdhci-pci-o2micro.c<br/>+++ b/drivers/mmc/host/sdhci-pci-o2micro.c<br/>@@ -16,22 +16,223 @@<br/>  */<br/> <br/> #include &lt;linux/pci.h&gt;<br/>-<br/>+#include &lt;linux/platform_device.h&gt;<br/>+#include &lt;linux/regulator/fixed.h&gt;<br/>+#include &lt;linux/regulator/machine.h&gt;<br/>+#include &lt;linux/mmc/host.h&gt;<br/>+#include &lt;linux/mmc/mmc.h&gt;<br/>+#include &lt;linux/delay.h&gt;<br/> #include "sdhci.h"<br/> #include "sdhci-pci.h"<br/> #include "sdhci-pci-o2micro.h"<br/> <br/>+static void sdhci_o2_start_tuning(struct sdhci_host *host) {<br/>+	u16 ctrl;<br/>+<br/>+	ctrl = sdhci_readw(host, SDHCI_HOST_CONTROL2);<br/>+	ctrl |= SDHCI_CTRL_EXEC_TUNING;<br/>+	if (host-&gt;quirks2 &amp; SDHCI_QUIRK2_TUNING_WORK_AROUND)<br/>+		ctrl |= SDHCI_CTRL_TUNED_CLK;<br/>+	sdhci_writew(host, ctrl, SDHCI_HOST_CONTROL2);<br/>+<br/>+	/*<br/>+	 * As per the Host Controller spec v3.00, tuning command<br/>+	 * generates Buffer Read Ready interrupt, so enable that.<br/>+	 *<br/>+	 * Note: The spec clearly says that when tuning sequence<br/>+	 * is being performed, the controller does not generate<br/>+	 * interrupts other than Buffer Read Ready interrupt. But<br/>+	 * to make sure we don't hit a controller bug, we _only_<br/>+	 * enable Buffer Read Ready interrupt here.<br/>+	 */<br/>+	sdhci_writel(host, SDHCI_INT_DATA_AVAIL, SDHCI_INT_ENABLE);<br/>+	sdhci_writel(host, SDHCI_INT_DATA_AVAIL, SDHCI_SIGNAL_ENABLE); }<br/>+<br/>+static void sdhci_o2_end_tuning(struct sdhci_host *host) {<br/>+	sdhci_writel(host, host-&gt;ier, SDHCI_INT_ENABLE);<br/>+	sdhci_writel(host, host-&gt;ier, SDHCI_SIGNAL_ENABLE); }<br/>+<br/>+static inline bool sdhci_data_line_cmd(struct mmc_command *cmd) {<br/>+	return cmd-&gt;data || cmd-&gt;flags &amp; MMC_RSP_BUSY; }<br/>+<br/>+static void sdhci_del_timer(struct sdhci_host *host, struct mmc_request <br/>+*mrq) {<br/>+	if (sdhci_data_line_cmd(mrq-&gt;cmd))<br/>+		del_timer(&amp;host-&gt;data_timer);<br/>+	else<br/>+		del_timer(&amp;host-&gt;timer);<br/>+}<br/>+<br/>+static void sdhci_o2_set_tuning_mode(struct sdhci_host *host, bool hw) <br/>+{<br/>+	u16 reg;<br/>+<br/>+	if (hw) {<br/>+		// enable hardware tuning<br/>+		reg = sdhci_readw(host, O2_SD_VENDOR_SETTING);<br/>+		reg &amp;= (~O2_SD_HW_TUNING_ENABLE);<br/>+		sdhci_writew(host, reg, O2_SD_VENDOR_SETTING);<br/>+	} else {<br/>+		reg = sdhci_readw(host, O2_SD_VENDOR_SETTING);<br/>+		reg |= O2_SD_HW_TUNING_ENABLE;<br/>+		sdhci_writew(host, reg, O2_SD_VENDOR_SETTING);<br/>+	}<br/>+}<br/>+<br/>+static u8 data_buf[64];<br/>+<br/>+static void sdhci_o2_send_tuning(struct sdhci_host *host, u32 opcode) {<br/>+	struct mmc_command cmd = { };<br/>+	struct mmc_data data = { };<br/>+	struct scatterlist sg;<br/>+	struct mmc_request mrq = { };<br/>+	unsigned long flags;<br/>+	u32 b = host-&gt;sdma_boundary;<br/>+	int size = sizeof(data_buf);<br/>+<br/>+	cmd.opcode = opcode;<br/>+	cmd.flags = MMC_RSP_PRESENT | MMC_RSP_OPCODE | MMC_RSP_CRC;<br/>+	cmd.mrq = &amp;mrq;<br/>+	mrq.cmd = &amp;cmd;<br/>+	mrq.data = &amp;data;<br/>+	data.blksz = size;<br/>+	data.blocks = 1;<br/>+	data.flags = MMC_DATA_READ;<br/>+<br/>+	data.timeout_ns = 150 * NSEC_PER_MSEC;<br/>+<br/>+	data.sg = &amp;sg;<br/>+	data.sg_len = 1;<br/>+	sg_init_one(&amp;sg, data_buf, size);<br/>+<br/>+	spin_lock_irqsave(&amp;host-&gt;lock, flags);<br/>+<br/>+	sdhci_writew(host, SDHCI_MAKE_BLKSZ(b, 64), SDHCI_BLOCK_SIZE);<br/>+<br/>+	/*<br/>+	 * The tuning block is sent by the card to the host controller.<br/>+	 * So we set the TRNS_READ bit in the Transfer Mode register.<br/>+	 * This also takes care of setting DMA Enable and Multi Block<br/>+	 * Select in the same register to 0.<br/>+	 */<br/>+	sdhci_writew(host, SDHCI_TRNS_READ, SDHCI_TRANSFER_MODE);<br/>+<br/>+	sdhci_send_command(host, &amp;cmd);<br/>+<br/>+	host-&gt;cmd = NULL;<br/>+<br/>+	sdhci_del_timer(host, &amp;mrq);<br/>+<br/>+	host-&gt;tuning_done = 0;<br/>+<br/>+	mmiowb();<br/>+	spin_unlock_irqrestore(&amp;host-&gt;lock, flags);<br/>+<br/>+	/* Wait for Buffer Read Ready interrupt */<br/>+	wait_event_timeout(host-&gt;buf_ready_int, (host-&gt;tuning_done == 1),<br/>+			   msecs_to_jiffies(50));<br/>+<br/>+}<br/>+<br/>+static void sdhci_o2_reset_tuning(struct sdhci_host *host) {<br/>+	u16 ctrl;<br/>+<br/>+	ctrl = sdhci_readw(host, SDHCI_HOST_CONTROL2);<br/>+	ctrl &amp;= ~SDHCI_CTRL_TUNED_CLK;<br/>+	ctrl &amp;= ~SDHCI_CTRL_EXEC_TUNING;<br/>+	sdhci_writew(host, ctrl, SDHCI_HOST_CONTROL2); }<br/>+<br/>+static void __sdhci_o2_execute_tuning(struct sdhci_host *host, u32 <br/>+opcode) {<br/>+<br/>+	int i;<br/>+<br/>+	sdhci_o2_send_tuning(host, MMC_SEND_TUNING_BLOCK_HS200);<br/>+<br/>+	for (i = 0; i &lt; 150; i++) {<br/>+		u16 ctrl = sdhci_readw(host, SDHCI_HOST_CONTROL2);<br/>+<br/>+		if (!(ctrl &amp; SDHCI_CTRL_EXEC_TUNING)) {<br/>+			if (ctrl &amp; SDHCI_CTRL_TUNED_CLK) {<br/>+				pr_info("%s: HW tuning ok !\n",<br/>+					mmc_hostname(host-&gt;mmc));<br/>+				host-&gt;tuning_done = true;<br/>+				return;<br/>+			}<br/>+			pr_warn("%s: HW tuning failed !\n",<br/>+				mmc_hostname(host-&gt;mmc));<br/>+<br/>+			break;<br/>+		}<br/>+<br/>+		mdelay(1);<br/>+	}<br/>+<br/>+	pr_info("%s: Tuning failed, falling back to fixed sampling clock\n",<br/>+		mmc_hostname(host-&gt;mmc));<br/>+	sdhci_o2_reset_tuning(host);<br/>+<br/>+}<br/>+<br/>+static int sdhci_o2_execute_tuning(struct mmc_host *mmc, u32 opcode) {<br/>+	struct sdhci_host *host = mmc_priv(mmc);<br/>+	int current_bus_width = 0;<br/>+<br/>+	/*<br/>+	 * This handler only implements the eMMC tuning that is specific to<br/>+	 * this controller.  Fall back to the standard method for other TINMING.<br/>+	 */<br/>+	if (host-&gt;timing != MMC_TIMING_MMC_HS200)<br/>+		return sdhci_execute_tuning(mmc, opcode);<br/>+<br/>+	if (WARN_ON(opcode != MMC_SEND_TUNING_BLOCK_HS200))<br/>+		return -EINVAL;<br/>+<br/>+	/*<br/>+	 * o2 sdhci host didn't support 8bit emmc tuning<br/>+	 */<br/>+	if (mmc-&gt;ios.bus_width == MMC_BUS_WIDTH_8) {<br/>+		current_bus_width = mmc-&gt;ios.bus_width;<br/>+		mmc-&gt;ios.bus_width = MMC_BUS_WIDTH_4;<br/>+		mmc-&gt;ops-&gt;set_ios(mmc, &amp;mmc-&gt;ios);<br/>+	}<br/>+<br/>+	sdhci_o2_set_tuning_mode(host, true);<br/>+<br/>+	sdhci_o2_start_tuning(host);<br/>+<br/>+	__sdhci_o2_execute_tuning(host, opcode);<br/>+<br/>+	sdhci_o2_end_tuning(host);<br/>+<br/>+	if (current_bus_width == MMC_BUS_WIDTH_8) {<br/>+		mmc-&gt;ios.bus_width = current_bus_width;<br/>+		mmc-&gt;ops-&gt;set_ios(mmc, &amp;mmc-&gt;ios);<br/>+	}<br/>+<br/>+	host-&gt;flags &amp;= ~SDHCI_HS400_TUNING;<br/>+	return 0;<br/>+}<br/>+<br/> static void o2_pci_set_baseclk(struct sdhci_pci_chip *chip, u32 value)  {<br/> 	u32 scratch_32;<br/>-	pci_read_config_dword(chip-&gt;pdev,<br/>-			      O2_SD_PLL_SETTING, &amp;scratch_32);<br/>+	pci_read_config_dword(chip-&gt;pdev, O2_SD_PLL_SETTING, &amp;scratch_32);<br/> <br/> 	scratch_32 &amp;= 0x0000FFFF;<br/> 	scratch_32 |= value;<br/> <br/>-	pci_write_config_dword(chip-&gt;pdev,<br/>-			       O2_SD_PLL_SETTING, scratch_32);<br/>+	pci_write_config_dword(chip-&gt;pdev, O2_SD_PLL_SETTING, scratch_32);<br/> }<br/> <br/> static void o2_pci_led_enable(struct sdhci_pci_chip *chip) @@ -40,23 +241,19 @@ static void o2_pci_led_enable(struct sdhci_pci_chip *chip)<br/> 	u32 scratch_32;<br/> <br/> 	/* Set led of SD host function enable */<br/>-	ret = pci_read_config_dword(chip-&gt;pdev,<br/>-				    O2_SD_FUNC_REG0, &amp;scratch_32);<br/>+	ret = pci_read_config_dword(chip-&gt;pdev, O2_SD_FUNC_REG0, &amp;scratch_32);<br/> 	if (ret)<br/> 		return;<br/> <br/> 	scratch_32 &amp;= ~O2_SD_FREG0_LEDOFF;<br/>-	pci_write_config_dword(chip-&gt;pdev,<br/>-			       O2_SD_FUNC_REG0, scratch_32);<br/>+	pci_write_config_dword(chip-&gt;pdev, O2_SD_FUNC_REG0, scratch_32);<br/> <br/>-	ret = pci_read_config_dword(chip-&gt;pdev,<br/>-				    O2_SD_TEST_REG, &amp;scratch_32);<br/>+	ret = pci_read_config_dword(chip-&gt;pdev, O2_SD_TEST_REG, &amp;scratch_32);<br/> 	if (ret)<br/> 		return;<br/> <br/> 	scratch_32 |= O2_SD_LED_ENABLE;<br/>-	pci_write_config_dword(chip-&gt;pdev,<br/>-			       O2_SD_TEST_REG, scratch_32);<br/>+	pci_write_config_dword(chip-&gt;pdev, O2_SD_TEST_REG, scratch_32);<br/> <br/> }<br/>@@ -104,8 +301,7 @@ static void sdhci_pci_o2_fujin2_pci_init(struct sdhci_pci_chip *chip)<br/> 	scratch_32 |= 0x00CC;<br/> 	pci_write_config_dword(chip-&gt;pdev, O2_SD_CAP_REG0, scratch_32);<br/> 	/* Set DLL Tuning Window */<br/>-	ret = pci_read_config_dword(chip-&gt;pdev,<br/>-				    O2_SD_TUNING_CTRL, &amp;scratch_32);<br/>+	ret = pci_read_config_dword(chip-&gt;pdev, O2_SD_TUNING_CTRL, <br/>+&amp;scratch_32);<br/> 	if (ret)<br/> 		return;<br/> 	scratch_32 &amp;= ~(0x000000FF);<br/>@@ -137,8 +333,7 @@ static void sdhci_pci_o2_fujin2_pci_init(struct sdhci_pci_chip *chip)<br/> 	scratch_32 |= 0x30000000;<br/> 	pci_write_config_dword(chip-&gt;pdev, O2_SD_CAPS, scratch_32);<br/> <br/>-	ret = pci_read_config_dword(chip-&gt;pdev,<br/>-				    O2_SD_MISC_CTRL4, &amp;scratch_32);<br/>+	ret = pci_read_config_dword(chip-&gt;pdev, O2_SD_MISC_CTRL4, <br/>+&amp;scratch_32);<br/> 	if (ret)<br/> 		return;<br/> 	scratch_32 &amp;= ~(0x000f0000);<br/>@@ -151,6 +346,7 @@ int sdhci_pci_o2_probe_slot(struct sdhci_pci_slot *slot)<br/> 	struct sdhci_pci_chip *chip;<br/> 	struct sdhci_host *host;<br/> 	u32 reg;<br/>+	int ret;<br/> <br/> 	chip = slot-&gt;chip;<br/> 	host = slot-&gt;host;<br/>@@ -164,6 +360,22 @@ int sdhci_pci_o2_probe_slot(struct sdhci_pci_slot *slot)<br/> 		if (reg &amp; 0x1)<br/> 			host-&gt;quirks |= SDHCI_QUIRK_MULTIBLOCK_READ_ACMD12;<br/> <br/>+		if (chip-&gt;pdev-&gt;device == PCI_DEVICE_ID_O2_SEABIRD0) {<br/>+			ret = pci_read_config_dword(chip-&gt;pdev,<br/>+						    O2_SD_MISC_SETTING, &amp;reg);<br/>+			if (ret)<br/>+				return -EIO;<br/>+			if (reg &amp; (1 &lt;&lt; 4)) {<br/>+				pr_info("%s: emmc 1.8v flag is set,<br/>+					force 1.8v signaling voltage\n",<br/>+					mmc_hostname(host-&gt;mmc));<br/>+				host-&gt;flags &amp;= ~(SDHCI_SIGNALING_330);<br/>+				host-&gt;flags |= SDHCI_SIGNALING_180;<br/>+			}<br/>+		}<br/>+<br/>+		host-&gt;mmc_host_ops.execute_tuning = sdhci_o2_execute_tuning;<br/>+<br/> 		if (chip-&gt;pdev-&gt;device != PCI_DEVICE_ID_O2_FUJIN2)<br/> 			break;<br/> 		/* set dll watch dog timer */<br/>@@ -191,8 +403,7 @@ int sdhci_pci_o2_probe(struct sdhci_pci_chip *chip)<br/> 	case PCI_DEVICE_ID_O2_8320:<br/> 	case PCI_DEVICE_ID_O2_8321:<br/> 		/* This extra setup is required due to broken ADMA. */<br/>-		ret = pci_read_config_byte(chip-&gt;pdev,<br/>-				O2_SD_LOCK_WP, &amp;scratch);<br/>+		ret = pci_read_config_byte(chip-&gt;pdev, O2_SD_LOCK_WP, &amp;scratch);<br/> 		if (ret)<br/> 			return ret;<br/> 		scratch &amp;= 0x7f;<br/>@@ -202,8 +413,7 @@ int sdhci_pci_o2_probe(struct sdhci_pci_chip *chip)<br/> 		pci_write_config_byte(chip-&gt;pdev, O2_SD_MULTI_VCC3V, 0x08);<br/> <br/> 		/* Disable CLK_REQ# support after media DET */<br/>-		ret = pci_read_config_byte(chip-&gt;pdev,<br/>-				O2_SD_CLKREQ, &amp;scratch);<br/>+		ret = pci_read_config_byte(chip-&gt;pdev, O2_SD_CLKREQ, &amp;scratch);<br/> 		if (ret)<br/> 			return ret;<br/> 		scratch |= 0x20;<br/>@@ -224,16 +434,14 @@ int sdhci_pci_o2_probe(struct sdhci_pci_chip *chip)<br/> 		pci_write_config_byte(chip-&gt;pdev, O2_SD_ADMA2, 0x08);<br/> <br/> 		/* Disable the infinite transfer mode */<br/>-		ret = pci_read_config_byte(chip-&gt;pdev,<br/>-				O2_SD_INF_MOD, &amp;scratch);<br/>+		ret = pci_read_config_byte(chip-&gt;pdev, O2_SD_INF_MOD, &amp;scratch);<br/> 		if (ret)<br/> 			return ret;<br/> 		scratch |= 0x08;<br/> 		pci_write_config_byte(chip-&gt;pdev, O2_SD_INF_MOD, scratch);<br/> <br/> 		/* Lock WP */<br/>-		ret = pci_read_config_byte(chip-&gt;pdev,<br/>-				O2_SD_LOCK_WP, &amp;scratch);<br/>+		ret = pci_read_config_byte(chip-&gt;pdev, O2_SD_LOCK_WP, &amp;scratch);<br/> 		if (ret)<br/> 			return ret;<br/> 		scratch |= 0x80;<br/>@@ -243,8 +451,7 @@ int sdhci_pci_o2_probe(struct sdhci_pci_chip *chip)<br/> 	case PCI_DEVICE_ID_O2_SDS1:<br/> 	case PCI_DEVICE_ID_O2_FUJIN2:<br/> 		/* UnLock WP */<br/>-		ret = pci_read_config_byte(chip-&gt;pdev,<br/>-				O2_SD_LOCK_WP, &amp;scratch);<br/>+		ret = pci_read_config_byte(chip-&gt;pdev, O2_SD_LOCK_WP, &amp;scratch);<br/> 		if (ret)<br/> 			return ret;<br/> <br/>@@ -319,15 +526,13 @@ int sdhci_pci_o2_probe(struct sdhci_pci_chip *chip)<br/> 		if (ret)<br/> 			return ret;<br/> 		scratch_32 &amp;= ~(0xE0);<br/>-		pci_write_config_dword(chip-&gt;pdev,<br/>-				       O2_SD_CAP_REG2, scratch_32);<br/>+		pci_write_config_dword(chip-&gt;pdev, O2_SD_CAP_REG2, scratch_32);<br/> <br/> 		if (chip-&gt;pdev-&gt;device == PCI_DEVICE_ID_O2_FUJIN2)<br/> 			sdhci_pci_o2_fujin2_pci_init(chip);<br/> <br/> 		/* Lock WP */<br/>-		ret = pci_read_config_byte(chip-&gt;pdev,<br/>-					   O2_SD_LOCK_WP, &amp;scratch);<br/>+		ret = pci_read_config_byte(chip-&gt;pdev, O2_SD_LOCK_WP, &amp;scratch);<br/> 		if (ret)<br/> 			return ret;<br/> 		scratch |= 0x80;<br/>@@ -336,8 +541,7 @@ int sdhci_pci_o2_probe(struct sdhci_pci_chip *chip)<br/> 	case PCI_DEVICE_ID_O2_SEABIRD0:<br/> 	case PCI_DEVICE_ID_O2_SEABIRD1:<br/> 		/* UnLock WP */<br/>-		ret = pci_read_config_byte(chip-&gt;pdev,<br/>-				O2_SD_LOCK_WP, &amp;scratch);<br/>+		ret = pci_read_config_byte(chip-&gt;pdev, O2_SD_LOCK_WP, &amp;scratch);<br/> 		if (ret)<br/> 			return ret;<br/> <br/>@@ -369,11 +573,9 @@ int sdhci_pci_o2_probe(struct sdhci_pci_chip *chip)<br/> 		}<br/> <br/> 		/* Set Tuning Windows to 5 */<br/>-		pci_write_config_byte(chip-&gt;pdev,<br/>-				O2_SD_TUNING_CTRL, 0x55);<br/>+		pci_write_config_byte(chip-&gt;pdev, O2_SD_TUNING_CTRL, 0x55);<br/> 		/* Lock WP */<br/>-		ret = pci_read_config_byte(chip-&gt;pdev,<br/>-					   O2_SD_LOCK_WP, &amp;scratch);<br/>+		ret = pci_read_config_byte(chip-&gt;pdev, O2_SD_LOCK_WP, &amp;scratch);<br/> 		if (ret)<br/> 			return ret;<br/> 		scratch |= 0x80;<br/>--<br/>2.14.1<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:40    [W:0.046 / U:4.236 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

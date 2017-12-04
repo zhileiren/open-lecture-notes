@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Boris Brezillon: Re: [PATCH] mtd: nand: squash struct nand_buffers into struct nand_chip
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Boris Brezillon" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/100" onclick="this.href='/lkml/headers'+'/2017/12/4/100';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/100">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/21">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/21">
+        Masahiro Yamada
+       </a>
+       <ul>
+        <li class="origin">
+         <a href="">
+          Boris Brezillon
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/100/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 10:10:43 +0100
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Boris Brezillon &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH] mtd: nand: squash struct nand_buffers into struct nand_chip
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Mon,  4 Dec 2017 14:47:50 +0900<br/>Masahiro Yamada &lt;yamada.masahiro@socionext.com&gt; wrote:<br/><br/>&gt; struct nand_buffers is malloc'ed in nand_scan_tail() just for<br/>&gt; containing three pointers.  Move the pointers into nand_chip<br/>&gt; and delete struct nand_buffers.<br/>&gt; <br/>&gt; Signed-off-by: Masahiro Yamada &lt;yamada.masahiro@socionext.com&gt;<br/>&gt; ---<br/>&gt; <br/>&gt; Another possibility is to keep struct nand_buffers,<br/>&gt; but embed it in struct nand_chip.<br/>&gt; <br/>&gt;     struct nand_chip {<br/>&gt;              ...<br/>&gt; <br/>&gt;              struct nand_buffers buffers;<br/>&gt; <br/>&gt;              ...<br/>&gt;     };<br/>&gt; <br/>&gt; I will follow Boris's opinion, anyway.<br/><br/>Nope, I think it's fine to just drop the nand_buffers struct, but I'd<br/>prefer to have ecc related buffers placed in nand_ecc_ctrl:<br/><br/>	struct nand_ecc_ctrl {<br/>		...<br/>		u8 *code_buf;<br/>		u8 *calc_buf;<br/>		...<br/>	};<br/><br/>or<br/><br/>	struct nand_ecc_ctrl {<br/>		...<br/>		struct {<br/>			u8 *code;<br/>			u8 *calc;<br/>		} bufs;<br/>		...<br/>	};<br/><br/>And ideally, databuf should be placed next to pagebuf in the<br/>nand_chip struct, since those fields are tightly linked.<br/><br/>&gt; <br/>&gt; <br/>&gt;  drivers/mtd/nand/brcmnand/brcmnand.c   |  2 +-<br/>&gt;  drivers/mtd/nand/cafe_nand.c           | 15 ++----<br/>&gt;  drivers/mtd/nand/denali.c              |  2 +-<br/>&gt;  drivers/mtd/nand/fsmc_nand.c           |  4 +-<br/>&gt;  drivers/mtd/nand/gpmi-nand/gpmi-nand.c |  4 +-<br/>&gt;  drivers/mtd/nand/nand_base.c           | 91 +++++++++++++++-------------------<br/>&gt;  drivers/mtd/nand/nand_bbt.c            |  2 +-<br/>&gt;  drivers/mtd/nand/omap2.c               | 10 ++--<br/>&gt;  drivers/mtd/nand/sunxi_nand.c          |  6 +--<br/>&gt;  include/linux/mtd/rawnand.h            | 23 +++------<br/>&gt;  10 files changed, 64 insertions(+), 95 deletions(-)<br/>&gt; <br/>&gt; diff --git a/drivers/mtd/nand/brcmnand/brcmnand.c b/drivers/mtd/nand/brcmnand/brcmnand.c<br/>&gt; index e0eb51d..6c9f7ec 100644<br/>&gt; --- a/drivers/mtd/nand/brcmnand/brcmnand.c<br/>&gt; +++ b/drivers/mtd/nand/brcmnand/brcmnand.c<br/>&gt; @@ -1681,7 +1681,7 @@ static int brcmstb_nand_verify_erased_page(struct mtd_info *mtd,<br/>&gt;  	int ret;<br/>&gt;  <br/>&gt;  	if (!buf) {<br/>&gt; -		buf = chip-&gt;buffers-&gt;databuf;<br/>&gt; +		buf = chip-&gt;databuf;<br/>&gt;  		/* Invalidate page cache */<br/>&gt;  		chip-&gt;pagebuf = -1;<br/>&gt;  	}<br/>&gt; diff --git a/drivers/mtd/nand/cafe_nand.c b/drivers/mtd/nand/cafe_nand.c<br/>&gt; index bc558c4..1e54196 100644<br/>&gt; --- a/drivers/mtd/nand/cafe_nand.c<br/>&gt; +++ b/drivers/mtd/nand/cafe_nand.c<br/>&gt; @@ -613,7 +613,6 @@ static int cafe_nand_probe(struct pci_dev *pdev,<br/>&gt;  	uint32_t ctrl;<br/>&gt;  	int err = 0;<br/>&gt;  	int old_dma;<br/>&gt; -	struct nand_buffers *nbuf;<br/>&gt;  <br/>&gt;  	/* Very old versions shared the same PCI ident for all three<br/>&gt;  	   functions on the chip. Verify the class too... */<br/>&gt; @@ -732,14 +731,12 @@ static int cafe_nand_probe(struct pci_dev *pdev,<br/>&gt;  		goto out_irq;<br/>&gt;  <br/>&gt;  	cafe-&gt;dmabuf = dma_alloc_coherent(&amp;cafe-&gt;pdev-&gt;dev,<br/>&gt; -				2112 + sizeof(struct nand_buffers) +<br/>&gt; -				mtd-&gt;writesize + mtd-&gt;oobsize,<br/>&gt; +				2112 + mtd-&gt;writesize + mtd-&gt;oobsize,<br/>&gt;  				&amp;cafe-&gt;dmaaddr, GFP_KERNEL);<br/><br/>Not directly related to this patch, but cafe_nand is the last user of<br/>NAND_OWN_BUFFERS, and after looking at the code, I think it's actually<br/>not needed, because the driver uses its own bounce buffer to do DMA<br/>transfers. That'd be great if we could get rid of this flag completely<br/>and let the core allocate the buffers for everyone. Could you have a<br/>look?<br/><br/>&gt;  	if (!cafe-&gt;dmabuf) {<br/>&gt;  		err = -ENOMEM;<br/>&gt;  		goto out_irq;<br/>&gt;  	}<br/>&gt; -	cafe-&gt;nand.buffers = nbuf = (void *)cafe-&gt;dmabuf + 2112;<br/>&gt;  <br/>&gt;  	/* Set up DMA address */<br/>&gt;  	cafe_writel(cafe, cafe-&gt;dmaaddr &amp; 0xffffffff, NAND_DMA_ADDR0);<br/>&gt; @@ -753,9 +750,7 @@ static int cafe_nand_probe(struct pci_dev *pdev,<br/>&gt;  		cafe_readl(cafe, NAND_DMA_ADDR0), cafe-&gt;dmabuf);<br/>&gt;  <br/>&gt;  	/* this driver does not need the @ecccalc and @ecccode */<br/>&gt; -	nbuf-&gt;ecccalc = NULL;<br/>&gt; -	nbuf-&gt;ecccode = NULL;<br/>&gt; -	nbuf-&gt;databuf = (uint8_t *)(nbuf + 1);<br/>&gt; +	cafe-&gt;nand.databuf = (void *)cafe-&gt;dmabuf + 2112;<br/>&gt;  <br/>&gt;  	/* Restore the DMA flag */<br/>&gt;  	usedma = old_dma;<br/>&gt; @@ -802,8 +797,7 @@ static int cafe_nand_probe(struct pci_dev *pdev,<br/>&gt;  <br/>&gt;   out_free_dma:<br/>&gt;  	dma_free_coherent(&amp;cafe-&gt;pdev-&gt;dev,<br/>&gt; -			2112 + sizeof(struct nand_buffers) +<br/>&gt; -			mtd-&gt;writesize + mtd-&gt;oobsize,<br/>&gt; +			2112 + mtd-&gt;writesize + mtd-&gt;oobsize,<br/>&gt;  			cafe-&gt;dmabuf, cafe-&gt;dmaaddr);<br/>&gt;   out_irq:<br/>&gt;  	/* Disable NAND IRQ in global IRQ mask register */<br/>&gt; @@ -830,8 +824,7 @@ static void cafe_nand_remove(struct pci_dev *pdev)<br/>&gt;  	free_rs(cafe-&gt;rs);<br/>&gt;  	pci_iounmap(pdev, cafe-&gt;mmio);<br/>&gt;  	dma_free_coherent(&amp;cafe-&gt;pdev-&gt;dev,<br/>&gt; -			2112 + sizeof(struct nand_buffers) +<br/>&gt; -			mtd-&gt;writesize + mtd-&gt;oobsize,<br/>&gt; +			2112 + mtd-&gt;writesize + mtd-&gt;oobsize,<br/>&gt;  			cafe-&gt;dmabuf, cafe-&gt;dmaaddr);<br/>&gt;  	kfree(cafe);<br/>&gt;  }<br/>&gt; diff --git a/drivers/mtd/nand/denali.c b/drivers/mtd/nand/denali.c<br/>&gt; index 2fc964b..e1f8c6f 100644<br/>&gt; --- a/drivers/mtd/nand/denali.c<br/>&gt; +++ b/drivers/mtd/nand/denali.c<br/>&gt; @@ -328,7 +328,7 @@ static int denali_check_erased_page(struct mtd_info *mtd,<br/>&gt;  				    unsigned long uncor_ecc_flags,<br/>&gt;  				    unsigned int max_bitflips)<br/>&gt;  {<br/>&gt; -	uint8_t *ecc_code = chip-&gt;buffers-&gt;ecccode;<br/>&gt; +	uint8_t *ecc_code = chip-&gt;ecccode;<br/>&gt;  	int ecc_steps = chip-&gt;ecc.steps;<br/>&gt;  	int ecc_size = chip-&gt;ecc.size;<br/>&gt;  	int ecc_bytes = chip-&gt;ecc.bytes;<br/>&gt; diff --git a/drivers/mtd/nand/fsmc_nand.c b/drivers/mtd/nand/fsmc_nand.c<br/>&gt; index eac15d9..147ca3d 100644<br/>&gt; --- a/drivers/mtd/nand/fsmc_nand.c<br/>&gt; +++ b/drivers/mtd/nand/fsmc_nand.c<br/>&gt; @@ -684,8 +684,8 @@ static int fsmc_read_page_hwecc(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  	int eccbytes = chip-&gt;ecc.bytes;<br/>&gt;  	int eccsteps = chip-&gt;ecc.steps;<br/>&gt;  	uint8_t *p = buf;<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; -	uint8_t *ecc_code = chip-&gt;buffers-&gt;ecccode;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_code = chip-&gt;ecccode;<br/>&gt;  	int off, len, group = 0;<br/>&gt;  	/*<br/>&gt;  	 * ecc_oob is intentionally taken as uint16_t. In 16bit devices, we<br/>&gt; diff --git a/drivers/mtd/nand/gpmi-nand/gpmi-nand.c b/drivers/mtd/nand/gpmi-nand/gpmi-nand.c<br/>&gt; index 50f8d4a..3312945 100644<br/>&gt; --- a/drivers/mtd/nand/gpmi-nand/gpmi-nand.c<br/>&gt; +++ b/drivers/mtd/nand/gpmi-nand/gpmi-nand.c<br/>&gt; @@ -1712,7 +1712,7 @@ static int mx23_check_transcription_stamp(struct gpmi_nand_data *this)<br/>&gt;  	unsigned int search_area_size_in_strides;<br/>&gt;  	unsigned int stride;<br/>&gt;  	unsigned int page;<br/>&gt; -	uint8_t *buffer = chip-&gt;buffers-&gt;databuf;<br/>&gt; +	uint8_t *buffer = chip-&gt;databuf;<br/>&gt;  	int saved_chip_number;<br/>&gt;  	int found_an_ncb_fingerprint = false;<br/>&gt;  <br/>&gt; @@ -1771,7 +1771,7 @@ static int mx23_write_transcription_stamp(struct gpmi_nand_data *this)<br/>&gt;  	unsigned int block;<br/>&gt;  	unsigned int stride;<br/>&gt;  	unsigned int page;<br/>&gt; -	uint8_t      *buffer = chip-&gt;buffers-&gt;databuf;<br/>&gt; +	uint8_t      *buffer = chip-&gt;databuf;<br/>&gt;  	int saved_chip_number;<br/>&gt;  	int status;<br/>&gt;  <br/>&gt; diff --git a/drivers/mtd/nand/nand_base.c b/drivers/mtd/nand/nand_base.c<br/>&gt; index 6135d00..1f8297c 100644<br/>&gt; --- a/drivers/mtd/nand/nand_base.c<br/>&gt; +++ b/drivers/mtd/nand/nand_base.c<br/>&gt; @@ -1456,8 +1456,8 @@ static int nand_read_page_swecc(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  	int eccbytes = chip-&gt;ecc.bytes;<br/>&gt;  	int eccsteps = chip-&gt;ecc.steps;<br/>&gt;  	uint8_t *p = buf;<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; -	uint8_t *ecc_code = chip-&gt;buffers-&gt;ecccode;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_code = chip-&gt;ecccode;<br/>&gt;  	unsigned int max_bitflips = 0;<br/>&gt;  <br/>&gt;  	chip-&gt;ecc.read_page_raw(mtd, chip, buf, 1, page);<br/>&gt; @@ -1529,7 +1529,7 @@ static int nand_read_subpage(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  <br/>&gt;  	/* Calculate ECC */<br/>&gt;  	for (i = 0; i &lt; eccfrag_len ; i += chip-&gt;ecc.bytes, p += chip-&gt;ecc.size)<br/>&gt; -		chip-&gt;ecc.calculate(mtd, p, &amp;chip-&gt;buffers-&gt;ecccalc[i]);<br/>&gt; +		chip-&gt;ecc.calculate(mtd, p, &amp;chip-&gt;ecccalc[i]);<br/>&gt;  <br/>&gt;  	/*<br/>&gt;  	 * The performance is faster if we position offsets according to<br/>&gt; @@ -1563,7 +1563,7 @@ static int nand_read_subpage(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  		chip-&gt;read_buf(mtd, &amp;chip-&gt;oob_poi[aligned_pos], aligned_len);<br/>&gt;  	}<br/>&gt;  <br/>&gt; -	ret = mtd_ooblayout_get_eccbytes(mtd, chip-&gt;buffers-&gt;ecccode,<br/>&gt; +	ret = mtd_ooblayout_get_eccbytes(mtd, chip-&gt;ecccode,<br/>&gt;  					 chip-&gt;oob_poi, index, eccfrag_len);<br/>&gt;  	if (ret)<br/>&gt;  		return ret;<br/>&gt; @@ -1572,16 +1572,16 @@ static int nand_read_subpage(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  	for (i = 0; i &lt; eccfrag_len ; i += chip-&gt;ecc.bytes, p += chip-&gt;ecc.size) {<br/>&gt;  		int stat;<br/>&gt;  <br/>&gt; -		stat = chip-&gt;ecc.correct(mtd, p,<br/>&gt; -			&amp;chip-&gt;buffers-&gt;ecccode[i], &amp;chip-&gt;buffers-&gt;ecccalc[i]);<br/>&gt; +		stat = chip-&gt;ecc.correct(mtd, p, &amp;chip-&gt;ecccode[i],<br/>&gt; +					 &amp;chip-&gt;ecccalc[i]);<br/>&gt;  		if (stat == -EBADMSG &amp;&amp;<br/>&gt;  		    (chip-&gt;ecc.options &amp; NAND_ECC_GENERIC_ERASED_CHECK)) {<br/>&gt;  			/* check for empty pages with bitflips */<br/>&gt;  			stat = nand_check_erased_ecc_chunk(p, chip-&gt;ecc.size,<br/>&gt; -						&amp;chip-&gt;buffers-&gt;ecccode[i],<br/>&gt; -						chip-&gt;ecc.bytes,<br/>&gt; -						NULL, 0,<br/>&gt; -						chip-&gt;ecc.strength);<br/>&gt; +							   &amp;chip-&gt;ecccode[i],<br/>&gt; +							   chip-&gt;ecc.bytes,<br/>&gt; +							   NULL, 0,<br/>&gt; +							   chip-&gt;ecc.strength);<br/>&gt;  		}<br/>&gt;  <br/>&gt;  		if (stat &lt; 0) {<br/>&gt; @@ -1611,8 +1611,8 @@ static int nand_read_page_hwecc(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  	int eccbytes = chip-&gt;ecc.bytes;<br/>&gt;  	int eccsteps = chip-&gt;ecc.steps;<br/>&gt;  	uint8_t *p = buf;<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; -	uint8_t *ecc_code = chip-&gt;buffers-&gt;ecccode;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_code = chip-&gt;ecccode;<br/>&gt;  	unsigned int max_bitflips = 0;<br/>&gt;  <br/>&gt;  	for (i = 0; eccsteps; eccsteps--, i += eccbytes, p += eccsize) {<br/>&gt; @@ -1674,8 +1674,8 @@ static int nand_read_page_hwecc_oob_first(struct mtd_info *mtd,<br/>&gt;  	int eccbytes = chip-&gt;ecc.bytes;<br/>&gt;  	int eccsteps = chip-&gt;ecc.steps;<br/>&gt;  	uint8_t *p = buf;<br/>&gt; -	uint8_t *ecc_code = chip-&gt;buffers-&gt;ecccode;<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_code = chip-&gt;ecccode;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt;  	unsigned int max_bitflips = 0;<br/>&gt;  <br/>&gt;  	/* Read the OOB area first */<br/>&gt; @@ -1894,7 +1894,7 @@ static int nand_do_read_ops(struct mtd_info *mtd, loff_t from,<br/>&gt;  <br/>&gt;  		/* Is the current page in the buffer? */<br/>&gt;  		if (realpage != chip-&gt;pagebuf || oob) {<br/>&gt; -			bufpoi = use_bufpoi ? chip-&gt;buffers-&gt;databuf : buf;<br/>&gt; +			bufpoi = use_bufpoi ? chip-&gt;databuf : buf;<br/>&gt;  <br/>&gt;  			if (use_bufpoi &amp;&amp; aligned)<br/>&gt;  				pr_debug("%s: using read bounce buffer for buf@%p\n",<br/>&gt; @@ -1938,7 +1938,7 @@ static int nand_do_read_ops(struct mtd_info *mtd, loff_t from,<br/>&gt;  					/* Invalidate page cache */<br/>&gt;  					chip-&gt;pagebuf = -1;<br/>&gt;  				}<br/>&gt; -				memcpy(buf, chip-&gt;buffers-&gt;databuf + col, bytes);<br/>&gt; +				memcpy(buf, chip-&gt;databuf + col, bytes);<br/>&gt;  			}<br/>&gt;  <br/>&gt;  			if (unlikely(oob)) {<br/>&gt; @@ -1979,7 +1979,7 @@ static int nand_do_read_ops(struct mtd_info *mtd, loff_t from,<br/>&gt;  			buf += bytes;<br/>&gt;  			max_bitflips = max_t(unsigned int, max_bitflips, ret);<br/>&gt;  		} else {<br/>&gt; -			memcpy(buf, chip-&gt;buffers-&gt;databuf + col, bytes);<br/>&gt; +			memcpy(buf, chip-&gt;databuf + col, bytes);<br/>&gt;  			buf += bytes;<br/>&gt;  			max_bitflips = max_t(unsigned int, max_bitflips,<br/>&gt;  					     chip-&gt;pagebuf_bitflips);<br/>&gt; @@ -2403,7 +2403,7 @@ static int nand_write_page_swecc(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  	int i, eccsize = chip-&gt;ecc.size, ret;<br/>&gt;  	int eccbytes = chip-&gt;ecc.bytes;<br/>&gt;  	int eccsteps = chip-&gt;ecc.steps;<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt;  	const uint8_t *p = buf;<br/>&gt;  <br/>&gt;  	/* Software ECC calculation */<br/>&gt; @@ -2433,7 +2433,7 @@ static int nand_write_page_hwecc(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  	int i, eccsize = chip-&gt;ecc.size, ret;<br/>&gt;  	int eccbytes = chip-&gt;ecc.bytes;<br/>&gt;  	int eccsteps = chip-&gt;ecc.steps;<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt;  	const uint8_t *p = buf;<br/>&gt;  <br/>&gt;  	for (i = 0; eccsteps; eccsteps--, i += eccbytes, p += eccsize) {<br/>&gt; @@ -2469,7 +2469,7 @@ static int nand_write_subpage_hwecc(struct mtd_info *mtd,<br/>&gt;  				int oob_required, int page)<br/>&gt;  {<br/>&gt;  	uint8_t *oob_buf  = chip-&gt;oob_poi;<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt;  	int ecc_size      = chip-&gt;ecc.size;<br/>&gt;  	int ecc_bytes     = chip-&gt;ecc.bytes;<br/>&gt;  	int ecc_steps     = chip-&gt;ecc.steps;<br/>&gt; @@ -2503,7 +2503,7 @@ static int nand_write_subpage_hwecc(struct mtd_info *mtd,<br/>&gt;  <br/>&gt;  	/* copy calculated ECC for whole page to chip-&gt;buffer-&gt;oob */<br/>&gt;  	/* this include masked-value(0xFF) for unwritten subpages */<br/>&gt; -	ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; +	ecc_calc = chip-&gt;ecccalc;<br/>&gt;  	ret = mtd_ooblayout_set_eccbytes(mtd, ecc_calc, chip-&gt;oob_poi, 0,<br/>&gt;  					 chip-&gt;ecc.total);<br/>&gt;  	if (ret)<br/>&gt; @@ -2737,9 +2737,9 @@ static int nand_do_write_ops(struct mtd_info *mtd, loff_t to,<br/>&gt;  			if (part_pagewr)<br/>&gt;  				bytes = min_t(int, bytes - column, writelen);<br/>&gt;  			chip-&gt;pagebuf = -1;<br/>&gt; -			memset(chip-&gt;buffers-&gt;databuf, 0xff, mtd-&gt;writesize);<br/>&gt; -			memcpy(&amp;chip-&gt;buffers-&gt;databuf[column], buf, bytes);<br/>&gt; -			wbuf = chip-&gt;buffers-&gt;databuf;<br/>&gt; +			memset(chip-&gt;databuf, 0xff, mtd-&gt;writesize);<br/>&gt; +			memcpy(&amp;chip-&gt;databuf[column], buf, bytes);<br/>&gt; +			wbuf = chip-&gt;databuf;<br/>&gt;  		}<br/>&gt;  <br/>&gt;  		if (unlikely(oob)) {<br/>&gt; @@ -4632,7 +4632,6 @@ int nand_scan_tail(struct mtd_info *mtd)<br/>&gt;  {<br/>&gt;  	struct nand_chip *chip = mtd_to_nand(mtd);<br/>&gt;  	struct nand_ecc_ctrl *ecc = &amp;chip-&gt;ecc;<br/>&gt; -	struct nand_buffers *nbuf = NULL;<br/>&gt;  	int ret, i;<br/>&gt;  <br/>&gt;  	/* New bad blocks should be marked in OOB, flash-based BBT, or both */<br/>&gt; @@ -4647,31 +4646,23 @@ int nand_scan_tail(struct mtd_info *mtd)<br/>&gt;  	}<br/>&gt;  <br/>&gt;  	if (!(chip-&gt;options &amp; NAND_OWN_BUFFERS)) {<br/>&gt; -		nbuf = kzalloc(sizeof(*nbuf), GFP_KERNEL);<br/>&gt; -		if (!nbuf)<br/>&gt; +		chip-&gt;ecccalc = kmalloc(mtd-&gt;oobsize, GFP_KERNEL);<br/>&gt; +		if (!chip-&gt;ecccalc)<br/>&gt;  			return -ENOMEM;<br/>&gt;  <br/>&gt; -		nbuf-&gt;ecccalc = kmalloc(mtd-&gt;oobsize, GFP_KERNEL);<br/>&gt; -		if (!nbuf-&gt;ecccalc) {<br/>&gt; +		chip-&gt;ecccode = kmalloc(mtd-&gt;oobsize, GFP_KERNEL);<br/>&gt; +		if (!chip-&gt;ecccode) {<br/>&gt;  			ret = -ENOMEM;<br/>&gt;  			goto err_free_nbuf;<br/>&gt;  		}<br/><br/>Hm, again not directly related to this patch, but I wonder if we<br/>couldn't allocate those buffers only when they are really needed. For<br/>example, most NAND controllers do the ECC calculation/correct in HW and<br/>simply don't need those buffers.<br/><br/>Regards,<br/><br/>Boris<br/><br/>&gt;  <br/>&gt; -		nbuf-&gt;ecccode = kmalloc(mtd-&gt;oobsize, GFP_KERNEL);<br/>&gt; -		if (!nbuf-&gt;ecccode) {<br/>&gt; -			ret = -ENOMEM;<br/>&gt; -			goto err_free_nbuf;<br/>&gt; -		}<br/>&gt; -<br/>&gt; -		nbuf-&gt;databuf = kmalloc(mtd-&gt;writesize + mtd-&gt;oobsize,<br/>&gt; +		chip-&gt;databuf = kmalloc(mtd-&gt;writesize + mtd-&gt;oobsize,<br/>&gt;  					GFP_KERNEL);<br/>&gt; -		if (!nbuf-&gt;databuf) {<br/>&gt; +		if (!chip-&gt;databuf) {<br/>&gt;  			ret = -ENOMEM;<br/>&gt;  			goto err_free_nbuf;<br/>&gt;  		}<br/>&gt; -<br/>&gt; -		chip-&gt;buffers = nbuf;<br/>&gt; -	} else if (!chip-&gt;buffers) {<br/>&gt; +	} else if (!chip-&gt;databuf) {<br/>&gt;  		return -ENOMEM;<br/>&gt;  	}<br/>&gt;  <br/>&gt; @@ -4688,7 +4679,7 @@ int nand_scan_tail(struct mtd_info *mtd)<br/>&gt;  		goto err_free_nbuf;<br/>&gt;  <br/>&gt;  	/* Set the internal oob buffer location, just after the page data */<br/>&gt; -	chip-&gt;oob_poi = chip-&gt;buffers-&gt;databuf + mtd-&gt;writesize;<br/>&gt; +	chip-&gt;oob_poi = chip-&gt;databuf + mtd-&gt;writesize;<br/>&gt;  <br/>&gt;  	/*<br/>&gt;  	 * If no default placement scheme is given, select an appropriate one.<br/>&gt; @@ -4975,12 +4966,9 @@ int nand_scan_tail(struct mtd_info *mtd)<br/>&gt;  	nand_manufacturer_cleanup(chip);<br/>&gt;  <br/>&gt;  err_free_nbuf:<br/>&gt; -	if (nbuf) {<br/>&gt; -		kfree(nbuf-&gt;databuf);<br/>&gt; -		kfree(nbuf-&gt;ecccode);<br/>&gt; -		kfree(nbuf-&gt;ecccalc);<br/>&gt; -		kfree(nbuf);<br/>&gt; -	}<br/>&gt; +	kfree(chip-&gt;databuf);<br/>&gt; +	kfree(chip-&gt;ecccode);<br/>&gt; +	kfree(chip-&gt;ecccalc);<br/>&gt;  <br/>&gt;  	return ret;<br/>&gt;  }<br/>&gt; @@ -5032,11 +5020,10 @@ void nand_cleanup(struct nand_chip *chip)<br/>&gt;  <br/>&gt;  	/* Free bad block table memory */<br/>&gt;  	kfree(chip-&gt;bbt);<br/>&gt; -	if (!(chip-&gt;options &amp; NAND_OWN_BUFFERS) &amp;&amp; chip-&gt;buffers) {<br/>&gt; -		kfree(chip-&gt;buffers-&gt;databuf);<br/>&gt; -		kfree(chip-&gt;buffers-&gt;ecccode);<br/>&gt; -		kfree(chip-&gt;buffers-&gt;ecccalc);<br/>&gt; -		kfree(chip-&gt;buffers);<br/>&gt; +	if (!(chip-&gt;options &amp; NAND_OWN_BUFFERS)) {<br/>&gt; +		kfree(chip-&gt;databuf);<br/>&gt; +		kfree(chip-&gt;ecccode);<br/>&gt; +		kfree(chip-&gt;ecccalc);<br/>&gt;  	}<br/>&gt;  <br/>&gt;  	/* Free bad block descriptor memory */<br/>&gt; diff --git a/drivers/mtd/nand/nand_bbt.c b/drivers/mtd/nand/nand_bbt.c<br/>&gt; index 2915b67..53acc4a 100644<br/>&gt; --- a/drivers/mtd/nand/nand_bbt.c<br/>&gt; +++ b/drivers/mtd/nand/nand_bbt.c<br/>&gt; @@ -898,7 +898,7 @@ static inline int nand_memory_bbt(struct mtd_info *mtd, struct nand_bbt_descr *b<br/>&gt;  {<br/>&gt;  	struct nand_chip *this = mtd_to_nand(mtd);<br/>&gt;  <br/>&gt; -	return create_bbt(mtd, this-&gt;buffers-&gt;databuf, bd, -1);<br/>&gt; +	return create_bbt(mtd, this-&gt;databuf, bd, -1);<br/>&gt;  }<br/>&gt;  <br/>&gt;  /**<br/>&gt; diff --git a/drivers/mtd/nand/omap2.c b/drivers/mtd/nand/omap2.c<br/>&gt; index dad438c..7870cb1 100644<br/>&gt; --- a/drivers/mtd/nand/omap2.c<br/>&gt; +++ b/drivers/mtd/nand/omap2.c<br/>&gt; @@ -1530,7 +1530,7 @@ static int omap_write_page_bch(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  			       const uint8_t *buf, int oob_required, int page)<br/>&gt;  {<br/>&gt;  	int ret;<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt;  <br/>&gt;  	/* Enable GPMC ecc engine */<br/>&gt;  	chip-&gt;ecc.hwctl(mtd, NAND_ECC_WRITE);<br/>&gt; @@ -1568,7 +1568,7 @@ static int omap_write_subpage_bch(struct mtd_info *mtd,<br/>&gt;  				  u32 data_len, const u8 *buf,<br/>&gt;  				  int oob_required, int page)<br/>&gt;  {<br/>&gt; -	u8 *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; +	u8 *ecc_calc = chip-&gt;ecccalc;<br/>&gt;  	int ecc_size      = chip-&gt;ecc.size;<br/>&gt;  	int ecc_bytes     = chip-&gt;ecc.bytes;<br/>&gt;  	int ecc_steps     = chip-&gt;ecc.steps;<br/>&gt; @@ -1605,7 +1605,7 @@ static int omap_write_subpage_bch(struct mtd_info *mtd,<br/>&gt;  <br/>&gt;  	/* copy calculated ECC for whole page to chip-&gt;buffer-&gt;oob */<br/>&gt;  	/* this include masked-value(0xFF) for unwritten subpages */<br/>&gt; -	ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; +	ecc_calc = chip-&gt;ecccalc;<br/>&gt;  	ret = mtd_ooblayout_set_eccbytes(mtd, ecc_calc, chip-&gt;oob_poi, 0,<br/>&gt;  					 chip-&gt;ecc.total);<br/>&gt;  	if (ret)<br/>&gt; @@ -1635,8 +1635,8 @@ static int omap_write_subpage_bch(struct mtd_info *mtd,<br/>&gt;  static int omap_read_page_bch(struct mtd_info *mtd, struct nand_chip *chip,<br/>&gt;  				uint8_t *buf, int oob_required, int page)<br/>&gt;  {<br/>&gt; -	uint8_t *ecc_calc = chip-&gt;buffers-&gt;ecccalc;<br/>&gt; -	uint8_t *ecc_code = chip-&gt;buffers-&gt;ecccode;<br/>&gt; +	uint8_t *ecc_calc = chip-&gt;ecccalc;<br/>&gt; +	uint8_t *ecc_code = chip-&gt;ecccode;<br/>&gt;  	int stat, ret;<br/>&gt;  	unsigned int max_bitflips = 0;<br/>&gt;  <br/>&gt; diff --git a/drivers/mtd/nand/sunxi_nand.c b/drivers/mtd/nand/sunxi_nand.c<br/>&gt; index 82244be..a487be5 100644<br/>&gt; --- a/drivers/mtd/nand/sunxi_nand.c<br/>&gt; +++ b/drivers/mtd/nand/sunxi_nand.c<br/>&gt; @@ -1544,7 +1544,7 @@ static int sunxi_nfc_hw_common_ecc_read_oob(struct mtd_info *mtd,<br/>&gt;  <br/>&gt;  	chip-&gt;pagebuf = -1;<br/>&gt;  <br/>&gt; -	return chip-&gt;ecc.read_page(mtd, chip, chip-&gt;buffers-&gt;databuf, 1, page);<br/>&gt; +	return chip-&gt;ecc.read_page(mtd, chip, chip-&gt;databuf, 1, page);<br/>&gt;  }<br/>&gt;  <br/>&gt;  static int sunxi_nfc_hw_common_ecc_write_oob(struct mtd_info *mtd,<br/>&gt; @@ -1557,8 +1557,8 @@ static int sunxi_nfc_hw_common_ecc_write_oob(struct mtd_info *mtd,<br/>&gt;  <br/>&gt;  	chip-&gt;pagebuf = -1;<br/>&gt;  <br/>&gt; -	memset(chip-&gt;buffers-&gt;databuf, 0xff, mtd-&gt;writesize);<br/>&gt; -	ret = chip-&gt;ecc.write_page(mtd, chip, chip-&gt;buffers-&gt;databuf, 1, page);<br/>&gt; +	memset(chip-&gt;databuf, 0xff, mtd-&gt;writesize);<br/>&gt; +	ret = chip-&gt;ecc.write_page(mtd, chip, chip-&gt;databuf, 1, page);<br/>&gt;  	if (ret)<br/>&gt;  		return ret;<br/>&gt;  <br/>&gt; diff --git a/include/linux/mtd/rawnand.h b/include/linux/mtd/rawnand.h<br/>&gt; index 749bb08..75bf28d 100644<br/>&gt; --- a/include/linux/mtd/rawnand.h<br/>&gt; +++ b/include/linux/mtd/rawnand.h<br/>&gt; @@ -608,21 +608,6 @@ static inline int nand_standard_page_accessors(struct nand_ecc_ctrl *ecc)<br/>&gt;  }<br/>&gt;  <br/>&gt;  /**<br/>&gt; - * struct nand_buffers - buffer structure for read/write<br/>&gt; - * @ecccalc:	buffer pointer for calculated ECC, size is oobsize.<br/>&gt; - * @ecccode:	buffer pointer for ECC read from flash, size is oobsize.<br/>&gt; - * @databuf:	buffer pointer for data, size is (page size + oobsize).<br/>&gt; - *<br/>&gt; - * Do not change the order of buffers. databuf and oobrbuf must be in<br/>&gt; - * consecutive order.<br/>&gt; - */<br/>&gt; -struct nand_buffers {<br/>&gt; -	uint8_t	*ecccalc;<br/>&gt; -	uint8_t	*ecccode;<br/>&gt; -	uint8_t *databuf;<br/>&gt; -};<br/>&gt; -<br/>&gt; -/**<br/>&gt;   * struct nand_sdr_timings - SDR NAND chip timings<br/>&gt;   *<br/>&gt;   * This struct defines the timing requirements of a SDR NAND chip.<br/>&gt; @@ -790,7 +775,9 @@ struct nand_manufacturer_ops {<br/>&gt;   * @setup_read_retry:	[FLASHSPECIFIC] flash (vendor) specific function for<br/>&gt;   *			setting the read-retry mode. Mostly needed for MLC NAND.<br/>&gt;   * @ecc:		[BOARDSPECIFIC] ECC control structure<br/>&gt; - * @buffers:		buffer structure for read/write<br/>&gt; + * @ecccalc:		buffer pointer for calculated ECC, size is oobsize.<br/>&gt; + * @ecccode:		buffer pointer for ECC read from flash, size is oobsize.<br/>&gt; + * @databuf:		buffer pointer for data, size is (page size + oobsize).<br/>&gt;   * @buf_align:		minimum buffer alignment required by a platform<br/>&gt;   * @hwcontrol:		platform-specific hardware control structure<br/>&gt;   * @erase:		[REPLACEABLE] erase function<br/>&gt; @@ -938,7 +925,9 @@ struct nand_chip {<br/>&gt;  	struct nand_hw_control *controller;<br/>&gt;  <br/>&gt;  	struct nand_ecc_ctrl ecc;<br/>&gt; -	struct nand_buffers *buffers;<br/>&gt; +	u8 *ecccalc;<br/>&gt; +	u8 *ecccode;<br/>&gt; +	u8 *databuf;<br/>&gt;  	unsigned long buf_align;<br/>&gt;  	struct nand_hw_control hwcontrol;<br/>&gt;  <br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:12    [W:0.072 / U:4.052 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

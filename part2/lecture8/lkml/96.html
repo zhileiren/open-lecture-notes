@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Lee Jones: Re: [PATCH v2 2/2] cros_ec: Move cros_ec_dev module to drivers/mfd
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Lee Jones" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/101" onclick="this.href='/lkml/headers'+'/2017/12/4/101';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/101">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/20/408">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/11/30/848">
+        Guenter Roeck
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/1/674">
+          Gwendal Grignou
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="">
+            Lee Jones
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 09:10:26 +0000
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Lee Jones &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH v2 2/2] cros_ec: Move cros_ec_dev module to drivers/mfd
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Fri, 01 Dec 2017, Gwendal Grignou wrote:<br/><br/>&gt; Reviewed-by: Gwendal Grignou &lt;gwendal@chromium.org&gt;<br/><br/>Can you please reply inline (where Guenter did is perfect) and snip<br/>the rest please?  Top posting is to be strongly discouraged.<br/><br/>&gt; On Thu, Nov 30, 2017 at 12:50 PM, Guenter Roeck &lt;groeck@google.com&gt; wrote:<br/>&gt; &gt; On Mon, Nov 20, 2017 at 8:15 AM, Thierry Escande<br/>&gt; &gt; &lt;thierry.escande@collabora.com&gt; wrote:<br/>&gt; &gt;&gt; The cros_ec_dev module is responsible for registering the MFD devices<br/>&gt; &gt;&gt; attached to the ChromeOS EC. This patch moves this module to drivers/mfd<br/>&gt; &gt;&gt; so calls to mfd_add_devices() are not done from outside the MFD subtree<br/>&gt; &gt;&gt; anymore.<br/>&gt; &gt;&gt;<br/>&gt; &gt;&gt; Signed-off-by: Thierry Escande &lt;thierry.escande@collabora.com&gt;<br/>&gt; &gt;<br/>&gt; &gt; Tested-by: Guenter Roeck &lt;groeck@chromium.org&gt;<br/>&gt; &gt;<br/>&gt; &gt;&gt; ---<br/>&gt; &gt;&gt;  drivers/mfd/Kconfig                        |  10 +<br/>&gt; &gt;&gt;  drivers/mfd/Makefile                       |   1 +<br/>&gt; &gt;&gt;  drivers/mfd/cros_ec_dev.c                  | 552 ++++++++++++++++++++++++++++<br/>&gt; &gt;&gt;  drivers/mfd/cros_ec_dev.h                  |  52 +++<br/>&gt; &gt;&gt;  drivers/platform/chrome/Kconfig            |  10 -<br/>&gt; &gt;&gt;  drivers/platform/chrome/Makefile           |   1 -<br/>&gt; &gt;&gt;  drivers/platform/chrome/cros_ec_debugfs.c  |   3 -<br/>&gt; &gt;&gt;  drivers/platform/chrome/cros_ec_debugfs.h  |  27 --<br/>&gt; &gt;&gt;  drivers/platform/chrome/cros_ec_dev.c      | 553 -----------------------------<br/>&gt; &gt;&gt;  drivers/platform/chrome/cros_ec_dev.h      |  52 ---<br/>&gt; &gt;&gt;  drivers/platform/chrome/cros_ec_lightbar.c |   2 -<br/>&gt; &gt;&gt;  drivers/platform/chrome/cros_ec_sysfs.c    |   2 -<br/>&gt; &gt;&gt;  include/linux/mfd/cros_ec.h                |   4 +<br/>&gt; &gt;&gt;  13 files changed, 619 insertions(+), 650 deletions(-)<br/>&gt; &gt;&gt;  create mode 100644 drivers/mfd/cros_ec_dev.c<br/>&gt; &gt;&gt;  create mode 100644 drivers/mfd/cros_ec_dev.h<br/>&gt; &gt;&gt;  delete mode 100644 drivers/platform/chrome/cros_ec_debugfs.h<br/>&gt; &gt;&gt;  delete mode 100644 drivers/platform/chrome/cros_ec_dev.c<br/>&gt; &gt;&gt;  delete mode 100644 drivers/platform/chrome/cros_ec_dev.h<br/><br/>-- <br/>Lee Jones<br/>Linaro STMicroelectronics Landing Team Lead<br/>Linaro.org │ Open source software for ARM SoCs<br/>Follow Linaro: Facebook | Twitter | Blog<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:12    [W:0.045 / U:4.016 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

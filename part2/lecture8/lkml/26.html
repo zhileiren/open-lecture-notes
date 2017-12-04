@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: SF Markus Elfring: Re: Difficulties for compilation without extra optimisation
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by SF Markus Elfring" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/171" onclick="this.href='/lkml/headers'+'/2017/12/4/171';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/171">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/7/599">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/88">
+        SF Markus Elfring
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/138">
+          Steven Rostedt
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="">
+            SF Markus Elfring
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: Difficulties for compilation without extra optimisation
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           SF Markus Elfring &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 11:18:26 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">&gt;&gt; Will the compilation be a bit quicker when extra data processing<br/>&gt;&gt; could be omitted?<br/>&gt; <br/>&gt; Why would you care more about the time it takes to compile the kernel,<br/>&gt; than the time it takes for executing it?<br/><br/>I am also interested in the evolution of compilation time frames.<br/><br/><br/>&gt; Benchmarks are all about performance of a running kernel,<br/><br/>This is generally reasonable.<br/><br/><br/>&gt; nobody compares benchmarks of the time it takes to compile it.<br/><br/>I guess that the situation can be occasionally different there.<br/><br/><br/>&gt; Sure, we like to make the compile times quicker<br/><br/>Good to know …<br/><br/><br/>&gt; (heck, I wrote "make localmodconfig" for just that purpose),<br/><br/>Thanks.<br/><br/><br/>&gt; but we never favor compiler time over execution time.<br/><br/>I imagine that the speed expectations could be adjusted during software development,<br/>couldn't they?<br/><br/><br/>&gt; In fact, if we can improve the execution performance by sacrificing compile time,<br/>&gt; we are happy to do that.<br/><br/>I guess that you would like to consider some constraints there.<br/><br/><br/>&gt;&gt;&gt; In fact, we do a lot of tricks to make sure that things work the way<br/>&gt;&gt;&gt; we expect it to, because we add broken code that only gets compiled out<br/>&gt;&gt;&gt; when gcc optimizes the code the way we expect it to be,<br/>&gt;&gt;&gt; and the kernel build will break otherwise.  <br/>&gt;&gt;<br/>&gt;&gt; * Can this goal be also achieved without the addition of “broken code”?<br/>&gt; <br/>&gt; No.<br/><br/>Will any other contributors take another look?<br/><br/><br/>&gt;&gt; * How do you think about to improve the error handling there?<br/>&gt; <br/>&gt; It works just fine as is.<br/><br/>I hope that further software improvements can be achieved also for this use case.<br/><br/><br/>&gt; Errors that can be detected at build time are 100 times better<br/>&gt; than detecting them at execution time.<br/><br/>I agree to such a general view.<br/><br/>Will an other (or no) error message be more appropriate?<br/><br/>Regards,<br/>Markus<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:20    [W:0.022 / U:3.176 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

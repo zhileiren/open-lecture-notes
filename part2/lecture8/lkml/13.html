@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: "Du, Changbin": BUG: KASAN: global-out-of-bounds in cppc_get_perf_caps+0xf3/0x3b0
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title='lkml.org : last messages by "Du, Changbin"' type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/184" onclick="this.href='/lkml/headers'+'/2017/12/4/184';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/184">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/184">
+        First message in thread
+       </a>
+      </li>
+      <li class="origin">
+       <a href="">
+        "Du, Changbin"
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1305798">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 18:19:45 +0800
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           "Du, Changbin" &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           BUG: KASAN: global-out-of-bounds in cppc_get_perf_caps+0xf3/0x3b0
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">Hi Cherian,<br/>Your patch 'ACPI / CPPC: Make CPPC ACPI driver aware of PCC subspace IDs'<br/>introduced a out-of-bounds BUG in kernel. The code need to check<br/>cpu_pcc_subspace_idx before use it since it can be -1. Thanks.<br/><br/>[   15.113449] ==================================================================<br/>[   15.116983] BUG: KASAN: global-out-of-bounds in cppc_get_perf_caps+0xf3/0x3b0<br/>[   15.116983] Read of size 8 at addr ffffffffb9a5c0d8 by task swapper/0/1<br/><br/>[   15.116983] CPU: 3 PID: 1 Comm: swapper/0 Not tainted 4.15.0-rc2+ #2<br/>[   15.116983] Hardware name: Dell Inc. OptiPlex 7040/0Y7WYT, BIOS 1.2.8 01/26/2016<br/>[   15.116983] Call Trace:<br/>[   15.116983]  dump_stack+0x7c/0xbb<br/>[   15.116983]  print_address_description+0x1df/0x290<br/>[   15.116983]  kasan_report+0x28a/0x370<br/>[   15.116983]  ? cppc_get_perf_caps+0xf3/0x3b0<br/>[   15.116983]  cppc_get_perf_caps+0xf3/0x3b0<br/>[   15.116983]  ? cpc_read+0x210/0x210<br/>[   15.116983]  ? __rdmsr_on_cpu+0x90/0x90<br/>[   15.116983]  ? rdmsrl_on_cpu+0xa9/0xe0<br/>[   15.116983]  ? rdmsr_on_cpu+0x100/0x100<br/>[   15.116983]  ? wrmsrl_on_cpu+0x9c/0xd0<br/>[   15.116983]  ? wrmsrl_on_cpu+0x9c/0xd0<br/>[   15.116983]  ? wrmsr_on_cpu+0xe0/0xe0<br/>[   15.116983]  __intel_pstate_cpu_init.part.16+0x3a2/0x530<br/>[   15.116983]  ? intel_pstate_init_cpu+0x197/0x390<br/>[   15.116983]  ? show_no_turbo+0xe0/0xe0<br/>[   15.116983]  ? __lockdep_init_map+0xa0/0x290<br/>[   15.116983]  intel_pstate_cpu_init+0x30/0x60<br/>[   15.116983]  cpufreq_online+0x155/0xac0<br/>[   15.116983]  cpufreq_add_dev+0x9b/0xb0<br/>[   15.116983]  subsys_interface_register+0x1ae/0x290<br/>[   15.116983]  ? bus_unregister_notifier+0x40/0x40<br/>[   15.116983]  ? mark_held_locks+0x83/0xb0<br/>[   15.116983]  ? _raw_write_unlock_irqrestore+0x32/0x60<br/>[   15.116983]  ? intel_pstate_setup+0xc/0x104<br/>[   15.116983]  ? intel_pstate_setup+0xc/0x104<br/>[   15.116983]  ? cpufreq_register_driver+0x1ce/0x2b0<br/>[   15.116983]  cpufreq_register_driver+0x1ce/0x2b0<br/>[   15.116983]  ? intel_pstate_setup+0x104/0x104<br/>[   15.116983]  intel_pstate_register_driver+0x3a/0xa0<br/>[   15.116983]  intel_pstate_init+0x3c4/0x434<br/>[   15.116983]  ? intel_pstate_setup+0x104/0x104<br/>[   15.116983]  ? intel_pstate_setup+0x104/0x104<br/>[   15.116983]  do_one_initcall+0x9c/0x206<br/>[   15.116983]  ? parameq+0xa0/0xa0<br/>[   15.116983]  ? initcall_blacklisted+0x150/0x150<br/>[   15.116983]  ? lock_downgrade+0x2c0/0x2c0<br/>[   15.116983]  kernel_init_freeable+0x327/0x3f0<br/>[   15.116983]  ? start_kernel+0x612/0x612<br/>[   15.116983]  ? _raw_spin_unlock_irq+0x29/0x40<br/>[   15.116983]  ? finish_task_switch+0xdd/0x320<br/>[   15.116983]  ? finish_task_switch+0x8e/0x320<br/>[   15.116983]  ? rest_init+0xd0/0xd0<br/>[   15.116983]  kernel_init+0xf/0x11a<br/>[   15.116983]  ? rest_init+0xd0/0xd0<br/>[   15.116983]  ret_from_fork+0x24/0x30<br/><br/>[   15.116983] The buggy address belongs to the variable:<br/>[   15.116983]  __key.36299+0x38/0x40<br/><br/>[   15.116983] Memory state around the buggy address:<br/>[   15.116983]  ffffffffb9a5bf80: fa fa fa fa 00 fa fa fa fa fa fa fa 00 fa fa fa<br/>[   15.116983]  ffffffffb9a5c000: fa fa fa fa 00 fa fa fa fa fa fa fa 00 fa fa fa<br/>[   15.116983] &gt;ffffffffb9a5c080: fa fa fa fa 00 fa fa fa fa fa fa fa 00 00 00 00<br/>[   15.116983]                                                     ^<br/>[   15.116983]  ffffffffb9a5c100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00<br/>[   15.116983]  ffffffffb9a5c180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00<br/>[   15.116983] ==================================================================<br/><br/>-- <br/>Thanks,<br/>Changbin Du<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:28    [W:0.021 / U:3.124 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

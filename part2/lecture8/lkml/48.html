@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Hendrik Brueckner: [PATCH v2 6/6] perf s390: add regs_query_register_offset()
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Hendrik Brueckner" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/149" onclick="this.href='/lkml/headers'+'/2017/12/4/149';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/149">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/146">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/146">
+        Hendrik Brueckner
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/147">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/148">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/150">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/154">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/156">
+          Hendrik Brueckner
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/149/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Hendrik Brueckner &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH v2 6/6] perf s390: add regs_query_register_offset()
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 10:56:49 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">The regs_query_register_offset() helper function converts<br/>register name like "%r0" to an offset of a register in user_pt_regs<br/>It is required by the BPF prologue generator.<br/><br/>The user_pt_regs structure was recently added to "asm/ptrace.h".<br/>Hence, update tools/perf/check-headers.sh to keep the header file<br/>in sync with kernel changes.<br/><br/>Suggested-by: Thomas Richter &lt;tmricht@linux.vnet.ibm.com&gt;<br/>Signed-off-by: Hendrik Brueckner &lt;brueckner@linux.vnet.ibm.com&gt;<br/>Reviewed-and-tested-by: Thomas Richter &lt;tmricht@linux.vnet.ibm.com&gt;<br/>Acked-by: Alexei Starovoitov &lt;ast@kernel.org&gt;<br/>Cc: Arnaldo Carvalho de Melo &lt;acme@kernel.org&gt;<br/>Cc: Jiri Olsa &lt;jolsa@redhat.com&gt;<br/>Cc: Heiko Carstens &lt;heiko.carstens@de.ibm.com&gt;<br/>---<br/> tools/perf/arch/s390/Makefile          |  1 +<br/> tools/perf/arch/s390/util/dwarf-regs.c | 32 +++++++++++++++++++++++++++++---<br/> tools/perf/check-headers.sh            |  1 +<br/> 3 files changed, 31 insertions(+), 3 deletions(-)<br/><br/>diff --git a/tools/perf/arch/s390/Makefile b/tools/perf/arch/s390/Makefile<br/>index 21322e0..09ba923 100644<br/>--- a/tools/perf/arch/s390/Makefile<br/>+++ b/tools/perf/arch/s390/Makefile<br/>@@ -2,3 +2,4 @@ ifndef NO_DWARF<br/> PERF_HAVE_DWARF_REGS := 1<br/> endif<br/> HAVE_KVM_STAT_SUPPORT := 1<br/>+PERF_HAVE_ARCH_REGS_QUERY_REGISTER_OFFSET := 1<br/>diff --git a/tools/perf/arch/s390/util/dwarf-regs.c b/tools/perf/arch/s390/util/dwarf-regs.c<br/>index f47576c..a8ace5c 100644<br/>--- a/tools/perf/arch/s390/util/dwarf-regs.c<br/>+++ b/tools/perf/arch/s390/util/dwarf-regs.c<br/>@@ -2,17 +2,43 @@<br/> /*<br/>  * Mapping of DWARF debug register numbers into register names.<br/>  *<br/>- *    Copyright IBM Corp. 2010<br/>- *    Author(s): Heiko Carstens &lt;heiko.carstens@de.ibm.com&gt;,<br/>+ * Copyright IBM Corp. 2010, 2017<br/>+ * Author(s): Heiko Carstens &lt;heiko.carstens@de.ibm.com&gt;,<br/>+ *	      Hendrik Brueckner &lt;brueckner@linux.vnet.ibm.com&gt;<br/>  *<br/>  */<br/> <br/>+#include &lt;errno.h&gt;<br/> #include &lt;stddef.h&gt;<br/>-#include &lt;dwarf-regs.h&gt;<br/>+#include &lt;stdlib.h&gt;<br/> #include &lt;linux/kernel.h&gt;<br/>+#include &lt;asm/ptrace.h&gt;<br/>+#include &lt;string.h&gt;<br/>+#include &lt;dwarf-regs.h&gt;<br/> #include "dwarf-regs-table.h"<br/> <br/> const char *get_arch_regstr(unsigned int n)<br/> {<br/> 	return (n &gt;= ARRAY_SIZE(s390_dwarf_regs)) ? NULL : s390_dwarf_regs[n];<br/> }<br/>+<br/>+/*<br/>+ * Convert the register name into an offset to struct pt_regs (kernel).<br/>+ * This is required by the BPF prologue generator.  The BPF<br/>+ * program is called in the BPF overflow handler in the perf<br/>+ * core.<br/>+ */<br/>+int regs_query_register_offset(const char *name)<br/>+{<br/>+	unsigned long gpr;<br/>+<br/>+	if (!name || strncmp(name, "%r", 2))<br/>+		return -EINVAL;<br/>+<br/>+	errno = 0;<br/>+	gpr = strtoul(name + 2, NULL, 10);<br/>+	if (errno || gpr &gt;= 16)<br/>+		return -EINVAL;<br/>+<br/>+	return offsetof(user_pt_regs, gprs) + 8 * gpr;<br/>+}<br/>diff --git a/tools/perf/check-headers.sh b/tools/perf/check-headers.sh<br/>index 77406d2..6db9d80 100755<br/>--- a/tools/perf/check-headers.sh<br/>+++ b/tools/perf/check-headers.sh<br/>@@ -30,6 +30,7 @@ arch/x86/include/uapi/asm/vmx.h<br/> arch/powerpc/include/uapi/asm/kvm.h<br/> arch/s390/include/uapi/asm/kvm.h<br/> arch/s390/include/uapi/asm/kvm_perf.h<br/>+arch/s390/include/uapi/asm/ptrace.h<br/> arch/s390/include/uapi/asm/sie.h<br/> arch/arm/include/uapi/asm/kvm.h<br/> arch/arm64/include/uapi/asm/kvm.h<br/>-- <br/>1.8.3.1<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:58    [W:0.023 / U:4.048 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

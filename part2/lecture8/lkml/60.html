@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Richard Fitzgerald: Re: [PATCH v6 03/17] mfd: madera: Add common support for Cirrus Logic Madera codecs
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Richard Fitzgerald" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/137" onclick="this.href='/lkml/headers'+'/2017/12/4/137';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/137">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/23/451">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/11/29/321">
+        Richard Fitzgerald
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/2/47">
+          Linus Walleij
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="">
+            Richard Fitzgerald
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH v6 03/17] mfd: madera: Add common support for Cirrus Logic Madera codecs
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Richard Fitzgerald &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 09:47:00 +0000
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On 02/12/17 12:10, Linus Walleij wrote:<br/>&gt; On Wed, Nov 29, 2017 at 12:36 PM, Richard Fitzgerald<br/>&gt; &lt;rf@opensource.wolfsonmicro.com&gt; wrote:<br/>&gt;&gt; On 29/11/17 10:18, Linus Walleij wrote:<br/>&gt;&gt;&gt;<br/>&gt;&gt;&gt; On Thu, Nov 23, 2017 at 6:13 PM, Richard Fitzgerald<br/>&gt;&gt;&gt; &lt;rf@opensource.wolfsonmicro.com&gt; wrote:<br/>&gt;&gt;&gt;<br/>&gt;&gt;&gt;&gt; +config MFD_MADERA_I2C<br/>&gt;&gt;&gt;&gt; +       bool "Cirrus Logic Madera codecs with I2C"<br/>&gt;&gt;&gt;&gt; +       select MFD_MADERA<br/>&gt;&gt;&gt;&gt; +       select REGMAP_I2C<br/>&gt;&gt;&gt;&gt; +       depends on I2C<br/>&gt;&gt;&gt;&gt; +       depends on PINCTRL<br/>&gt;&gt;&gt;&gt; +       help<br/>&gt;&gt;&gt;&gt; +         Support for the Cirrus Logic Madera platform audio SoC<br/>&gt;&gt;&gt;&gt; +         core functionality controlled via I2C.<br/>&gt;&gt;&gt;&gt; +<br/>&gt;&gt;&gt;&gt; +config MFD_MADERA_SPI<br/>&gt;&gt;&gt;&gt; +       bool "Cirrus Logic Madera codecs with SPI"<br/>&gt;&gt;&gt;&gt; +       select MFD_MADERA<br/>&gt;&gt;&gt;&gt; +       select REGMAP_SPI<br/>&gt;&gt;&gt;&gt; +       depends on SPI_MASTER<br/>&gt;&gt;&gt;&gt; +       depends on PINCTRL<br/>&gt;&gt;&gt;&gt; +       help<br/>&gt;&gt;&gt;&gt; +         Support for the Cirrus Logic Madera platform audio SoC<br/>&gt;&gt;&gt;&gt; +         core functionality controlled via SPI.<br/>&gt;&gt;&gt;<br/>&gt;&gt;&gt;<br/>&gt;&gt;&gt; Why do the I2C and SPI subdrivers depend on PINCTRL?<br/>&gt;&gt;&gt;<br/>&gt;&gt;&gt; They sure don't seem to be using any pinctrl-specific APIs.<br/>&gt;&gt;&gt;<br/>&gt;&gt;<br/>&gt;&gt; They require PINCTRL even if they don't call any functions on it because the<br/>&gt;&gt; chip won't work correctly if there isn't a PINCTRL driver to apply the<br/>&gt;&gt; correct pinmux configuration.<br/>&gt; <br/>&gt; Apply the configuration to what? Sorry I don't get it.<br/>&gt; <br/>&gt; You can't be referring to the internal pin controller of the Madera, since<br/><br/>Yes I am<br/><br/>&gt; that has to come up before its pin controller can even be communicated<br/>&gt; with.<br/><br/>So?<br/><br/>The MFD driver powers up the chip before registering child drivers.<br/><br/>Also that's not entirely relevant, the pinctrl settings can still be <br/>written with the chip off because they will go into the regmap cache and <br/>be applied when the chip is next resumed.<br/><br/>&gt; <br/>&gt; If you mean it is to apply the configuration to the system SoC where<br/>&gt; this coded is connected, this is wrong. There may very well be systems<br/>&gt; which have dedicated pins for the codec, atleast in theory. The fact<br/>&gt; that your reference board needs this is not a universal requirement,<br/>&gt; it should be set up in the machine-specific Kconfig for the reference<br/>&gt; board in that case.<br/>&gt; <br/>&gt; Yours,<br/>&gt; Linus Walleij<br/>&gt; <br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:47    [W:0.075 / U:3.560 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

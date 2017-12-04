@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Juri Lelli: [RFC PATCH v2 8/8] sched/deadline: make bandwidth enforcement scale-invariant
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Juri Lelli" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/177" onclick="this.href='/lkml/headers'+'/2017/12/4/177';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/177">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/173">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/173">
+        Juri Lelli
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/174">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/175">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/176">
+          Juri Lelli
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/180">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/181">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/182">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/183">
+          Juri Lelli
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/177/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Juri Lelli &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [RFC PATCH v2 8/8] sched/deadline: make bandwidth enforcement scale-invariant
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:23:25 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">From: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/><br/>Apply frequency and cpu scale-invariance correction factor to bandwidth<br/>enforcement (similar to what we already do to fair utilization tracking).<br/><br/>Each delta_exec gets scaled considering current frequency and maximum<br/>cpu capacity; which means that the reservation runtime parameter (that<br/>need to be specified profiling the task execution at max frequency on<br/>biggest capacity core) gets thus scaled accordingly.<br/><br/>Signed-off-by: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/>Cc: Peter Zijlstra &lt;peterz@infradead.org&gt;<br/>Cc: Ingo Molnar &lt;mingo@kernel.org&gt;<br/>Cc: Rafael J. Wysocki &lt;rafael.j.wysocki@intel.com&gt;<br/>Cc: Viresh Kumar &lt;viresh.kumar@linaro.org&gt;<br/>Cc: Luca Abeni &lt;luca.abeni@santannapisa.it&gt;<br/>Cc: Claudio Scordino &lt;claudio@evidence.eu.com&gt;<br/>---<br/> kernel/sched/deadline.c | 26 ++++++++++++++++++++++----<br/> kernel/sched/fair.c     |  2 --<br/> kernel/sched/sched.h    |  2 ++<br/> 3 files changed, 24 insertions(+), 6 deletions(-)<br/><br/>diff --git a/kernel/sched/deadline.c b/kernel/sched/deadline.c<br/>index 40f12aab9250..741d2fe26f88 100644<br/>--- a/kernel/sched/deadline.c<br/>+++ b/kernel/sched/deadline.c<br/>@@ -1151,7 +1151,8 @@ static void update_curr_dl(struct rq *rq)<br/> {<br/> 	struct task_struct *curr = rq-&gt;curr;<br/> 	struct sched_dl_entity *dl_se = &amp;curr-&gt;dl;<br/>-	u64 delta_exec;<br/>+	u64 delta_exec, scaled_delta_exec;<br/>+	int cpu = cpu_of(rq);<br/> <br/> 	if (!dl_task(curr) || !on_dl_rq(dl_se))<br/> 		return;<br/>@@ -1185,9 +1186,26 @@ static void update_curr_dl(struct rq *rq)<br/> 	if (unlikely(dl_entity_is_special(dl_se)))<br/> 		return;<br/> <br/>-	if (unlikely(dl_se-&gt;flags &amp; SCHED_FLAG_RECLAIM))<br/>-		delta_exec = grub_reclaim(delta_exec, rq, &amp;curr-&gt;dl);<br/>-	dl_se-&gt;runtime -= delta_exec;<br/>+	/*<br/>+	 * For tasks that participate in GRUB, we implement GRUB-PA: the<br/>+	 * spare reclaimed bandwidth is used to clock down frequency.<br/>+	 *<br/>+	 * For the others, we still need to scale reservation parameters<br/>+	 * according to current frequency and CPU maximum capacity.<br/>+	 */<br/>+	if (unlikely(dl_se-&gt;flags &amp; SCHED_FLAG_RECLAIM)) {<br/>+		scaled_delta_exec = grub_reclaim(delta_exec,<br/>+						 rq,<br/>+						 &amp;curr-&gt;dl);<br/>+	} else {<br/>+		unsigned long scale_freq = arch_scale_freq_capacity(cpu);<br/>+		unsigned long scale_cpu = arch_scale_cpu_capacity(NULL, cpu);<br/>+<br/>+		scaled_delta_exec = cap_scale(delta_exec, scale_freq);<br/>+		scaled_delta_exec = cap_scale(scaled_delta_exec, scale_cpu);<br/>+	}<br/>+<br/>+	dl_se-&gt;runtime -= scaled_delta_exec;<br/> <br/> throttle:<br/> 	if (dl_runtime_exceeded(dl_se) || dl_se-&gt;dl_yielded) {<br/>diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c<br/>index 535d9409f4af..5bc3273a5c1c 100644<br/>--- a/kernel/sched/fair.c<br/>+++ b/kernel/sched/fair.c<br/>@@ -3091,8 +3091,6 @@ static u32 __accumulate_pelt_segments(u64 periods, u32 d1, u32 d3)<br/> 	return c1 + c2 + c3;<br/> }<br/> <br/>-#define cap_scale(v, s) ((v)*(s) &gt;&gt; SCHED_CAPACITY_SHIFT)<br/>-<br/> /*<br/>  * Accumulate the three separate parts of the sum; d1 the remainder<br/>  * of the last (incomplete) period, d2 the span of full periods and d3<br/>diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h<br/>index 0022c649fabb..6d9d55e764fa 100644<br/>--- a/kernel/sched/sched.h<br/>+++ b/kernel/sched/sched.h<br/>@@ -156,6 +156,8 @@ static inline int task_has_dl_policy(struct task_struct *p)<br/> 	return dl_policy(p-&gt;policy);<br/> }<br/> <br/>+#define cap_scale(v, s) ((v)*(s) &gt;&gt; SCHED_CAPACITY_SHIFT)<br/>+<br/> /*<br/>  * !! For sched_setattr_nocheck() (kernel) only !!<br/>  *<br/>-- <br/>2.14.3<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:25    [W:0.022 / U:3.208 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

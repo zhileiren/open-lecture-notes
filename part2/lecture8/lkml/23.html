@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Juri Lelli: [RFC PATCH v2 2/8] sched/deadline: move cpu frequency selection triggering points
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Juri Lelli" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/174" onclick="this.href='/lkml/headers'+'/2017/12/4/174';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/174">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/173">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/173">
+        Juri Lelli
+       </a>
+       <ul>
+        <li class="origin">
+         <a href="">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/175">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/176">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/177">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/180">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/181">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/182">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/183">
+          Juri Lelli
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/174/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Juri Lelli &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [RFC PATCH v2 2/8] sched/deadline: move cpu frequency selection triggering points
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:23:19 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">From: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/><br/>Since SCHED_DEADLINE doesn't track utilization signal (but reserves a<br/>fraction of CPU bandwidth to tasks admitted to the system), there is no<br/>point in evaluating frequency changes during each tick event.<br/><br/>Move frequency selection triggering points to where running_bw changes.<br/><br/>Co-authored-by: Claudio Scordino &lt;claudio@evidence.eu.com&gt;<br/>Signed-off-by: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/>Cc: Peter Zijlstra &lt;peterz@infradead.org&gt;<br/>Cc: Ingo Molnar &lt;mingo@kernel.org&gt;<br/>Cc: Rafael J. Wysocki &lt;rafael.j.wysocki@intel.com&gt;<br/>Cc: Viresh Kumar &lt;viresh.kumar@linaro.org&gt;<br/>Cc: Luca Abeni &lt;luca.abeni@santannapisa.it&gt;<br/>Reviewed-by: Viresh Kumar &lt;viresh.kumar@linaro.org&gt;<br/>---<br/> kernel/sched/deadline.c |  7 ++++---<br/> kernel/sched/sched.h    | 12 ++++++------<br/> 2 files changed, 10 insertions(+), 9 deletions(-)<br/><br/>diff --git a/kernel/sched/deadline.c b/kernel/sched/deadline.c<br/>index 2473736c7616..7e4038bf9954 100644<br/>--- a/kernel/sched/deadline.c<br/>+++ b/kernel/sched/deadline.c<br/>@@ -86,6 +86,8 @@ void add_running_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> 	dl_rq-&gt;running_bw += dl_bw;<br/> 	SCHED_WARN_ON(dl_rq-&gt;running_bw &lt; old); /* overflow */<br/> 	SCHED_WARN_ON(dl_rq-&gt;running_bw &gt; dl_rq-&gt;this_bw);<br/>+	/* kick cpufreq (see the comment in kernel/sched/sched.h). */<br/>+	cpufreq_update_util(rq_of_dl_rq(dl_rq), SCHED_CPUFREQ_DL);<br/> }<br/> <br/> static inline<br/>@@ -98,6 +100,8 @@ void sub_running_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> 	SCHED_WARN_ON(dl_rq-&gt;running_bw &gt; old); /* underflow */<br/> 	if (dl_rq-&gt;running_bw &gt; old)<br/> 		dl_rq-&gt;running_bw = 0;<br/>+	/* kick cpufreq (see the comment in kernel/sched/sched.h). */<br/>+	cpufreq_update_util(rq_of_dl_rq(dl_rq), SCHED_CPUFREQ_DL);<br/> }<br/> <br/> static inline<br/>@@ -1134,9 +1138,6 @@ static void update_curr_dl(struct rq *rq)<br/> 		return;<br/> 	}<br/> <br/>-	/* kick cpufreq (see the comment in kernel/sched/sched.h). */<br/>-	cpufreq_update_util(rq, SCHED_CPUFREQ_DL);<br/>-<br/> 	schedstat_set(curr-&gt;se.statistics.exec_max,<br/> 		      max(curr-&gt;se.statistics.exec_max, delta_exec));<br/> <br/>diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h<br/>index b19552a212de..a1730e39cbc6 100644<br/>--- a/kernel/sched/sched.h<br/>+++ b/kernel/sched/sched.h<br/>@@ -2096,14 +2096,14 @@ DECLARE_PER_CPU(struct update_util_data *, cpufreq_update_util_data);<br/>  * The way cpufreq is currently arranged requires it to evaluate the CPU<br/>  * performance state (frequency/voltage) on a regular basis to prevent it from<br/>  * being stuck in a completely inadequate performance level for too long.<br/>- * That is not guaranteed to happen if the updates are only triggered from CFS,<br/>- * though, because they may not be coming in if RT or deadline tasks are active<br/>- * all the time (or there are RT and DL tasks only).<br/>+ * That is not guaranteed to happen if the updates are only triggered from CFS<br/>+ * and DL, though, because they may not be coming in if only RT tasks are<br/>+ * active all the time (or there are RT tasks only).<br/>  *<br/>- * As a workaround for that issue, this function is called by the RT and DL<br/>- * sched classes to trigger extra cpufreq updates to prevent it from stalling,<br/>+ * As a workaround for that issue, this function is called periodically by the<br/>+ * RT sched class to trigger extra cpufreq updates to prevent it from stalling,<br/>  * but that really is a band-aid.  Going forward it should be replaced with<br/>- * solutions targeted more specifically at RT and DL tasks.<br/>+ * solutions targeted more specifically at RT tasks.<br/>  */<br/> static inline void cpufreq_update_util(struct rq *rq, unsigned int flags)<br/> {<br/>-- <br/>2.14.3<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:25    [W:0.066 / U:3.228 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

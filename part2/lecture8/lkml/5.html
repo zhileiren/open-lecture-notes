@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Geert Uytterhoeven: [PATCH v4 2/4] macb: Kill PHY reset code
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Geert Uytterhoeven" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/192" onclick="this.href='/lkml/headers'+'/2017/12/4/192';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/192">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/190">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/190">
+        Geert Uytterhoeven
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/191">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/195">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/196">
+          Geert Uytterhoeven
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/192/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Geert Uytterhoeven &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH v4 2/4] macb: Kill PHY reset code
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:34:50 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">From: Sergei Shtylyov &lt;sergei.shtylyov@cogentembedded.com&gt;<br/><br/>With the phylib now being aware of the "reset-gpios" PHY node property,<br/>there should be no need to frob the PHY reset in this driver anymore...<br/><br/>Signed-off-by: Sergei Shtylyov &lt;sergei.shtylyov@cogentembedded.com&gt;<br/>Acked-by: Nicolas Ferre &lt;nicolas.ferre@atmel.com&gt;<br/>Reviewed-by: Florian Fainelli &lt;f.fainelli@gmail.com&gt;<br/>Signed-off-by: Geert Uytterhoeven &lt;geert+renesas@glider.be&gt;<br/>---<br/>v4:<br/>  - Add Reviewed-by,<br/><br/>v3:<br/>  - Resolve rejects due to the file being renamed, refresh the patch,<br/>  - Add code to reset PHY on probe error,<br/>  - Edit patch description,<br/>  - Take over from Sergei,<br/>  - Add Acked-by,<br/><br/>v2:<br/>  - No changes.<br/>---<br/> drivers/net/ethernet/cadence/macb.h      |  1 -<br/> drivers/net/ethernet/cadence/macb_main.c | 21 ---------------------<br/> 2 files changed, 22 deletions(-)<br/><br/>diff --git a/drivers/net/ethernet/cadence/macb.h b/drivers/net/ethernet/cadence/macb.h<br/>index 3165c2ba58f97744..c50c5ec49b1dc585 100644<br/>--- a/drivers/net/ethernet/cadence/macb.h<br/>+++ b/drivers/net/ethernet/cadence/macb.h<br/>@@ -1171,7 +1171,6 @@ struct macb {<br/> 	unsigned int		dma_burst_length;<br/> <br/> 	phy_interface_t		phy_interface;<br/>-	struct gpio_desc	*reset_gpio;<br/> <br/> 	/* AT91RM9200 transmit */<br/> 	struct sk_buff *skb;			/* holds skb until xmit interrupt completes */<br/>diff --git a/drivers/net/ethernet/cadence/macb_main.c b/drivers/net/ethernet/cadence/macb_main.c<br/>index c5fa87cdc6c401a7..3f0dfb20fdbcf936 100644<br/>--- a/drivers/net/ethernet/cadence/macb_main.c<br/>+++ b/drivers/net/ethernet/cadence/macb_main.c<br/>@@ -3803,7 +3803,6 @@ static int macb_probe(struct platform_device *pdev)<br/> 					      = macb_config-&gt;clk_init;<br/> 	int (*init)(struct platform_device *) = macb_config-&gt;init;<br/> 	struct device_node *np = pdev-&gt;dev.of_node;<br/>-	struct device_node *phy_node;<br/> 	struct clk *pclk, *hclk = NULL, *tx_clk = NULL, *rx_clk = NULL;<br/> 	unsigned int queue_mask, num_queues;<br/> 	struct macb_platform_data *pdata;<br/>@@ -3909,18 +3908,6 @@ static int macb_probe(struct platform_device *pdev)<br/> 	else<br/> 		macb_get_hwaddr(bp);<br/> <br/>-	/* Power up the PHY if there is a GPIO reset */<br/>-	phy_node =  of_get_next_available_child(np, NULL);<br/>-	if (phy_node) {<br/>-		int gpio = of_get_named_gpio(phy_node, "reset-gpios", 0);<br/>-<br/>-		if (gpio_is_valid(gpio)) {<br/>-			bp-&gt;reset_gpio = gpio_to_desc(gpio);<br/>-			gpiod_direction_output(bp-&gt;reset_gpio, 1);<br/>-		}<br/>-	}<br/>-	of_node_put(phy_node);<br/>-<br/> 	err = of_get_phy_mode(np);<br/> 	if (err &lt; 0) {<br/> 		pdata = dev_get_platdata(&amp;pdev-&gt;dev);<br/>@@ -3967,10 +3954,6 @@ static int macb_probe(struct platform_device *pdev)<br/> 		of_phy_deregister_fixed_link(np);<br/> 	mdiobus_free(bp-&gt;mii_bus);<br/> <br/>-	/* Shutdown the PHY if there is a GPIO reset */<br/>-	if (bp-&gt;reset_gpio)<br/>-		gpiod_set_value(bp-&gt;reset_gpio, 0);<br/>-<br/> err_out_free_netdev:<br/> 	free_netdev(dev);<br/> <br/>@@ -4001,10 +3984,6 @@ static int macb_remove(struct platform_device *pdev)<br/> 		dev-&gt;phydev = NULL;<br/> 		mdiobus_free(bp-&gt;mii_bus);<br/> <br/>-		/* Shutdown the PHY if there is a GPIO reset */<br/>-		if (bp-&gt;reset_gpio)<br/>-			gpiod_set_value(bp-&gt;reset_gpio, 0);<br/>-<br/> 		unregister_netdev(dev);<br/> 		clk_disable_unprepare(bp-&gt;tx_clk);<br/> 		clk_disable_unprepare(bp-&gt;hclk);<br/>-- <br/>2.7.4<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:36    [W:0.023 / U:2.708 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

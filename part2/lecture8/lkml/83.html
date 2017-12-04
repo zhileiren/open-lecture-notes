@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Jarkko Sakkinen: Re: [PATCH v6 08/11] intel_sgx: in-kernel launch enclave
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Jarkko Sakkinen" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/114" onclick="this.href='/lkml/headers'+'/2017/12/4/114';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/114">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/25/123">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/11/25/116">
+        Jarkko Sakkinen
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/11/27/206">
+          Till Smejkal
+         </a>
+         <ul>
+          <li>
+           <a href="/lkml/2017/11/28/1322">
+            Jarkko Sakkinen
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="/lkml/2017/11/28/1485">
+          Jarkko Sakkinen
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="">
+            Jarkko Sakkinen
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 11:23:03 +0200
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Jarkko Sakkinen &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH v6 08/11] intel_sgx: in-kernel launch enclave
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Wed, Nov 29, 2017 at 12:38:52AM +0200, Jarkko Sakkinen wrote:<br/>&gt; On Sat, Nov 25, 2017 at 09:29:25PM +0200, Jarkko Sakkinen wrote:<br/>&gt; &gt; This commits implements the in-kernel launch enclave. It is wrapped into<br/>&gt; &gt; a user space program that reads SIGSTRUCT instances from stdin and<br/>&gt; &gt; outputs launch tokens to stdout.<br/>&gt; &gt; <br/>&gt; &gt; The commit also adds enclave signing tool that is used by kbuild to<br/>&gt; &gt; measure and sign the launch enclave.<br/>&gt; &gt; <br/>&gt; &gt; CONFIG_INTEL_SGX_SIGNING_KEY points to a PEM-file for the 3072-bit RSA<br/>&gt; &gt; key that is used as the LE public key pair. The default location is:<br/>&gt; &gt; <br/>&gt; &gt;   drivers/platform/x86/intel_sgx/intel_sgx_signing_key.pem<br/>&gt; &gt; <br/>&gt; &gt; If the default key does not exist kbuild will generate a random key and<br/>&gt; &gt; place it to this location. KBUILD_SGX_SIGN_PIN can be used to specify<br/>&gt; &gt; the passphrase for the LE public key.<br/>&gt; &gt; <br/>&gt; &gt; TinyCrypt (<a href="https://github.com/01org/tinycrypt">https://github.com/01org/tinycrypt</a>) is used as AES<br/>&gt; &gt; implementation, which is not timing resistant. Eventually this needs to<br/>&gt; &gt; be replaced with AES-NI based implementation that could be either<br/>&gt; &gt; <br/>&gt; &gt; - re-use existing AES-NI code in the kernel<br/>&gt; &gt; - have its own hand written code<br/>&gt; <br/>&gt; The AES is the biggest remaining open I think.<br/>&gt; <br/>&gt; I'm starting look at how to re-use kernel aesni code by linking it as<br/>&gt; part of the enclave binary i.e. aesni-intel_asm.S. This will render<br/>&gt; away TinyCrypt's AES code that is used ATM.<br/>&gt; <br/>&gt; I still need TinyCrypt CMAC, which I will modify to call CBC AES<br/>&gt; encryption routine.<br/>&gt; <br/>&gt; Does this sound like a sufficient plan?<br/><br/>I'm successfully using now kernel provided aesni_enc and aesni_set_key.<br/>Only CMAC comes from TC. I think refactor stuff in cmac_mode.c to kernel<br/>coding style and call it as derived works from TC since already calls<br/>have replaced (AES). Makes sense to clean it up and make it pass<br/>checkpatch.pl.<br/><br/>/Jarkko<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:24    [W:0.092 / U:5.048 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Geert Uytterhoeven: Re: [PATCH 1/3] eeprom: at25: Add DT support for EEPROMs with odd address bits
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Geert Uytterhoeven" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/104" onclick="this.href='/lkml/headers'+'/2017/12/4/104';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/104">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/30/360">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/11/30/360">
+        Geert Uytterhoeven
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/11/30/356">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/11/30/358">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/11/30/359">
+          Geert Uytterhoeven
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="">
+            Geert Uytterhoeven
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Geert Uytterhoeven &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 10:17:47 +0100
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH 1/3] eeprom: at25: Add DT support for EEPROMs with odd address bits
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Thu, Nov 30, 2017 at 2:29 PM, Geert Uytterhoeven<br/>&lt;geert+renesas@glider.be&gt; wrote:<br/>&gt; Certain EEPROMS have a size that is larger than the number of address<br/>&gt; bytes would allow, and store the MSB of the address in bit 3 of the<br/>&gt; instruction byte.<br/>&gt;<br/>&gt; This can be described in platform data using EE_INSTR_BIT3_IS_ADDR, or<br/>&gt; in DT using the obsolete legacy "at25,addr-mode" property.<br/>&gt; But currently there exists no non-deprecated way to describe this in DT.<br/>&gt;<br/>&gt; Hence extend the existing "address-width" DT property to allow<br/>&gt; specifying 9, 17, or 25 address bits, and enable support for that in the<br/>&gt; driver.<br/>&gt;<br/>&gt; Signed-off-by: Geert Uytterhoeven &lt;geert+renesas@glider.be&gt;<br/>&gt; ---<br/>&gt; EEPROMs using 9 address bits are common (e.g. M95040, 25AA040/25LC040).<br/>&gt; Do EEPROMs using 17 or 25 address bits, as mentioned in<br/>&gt; include/linux/spi/eeprom.h, really exist?<br/>&gt; Or should we just limit it to a single odd value (9 bits)?<br/><br/>At least for the real Atmel parts, only the AT25040 part uses odd (8 +<br/>1 bit) addressing.<br/>AT25M01 uses 3-byte addressing (it needs 17 bits).<br/><br/>So I tend to believe EEPROMs using 16 + 1  or 24 + 1 address bits (with the<br/>extra bit in the instruction byte) do not exist?<br/><br/>&gt; ---<br/>&gt;  Documentation/devicetree/bindings/eeprom/at25.txt | 4 +++-<br/>&gt;  drivers/misc/eeprom/at25.c                        | 4 ++++<br/>&gt;  2 files changed, 7 insertions(+), 1 deletion(-)<br/>&gt;<br/>&gt; diff --git a/Documentation/devicetree/bindings/eeprom/at25.txt b/Documentation/devicetree/bindings/eeprom/at25.txt<br/>&gt; index 1d3447165c374f67..d00779e4ab4377b9 100644<br/>&gt; --- a/Documentation/devicetree/bindings/eeprom/at25.txt<br/>&gt; +++ b/Documentation/devicetree/bindings/eeprom/at25.txt<br/>&gt; @@ -6,7 +6,9 @@ Required properties:<br/>&gt;  - spi-max-frequency : max spi frequency to use<br/>&gt;  - pagesize : size of the eeprom page<br/>&gt;  - size : total eeprom size in bytes<br/>&gt; -- address-width : number of address bits (one of 8, 16, or 24)<br/>&gt; +- address-width : number of address bits (one of 8, 9, 16, 17, 24, or 25).<br/>&gt; +  For odd values, the MSB of the address is sent as bit 3 of the instruction<br/>&gt; +  byte, before the address byte(s).<br/><br/>Alternatively, we can drop the binding change, i.e. keep on using<br/>address-width = &lt;8&gt; for 512-byte '040...<br/><br/>&gt;  Optional properties:<br/>&gt;  - spi-cpha : SPI shifted clock phase, as per spi-bus bindings.<br/>&gt; diff --git a/drivers/misc/eeprom/at25.c b/drivers/misc/eeprom/at25.c<br/>&gt; index 5afe4cd165699060..a50a0f16fa0e1d1d 100644<br/>&gt; --- a/drivers/misc/eeprom/at25.c<br/>&gt; +++ b/drivers/misc/eeprom/at25.c<br/>&gt; @@ -275,6 +275,10 @@ static int at25_fw_to_chip(struct device *dev, struct spi_eeprom *chip)<br/>&gt;                                 "Error: missing \"address-width\" property\n");<br/>&gt;                         return -ENODEV;<br/>&gt;                 }<br/>&gt; +               if (val &amp; 1) {<br/>&gt; +                       chip-&gt;flags |= EE_INSTR_BIT3_IS_ADDR;<br/>&gt; +                       val -= 1;<br/>&gt; +               }<br/><br/>... and handle it here like:<br/><br/>        if (chip-&gt;byte_len == 2U &lt;&lt; val)<br/>                chip-&gt;flags |= EE_INSTR_BIT3_IS_ADDR;<br/><br/>However, that would IMHO be a bit confusing, as the "address-width"<br/>property is no longer the real address width, but indicates how many bits<br/>are specified in address bytes sent after the read/write command.<br/>So "address-bytes" = 1, 2, or 3 would be more correct ;-)<br/><br/>Or deprecate this whole "specify parameters using DT properties" business,<br/>and derive them from the compatible value. But that would mean adding a<br/>large and ever growing table to an old driver...<br/><br/>Thoughts?<br/><br/>Thanks again!<br/><br/>Gr{oetje,eeting}s,<br/><br/>                        Geert<br/><br/>--<br/>Geert Uytterhoeven -- There's lots of Linux beyond ia32 -- geert@linux-m68k.org<br/><br/>In personal conversations with technical people, I call myself a hacker. But<br/>when I'm talking to journalists I just say "programmer" or something like that.<br/>                                -- Linus Torvalds<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:18    [W:0.043 / U:3.948 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Juri Lelli: [RFC PATCH v2 1/8] sched/cpufreq_schedutil: make use of DEADLINE utilization signal
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Juri Lelli" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/183" onclick="this.href='/lkml/headers'+'/2017/12/4/183';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/183">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/173">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/173">
+        Juri Lelli
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/174">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/175">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/176">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/177">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/180">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/181">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/182">
+          Juri Lelli
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Juri Lelli
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/183/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Juri Lelli &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [RFC PATCH v2 1/8] sched/cpufreq_schedutil: make use of DEADLINE utilization signal
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:23:18 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">From: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/><br/>SCHED_DEADLINE tracks active utilization signal with a per dl_rq<br/>variable named running_bw.<br/><br/>Make use of that to drive cpu frequency selection: add up FAIR and<br/>DEADLINE contribution to get the required CPU capacity to handle both<br/>requirements (while RT still selects max frequency).<br/><br/>Co-authored-by: Claudio Scordino &lt;claudio@evidence.eu.com&gt;<br/>Signed-off-by: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/>Cc: Peter Zijlstra &lt;peterz@infradead.org&gt;<br/>Cc: Ingo Molnar &lt;mingo@kernel.org&gt;<br/>Cc: Rafael J. Wysocki &lt;rafael.j.wysocki@intel.com&gt;<br/>Cc: Viresh Kumar &lt;viresh.kumar@linaro.org&gt;<br/>Cc: Luca Abeni &lt;luca.abeni@santannapisa.it&gt;<br/>Acked-by: Viresh Kumar &lt;viresh.kumar@linaro.org&gt;<br/>---<br/> include/linux/sched/cpufreq.h    |  2 --<br/> kernel/sched/cpufreq_schedutil.c | 25 +++++++++++++++----------<br/> 2 files changed, 15 insertions(+), 12 deletions(-)<br/><br/>diff --git a/include/linux/sched/cpufreq.h b/include/linux/sched/cpufreq.h<br/>index d1ad3d825561..0b55834efd46 100644<br/>--- a/include/linux/sched/cpufreq.h<br/>+++ b/include/linux/sched/cpufreq.h<br/>@@ -12,8 +12,6 @@<br/> #define SCHED_CPUFREQ_DL	(1U &lt;&lt; 1)<br/> #define SCHED_CPUFREQ_IOWAIT	(1U &lt;&lt; 2)<br/> <br/>-#define SCHED_CPUFREQ_RT_DL	(SCHED_CPUFREQ_RT | SCHED_CPUFREQ_DL)<br/>-<br/> #ifdef CONFIG_CPU_FREQ<br/> struct update_util_data {<br/>        void (*func)(struct update_util_data *data, u64 time, unsigned int flags);<br/>diff --git a/kernel/sched/cpufreq_schedutil.c b/kernel/sched/cpufreq_schedutil.c<br/>index 2f52ec0f1539..de1ad1fffbdc 100644<br/>--- a/kernel/sched/cpufreq_schedutil.c<br/>+++ b/kernel/sched/cpufreq_schedutil.c<br/>@@ -179,12 +179,17 @@ static unsigned int get_next_freq(struct sugov_policy *sg_policy,<br/> static void sugov_get_util(unsigned long *util, unsigned long *max, int cpu)<br/> {<br/> 	struct rq *rq = cpu_rq(cpu);<br/>-	unsigned long cfs_max;<br/>+	unsigned long dl_util = (rq-&gt;dl.running_bw * SCHED_CAPACITY_SCALE)<br/>+				&gt;&gt; BW_SHIFT;<br/> <br/>-	cfs_max = arch_scale_cpu_capacity(NULL, cpu);<br/>+	*max = arch_scale_cpu_capacity(NULL, cpu);<br/> <br/>-	*util = min(rq-&gt;cfs.avg.util_avg, cfs_max);<br/>-	*max = cfs_max;<br/>+	/*<br/>+	 * Ideally we would like to set util_dl as min/guaranteed freq and<br/>+	 * util_cfs + util_dl as requested freq. However, cpufreq is not yet<br/>+	 * ready for such an interface. So, we only do the latter for now.<br/>+	 */<br/>+	*util = min(rq-&gt;cfs.avg.util_avg + dl_util, *max);<br/> }<br/> <br/> static void sugov_set_iowait_boost(struct sugov_cpu *sg_cpu, u64 time,<br/>@@ -272,7 +277,7 @@ static void sugov_update_single(struct update_util_data *hook, u64 time,<br/> <br/> 	busy = sugov_cpu_is_busy(sg_cpu);<br/> <br/>-	if (flags &amp; SCHED_CPUFREQ_RT_DL) {<br/>+	if (flags &amp; SCHED_CPUFREQ_RT) {<br/> 		next_f = policy-&gt;cpuinfo.max_freq;<br/> 	} else {<br/> 		sugov_get_util(&amp;util, &amp;max, sg_cpu-&gt;cpu);<br/>@@ -317,7 +322,7 @@ static unsigned int sugov_next_freq_shared(struct sugov_cpu *sg_cpu, u64 time)<br/> 			j_sg_cpu-&gt;iowait_boost_pending = false;<br/> 			continue;<br/> 		}<br/>-		if (j_sg_cpu-&gt;flags &amp; SCHED_CPUFREQ_RT_DL)<br/>+		if (j_sg_cpu-&gt;flags &amp; SCHED_CPUFREQ_RT)<br/> 			return policy-&gt;cpuinfo.max_freq;<br/> <br/> 		j_util = j_sg_cpu-&gt;util;<br/>@@ -353,7 +358,7 @@ static void sugov_update_shared(struct update_util_data *hook, u64 time,<br/> 	sg_cpu-&gt;last_update = time;<br/> <br/> 	if (sugov_should_update_freq(sg_policy, time)) {<br/>-		if (flags &amp; SCHED_CPUFREQ_RT_DL)<br/>+		if (flags &amp; SCHED_CPUFREQ_RT)<br/> 			next_f = sg_policy-&gt;policy-&gt;cpuinfo.max_freq;<br/> 		else<br/> 			next_f = sugov_next_freq_shared(sg_cpu, time);<br/>@@ -383,9 +388,9 @@ static void sugov_irq_work(struct irq_work *irq_work)<br/> 	sg_policy = container_of(irq_work, struct sugov_policy, irq_work);<br/> <br/> 	/*<br/>-	 * For RT and deadline tasks, the schedutil governor shoots the<br/>-	 * frequency to maximum. Special care must be taken to ensure that this<br/>-	 * kthread doesn't result in the same behavior.<br/>+	 * For RT tasks, the schedutil governor shoots the frequency to maximum.<br/>+	 * Special care must be taken to ensure that this kthread doesn't result<br/>+	 * in the same behavior.<br/> 	 *<br/> 	 * This is (mostly) guaranteed by the work_in_progress flag. The flag is<br/> 	 * updated only at the end of the sugov_work() function and before that<br/>-- <br/>2.14.3<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:27    [W:0.024 / U:0.576 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

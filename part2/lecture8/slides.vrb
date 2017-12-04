@@ -1,0 +1,20 @@
+\frametitle{Program skeleton}
+\tiny
+    \begin{verbatim}
+txt = requests.get(URL).text
+doc = bs4.BeautifulSoup(txt, "lxml")
+title = doc.find('title').text
+current_frame_title = title
+interested = doc.find_all(['h1', 'h2', 'pre', 'p'])
+for node in interested:
+    if node.name == 'h1':
+        #处理h1
+    elif node.name == 'h2':
+        #处理h2
+    elif node.name == 'p':
+        #处理p
+    elif node.name == 'pre':
+        #处理pre
+    else:
+        #处理异常
+\end{verbatim}

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML:    kaiwan.billimoria@gmail ...: Re: [PATCH] leaking_addresses: add support for 32-bit kernel addresses
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by    kaiwan.billimoria@gmail ..." type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/172" onclick="this.href='/lkml/headers'+'/2017/12/4/172';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/172">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/28/43">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/10">
+        Kaiwan N Billimoria
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/68">
+          "Tobin C. Harding"
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="">
+            kaiwan.billimoria@gmail ...
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/172/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH] leaking_addresses: add support for 32-bit kernel addresses
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           kaiwan.billimoria@gmail ...
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 04 Dec 2017 15:50:41 +0530
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Mon, 2017-12-04 at 19:21 +1100, Tobin C. Harding wrote:<br/>&gt; On Mon, Dec 04, 2017 at 10:51:53AM +0530, Kaiwan N Billimoria wrote:<br/>&gt; &gt; &gt; ---<br/>&gt; &gt; diff --git a/scripts/leaking_addresses.pl b/scripts/leaking_addresses.pl<br/>&gt; &gt; index 9906dcf8b807..260b52e456f1 100755<br/>&gt; &gt; --- a/scripts/leaking_addresses.pl<br/>&gt; &gt; +++ b/scripts/leaking_addresses.pl<br/>&gt; &gt; @@ -266,7 +266,7 @@ sub is_false_positive<br/>&gt; &gt;  sub is_false_positive_ix86_32<br/>&gt; &gt;  {<br/>&gt; &gt;         my ($match) = @_;<br/>&gt; &gt; -       state $page_offset = eval get_page_offset(); # only gets called once<br/>&gt; &gt; +       state $page_offset = hex get_page_offset(); # only gets called once<br/>&gt; <br/>&gt; I don't think this is valid ;) I meant use hex() to convert the string<br/>&gt; to an int so it doesn't throw the warning (inside get_page_offset()).<br/><br/>Yup, got it, thanks   :-p<br/>Combined patch below:<br/><br/><br/>---<br/> scripts/leaking_addresses.pl | 13 ++++++-------<br/> 1 file changed, 6 insertions(+), 7 deletions(-)<br/><br/>diff --git a/scripts/leaking_addresses.pl b/scripts/leaking_addresses.pl<br/>index 9906dcf8b807..a595a2c66b12 100755<br/>--- a/scripts/leaking_addresses.pl<br/>+++ b/scripts/leaking_addresses.pl<br/>@@ -266,8 +266,7 @@ sub is_false_positive<br/> sub is_false_positive_ix86_32<br/> {<br/> 	my ($match) = @_;<br/>-	state $page_offset = eval get_page_offset(); # only gets called once<br/>-<br/>+	state $page_offset = get_page_offset(); # only gets called once<br/> 	if ($match =~ '\b(0x)?(f|F){8}\b') {<br/> 		return 1;<br/> 	}<br/>@@ -283,7 +282,7 @@ sub is_false_positive_ix86_32<br/> sub get_page_offset<br/> {<br/> 	my $page_offset;<br/>-	my $default_offset = "0xc0000000";<br/>+	my $default_offset = hex("0xc0000000");<br/> 	my @config_files;<br/> <br/> 	# Allow --page-offset-32bit to override.<br/>@@ -306,23 +305,23 @@ sub get_page_offset<br/> 		} else {<br/> 			$page_offset = parse_kernel_config_file($tmp_file);<br/> 			if ($page_offset ne "") {<br/>-				return $page_offset;<br/>+				return hex($page_offset);<br/> 			}<br/> 		}<br/> 		system("rm -f $tmp_file");<br/> 	}<br/> <br/> 	foreach my $config_file (@config_files) {<br/>-		$config_file =~ s/\R*//g;<br/>+		chomp $config_file;<br/> 		$page_offset = parse_kernel_config_file($config_file);<br/> 		if ($page_offset ne "") {<br/>-			return $page_offset;<br/>+			return hex($page_offset);<br/> 		}<br/> 	}<br/> <br/> 	printf STDERR "\nFailed to parse kernel config files\n";<br/> 	printf STDERR "*** NOTE ***\n";<br/>-	printf STDERR "Falling back to PAGE_OFFSET = %s\n\n", $default_offset;<br/>+	printf STDERR "Falling back to PAGE_OFFSET = 0x%x\n\n", $default_offset;<br/> <br/> 	return $default_offset;<br/> }<br/>-- <br/>2.14.3<br/>Thanks,<br/>Kaiwan.<br/><br/>&gt; thanks,<br/>&gt; Tobin.<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:21    [W:0.026 / U:4.972 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

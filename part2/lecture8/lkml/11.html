@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Hans de Goede: Re: [PATCH 2/2] iio: accel: bmc150: Check for a second ACPI device for BOSC0200
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Hans de Goede" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/186" onclick="this.href='/lkml/headers'+'/2017/12/4/186';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/186">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/29/1114">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/2/51">
+        Jonathan Cameron
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/152">
+          Mika Westerberg
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="">
+            Hans de Goede
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH 2/2] iio: accel: bmc150: Check for a second ACPI device for BOSC0200
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Hans de Goede &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 11:29:31 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">Hi,<br/><br/>On 04-12-17 10:58, Mika Westerberg wrote:<br/>&gt; On Sat, Dec 02, 2017 at 12:19:27PM +0000, Jonathan Cameron wrote:<br/>&gt;&gt; On Wed, 29 Nov 2017 22:31:12 +0000<br/>&gt;&gt; Jeremy Cline &lt;jeremy@jcline.org&gt; wrote:<br/>&gt;&gt;<br/>&gt;&gt;&gt; Some BOSC0200 acpi_device-s describe two accelerometers in a single ACPI<br/>&gt;&gt;&gt; device. Check for a companion device and handle a second i2c_client<br/>&gt;&gt;&gt; if it is present.<br/>&gt;&gt;<br/>&gt;&gt; + Mika and Wolfram - please cc them on anything odd and i2c / ACPI related.<br/>&gt;&gt; (I like to share the pain)<br/>&gt;&gt;<br/>&gt;&gt; My usual question, just out of curiosity as we have to cope with this<br/>&gt;&gt; fun anyway.  Are you actually allowed to do this under the ACPI spec<br/>&gt;&gt; or not?  I would assume an acpi device is supposed to be just that A<br/>&gt;&gt; device...  I fall asleep every time I try to read that spec ;)<br/>&gt; <br/>&gt; Yes, it is allowed. Typically you have an ACPI device and it can have<br/>&gt; multiple I2cSerialBus() connections.<br/>&gt; <br/>&gt; Linux ACPI/I2C core then picks the first one and creates i2c_client from<br/>&gt; that but the additional connections need to be created by the driver in<br/>&gt; question.<br/>&gt; <br/>&gt; BTW, there is a function i2c_new_secondary_device() that is supposed to<br/>&gt; be used for this but it does not have ACPI support yet (maybe it is good<br/>&gt; time to add it now, with this patch series?)<br/><br/>i2c_new_secondary_device() is for a different purpose, this is for when<br/>a single i2c device listens on multiple addresses and the driver wants<br/>separate i2c_client-s to use to talk to each address.<br/><br/>In this case there are 2 separate devices, not a single device listening<br/>on multiple addresses.  Something like i2c_new_secondary_device() ACPI<br/>support might be useful for i2c devices where a single device / "IC" listens<br/>on multiple addresses and all these addresses are listed in the ACPI resource<br/>table, but not for this specific case.<br/><br/>Regards,<br/><br/>Hans<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:30    [W:0.021 / U:3.572 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

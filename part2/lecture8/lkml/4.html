@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Pali =?utf-8?B?Um9ow6Fy?=: Re: i8k_smm_func() takes enormous of time to execute
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Pali =?utf-8?B?Um9ow6Fy?=" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/193" onclick="this.href='/lkml/headers'+'/2017/12/4/193';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/193">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/23/538">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/11/24/203">
+        Pali =?utf-8?B?Um9ow6Fy?=
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/11/24/235">
+          Oleksandr Natalenko
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="">
+            Pali =?utf-8?B?Um9ow6Fy?=
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 11:35:07 +0100
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Pali Rohár &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: i8k_smm_func() takes enormous of time to execute
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Friday 24 November 2017 13:28:59 Oleksandr Natalenko wrote:<br/>&gt; On pátek 24. listopadu 2017 12:25:43 CET Pali Rohár wrote:<br/>&gt; &gt; On Friday 24 November 2017 12:17:30 Oleksandr Natalenko wrote:<br/>&gt; &gt; &gt; &gt; There are two patches waiting to be tested in<br/>&gt; &gt; &gt; &gt; <a href="https://bugzilla.kernel.org/show_bug.cgi?id=195751">https://bugzilla.kernel.org/show_bug.cgi?id=195751</a><br/>&gt; &gt; &gt; <br/>&gt; &gt; &gt; Tested and attached a couple of patches on top of those to the BZ. If<br/>&gt; &gt; &gt; disabling fan control is the only approach here, I can confirm that this<br/>&gt; &gt; &gt; works.<br/>&gt; &gt; <br/>&gt; &gt; Hi! Please figure out which SMM call (they are identified by eax and ebx<br/>&gt; &gt; registers) cause this freeze. So we would now what needs to be<br/>&gt; &gt; blacklisted.<br/>&gt; <br/>&gt; Here it goes:<br/>&gt; <br/>&gt; [ 7.191081] dell_smm_hwmon: smm(0x10a3 0x0000) = 0x002e (took     1837 usecs)<br/>&gt; [ 7.194007] dell_smm_hwmon: smm(0x00a3 0x0001) = 0xffff (took      151 usecs)<br/>&gt; [ 7.198239] dell_smm_hwmon: smm(0x00a3 0x0000) = 0x0002 (took     1411 usecs)<br/>&gt; [ 7.199095] dell_smm_hwmon: smm(0x02a3 0x0001) = 0xffff (took       71 usecs)<br/>&gt; [ 7.700493] dell_smm_hwmon: smm(0x02a3 0x0000) = 0x157c (took   488912 usecs)<br/>&gt; [ 7.701277] dell_smm_hwmon: smm(0x0025 0X0000) = 0xffff (took       71 usecs)<br/>&gt; <br/>&gt; 0x02a3 is I8K_SMM_GET_SPEED.<br/><br/>Ok, so it is really a good idea to disable fan control completely on your machine.<br/><br/>Your last patch in bugzilla looks ok, you add my Reviewed-by: Pali Rohár &lt;pali.rohar@gmail.com&gt;<br/><br/>-- <br/>Pali Rohár<br/>pali.rohar@gmail.com<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:36    [W:0.020 / U:2.700 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

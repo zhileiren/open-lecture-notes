@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Marc Zyngier: Re: [PATCH] irqchip/gic-v3: Fix the driver probe() fail due to disabled GICC entry
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Marc Zyngier" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/185" onclick="this.href='/lkml/headers'+'/2017/12/4/185';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/185">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/3/186">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/3/186">
+        Shanker Donthineni
+       </a>
+       <ul>
+        <li class="origin">
+         <a href="">
+          Marc Zyngier
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH] irqchip/gic-v3: Fix the driver probe() fail due to disabled GICC entry
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Marc Zyngier &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 10:28:52 +0000
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On 03/12/17 23:21, Shanker Donthineni wrote:<br/>&gt; As per MADT specification, it's perfectly valid firmware can pass<br/>&gt; MADT table to OS with disabled GICC entries. ARM64-SMP code skips<br/>&gt; those cpu cores to bring online. However the current GICv3 driver<br/>&gt; probe bails out in this case on systems where redistributor regions<br/>&gt; are not in the always-on power domain.<br/>&gt; <br/>&gt; This patch does the two things to fix the panic.<br/>&gt;   - Don't return an error in gic_acpi_match_gicc() for disabled GICC.<br/>&gt;   - No need to keep GICR region information for disabled GICC.<br/>&gt; <br/>&gt; Kernel crash traces:<br/>&gt;   Kernel panic - not syncing: No interrupt controller found.<br/>&gt;   CPU: 0 PID: 0 Comm: swapper/0 Not tainted 4.13.5 #26<br/>&gt;   [&lt;ffff000008087770&gt;] dump_backtrace+0x0/0x218<br/>&gt;   [&lt;ffff0000080879dc&gt;] show_stack+0x14/0x20<br/>&gt;   [&lt;ffff00000883b078&gt;] dump_stack+0x98/0xb8<br/>&gt;   [&lt;ffff0000080c5c14&gt;] panic+0x118/0x26c<br/>&gt;   [&lt;ffff000008b62348&gt;] init_IRQ+0x24/0x2c<br/>&gt;   [&lt;ffff000008b609fc&gt;] start_kernel+0x230/0x394<br/>&gt;   [&lt;ffff000008b601e4&gt;] __primary_switched+0x64/0x6c<br/>&gt;   ---[ end Kernel panic - not syncing: No interrupt controller found.<br/>&gt; <br/>&gt; Disabled GICC subtable example:<br/>&gt;                    Subtable Type : 0B [Generic Interrupt Controller]<br/>&gt;                           Length : 50<br/>&gt;                         Reserved : 0000<br/>&gt;             CPU Interface Number : 0000003D<br/>&gt;                    Processor UID : 0000003D<br/>&gt;            Flags (decoded below) : 00000000<br/>&gt;                Processor Enabled : 0<br/>&gt;  Performance Interrupt Trig Mode : 0<br/>&gt;  Virtual GIC Interrupt Trig Mode : 0<br/>&gt;         Parking Protocol Version : 00000000<br/>&gt;            Performance Interrupt : 00000017<br/>&gt;                   Parked Address : 0000000000000000<br/>&gt;                     Base Address : 0000000000000000<br/>&gt;         Virtual GIC Base Address : 0000000000000000<br/>&gt;      Hypervisor GIC Base Address : 0000000000000000<br/>&gt;            Virtual GIC Interrupt : 00000019<br/>&gt;       Redistributor Base Address : 0000FFFF88F40000<br/>&gt;                        ARM MPIDR : 000000000000000D<br/>&gt;                 Efficiency Class : 00<br/>&gt;                         Reserved : 000000<br/>&gt; <br/>&gt; Signed-off-by: Shanker Donthineni &lt;shankerd@codeaurora.org&gt;<br/>&gt; ---<br/>&gt;  drivers/irqchip/irq-gic-v3.c | 14 +++++++++-----<br/>&gt;  1 file changed, 9 insertions(+), 5 deletions(-)<br/>&gt; <br/>&gt; diff --git a/drivers/irqchip/irq-gic-v3.c b/drivers/irqchip/irq-gic-v3.c<br/>&gt; index b56c3e2..a30fbac 100644<br/>&gt; --- a/drivers/irqchip/irq-gic-v3.c<br/>&gt; +++ b/drivers/irqchip/irq-gic-v3.c<br/>&gt; @@ -1331,6 +1331,10 @@ static int __init gic_of_init(struct device_node *node, struct device_node *pare<br/>&gt;  	u32 size = reg == GIC_PIDR2_ARCH_GICv4 ? SZ_64K * 4 : SZ_64K * 2;<br/>&gt;  	void __iomem *redist_base;<br/>&gt; <br/>&gt; +	/* GICC entry which has !ACPI_MADT_ENABLED is not unusable so skip */<br/>&gt; +	if (!(gicc-&gt;flags &amp; ACPI_MADT_ENABLED))<br/>&gt; +		return 0;<br/>&gt; +<br/>&gt;  	redist_base = ioremap(gicc-&gt;gicr_base_address, size);<br/>&gt;  	if (!redist_base)<br/>&gt;  		return -ENOMEM;<br/>&gt; @@ -1374,13 +1378,13 @@ static int __init gic_acpi_match_gicc(struct acpi_subtable_header *header,<br/>&gt;  				(struct acpi_madt_generic_interrupt *)header;<br/>&gt; <br/>&gt;  	/*<br/>&gt; -	 * If GICC is enabled and has valid gicr base address, then it means<br/>&gt; -	 * GICR base is presented via GICC<br/>&gt; +	 * If GICC is enabled and has not valid gicr base address, then it means<br/>&gt; +	 * GICR base is not presented via GICC<br/>&gt;  	 */<br/>&gt; -	if ((gicc-&gt;flags &amp; ACPI_MADT_ENABLED) &amp;&amp; gicc-&gt;gicr_base_address)<br/>&gt; -		return 0;<br/>&gt; +	if ((gicc-&gt;flags &amp; ACPI_MADT_ENABLED) &amp;&amp; (!gicc-&gt;gicr_base_address))<br/>&gt; +		return -ENODEV;<br/><br/>This doesn't feel quite right. It would mean that having the ENABLED<br/>flag cleared and potentially no address would make it valid? It looks to<br/>me that the original code is "less wrong".<br/><br/>What am I missing?<br/><br/>Thanks,<br/><br/>	M.<br/>-- <br/>Jazz is not dead. It just smells funny...<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:29    [W:0.024 / U:2.756 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

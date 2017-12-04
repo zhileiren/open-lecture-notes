@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Juri Lelli: [RFC PATCH v2 0/8] SCHED_DEADLINE freq/cpu invariance and OPP selection
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Juri Lelli" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/173" onclick="this.href='/lkml/headers'+'/2017/12/4/173';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/173">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/173">
+        First message in thread
+       </a>
+      </li>
+      <li class="origin">
+       <a href="/lkml/2017/12/4/174">
+        Juri Lelli
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/174">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/175">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/176">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/177">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/180">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/181">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/182">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/183">
+          Juri Lelli
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Juri Lelli &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [RFC PATCH v2 0/8] SCHED_DEADLINE freq/cpu invariance and OPP selection
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:23:17 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">Hi,<br/><br/>v2 of the RFC set implementing frequency/cpu invariance and OPP selection for<br/>SCHED_DEADLINE [1]. The set is based on mainline as of today (ae64f9bd1d36).<br/><br/>Patches high level description:<br/><br/> o [01-02]/08 add the necessary links to start accounting DEADLINE contribution<br/>              to OPP selection <br/> o 03/08      it's a temporary solution to make possible (on ARM) to change<br/>              frequency for DEADLINE tasks (that would possibly delay the SCHED_FIFO<br/>              worker kthread); proper solution would be to be able to issue frequency<br/>              transition from an atomic ctx<br/> o [04-05]/08 it's a schedutil change that copes with the fact that DEADLINE<br/>              doesn't require periodic OPP selection triggering point<br/> o [06-07]/08 make arch_scale_{freq,cpu}_capacity() function available on !CONFIG_SMP<br/>              configurations too<br/> o 08/08      implements frequency/cpu invariance for tasks' reservation<br/>              parameters; which basically means that we implement GRUB-PA [2]<br/><br/>Changes w.r.t. RFCv1:<br/><br/> - rebase on mainline<br/> - return -EINVAL for user trying to use the new flag (Peter)<br/> - s/SPECIAL/SUGOV/ in the flag name (several comments from people to<br/>   find better naming, Steve thinks SUGOV is more greppable than others)<br/> - give worker kthread a fake (unused) bandwidth, so that if priority<br/>   inheritance is triggered we don't BUG_ON on zero runtime<br/> - filter out fake bandwidth when computing SCHED_DEADLINE bandwidth (fix by<br/>   Claudio Scordino)<br/><br/>Please have a look. Feedback and comments are, as usual, more than welcome.<br/><br/>In case you would like to test this out:<br/><br/> <a href="https://github.com/jlelli/linux.git">https://github.com/jlelli/linux.git</a> upstream/deadline/freq-rfc-v2<br/><br/>Best,<br/><br/>- Juri<br/><br/>[1] v0: <a href="https://lkml.org/lkml/2017/5/23/249">https://lkml.org/lkml/2017/5/23/249</a><br/>    v1: <a href="https://lkml.org/lkml/2017/7/5/139">https://lkml.org/lkml/2017/7/5/139</a><br/>[2] C. Scordino, G. Lipari, A Resource Reservation Algorithm for<br/>    Power-Aware Scheduling of Periodic and Aperiodic Real-Time Tasks,<br/>    IEEE Transactions on Computers, December 2006<br/><br/>Juri Lelli (8):<br/>  sched/cpufreq_schedutil: make use of DEADLINE utilization signal<br/>  sched/deadline: move cpu frequency selection triggering points<br/>  sched/cpufreq_schedutil: make worker kthread be SCHED_DEADLINE<br/>  sched/cpufreq_schedutil: split utilization signals<br/>  sched/cpufreq_schedutil: always consider all CPUs when deciding next<br/>    freq<br/>  sched/sched.h: remove sd arch_scale_freq_capacity parameter<br/>  sched/sched.h: move arch_scale_{freq,cpu}_capacity outside CONFIG_SMP<br/>  sched/deadline: make bandwidth enforcement scale-invariant<br/><br/> include/linux/arch_topology.h    |   2 +-<br/> include/linux/sched.h            |   1 +<br/> include/linux/sched/cpufreq.h    |   2 -<br/> include/linux/sched/topology.h   |  12 ++--<br/> kernel/sched/core.c              |  15 ++++-<br/> kernel/sched/cpufreq_schedutil.c |  84 +++++++++++++++---------<br/> kernel/sched/deadline.c          | 136 ++++++++++++++++++++++++++++-----------<br/> kernel/sched/fair.c              |   4 +-<br/> kernel/sched/sched.h             |  53 +++++++++++----<br/> 9 files changed, 217 insertions(+), 92 deletions(-)<br/><br/>-- <br/>2.14.3<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:24    [W:0.022 / U:3.636 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

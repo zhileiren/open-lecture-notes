@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Hendrik Brueckner: [PATCH v2 3/6] arm64/bpf: correct broken uapi for BPF_PROG_TYPE_PERF_EVENT program type
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Hendrik Brueckner" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/147" onclick="this.href='/lkml/headers'+'/2017/12/4/147';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/147">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/146">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/146">
+        Hendrik Brueckner
+       </a>
+       <ul>
+        <li class="origin">
+         <a href="">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/148">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/149">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/150">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/154">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/156">
+          Hendrik Brueckner
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/147/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Hendrik Brueckner &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH v2 3/6] arm64/bpf: correct broken uapi for BPF_PROG_TYPE_PERF_EVENT program type
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 10:56:46 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">Correct the broken uapi for the BPF_PROG_TYPE_PERF_EVENT program type<br/>by exporting the user_pt_regs structure instead of the pt_regs structure<br/>that is in-kernel only.<br/><br/>Signed-off-by: Hendrik Brueckner &lt;brueckner@linux.vnet.ibm.com&gt;<br/>Reviewed-by: Thomas Richter &lt;tmricht@linux.vnet.ibm.com&gt;<br/>Acked-by: Alexei Starovoitov &lt;ast@kernel.org&gt;<br/>Cc: Will Deacon &lt;will.deacon@arm.com&gt;<br/>Cc: Mark Rutland &lt;mark.rutland@arm.com&gt;<br/>Cc: Arnaldo Carvalho de Melo &lt;acme@kernel.org&gt;<br/>---<br/> arch/arm64/include/asm/perf_event.h          | 2 ++<br/> arch/arm64/include/uapi/asm/bpf_perf_event.h | 9 +++++++++<br/> 2 files changed, 11 insertions(+)<br/> create mode 100644 arch/arm64/include/uapi/asm/bpf_perf_event.h<br/><br/>diff --git a/arch/arm64/include/asm/perf_event.h b/arch/arm64/include/asm/perf_event.h<br/>index 8d5cbec..f9ccc36 100644<br/>--- a/arch/arm64/include/asm/perf_event.h<br/>+++ b/arch/arm64/include/asm/perf_event.h<br/>@@ -18,6 +18,7 @@<br/> #define __ASM_PERF_EVENT_H<br/> <br/> #include &lt;asm/stack_pointer.h&gt;<br/>+#include &lt;asm/ptrace.h&gt;<br/> <br/> #define	ARMV8_PMU_MAX_COUNTERS	32<br/> #define	ARMV8_PMU_COUNTER_MASK	(ARMV8_PMU_MAX_COUNTERS - 1)<br/>@@ -79,6 +80,7 @@<br/> extern unsigned long perf_instruction_pointer(struct pt_regs *regs);<br/> extern unsigned long perf_misc_flags(struct pt_regs *regs);<br/> #define perf_misc_flags(regs)	perf_misc_flags(regs)<br/>+#define perf_arch_bpf_user_pt_regs(regs) &amp;regs-&gt;user_regs<br/> #endif<br/> <br/> #define perf_arch_fetch_caller_regs(regs, __ip) { \<br/>diff --git a/arch/arm64/include/uapi/asm/bpf_perf_event.h b/arch/arm64/include/uapi/asm/bpf_perf_event.h<br/>new file mode 100644<br/>index 0000000..b551b74<br/>--- /dev/null<br/>+++ b/arch/arm64/include/uapi/asm/bpf_perf_event.h<br/>@@ -0,0 +1,9 @@<br/>+/* SPDX-License-Identifier: GPL-2.0 */<br/>+#ifndef _UAPI__ASM_BPF_PERF_EVENT_H__<br/>+#define _UAPI__ASM_BPF_PERF_EVENT_H__<br/>+<br/>+#include &lt;asm/ptrace.h&gt;<br/>+<br/>+typedef struct user_pt_regs bpf_user_pt_regs_t;<br/>+<br/>+#endif /* _UAPI__ASM_BPF_PERF_EVENT_H__ */<br/>-- <br/>1.8.3.1<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:58    [W:0.022 / U:4.060 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

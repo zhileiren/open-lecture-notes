@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Juri Lelli: [RFC PATCH v2 3/8] sched/cpufreq_schedutil: make worker kthread be SCHED_DEADLINE
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Juri Lelli" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/182" onclick="this.href='/lkml/headers'+'/2017/12/4/182';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/182">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/173">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/173">
+        Juri Lelli
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/174">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/175">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/176">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/177">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/180">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/181">
+          Juri Lelli
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/183">
+          Juri Lelli
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/182/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Juri Lelli &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [RFC PATCH v2 3/8] sched/cpufreq_schedutil: make worker kthread be SCHED_DEADLINE
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:23:20 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">From: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/><br/>Worker kthread needs to be able to change frequency for all other<br/>threads.<br/><br/>Make it special, just under STOP class.<br/><br/>Signed-off-by: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/>Cc: Peter Zijlstra &lt;peterz@infradead.org&gt;<br/>Cc: Ingo Molnar &lt;mingo@kernel.org&gt;<br/>Cc: Rafael J. Wysocki &lt;rafael.j.wysocki@intel.com&gt;<br/>Cc: Viresh Kumar &lt;viresh.kumar@linaro.org&gt;<br/>Cc: Luca Abeni &lt;luca.abeni@santannapisa.it&gt;<br/>Cc: Claudio Scordino &lt;claudio@evidence.eu.com&gt;<br/>---<br/>Changes from RFCv1:<br/> - return -EINVAL for user trying to use the new flag (Peter)<br/> - s/SPECIAL/SUGOV/ in the flag name (several comments from people to<br/>   find better naming, Steve thinks SUGOV is more greppable than others)<br/> - give worker kthread a fake (unused) bandwidth, so that if priority<br/>   inheritance is triggered we don't BUG_ON on zero runtime<br/> - filter out fake bandwidth when computing SCHED_DEADLINE bandwidth (fix by<br/>   Claudio Scordino)<br/>---<br/> include/linux/sched.h            |   1 +<br/> kernel/sched/core.c              |  15 +++++-<br/> kernel/sched/cpufreq_schedutil.c |  19 ++++++--<br/> kernel/sched/deadline.c          | 103 +++++++++++++++++++++++++++------------<br/> kernel/sched/sched.h             |  22 ++++++++-<br/> 5 files changed, 124 insertions(+), 36 deletions(-)<br/><br/>diff --git a/include/linux/sched.h b/include/linux/sched.h<br/>index 21991d668d35..c4b2d4a5cfab 100644<br/>--- a/include/linux/sched.h<br/>+++ b/include/linux/sched.h<br/>@@ -1438,6 +1438,7 @@ extern int idle_cpu(int cpu);<br/> extern int sched_setscheduler(struct task_struct *, int, const struct sched_param *);<br/> extern int sched_setscheduler_nocheck(struct task_struct *, int, const struct sched_param *);<br/> extern int sched_setattr(struct task_struct *, const struct sched_attr *);<br/>+extern int sched_setattr_nocheck(struct task_struct *, const struct sched_attr *);<br/> extern struct task_struct *idle_task(int cpu);<br/> <br/> /**<br/>diff --git a/kernel/sched/core.c b/kernel/sched/core.c<br/>index 75554f366fd3..5be52a3c1c1b 100644<br/>--- a/kernel/sched/core.c<br/>+++ b/kernel/sched/core.c<br/>@@ -4041,7 +4041,9 @@ static int __sched_setscheduler(struct task_struct *p,<br/> 	}<br/> <br/> 	if (attr-&gt;sched_flags &amp;<br/>-		~(SCHED_FLAG_RESET_ON_FORK | SCHED_FLAG_RECLAIM))<br/>+		~(SCHED_FLAG_RESET_ON_FORK |<br/>+		  SCHED_FLAG_RECLAIM |<br/>+		  SCHED_FLAG_SUGOV))<br/> 		return -EINVAL;<br/> <br/> 	/*<br/>@@ -4108,6 +4110,9 @@ static int __sched_setscheduler(struct task_struct *p,<br/> 	}<br/> <br/> 	if (user) {<br/>+		if (attr-&gt;sched_flags &amp; SCHED_FLAG_SUGOV)<br/>+			return -EINVAL;<br/>+<br/> 		retval = security_task_setscheduler(p);<br/> 		if (retval)<br/> 			return retval;<br/>@@ -4163,7 +4168,8 @@ static int __sched_setscheduler(struct task_struct *p,<br/> 		}<br/> #endif<br/> #ifdef CONFIG_SMP<br/>-		if (dl_bandwidth_enabled() &amp;&amp; dl_policy(policy)) {<br/>+		if (dl_bandwidth_enabled() &amp;&amp; dl_policy(policy) &amp;&amp;<br/>+				!(attr-&gt;sched_flags &amp; SCHED_FLAG_SUGOV)) {<br/> 			cpumask_t *span = rq-&gt;rd-&gt;span;<br/> <br/> 			/*<br/>@@ -4293,6 +4299,11 @@ int sched_setattr(struct task_struct *p, const struct sched_attr *attr)<br/> }<br/> EXPORT_SYMBOL_GPL(sched_setattr);<br/> <br/>+int sched_setattr_nocheck(struct task_struct *p, const struct sched_attr *attr)<br/>+{<br/>+	return __sched_setscheduler(p, attr, false, true);<br/>+}<br/>+<br/> /**<br/>  * sched_setscheduler_nocheck - change the scheduling policy and/or RT priority of a thread from kernelspace.<br/>  * @p: the task in question.<br/>diff --git a/kernel/sched/cpufreq_schedutil.c b/kernel/sched/cpufreq_schedutil.c<br/>index de1ad1fffbdc..c22457868ee6 100644<br/>--- a/kernel/sched/cpufreq_schedutil.c<br/>+++ b/kernel/sched/cpufreq_schedutil.c<br/>@@ -475,7 +475,20 @@ static void sugov_policy_free(struct sugov_policy *sg_policy)<br/> static int sugov_kthread_create(struct sugov_policy *sg_policy)<br/> {<br/> 	struct task_struct *thread;<br/>-	struct sched_param param = { .sched_priority = MAX_USER_RT_PRIO / 2 };<br/>+	struct sched_attr attr = {<br/>+		.size = sizeof(struct sched_attr),<br/>+		.sched_policy = SCHED_DEADLINE,<br/>+		.sched_flags = SCHED_FLAG_SUGOV,<br/>+		.sched_nice = 0,<br/>+		.sched_priority = 0,<br/>+		/*<br/>+		 * Fake (unused) bandwidth; workaround to "fix"<br/>+		 * priority inheritance.<br/>+		 */<br/>+		.sched_runtime	=  1000000,<br/>+		.sched_deadline = 10000000,<br/>+		.sched_period	= 10000000,<br/>+	};<br/> 	struct cpufreq_policy *policy = sg_policy-&gt;policy;<br/> 	int ret;<br/> <br/>@@ -493,10 +506,10 @@ static int sugov_kthread_create(struct sugov_policy *sg_policy)<br/> 		return PTR_ERR(thread);<br/> 	}<br/> <br/>-	ret = sched_setscheduler_nocheck(thread, SCHED_FIFO, &amp;param);<br/>+	ret = sched_setattr_nocheck(thread, &amp;attr);<br/> 	if (ret) {<br/> 		kthread_stop(thread);<br/>-		pr_warn("%s: failed to set SCHED_FIFO\n", __func__);<br/>+		pr_warn("%s: failed to set SCHED_DEADLINE\n", __func__);<br/> 		return ret;<br/> 	}<br/> <br/>diff --git a/kernel/sched/deadline.c b/kernel/sched/deadline.c<br/>index 7e4038bf9954..40f12aab9250 100644<br/>--- a/kernel/sched/deadline.c<br/>+++ b/kernel/sched/deadline.c<br/>@@ -78,7 +78,7 @@ static inline int dl_bw_cpus(int i)<br/> #endif<br/> <br/> static inline<br/>-void add_running_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/>+void __add_running_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> {<br/> 	u64 old = dl_rq-&gt;running_bw;<br/> <br/>@@ -91,7 +91,7 @@ void add_running_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> }<br/> <br/> static inline<br/>-void sub_running_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/>+void __sub_running_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> {<br/> 	u64 old = dl_rq-&gt;running_bw;<br/> <br/>@@ -105,7 +105,7 @@ void sub_running_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> }<br/> <br/> static inline<br/>-void add_rq_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/>+void __add_rq_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> {<br/> 	u64 old = dl_rq-&gt;this_bw;<br/> <br/>@@ -115,7 +115,7 @@ void add_rq_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> }<br/> <br/> static inline<br/>-void sub_rq_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/>+void __sub_rq_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> {<br/> 	u64 old = dl_rq-&gt;this_bw;<br/> <br/>@@ -127,16 +127,46 @@ void sub_rq_bw(u64 dl_bw, struct dl_rq *dl_rq)<br/> 	SCHED_WARN_ON(dl_rq-&gt;running_bw &gt; dl_rq-&gt;this_bw);<br/> }<br/> <br/>+static inline<br/>+void add_rq_bw(struct sched_dl_entity *dl_se, struct dl_rq *dl_rq)<br/>+{<br/>+	if (!(dl_se-&gt;flags &amp; SCHED_FLAG_SUGOV))<br/>+		__add_rq_bw(dl_se-&gt;dl_bw, dl_rq);<br/>+}<br/>+<br/>+static inline<br/>+void sub_rq_bw(struct sched_dl_entity *dl_se, struct dl_rq *dl_rq)<br/>+{<br/>+	if (!(dl_se-&gt;flags &amp; SCHED_FLAG_SUGOV))<br/>+		__sub_rq_bw(dl_se-&gt;dl_bw, dl_rq);<br/>+}<br/>+<br/>+static inline<br/>+void add_running_bw(struct sched_dl_entity *dl_se, struct dl_rq *dl_rq)<br/>+{<br/>+	if (!(dl_se-&gt;flags &amp; SCHED_FLAG_SUGOV))<br/>+		__add_running_bw(dl_se-&gt;dl_bw, dl_rq);<br/>+}<br/>+<br/>+static inline<br/>+void sub_running_bw(struct sched_dl_entity *dl_se, struct dl_rq *dl_rq)<br/>+{<br/>+	if (!(dl_se-&gt;flags &amp; SCHED_FLAG_SUGOV))<br/>+		__sub_running_bw(dl_se-&gt;dl_bw, dl_rq);<br/>+}<br/>+<br/> void dl_change_utilization(struct task_struct *p, u64 new_bw)<br/> {<br/> 	struct rq *rq;<br/> <br/>+	BUG_ON(p-&gt;dl.flags &amp; SCHED_FLAG_SUGOV);<br/>+<br/> 	if (task_on_rq_queued(p))<br/> 		return;<br/> <br/> 	rq = task_rq(p);<br/> 	if (p-&gt;dl.dl_non_contending) {<br/>-		sub_running_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+		sub_running_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/> 		p-&gt;dl.dl_non_contending = 0;<br/> 		/*<br/> 		 * If the timer handler is currently running and the<br/>@@ -148,8 +178,8 @@ void dl_change_utilization(struct task_struct *p, u64 new_bw)<br/> 		if (hrtimer_try_to_cancel(&amp;p-&gt;dl.inactive_timer) == 1)<br/> 			put_task_struct(p);<br/> 	}<br/>-	sub_rq_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>-	add_rq_bw(new_bw, &amp;rq-&gt;dl);<br/>+	__sub_rq_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+	__add_rq_bw(new_bw, &amp;rq-&gt;dl);<br/> }<br/> <br/> /*<br/>@@ -221,6 +251,9 @@ static void task_non_contending(struct task_struct *p)<br/> 	if (dl_se-&gt;dl_runtime == 0)<br/> 		return;<br/> <br/>+	if (unlikely(dl_entity_is_special(dl_se)))<br/>+		return;<br/>+<br/> 	WARN_ON(hrtimer_active(&amp;dl_se-&gt;inactive_timer));<br/> 	WARN_ON(dl_se-&gt;dl_non_contending);<br/> <br/>@@ -240,12 +273,12 @@ static void task_non_contending(struct task_struct *p)<br/> 	 */<br/> 	if (zerolag_time &lt; 0) {<br/> 		if (dl_task(p))<br/>-			sub_running_bw(dl_se-&gt;dl_bw, dl_rq);<br/>+			sub_running_bw(dl_se, dl_rq);<br/> 		if (!dl_task(p) || p-&gt;state == TASK_DEAD) {<br/> 			struct dl_bw *dl_b = dl_bw_of(task_cpu(p));<br/> <br/> 			if (p-&gt;state == TASK_DEAD)<br/>-				sub_rq_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+				sub_rq_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/> 			raw_spin_lock(&amp;dl_b-&gt;lock);<br/> 			__dl_sub(dl_b, p-&gt;dl.dl_bw, dl_bw_cpus(task_cpu(p)));<br/> 			__dl_clear_params(p);<br/>@@ -272,7 +305,7 @@ static void task_contending(struct sched_dl_entity *dl_se, int flags)<br/> 		return;<br/> <br/> 	if (flags &amp; ENQUEUE_MIGRATED)<br/>-		add_rq_bw(dl_se-&gt;dl_bw, dl_rq);<br/>+		add_rq_bw(dl_se, dl_rq);<br/> <br/> 	if (dl_se-&gt;dl_non_contending) {<br/> 		dl_se-&gt;dl_non_contending = 0;<br/>@@ -293,7 +326,7 @@ static void task_contending(struct sched_dl_entity *dl_se, int flags)<br/> 		 * when the "inactive timer" fired).<br/> 		 * So, add it back.<br/> 		 */<br/>-		add_running_bw(dl_se-&gt;dl_bw, dl_rq);<br/>+		add_running_bw(dl_se, dl_rq);<br/> 	}<br/> }<br/> <br/>@@ -1149,6 +1182,9 @@ static void update_curr_dl(struct rq *rq)<br/> <br/> 	sched_rt_avg_update(rq, delta_exec);<br/> <br/>+	if (unlikely(dl_entity_is_special(dl_se)))<br/>+		return;<br/>+<br/> 	if (unlikely(dl_se-&gt;flags &amp; SCHED_FLAG_RECLAIM))<br/> 		delta_exec = grub_reclaim(delta_exec, rq, &amp;curr-&gt;dl);<br/> 	dl_se-&gt;runtime -= delta_exec;<br/>@@ -1205,8 +1241,8 @@ static enum hrtimer_restart inactive_task_timer(struct hrtimer *timer)<br/> 		struct dl_bw *dl_b = dl_bw_of(task_cpu(p));<br/> <br/> 		if (p-&gt;state == TASK_DEAD &amp;&amp; dl_se-&gt;dl_non_contending) {<br/>-			sub_running_bw(p-&gt;dl.dl_bw, dl_rq_of_se(&amp;p-&gt;dl));<br/>-			sub_rq_bw(p-&gt;dl.dl_bw, dl_rq_of_se(&amp;p-&gt;dl));<br/>+			sub_running_bw(&amp;p-&gt;dl, dl_rq_of_se(&amp;p-&gt;dl));<br/>+			sub_rq_bw(&amp;p-&gt;dl, dl_rq_of_se(&amp;p-&gt;dl));<br/> 			dl_se-&gt;dl_non_contending = 0;<br/> 		}<br/> <br/>@@ -1223,7 +1259,7 @@ static enum hrtimer_restart inactive_task_timer(struct hrtimer *timer)<br/> 	sched_clock_tick();<br/> 	update_rq_clock(rq);<br/> <br/>-	sub_running_bw(dl_se-&gt;dl_bw, &amp;rq-&gt;dl);<br/>+	sub_running_bw(dl_se, &amp;rq-&gt;dl);<br/> 	dl_se-&gt;dl_non_contending = 0;<br/> unlock:<br/> 	task_rq_unlock(rq, p, &amp;rf);<br/>@@ -1417,8 +1453,8 @@ static void enqueue_task_dl(struct rq *rq, struct task_struct *p, int flags)<br/> 		dl_check_constrained_dl(&amp;p-&gt;dl);<br/> <br/> 	if (p-&gt;on_rq == TASK_ON_RQ_MIGRATING || flags &amp; ENQUEUE_RESTORE) {<br/>-		add_rq_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>-		add_running_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+		add_rq_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/>+		add_running_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/> 	}<br/> <br/> 	/*<br/>@@ -1458,8 +1494,8 @@ static void dequeue_task_dl(struct rq *rq, struct task_struct *p, int flags)<br/> 	__dequeue_task_dl(rq, p, flags);<br/> <br/> 	if (p-&gt;on_rq == TASK_ON_RQ_MIGRATING || flags &amp; DEQUEUE_SAVE) {<br/>-		sub_running_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>-		sub_rq_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+		sub_running_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/>+		sub_rq_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/> 	}<br/> <br/> 	/*<br/>@@ -1565,7 +1601,7 @@ static void migrate_task_rq_dl(struct task_struct *p)<br/> 	 */<br/> 	raw_spin_lock(&amp;rq-&gt;lock);<br/> 	if (p-&gt;dl.dl_non_contending) {<br/>-		sub_running_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+		sub_running_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/> 		p-&gt;dl.dl_non_contending = 0;<br/> 		/*<br/> 		 * If the timer handler is currently running and the<br/>@@ -1577,7 +1613,7 @@ static void migrate_task_rq_dl(struct task_struct *p)<br/> 		if (hrtimer_try_to_cancel(&amp;p-&gt;dl.inactive_timer) == 1)<br/> 			put_task_struct(p);<br/> 	}<br/>-	sub_rq_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+	sub_rq_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/> 	raw_spin_unlock(&amp;rq-&gt;lock);<br/> }<br/> <br/>@@ -2020,11 +2056,11 @@ static int push_dl_task(struct rq *rq)<br/> 	}<br/> <br/> 	deactivate_task(rq, next_task, 0);<br/>-	sub_running_bw(next_task-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>-	sub_rq_bw(next_task-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+	sub_running_bw(&amp;next_task-&gt;dl, &amp;rq-&gt;dl);<br/>+	sub_rq_bw(&amp;next_task-&gt;dl, &amp;rq-&gt;dl);<br/> 	set_task_cpu(next_task, later_rq-&gt;cpu);<br/>-	add_rq_bw(next_task-&gt;dl.dl_bw, &amp;later_rq-&gt;dl);<br/>-	add_running_bw(next_task-&gt;dl.dl_bw, &amp;later_rq-&gt;dl);<br/>+	add_rq_bw(&amp;next_task-&gt;dl, &amp;later_rq-&gt;dl);<br/>+	add_running_bw(&amp;next_task-&gt;dl, &amp;later_rq-&gt;dl);<br/> 	activate_task(later_rq, next_task, 0);<br/> 	ret = 1;<br/> <br/>@@ -2112,11 +2148,11 @@ static void pull_dl_task(struct rq *this_rq)<br/> 			resched = true;<br/> <br/> 			deactivate_task(src_rq, p, 0);<br/>-			sub_running_bw(p-&gt;dl.dl_bw, &amp;src_rq-&gt;dl);<br/>-			sub_rq_bw(p-&gt;dl.dl_bw, &amp;src_rq-&gt;dl);<br/>+			sub_running_bw(&amp;p-&gt;dl, &amp;src_rq-&gt;dl);<br/>+			sub_rq_bw(&amp;p-&gt;dl, &amp;src_rq-&gt;dl);<br/> 			set_task_cpu(p, this_cpu);<br/>-			add_rq_bw(p-&gt;dl.dl_bw, &amp;this_rq-&gt;dl);<br/>-			add_running_bw(p-&gt;dl.dl_bw, &amp;this_rq-&gt;dl);<br/>+			add_rq_bw(&amp;p-&gt;dl, &amp;this_rq-&gt;dl);<br/>+			add_running_bw(&amp;p-&gt;dl, &amp;this_rq-&gt;dl);<br/> 			activate_task(this_rq, p, 0);<br/> 			dmin = p-&gt;dl.deadline;<br/> <br/>@@ -2225,7 +2261,7 @@ static void switched_from_dl(struct rq *rq, struct task_struct *p)<br/> 		task_non_contending(p);<br/> <br/> 	if (!task_on_rq_queued(p))<br/>-		sub_rq_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+		sub_rq_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/> <br/> 	/*<br/> 	 * We cannot use inactive_task_timer() to invoke sub_running_bw()<br/>@@ -2257,7 +2293,7 @@ static void switched_to_dl(struct rq *rq, struct task_struct *p)<br/> <br/> 	/* If p is not queued we will update its parameters at next wakeup. */<br/> 	if (!task_on_rq_queued(p)) {<br/>-		add_rq_bw(p-&gt;dl.dl_bw, &amp;rq-&gt;dl);<br/>+		add_rq_bw(&amp;p-&gt;dl, &amp;rq-&gt;dl);<br/> <br/> 		return;<br/> 	}<br/>@@ -2436,6 +2472,9 @@ int sched_dl_overflow(struct task_struct *p, int policy,<br/> 	u64 new_bw = dl_policy(policy) ? to_ratio(period, runtime) : 0;<br/> 	int cpus, err = -1;<br/> <br/>+	if (attr-&gt;sched_flags &amp; SCHED_FLAG_SUGOV)<br/>+		return 0;<br/>+<br/> 	/* !deadline task may carry old deadline bandwidth */<br/> 	if (new_bw == p-&gt;dl.dl_bw &amp;&amp; task_has_dl_policy(p))<br/> 		return 0;<br/>@@ -2522,6 +2561,10 @@ void __getparam_dl(struct task_struct *p, struct sched_attr *attr)<br/>  */<br/> bool __checkparam_dl(const struct sched_attr *attr)<br/> {<br/>+	/* special dl tasks don't actually use any parameter */<br/>+	if (attr-&gt;sched_flags &amp; SCHED_FLAG_SUGOV)<br/>+		return true;<br/>+<br/> 	/* deadline != 0 */<br/> 	if (attr-&gt;sched_deadline == 0)<br/> 		return false;<br/>diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h<br/>index a1730e39cbc6..280b421a82e8 100644<br/>--- a/kernel/sched/sched.h<br/>+++ b/kernel/sched/sched.h<br/>@@ -156,13 +156,33 @@ static inline int task_has_dl_policy(struct task_struct *p)<br/> 	return dl_policy(p-&gt;policy);<br/> }<br/> <br/>+/*<br/>+ * !! For sched_setattr_nocheck() (kernel) only !!<br/>+ *<br/>+ * This is actually gross. :(<br/>+ *<br/>+ * It is used to make schedutil kworker(s) higher priority than SCHED_DEADLINE<br/>+ * tasks, but still be able to sleep. We need this on platforms that cannot<br/>+ * atomically change clock frequency. Remove once fast switching will be<br/>+ * available on such platforms.<br/>+ *<br/>+ * SUGOV stands for SchedUtil GOVernor.<br/>+ */<br/>+#define SCHED_FLAG_SUGOV	0x10000000<br/>+<br/>+static inline int dl_entity_is_special(struct sched_dl_entity *dl_se)<br/>+{<br/>+	return dl_se-&gt;flags &amp; SCHED_FLAG_SUGOV;<br/>+}<br/>+<br/> /*<br/>  * Tells if entity @a should preempt entity @b.<br/>  */<br/> static inline bool<br/> dl_entity_preempt(struct sched_dl_entity *a, struct sched_dl_entity *b)<br/> {<br/>-	return dl_time_before(a-&gt;deadline, b-&gt;deadline);<br/>+	return dl_entity_is_special(a) ||<br/>+	       dl_time_before(a-&gt;deadline, b-&gt;deadline);<br/> }<br/> <br/> /*<br/>-- <br/>2.14.3<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:27    [W:0.043 / U:3.088 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

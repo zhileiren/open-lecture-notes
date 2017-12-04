@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Neil Armstrong: [RESEND PATCH v5 0/6] ARM: Add Variscite DART-MX6 SoM and Carrier-board support
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Neil Armstrong" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/107" onclick="this.href='/lkml/headers'+'/2017/12/4/107';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/107">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/107">
+        First message in thread
+       </a>
+      </li>
+      <li class="origin">
+       <a href="/lkml/2017/12/4/108">
+        Neil Armstrong
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/108">
+          Neil Armstrong
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/109">
+          Neil Armstrong
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/110">
+          Neil Armstrong
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/112">
+          Neil Armstrong
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/113">
+          Neil Armstrong
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/115">
+          Neil Armstrong
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Neil Armstrong &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [RESEND PATCH v5 0/6] ARM: Add Variscite DART-MX6 SoM and Carrier-board support
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 10:21:04 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">This is a resend of [5] with only changes in the SPDX-Licence-Identifier to<br/>the top of the DTS files as required by Linus and explicited at [6].<br/><br/>This patchset adds support for the Variscite DART-MX6 SoM with :<br/>- i.MX6 Quad or Dual Lite SoC<br/>- 1Gb/2Gb LPDDR2<br/>- 4-64 GB eMMC<br/>- Camera Interface<br/>- HDMI+CEC interface<br/>- LVDS / DSI / Parallel RGB interfaces<br/>- Ethernet RGMII interface<br/>- On-SoM Wi-Fi/Bluetooth with WiLink wl1835 SDIO Module<br/>- SD/MMC/SDIO interface<br/>- USB Host + USB OTG interface<br/>- I2C interfaces<br/>- SPI interfaces<br/>- PCI-Express 2.0 interface<br/>- on-SoM Audio Codec with HP/Line-In interfaces + DMIC interface<br/>- Digital Audio interface<br/>- S/PDIF interface<br/><br/>And the Carrier-Board with the following :<br/>- LVDS interface for the VLCD-CAP-GLD-LVDS 7" LCD 800 x 480 touch display<br/>- HDMI Connector<br/>- USB Host + USB OTG Connector<br/>- 10/100/1000 Mbps Ethernet<br/>- miniPCI-Express slot<br/>- SD Card connector<br/>- Audio Headphone/Line In jack connectors<br/>- On-board DMIC<br/>- CAN bus header<br/>- SPI header<br/>- Camera Interfaces header<br/>- 4xButtons, 2xLeds<br/>- OnBoard RTC with Coin Backup battery socket<br/>- RS232 Header + USB-Serial debug port<br/><br/>First patch contains a missing pinmux define used by the SoM.<br/>Last patch contains configs used by the SoM DT like SERDEV or WL18XX support.<br/><br/>PCIe, On-Board DMIC and Camera Interfaces are not handled yet.<br/><br/>Changes since v5 at [5]:<br/>- Moved SPDX-Licence-Identifier to top of dts files<br/><br/>Changes since v4 at [4]:<br/>- Renamed coded label<br/>- Updated gpio wakeup properties<br/>- Removed useless panel blank lines<br/>- Removed leading 0 in pmic node name address<br/>- Changed last patch title to match imx defconfig name<br/>- Fixed dtsi alphabetical ordering<br/><br/>Changes since v3 at [3]:<br/>- minor pcie dt fix<br/>- added tags<br/><br/>Changes since v2 at [2]:<br/>- Added bindings acks<br/>- fixed enable-active-high regulators property<br/>- moved hdmi dd-i2c-bus to son dtsi<br/>- fixed pinmux IOMUX value<br/>- add pcie reset-gpio<br/><br/>Changes since v1 at [1]:<br/>- Add lvds display vendor prefix and bindings<br/>- fix all gpio phandle arguments with correct ACTIVE_XXX define<br/>- drop pcie support<br/>- drop custom operating points<br/>- fix arm/pu/soc vin-supply instead of &amp;cpu node override<br/>- fix can pinmux value<br/>- changed button node name<br/>- add revied-by tags on first and last patches<br/><br/>[1] <a href="http://lkml.kernel.org/r/1511281705-30849-1-git-send-email-narmstrong@baylibre.com">http://lkml.kernel.org/r/1511281705-30849-1-git-send-email-narmstrong@baylibre.com</a><br/>[2] <a href="http://lkml.kernel.org/r/1511348560-28505-1-git-send-email-narmstrong@baylibre.com">http://lkml.kernel.org/r/1511348560-28505-1-git-send-email-narmstrong@baylibre.com</a><br/>[3] <a href="http://lkml.kernel.org/r/1511785716-23492-1-git-send-email-narmstrong@baylibre.com">http://lkml.kernel.org/r/1511785716-23492-1-git-send-email-narmstrong@baylibre.com</a><br/>[4] <a href="http://lkml.kernel.org/r/1511950857-19292-1-git-send-email-narmstrong@baylibre.com">http://lkml.kernel.org/r/1511950857-19292-1-git-send-email-narmstrong@baylibre.com</a><br/>[5] <a href="http://lkml.kernel.org/r/1512119024-521-1-git-send-email-narmstrong@baylibre.com">http://lkml.kernel.org/r/1512119024-521-1-git-send-email-narmstrong@baylibre.com</a><br/>[6] <a href="https://marc.info/?l=linux-kernel&amp;m=151051532322831&amp;w=2">https://marc.info/?l=linux-kernel&amp;m=151051532322831&amp;w=2</a><br/><br/>Neil Armstrong (6):<br/>  ARM: dts: imx6qdl-pinfunc: Add missing<br/>    MX6QDL_PAD_ENET_RXD0__OSC32K_32K_OUT<br/>  dt-bindings: Add vendor prefix for Solomon Goldentek Display<br/>    Corporation<br/>  dt-bindings: display: Add bindings for SGD GKTW70SDAE4SE Panel<br/>  ARM: dts: imx6qdl: Add Variscite DART-MX6 SoM support<br/>  ARM: dts: imx6q: Add Variscite DART-MX6 Carrier-board support<br/>  ARM: imx_v6_v7_defconfig: Add missing config for DART-MX6 SoM<br/><br/> .../bindings/display/panel/sgd,gktw70sdae4se.txt   |  41 ++<br/> .../devicetree/bindings/vendor-prefixes.txt        |   1 +<br/> arch/arm/boot/dts/Makefile                         |   1 +<br/> arch/arm/boot/dts/imx6dl-pinfunc.h                 |   1 +<br/> arch/arm/boot/dts/imx6q-pinfunc.h                  |   1 +<br/> arch/arm/boot/dts/imx6q-var-dt6customboard.dts     | 235 ++++++++++<br/> arch/arm/boot/dts/imx6qdl-var-dart.dtsi            | 503 +++++++++++++++++++++<br/> arch/arm/configs/imx_v6_v7_defconfig               |   6 +<br/> 8 files changed, 789 insertions(+)<br/> create mode 100644 Documentation/devicetree/bindings/display/panel/sgd,gktw70sdae4se.txt<br/> create mode 100644 arch/arm/boot/dts/imx6q-var-dt6customboard.dts<br/> create mode 100644 arch/arm/boot/dts/imx6qdl-var-dart.dtsi<br/><br/>-- <br/>2.7.4<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:21    [W:0.049 / U:1.640 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

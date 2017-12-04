@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Greg Kroah-Hartman: Re: Use-after-free with deferred driver probing and __initconst
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Greg Kroah-Hartman" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/120" onclick="this.href='/lkml/headers'+'/2017/12/4/120';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/120">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/3/102">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/3/102">
+        Dan Aloni
+       </a>
+       <ul>
+        <li class="origin">
+         <a href="">
+          Greg Kroah-Hartman
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 10:24:42 +0100
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Greg Kroah-Hartman &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: Use-after-free with deferred driver probing and __initconst
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Sun, Dec 03, 2017 at 07:19:53PM +0200, Dan Aloni wrote:<br/>&gt; Hi all,<br/>&gt; <br/>&gt; [[ CC'ed: folks relating to the original __*_refok family of attributes,<br/>&gt; deferred probing, Open Firmware maintainer, drivers/base/ maintainer,<br/>&gt; kernel harderning, LKML ]]<br/>&gt; <br/>&gt; It seems that it is possible to cause a use-after-free in the base driver<br/>&gt; platform code using a set of combined circumstances which I describe below.<br/>&gt; The instance of the issue happens on a patched 4.4 kernel at a client of<br/>&gt; mine.<br/>&gt; <br/>&gt; [    6.173692] Process kworker/u12:3 (pid: 173, stack limit = 0xfffffc3ea92b8000)<br/>&gt; [    6.180902] Call trace:<br/>&gt; [    6.183345] [&lt;ffff12bbcd90746c&gt;] __of_match_node+0x48/0x8c<br/>&gt; [    6.188820] [&lt;ffff12bbcd9074f4&gt;] of_match_node+0x44/0x68<br/>&gt; [    6.194125] [&lt;ffff12bbcd9097e4&gt;] of_match_device+0x34/0x48<br/>&gt; [    6.199603] [&lt;ffff12bbcd4e1ed8&gt;] platform_match+0x34/0xa8<br/>&gt; [    6.204991] [&lt;ffff12bbcd4df3c0&gt;] __device_attach_driver+0x60/0xc8<br/>&gt; [    6.211077] [&lt;ffff12bbcd4dca38&gt;] bus_for_each_drv+0x60/0xac<br/>&gt; [    6.216640] [&lt;ffff12bbcd4ded40&gt;] __device_attach+0x98/0x124<br/>&gt; [    6.222203] [&lt;ffff12bbcd4df494&gt;] device_initial_probe+0x24/0x30<br/>&gt; [    6.228111] [&lt;ffff12bbcd4ddf4c&gt;] bus_probe_device+0x38/0xa0<br/>&gt; [    6.233677] [&lt;ffff12bbcd4de57c&gt;] deferred_probe_work_func+0x108/0x128<br/>&gt; [    6.240111] [&lt;ffff12bbcced1d50&gt;] process_one_work+0x268/0x444<br/>&gt; [    6.245849] [&lt;ffff12bbcced21a0&gt;] worker_thread+0x274/0x404<br/>&gt; [    6.251329] [&lt;ffff12bbcced8c28&gt;] kthread+0xe0/0xe8<br/>&gt; [    6.256114] [&lt;ffff12bbcce92740&gt;] ret_from_fork+0x10/0x50<br/>&gt; [    6.261415] ---[ end trace fccad0f7d2c2142a ]---<br/>&gt; [    6.271293] note: kworker/u12:3[173] exited with preempt_count 1<br/>&gt; [    6.277342] Unable to handle kernel paging request at virtual address ffffffffffffffd8<br/>&gt; <br/>&gt; It happens while booting, and among other things it requires having platform<br/>&gt; OF drivers marking their `of_driver_id` arrays as `__initconst`, e.g:<br/>&gt; <br/>&gt;     static const struct of_device_id some_driver_of[] __initconst = {<br/>&gt;         ...<br/>&gt;         {},<br/>&gt;     };<br/>&gt; <br/>&gt; Given a platform driver that uses deferred probing, these arrays marked as<br/>&gt; `__initconst` could be accessed from a deferred probe path after the init<br/>&gt; section of the kernel has been freed. I have not seen anything in the API<br/>&gt; related deferred probing that can guard from this scenario.<br/>&gt; <br/>&gt; On kernels prior to KASLR the access is not detected, but it can still happen,<br/>&gt; potentially accessing memory that was returned to the page allocator.<br/>&gt; <br/>&gt; On 4.15-rc1, the following shows the ratio between instances of `of_device_id`<br/>&gt; arrays and the number of them which are declared`__initconst`:<br/>&gt; <br/>&gt;     $ git grep 'struct of_device_id.*\[\]' | wc -l<br/>&gt;     3089<br/>&gt; <br/>&gt;     $ git grep 'struct of_device_id.*\[\]' | grep __initconst  | wc -l<br/>&gt;     117<br/>&gt; <br/>&gt; Not all of these instances are platform drivers, but perhaps deferred<br/>&gt; probing with other types of drivers may cause similar issues.<br/>&gt; <br/>&gt; Perhaps it is worthwhile patching stable kernels for the removal of<br/>&gt; `__initconst` on these arrays?<br/><br/>Yes, if those patches are in Linus's tree, that fixes a bug.<br/><br/>&gt; And for the larger question -<br/>&gt; <br/>&gt; Freeing of init sections poses an exploitable vulnerability if that memory<br/>&gt; is not unmapped, _and_ if there are still accesses taking place due to bugs<br/>&gt; of this kind. Linux's build process is supposed to detect references from<br/>&gt; non-freed sections to the freed sections, but clearly this instance has<br/>&gt; not been detected during build, particularly because we have the `__ref`,<br/>&gt; `__refdata`, and `__refconst` attributes which suppress those checks.<br/>&gt; <br/>&gt; Perhaps as a harderning measure, older kernels should be patched with a<br/>&gt; config option for not freeing init sections?<br/><br/>Older kernels should just get the fixes that are in newer kernels :)<br/><br/>If you have specific pointers to commits that resolve these issues, I'll<br/>be glad to queue them up in the stable kernels.<br/><br/>Yes, it is a whack-a-mole fixup, a much better option would be what you<br/>suggest.  Perhaps we need to fix the build to properly mark these<br/>section references as errors like other ones are?<br/><br/>thanks,<br/><br/>greg k-h<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:25    [W:0.037 / U:3.712 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

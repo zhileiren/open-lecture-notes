@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Michal Hocko: Re: [PATCH v3 1/4] mm: introduce get_user_pages_longterm
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Michal Hocko" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/126" onclick="this.href='/lkml/headers'+'/2017/12/4/126';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/126">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/29/895">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/1/527">
+        Jason Gunthorpe
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/1/540">
+          Dan Williams
+         </a>
+         <ul>
+          <li>
+           <a href="/lkml/2017/12/1/543">
+            Jason Gunthorpe
+           </a>
+          </li>
+          <li class="origin">
+           <a href="">
+            Michal Hocko
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 10:31:56 +0100
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Michal Hocko &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH v3 1/4] mm: introduce get_user_pages_longterm
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Fri 01-12-17 08:29:53, Dan Williams wrote:<br/>&gt; On Fri, Dec 1, 2017 at 8:02 AM, Jason Gunthorpe &lt;jgg@ziepe.ca&gt; wrote:<br/>&gt; &gt;<br/>&gt; &gt; On Fri, Dec 01, 2017 at 11:12:18AM +0100, Michal Hocko wrote:<br/>&gt; &gt; &gt; On Thu 30-11-17 12:01:17, Jason Gunthorpe wrote:<br/>&gt; &gt; &gt; &gt; On Thu, Nov 30, 2017 at 10:32:42AM -0800, Dan Williams wrote:<br/>&gt; &gt; &gt; &gt; &gt; &gt; Who and how many LRU pages can pin that way and how do you prevent nasty<br/>&gt; &gt; &gt; &gt; &gt; &gt; users to DoS systems this way?<br/>&gt; &gt; &gt; &gt; &gt;<br/>&gt; &gt; &gt; &gt; &gt; I assume this is something the RDMA community has had to contend with?<br/>&gt; &gt; &gt; &gt; &gt; I'm not an RDMA person, I'm just here to fix dax.<br/>&gt; &gt; &gt; &gt;<br/>&gt; &gt; &gt; &gt; The RDMA implementation respects the mlock rlimit<br/>&gt; &gt; &gt;<br/>&gt; &gt; &gt; OK, so then I am kind of lost in why do we need a special g-u-p variant.<br/>&gt; &gt; &gt; The documentation doesn't say and quite contrary it assumes that the<br/>&gt; &gt; &gt; caller knows what he is doing. This cannot be the right approach.<br/>&gt; &gt;<br/>&gt; &gt; I thought it was because get_user_pages_longterm is supposed to fail<br/>&gt; &gt; on DAX mappings?<br/>&gt; <br/>&gt; Correct, the rlimit checks are a separate issue,<br/>&gt; get_user_pages_longterm is only there to avoid open coding vma lookup<br/>&gt; and vma_is_fsdax() checks in multiple code paths.<br/><br/>Then it is a terrible misnomer. One would expect this is a proper way to<br/>get a longterm pin on a page.<br/><br/>&gt; &gt; And maybe we should think about moving the rlimit accounting into this<br/>&gt; &gt; new function too someday?<br/>&gt; <br/>&gt; DAX pages are not accounted in any rlimit because they are statically<br/>&gt; allocated reserved memory regions.<br/><br/>Which is OK, but how do you prevent anybody calling this function on<br/>normal LRU pages?<br/><br/>-- <br/>Michal Hocko<br/>SUSE Labs<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:33    [W:0.047 / U:3.588 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

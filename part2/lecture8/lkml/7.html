@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Geert Uytterhoeven: [PATCH v4 0/4] Teach phylib hard-resetting devices
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Geert Uytterhoeven" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/190" onclick="this.href='/lkml/headers'+'/2017/12/4/190';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/190">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/190">
+        First message in thread
+       </a>
+      </li>
+      <li class="origin">
+       <a href="/lkml/2017/12/4/191">
+        Geert Uytterhoeven
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/191">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/192">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/195">
+          Geert Uytterhoeven
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/196">
+          Geert Uytterhoeven
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Geert Uytterhoeven &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH v4 0/4] Teach phylib hard-resetting devices
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:34:48 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">	Hi David, Andrew, Florian, Simon, Magnus,<br/><br/>This patch series adds optional PHY reset support to phylib.<br/><br/>The first two patches are destined for David's net-next tree. They add<br/>core PHY reset code, and update a driver that currently uses its own<br/>reset code.<br/><br/>The last two patches are destined for Simon's renesas tree.  They add<br/>properties to describe the EthernetAVB PHY reset topology to the common<br/>Salvator-X/XS and ULCB DTS files, which solves two issues:<br/>  1. On Salvator-XS, the enable pin of the regulator providing PHY power<br/>     is connected to PRESETn, and PSCI powers down the SoC during system<br/>     suspend.  Hence a PHY reset is needed to restore network<br/>     functionality after system resume.<br/>  2. Linux should not rely on the boot loader having reset the PHY, but<br/>     should reset the PHY during driver probe.<br/><br/>Changes compared to v3:<br/>  - Remove Florian's Acked-by,<br/>  - Add missing #include &lt;linux/gpio/consumer.h&gt;,<br/>  - Re-add the gpiod check, as the dummy gpiod_set_value() for !GPIOLIB<br/>    does not ignore NULL, and calls WARN_ON(1),<br/>  - Do not reassert the reset signal if {mdio,phy}_probe() or<br/>    phy_device_register() succeeded, as that may destroy initial setup,<br/>  - Do not deassert the reset signal in {mdio,phy}_remove(), as it<br/>    should already be deasserted,<br/>  - Bring the PHY back into reset state in phy_device_remove(),<br/>  - Move/consolidate GPIO descriptor acquiring code from<br/>    of_mdiobus_register_phy() and of_mdiobus_register_device() to<br/>    mdiobus_register_device().<br/>    Note that this changes behavior slightly, in that the reset signal<br/>    is now also asserted when called from of_mdiobus_register_device().<br/>  - Add Reviewed-by,<br/><br/>Changes compared to v2, as sent by Sergei Shtylyov:<br/>  - Fix fwnode_get_named_gpiod() call due to added parameters (which<br/>    allowed to eliminate the gpiod_direction_output() call),<br/>  - Rebased, refreshed, reworded,<br/>  - Take over from Sergei,<br/>  - Add Acked-by,<br/>  - Remove unneeded gpiod check, as gpiod_set_value() handles NULL fine,<br/>  - Handle fwnode_get_named_gpiod() errors correctly:<br/>      - -ENOENT is ignored (the GPIO is optional), and turned into NULL,<br/>	which allowed to remove all later !IS_ERR() checks,<br/>      - Other errors (incl. -EPROBE_DEFER) are propagated,<br/>  - Extract DTS patches from series "[PATCH 0/4] ravb: Add PHY reset<br/>    support" (<a href="https://www.spinics.net/lists/netdev/msg457308.html">https://www.spinics.net/lists/netdev/msg457308.html</a>), and<br/>    incorporate in this series, after moving reset-gpios from the<br/>    ethernet to the ethernet-phy node.<br/><br/>Given (1) the new reset-gpios DT property in the PHY node follows<br/>established practises, (2) the DT binding change in the first patch has<br/>been acked by Rob, and (3) the DTS patch does not cause any regressions<br/>if it is applied before the PHY driver patches, the DTS patches can be<br/>applied independently.<br/><br/>Thanks!<br/><br/>Geert Uytterhoeven (2):<br/>  arm64: dts: renesas: salvator-common: Add EthernetAVB PHY reset<br/>  arm64: dts: renesas: ulcb: Add EthernetAVB PHY reset<br/><br/>Sergei Shtylyov (2):<br/>  phylib: Add device reset GPIO support<br/>  macb: Kill PHY reset code<br/><br/> Documentation/devicetree/bindings/net/phy.txt    |  2 ++<br/> arch/arm64/boot/dts/renesas/salvator-common.dtsi |  1 +<br/> arch/arm64/boot/dts/renesas/ulcb.dtsi            |  1 +<br/> drivers/net/ethernet/cadence/macb.h              |  1 -<br/> drivers/net/ethernet/cadence/macb_main.c         | 21 ----------------<br/> drivers/net/phy/at803x.c                         | 18 +++----------<br/> drivers/net/phy/mdio_bus.c                       | 21 ++++++++++++++++<br/> drivers/net/phy/mdio_device.c                    | 25 ++++++++++++++++--<br/> drivers/net/phy/phy_device.c                     | 32 ++++++++++++++++++++++--<br/> include/linux/mdio.h                             |  3 +++<br/> include/linux/phy.h                              |  5 ++++<br/> 11 files changed, 89 insertions(+), 41 deletions(-)<br/><br/>-- <br/>2.7.4<br/><br/>Gr{oetje,eeting}s,<br/><br/>						Geert<br/><br/>--<br/>Geert Uytterhoeven -- There's lots of Linux beyond ia32 -- geert@linux-m68k.org<br/><br/>In personal conversations with technical people, I call myself a hacker. But<br/>when I'm talking to journalists I just say "programmer" or something like that.<br/>							    -- Linus Torvalds<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:35    [W:0.023 / U:0.464 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

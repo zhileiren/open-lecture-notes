@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Juri Lelli: [RFC PATCH v2 6/8] sched/sched.h: remove sd arch_scale_freq_capacity parameter
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Juri Lelli" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/176" onclick="this.href='/lkml/headers'+'/2017/12/4/176';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/176">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/173">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/173">
+        Juri Lelli
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/174">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/175">
+          Juri Lelli
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/177">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/180">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/181">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/182">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/183">
+          Juri Lelli
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/176/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Juri Lelli &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [RFC PATCH v2 6/8] sched/sched.h: remove sd arch_scale_freq_capacity parameter
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:23:23 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">From: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/><br/>sd parameter is never used in arch_scale_freq_capacity (and it's hard to<br/>see where information coming from scheduling domains might help doing<br/>frequency invariance scaling).<br/><br/>Remove it; also in anticipation of moving arch_scale_freq_capacity<br/>outside CONFIG_SMP.<br/><br/>Signed-off-by: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/>Cc: Peter Zijlstra &lt;peterz@infradead.org&gt;<br/>Cc: Ingo Molnar &lt;mingo@kernel.org&gt;<br/>---<br/> include/linux/arch_topology.h | 2 +-<br/> kernel/sched/fair.c           | 2 +-<br/> kernel/sched/sched.h          | 4 ++--<br/> 3 files changed, 4 insertions(+), 4 deletions(-)<br/><br/>diff --git a/include/linux/arch_topology.h b/include/linux/arch_topology.h<br/>index 304511267c82..2b709416de05 100644<br/>--- a/include/linux/arch_topology.h<br/>+++ b/include/linux/arch_topology.h<br/>@@ -27,7 +27,7 @@ void topology_set_cpu_scale(unsigned int cpu, unsigned long capacity);<br/> DECLARE_PER_CPU(unsigned long, freq_scale);<br/> <br/> static inline<br/>-unsigned long topology_get_freq_scale(struct sched_domain *sd, int cpu)<br/>+unsigned long topology_get_freq_scale(int cpu)<br/> {<br/> 	return per_cpu(freq_scale, cpu);<br/> }<br/>diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c<br/>index 4037e19bbca2..535d9409f4af 100644<br/>--- a/kernel/sched/fair.c<br/>+++ b/kernel/sched/fair.c<br/>@@ -3122,7 +3122,7 @@ accumulate_sum(u64 delta, int cpu, struct sched_avg *sa,<br/> 	u32 contrib = (u32)delta; /* p == 0 -&gt; delta &lt; 1024 */<br/> 	u64 periods;<br/> <br/>-	scale_freq = arch_scale_freq_capacity(NULL, cpu);<br/>+	scale_freq = arch_scale_freq_capacity(cpu);<br/> 	scale_cpu = arch_scale_cpu_capacity(NULL, cpu);<br/> <br/> 	delta += sa-&gt;period_contrib;<br/>diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h<br/>index 280b421a82e8..b64207d54a55 100644<br/>--- a/kernel/sched/sched.h<br/>+++ b/kernel/sched/sched.h<br/>@@ -1712,7 +1712,7 @@ extern void sched_avg_update(struct rq *rq);<br/> <br/> #ifndef arch_scale_freq_capacity<br/> static __always_inline<br/>-unsigned long arch_scale_freq_capacity(struct sched_domain *sd, int cpu)<br/>+unsigned long arch_scale_freq_capacity(int cpu)<br/> {<br/> 	return SCHED_CAPACITY_SCALE;<br/> }<br/>@@ -1731,7 +1731,7 @@ unsigned long arch_scale_cpu_capacity(struct sched_domain *sd, int cpu)<br/> <br/> static inline void sched_rt_avg_update(struct rq *rq, u64 rt_delta)<br/> {<br/>-	rq-&gt;rt_avg += rt_delta * arch_scale_freq_capacity(NULL, cpu_of(rq));<br/>+	rq-&gt;rt_avg += rt_delta * arch_scale_freq_capacity(cpu_of(rq));<br/> 	sched_avg_update(rq);<br/> }<br/> #else<br/>-- <br/>2.14.3<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:25    [W:0.055 / U:3.896 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

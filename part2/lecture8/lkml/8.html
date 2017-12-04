@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Daniel Wagner: Re: [PATCH] sched/rt: Do not pull from current CPU if only one cpu to pull
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Daniel Wagner" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/189" onclick="this.href='/lkml/headers'+'/2017/12/4/189';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/189">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/2/269">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/2/269">
+        Steven Rostedt
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/54">
+          Juri Lelli
+         </a>
+         <ul>
+          <li>
+           <a href="/lkml/2017/12/4/61">
+            Steven Rostedt
+           </a>
+           <ul>
+            <li>
+             <a href="/lkml/2017/12/4/93">
+              Juri Lelli
+             </a>
+             <ul>
+              <li>
+               <a href="/lkml/2017/12/4/145">
+                Steven Rostedt
+               </a>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li class="origin">
+         <a href="">
+          Daniel Wagner
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH] sched/rt: Do not pull from current CPU if only one cpu to pull
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Daniel Wagner &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 11:29:17 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">Hi Steven,<br/><br/>On 12/02/2017 07:04 PM, Steven Rostedt wrote:<br/>&gt; Daniel Wagner reported a crash on the beaglebone black. This is a<br/>&gt; single CPU architecture, and does not have a functional:<br/>&gt; arch_send_call_function_single_ipi() and can crash if that is called.<br/>&gt; <br/>&gt; As it only has one CPU, it shouldn't be called, but if the kernel is<br/>&gt; compiled for SMP, the push/pull RT scheduling logic now calls it for<br/>&gt; irq_work if the one CPU is overloaded, it can use that function to call<br/>&gt; itself and crash the kernel.<br/>&gt; <br/>&gt; Ideally, we should disable the SCHED_FEAT(RT_PUSH_IPI) if the system<br/>&gt; only has a single CPU. But SCHED_FEAT is a constant if sched debugging<br/>&gt; is turned off. Another fix can also be used, and this should also help<br/>&gt; with normal SMP machines. That is, do not initiate the pull code if<br/>&gt; there's only one RT overloaded CPU, and that CPU happens to be the<br/>&gt; current CPU that is scheduling in a lower priority task.<br/>&gt; <br/>&gt; Even on a system with many CPUs, if there's many RT tasks waiting to<br/>&gt; run on a single CPU, and that CPU schedules in another RT task of lower<br/>&gt; priority, it will initiate the PULL logic in case there's a higher<br/>&gt; priority RT task on another CPU that is waiting to run. But if there is<br/>&gt; no other CPU with waiting RT tasks, it will initiate the RT pull logic<br/>&gt; on itself (as it still has RT tasks waiting to run). This is a wasted<br/>&gt; effort.<br/>&gt; <br/>&gt; Not only does this help with SMP code where the current CPU is the only<br/>&gt; one with RT overloaded tasks, it should also solve the issue that<br/>&gt; Daniel encountered, because it will prevent the PULL logic from<br/>&gt; executing, as there's only one CPU on the system, and the check added<br/>&gt; here will cause it to exit the RT pull code.<br/>&gt; <br/>&gt; Link: <a href="http://lkml.kernel.org/r/8c913cc2-b2e3-8c2e-e503-aff1428f8ff5@monom.org">http://lkml.kernel.org/r/8c913cc2-b2e3-8c2e-e503-aff1428f8ff5@monom.org</a><br/>&gt; Fixes: 4bdced5c9 ("sched/rt: Simplify the IPI based RT balancing logic")<br/>&gt; Cc: stable@vger.kernel.org<br/>&gt; Reported-by: Daniel Wagner &lt;wagi@monom.org&gt;<br/><br/>Tested-by: Daniel Wagner &lt;wagi@monom.org&gt;<br/><br/>Thanks,<br/>Daniel<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:35    [W:0.022 / U:2.984 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

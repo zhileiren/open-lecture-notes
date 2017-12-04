@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Patrick Bellasi: [PATCH] tracing: Fix trace_preempt_{on,off} for !CONFIG_DEBUG_PREEMPT builds
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Patrick Bellasi" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/135" onclick="this.href='/lkml/headers'+'/2017/12/4/135';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/135">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/135">
+        First message in thread
+       </a>
+      </li>
+      <li class="origin">
+       <a href="">
+        Patrick Bellasi
+       </a>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/135/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1305798">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Patrick Bellasi &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH] tracing: Fix trace_preempt_{on,off} for !CONFIG_DEBUG_PREEMPT builds
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 09:46:42 +0000
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">The new preempt enable/disable events introduced by:<br/><br/> d59158162 tracing: Add support for preempt and irq enable/disable events<br/><br/>are defined only for CONFIG_DEBUG_PREEMPT kernels when the<br/>CONFIG_PREEMPTIRQ_EVENTS support, introduced by the above patch, is<br/>enabled.<br/><br/>These events are generated within by trace_preempt_{on,off} calls,<br/>which are part of the the "Preemption-off Latency Tracer"<br/>(CONFIG_PREEMPT_TRACER).<br/><br/>Currently these calls are (correctly) generated on CONFIG_PREEMPT_TRACER<br/>even when the kernel is !CONFIG_DEBUG_PREEMPT configured. Thus leading<br/>to an undefined reference to the new trace events.<br/><br/>Let's ensure that we always have an (eventually) empty definition of the<br/>events for CONFIG_PREEMPTIRQ_EVENTS kernels.<br/><br/>This patch will ensure that the additional preempt enabled/disable<br/>events are generated only when we have both:<br/> CONFIG_PREEMPT_TRACER &amp;&amp; CONFIG_DEBUG_PREEMPT<br/><br/>Signed-off-by: Patrick Bellasi &lt;patrick.bellasi@arm.com&gt;<br/>Reviewed-by: Dietmar Eggemann &lt;dietmar.eggemann@arm.com&gt;<br/>Reviewed-by: Alessio Balsini &lt;alessio.balsini@arm.com&gt;<br/>Cc: Steven Rostedt &lt;rostedt@goodmis.org&gt;<br/>Cc: Ingo Molnar &lt;mingo@redhat.com&gt;<br/>Cc: Joel Fernandes &lt;joelaf@google.com&gt;<br/>Cc: Linux-kernel@vger.kernel.org<br/><br/>---<br/>Fix kernel compilation for this configuration:<br/> !CONFIG_DEBUG_PREEMPT &amp;&amp; CONFIG_PREEMPT_TRACER<br/><br/>To reproduce, e.g.<br/> 1. make defconfig<br/> 2. add:<br/>    CONFIG_PREEMPTIRQ_EVENTS=y<br/>    CONFIG_PREEMPT_TRACER=y<br/> 3. make kernel/trace/trace_irqsoff.o<br/><br/>For sake of consistency, this patch adds a default empty definition of<br/>all the new trace events whenever CONFIG_PREEMPTIRQ_EVENTS is enabled<br/>but the specific event's requirements are not satisfied.<br/>This is complementary to the default empty definitions provided<br/>for the !CONFIG_PREEMPTIRQ_EVENTS case.<br/>---<br/> include/trace/events/preemptirq.h | 10 ++++++++++<br/> kernel/trace/trace_irqsoff.c      |  3 +--<br/> 2 files changed, 11 insertions(+), 2 deletions(-)<br/><br/>diff --git a/include/trace/events/preemptirq.h b/include/trace/events/preemptirq.h<br/>index f5024c560d8f..500ad0a221d5 100644<br/>--- a/include/trace/events/preemptirq.h<br/>+++ b/include/trace/events/preemptirq.h<br/>@@ -40,6 +40,11 @@ DEFINE_EVENT(preemptirq_template, irq_disable,<br/> DEFINE_EVENT(preemptirq_template, irq_enable,<br/> 	     TP_PROTO(unsigned long ip, unsigned long parent_ip),<br/> 	     TP_ARGS(ip, parent_ip));<br/>+#else<br/>+#define trace_irq_disable(...)<br/>+#define trace_irq_enable(...)<br/>+#define trace_irq_disable_rcuidle(...)<br/>+#define trace_irq_enable_rcuidle(...)<br/> #endif<br/> <br/> #ifdef CONFIG_DEBUG_PREEMPT<br/>@@ -50,6 +55,11 @@ DEFINE_EVENT(preemptirq_template, preempt_disable,<br/> DEFINE_EVENT(preemptirq_template, preempt_enable,<br/> 	     TP_PROTO(unsigned long ip, unsigned long parent_ip),<br/> 	     TP_ARGS(ip, parent_ip));<br/>+#else<br/>+#define trace_preempt_disable(...)<br/>+#define trace_preempt_enable(...)<br/>+#define trace_preempt_disable_rcuidle(...)<br/>+#define trace_preempt_enable_rcuidle(...)<br/> #endif<br/> <br/> #endif /* _TRACE_PREEMPTIRQ_H */<br/>diff --git a/kernel/trace/trace_irqsoff.c b/kernel/trace/trace_irqsoff.c<br/>index 03ecb4465ee4..9d62e5f30d58 100644<br/>--- a/kernel/trace/trace_irqsoff.c<br/>+++ b/kernel/trace/trace_irqsoff.c<br/>@@ -848,8 +848,7 @@ inline void print_irqtrace_events(struct task_struct *curr)<br/> }<br/> #endif<br/> <br/>-#if defined(CONFIG_PREEMPT_TRACER) || \<br/>-	(defined(CONFIG_DEBUG_PREEMPT) &amp;&amp; defined(CONFIG_PREEMPTIRQ_EVENTS))<br/>+#ifdef CONFIG_PREEMPT_TRACER<br/> void trace_preempt_on(unsigned long a0, unsigned long a1)<br/> {<br/> 	trace_preempt_enable_rcuidle(a0, a1);<br/>-- <br/>2.14.1<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:47    [W:0.022 / U:4.016 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

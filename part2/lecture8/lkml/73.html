@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Dave Young: Re: [GIT PULL] hash addresses printed with %p
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Dave Young" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/124" onclick="this.href='/lkml/headers'+'/2017/12/4/124';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/124">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/28/1664">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/3/226">
+        Dave Young
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/3/233">
+          Joe Perches
+         </a>
+         <ul>
+          <li>
+           <a href="/lkml/2017/12/3/235">
+            Dave Young
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/52">
+          Greg Kroah-Hartman
+         </a>
+         <ul>
+          <li class="origin">
+           <a href="/lkml/2017/12/4/127">
+            Dave Young
+           </a>
+           <ul>
+            <li>
+             <a href="/lkml/2017/12/4/127">
+              Greg Kroah-Hartman
+             </a>
+             <ul>
+              <li>
+               <a href="/lkml/2017/12/4/141">
+                Ard Biesheuvel
+               </a>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 17:29:28 +0800
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Dave Young &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [GIT PULL] hash addresses printed with %p
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On 12/04/17 at 08:36am, Greg Kroah-Hartman wrote:<br/>&gt; On Mon, Dec 04, 2017 at 10:02:16AM +0800, Dave Young wrote:<br/>&gt; &gt; +#define __ATTR_IRUSR(_name) {						\<br/>&gt; &gt; +	.attr   = { .name = __stringify(_name), .mode = S_IRUSR },	\<br/>&gt; &gt; +	.show   = _name##_show,						\<br/>&gt; &gt; +}<br/>&gt; <br/>&gt; Ick, no, as others, including Linus, have said, using IRUSER is a pain<br/>&gt; in the ass to try to look up and remember what it is...<br/>&gt; <br/>&gt; Just use __ATTR() please, it should be fine for what you need to do,<br/>&gt; which is special-case a sysfs attribute.<br/><br/>Hmm, I was hesitating to do that because it needs either long code<br/>(over 80 chars) or some driver internal macros.<br/><br/>There is already same issue in dmi-sysfs.c, it uses an internal macro<br/>DMI_SYSFS_ATTR for 0400 attr.  I did not search all the kernel code,<br/>there might be more for such special cases. Maybe we can add some<br/>comment in sysfs.h to mention this is for some special case?<br/><br/>I can do something similar as dmi sysfs code though.<br/><br/>&gt; <br/>&gt; thanks,<br/>&gt; <br/>&gt; greg k-h<br/><br/>Thanks<br/>Dave<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:30    [W:0.079 / U:3.516 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

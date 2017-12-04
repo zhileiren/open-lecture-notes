@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Dan Carpenter: Re: [PATCH 4/6] staging: pi433: Rename enum optionOnOff in rf69_enum.h
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Dan Carpenter" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/170" onclick="this.href='/lkml/headers'+'/2017/12/4/170';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/170">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/3/75">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/3/75">
+        =?UTF-8?q?Simon=20Sandstr=C3=B6m?=
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/3/77">
+          =?UTF-8?q?Simon=20Sandstr=C3=B6m?=
+         </a>
+         <ul>
+          <li>
+           <a href="/lkml/2017/12/4/188">
+            Dan Carpenter
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/3/78">
+          =?UTF-8?q?Simon=20Sandstr=C3=B6m?=
+         </a>
+         <ul>
+          <li>
+           <a href="/lkml/2017/12/4/178">
+            Dan Carpenter
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/3/79">
+          =?UTF-8?q?Simon=20Sandstr=C3=B6m?=
+         </a>
+         <ul>
+          <li>
+           <a href="/lkml/2017/12/3/94">
+            Marcus Wolf
+           </a>
+           <ul>
+            <li>
+             <a href="/lkml/2017/12/4/161">
+              Simon =?utf-8?Q?Sandstr=C3=B6m?=
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="origin">
+           <a href="/lkml/2017/12/4/197">
+            Dan Carpenter
+           </a>
+           <ul>
+            <li>
+             <a href="/lkml/2017/12/4/197">
+              Dan Carpenter
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/3/80">
+          =?UTF-8?q?Simon=20Sandstr=C3=B6m?=
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/3/81">
+          =?UTF-8?q?Simon=20Sandstr=C3=B6m?=
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/3/82">
+          =?UTF-8?q?Simon=20Sandstr=C3=B6m?=
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/170/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 13:17:37 +0300
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Dan Carpenter &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: [PATCH 4/6] staging: pi433: Rename enum optionOnOff in rf69_enum.h
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On Sun, Dec 03, 2017 at 04:17:24PM +0100, Simon Sandström wrote:<br/>&gt; Renames the enum optionOnOff and its values optionOn, optionOff to enum<br/>&gt; option_on_off and OPTION_ON, OPTION_OFF. Fixes checkpatch.pl warnings:<br/>&gt; "Avoid CamelCase: &lt;optionOnOff&gt;, &lt;optionOn&gt;, &lt;optionOff&gt;".<br/>&gt; <br/>&gt; Signed-off-by: Simon Sandström &lt;simon@nikanor.nu&gt;<br/>&gt; ---<br/>&gt;  drivers/staging/pi433/pi433_if.c  | 34 ++++++++++++++---------------<br/>&gt;  drivers/staging/pi433/pi433_if.h  | 16 +++++++-------<br/>&gt;  drivers/staging/pi433/rf69.c      | 45 ++++++++++++++++++++++-----------------<br/>&gt;  drivers/staging/pi433/rf69.h      | 15 ++++++++-----<br/>&gt;  drivers/staging/pi433/rf69_enum.h |  6 +++---<br/>&gt;  5 files changed, 63 insertions(+), 53 deletions(-)<br/>&gt; <br/>&gt; diff --git a/drivers/staging/pi433/pi433_if.c b/drivers/staging/pi433/pi433_if.c<br/>&gt; index b8efe6a74a2a..4f6830f369e9 100644<br/>&gt; --- a/drivers/staging/pi433/pi433_if.c<br/>&gt; +++ b/drivers/staging/pi433/pi433_if.c<br/>&gt; @@ -198,7 +198,7 @@ rf69_set_rx_cfg(struct pi433_device *dev, struct pi433_rx_cfg *rx_cfg)<br/>&gt;  	/* packet config */<br/>&gt;  	/* enable */<br/>&gt;  	SET_CHECKED(rf69_set_sync_enable(dev-&gt;spi, rx_cfg-&gt;enable_sync));<br/>&gt; -	if (rx_cfg-&gt;enable_sync == optionOn)<br/>&gt; +	if (rx_cfg-&gt;enable_sync == OPTION_ON)<br/><br/>I haven't told anyone yet, but I wish someone would just get rid of<br/>optionOn entirely.  This should just be:<br/><br/>	if (rx_cfg-&gt;enable_sync) {<br/><br/><br/>&gt; diff --git a/drivers/staging/pi433/pi433_if.h b/drivers/staging/pi433/pi433_if.h<br/>&gt; index 6b31c1584b3a..34ff0d4807bd 100644<br/>&gt; --- a/drivers/staging/pi433/pi433_if.h<br/>&gt; +++ b/drivers/staging/pi433/pi433_if.h<br/>&gt; @@ -73,11 +73,11 @@ struct pi433_tx_cfg {<br/>&gt;  <br/>&gt;  <br/>&gt;  	/* packet format */<br/>&gt; -	enum optionOnOff	enable_preamble;<br/>&gt; -	enum optionOnOff	enable_sync;<br/>&gt; -	enum optionOnOff	enable_length_byte;<br/>&gt; -	enum optionOnOff	enable_address_byte;<br/>&gt; -	enum optionOnOff	enable_crc;<br/>&gt; +	enum option_on_off	enable_preamble;<br/>&gt; +	enum option_on_off	enable_sync;<br/>&gt; +	enum option_on_off	enable_length_byte;<br/>&gt; +	enum option_on_off	enable_address_byte;<br/>&gt; +	enum option_on_off	enable_crc;<br/><br/>These should be bool.<br/><br/>&gt; -int rf69_set_amplifier_0(struct spi_device *spi, enum optionOnOff optionOnOff)<br/>&gt; +int rf69_set_amplifier_0(struct spi_device *spi,<br/>&gt; +			 enum option_on_off option_on_off)<br/><br/><br/>This should be two functions:<br/><br/>int rf69_enable_amplifier_0(struct spi_device *spi)<br/>{<br/>	return WRITE_REG(REG_PALEVEL, (READ_REG(REG_PALEVEL) |  MASK_PALEVEL_PA0));<br/>}<br/><br/>int rf69_disable_amplifier_0(struct spi_device *spi)<br/>{<br/>	return WRITE_REG(REG_PALEVEL, (READ_REG(REG_PALEVEL) &amp; ~MASK_PALEVEL_PA0));<br/>}<br/><br/>Perhaps choose different function names if you want?  You could do it<br/>as several patches:<br/><br/>patch 1: change types to bool<br/>patch 2: sed -e '/ == optionOn//'<br/>patch 3: split the functions into two functions<br/>patch 4: delete optionOnOff enum<br/><br/>patches 1 and 2 could be merged together (your choice).<br/><br/>regards,<br/>dan carpenter<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:18    [W:0.077 / U:7.364 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

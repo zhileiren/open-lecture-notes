@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Juri Lelli: [RFC PATCH v2 7/8] sched/sched.h: move arch_scale_{freq,cpu}_capacity outside CONFIG_SMP
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Juri Lelli" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/180" onclick="this.href='/lkml/headers'+'/2017/12/4/180';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/180">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/173">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/173">
+        Juri Lelli
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/174">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/175">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/176">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/177">
+          Juri Lelli
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/181">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/182">
+          Juri Lelli
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/183">
+          Juri Lelli
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/180/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Juri Lelli &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [RFC PATCH v2 7/8] sched/sched.h: move arch_scale_{freq,cpu}_capacity outside CONFIG_SMP
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 11:23:24 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">From: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/><br/>Currently, frequency and cpu capacity scaling is only performed on<br/>CONFIG_SMP systems (as CFS PELT signals are only present for such<br/>systems). However, other scheduling classes want to do freq/cpu scaling,<br/>and for !CONFIG_SMP configurations as well.<br/><br/>arch_scale_freq_capacity is useful to implement frequency scaling even<br/>on !CONFIG_SMP platforms, so we simply move it outside CONFIG_SMP<br/>ifdeffery.<br/><br/>Even if arch_scale_cpu_capacity is not useful on !CONFIG_SMP platforms,<br/>we make a default implementation available for such configurations anyway<br/>to simplify scheduler code doing CPU scale invariance.<br/><br/>Signed-off-by: Juri Lelli &lt;juri.lelli@arm.com&gt;<br/>Cc: Peter Zijlstra &lt;peterz@infradead.org&gt;<br/>Cc: Ingo Molnar &lt;mingo@kernel.org&gt;<br/>Reviewed-by: Steven Rostedt (VMware) &lt;rostedt@goodmis.org&gt;<br/>---<br/> include/linux/sched/topology.h | 12 ++++++------<br/> kernel/sched/sched.h           | 13 ++++++++++---<br/> 2 files changed, 16 insertions(+), 9 deletions(-)<br/><br/>diff --git a/include/linux/sched/topology.h b/include/linux/sched/topology.h<br/>index cf257c2e728d..26347741ba50 100644<br/>--- a/include/linux/sched/topology.h<br/>+++ b/include/linux/sched/topology.h<br/>@@ -6,6 +6,12 @@<br/> <br/> #include &lt;linux/sched/idle.h&gt;<br/> <br/>+/*<br/>+ * Increase resolution of cpu_capacity calculations<br/>+ */<br/>+#define SCHED_CAPACITY_SHIFT	SCHED_FIXEDPOINT_SHIFT<br/>+#define SCHED_CAPACITY_SCALE	(1L &lt;&lt; SCHED_CAPACITY_SHIFT)<br/>+<br/> /*<br/>  * sched-domains (multiprocessor balancing) declarations:<br/>  */<br/>@@ -27,12 +33,6 @@<br/> #define SD_OVERLAP		0x2000	/* sched_domains of this level overlap */<br/> #define SD_NUMA			0x4000	/* cross-node balancing */<br/> <br/>-/*<br/>- * Increase resolution of cpu_capacity calculations<br/>- */<br/>-#define SCHED_CAPACITY_SHIFT	SCHED_FIXEDPOINT_SHIFT<br/>-#define SCHED_CAPACITY_SCALE	(1L &lt;&lt; SCHED_CAPACITY_SHIFT)<br/>-<br/> #ifdef CONFIG_SCHED_SMT<br/> static inline int cpu_smt_flags(void)<br/> {<br/>diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h<br/>index b64207d54a55..0022c649fabb 100644<br/>--- a/kernel/sched/sched.h<br/>+++ b/kernel/sched/sched.h<br/>@@ -1707,9 +1707,6 @@ static inline int hrtick_enabled(struct rq *rq)<br/> <br/> #endif /* CONFIG_SCHED_HRTICK */<br/> <br/>-#ifdef CONFIG_SMP<br/>-extern void sched_avg_update(struct rq *rq);<br/>-<br/> #ifndef arch_scale_freq_capacity<br/> static __always_inline<br/> unsigned long arch_scale_freq_capacity(int cpu)<br/>@@ -1718,6 +1715,9 @@ unsigned long arch_scale_freq_capacity(int cpu)<br/> }<br/> #endif<br/> <br/>+#ifdef CONFIG_SMP<br/>+extern void sched_avg_update(struct rq *rq);<br/>+<br/> #ifndef arch_scale_cpu_capacity<br/> static __always_inline<br/> unsigned long arch_scale_cpu_capacity(struct sched_domain *sd, int cpu)<br/>@@ -1735,6 +1735,13 @@ static inline void sched_rt_avg_update(struct rq *rq, u64 rt_delta)<br/> 	sched_avg_update(rq);<br/> }<br/> #else<br/>+#ifndef arch_scale_cpu_capacity<br/>+static __always_inline<br/>+unsigned long arch_scale_cpu_capacity(void __always_unused *sd, int cpu)<br/>+{<br/>+	return SCHED_CAPACITY_SCALE;<br/>+}<br/>+#endif<br/> static inline void sched_rt_avg_update(struct rq *rq, u64 rt_delta) { }<br/> static inline void sched_avg_update(struct rq *rq) { }<br/> #endif<br/>-- <br/>2.14.3<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:26    [W:0.021 / U:3.104 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

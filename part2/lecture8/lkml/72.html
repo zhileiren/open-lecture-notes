@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Jason Wang: [PATCH net-next V3] tun: add eBPF based queue selection method
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Jason Wang" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/125" onclick="this.href='/lkml/headers'+'/2017/12/4/125';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/125">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/125">
+        First message in thread
+       </a>
+      </li>
+      <li class="origin">
+       <a href="">
+        Jason Wang
+       </a>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/125/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1305798">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Jason Wang &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH net-next V3] tun: add eBPF based queue selection method
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 17:31:23 +0800
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">This patch introduces an eBPF based queue selection method. With this,<br/>the policy could be offloaded to userspace completely through a new<br/>ioctl TUNSETSTEERINGEBPF.<br/><br/>Signed-off-by: Jason Wang &lt;jasowang@redhat.com&gt;<br/>---<br/>Changes from V2:<br/>- call rtnl during netdev free<br/>- switch to use call_rcu() to prevent DOS from userspace<br/>- drop the policies setting/getting ioctls and allow detach through<br/>  passing -1 as fd<br/>---<br/> drivers/net/tun.c           | 145 +++++++++++++++++++++++++++++++++++++-------<br/> include/uapi/linux/if_tun.h |   1 +<br/> 2 files changed, 123 insertions(+), 23 deletions(-)<br/><br/>diff --git a/drivers/net/tun.c b/drivers/net/tun.c<br/>index 9574900..f6557e8 100644<br/>--- a/drivers/net/tun.c<br/>+++ b/drivers/net/tun.c<br/>@@ -195,6 +195,11 @@ struct tun_flow_entry {<br/> <br/> #define TUN_NUM_FLOW_ENTRIES 1024<br/> <br/>+struct tun_steering_prog {<br/>+	struct rcu_head rcu;<br/>+	struct bpf_prog *prog;<br/>+};<br/>+<br/> /* Since the socket were moved to tun_file, to preserve the behavior of persist<br/>  * device, socket filter, sndbuf and vnet header size were restore when the<br/>  * file were attached to a persist device.<br/>@@ -232,6 +237,7 @@ struct tun_struct {<br/> 	u32 rx_batched;<br/> 	struct tun_pcpu_stats __percpu *pcpu_stats;<br/> 	struct bpf_prog __rcu *xdp_prog;<br/>+	struct tun_steering_prog __rcu *steering_prog;<br/> };<br/> <br/> static int tun_napi_receive(struct napi_struct *napi, int budget)<br/>@@ -537,15 +543,12 @@ static inline void tun_flow_save_rps_rxhash(struct tun_flow_entry *e, u32 hash)<br/>  * different rxq no. here. If we could not get rxhash, then we would<br/>  * hope the rxq no. may help here.<br/>  */<br/>-static u16 tun_select_queue(struct net_device *dev, struct sk_buff *skb,<br/>-			    void *accel_priv, select_queue_fallback_t fallback)<br/>+static u16 tun_automq_select_queue(struct tun_struct *tun, struct sk_buff *skb)<br/> {<br/>-	struct tun_struct *tun = netdev_priv(dev);<br/> 	struct tun_flow_entry *e;<br/> 	u32 txq = 0;<br/> 	u32 numqueues = 0;<br/> <br/>-	rcu_read_lock();<br/> 	numqueues = READ_ONCE(tun-&gt;numqueues);<br/> <br/> 	txq = __skb_get_hash_symmetric(skb);<br/>@@ -563,10 +566,37 @@ static u16 tun_select_queue(struct net_device *dev, struct sk_buff *skb,<br/> 			txq -= numqueues;<br/> 	}<br/> <br/>-	rcu_read_unlock();<br/> 	return txq;<br/> }<br/> <br/>+static u16 tun_ebpf_select_queue(struct tun_struct *tun, struct sk_buff *skb)<br/>+{<br/>+	struct tun_steering_prog *prog;<br/>+	u16 ret = 0;<br/>+<br/>+	prog = rcu_dereference(tun-&gt;steering_prog);<br/>+	if (prog)<br/>+		ret = bpf_prog_run_clear_cb(prog-&gt;prog, skb);<br/>+<br/>+	return ret % tun-&gt;numqueues;<br/>+}<br/>+<br/>+static u16 tun_select_queue(struct net_device *dev, struct sk_buff *skb,<br/>+			    void *accel_priv, select_queue_fallback_t fallback)<br/>+{<br/>+	struct tun_struct *tun = netdev_priv(dev);<br/>+	u16 ret;<br/>+<br/>+	rcu_read_lock();<br/>+	if (rcu_dereference(tun-&gt;steering_prog))<br/>+		ret = tun_ebpf_select_queue(tun, skb);<br/>+	else<br/>+		ret = tun_automq_select_queue(tun, skb);<br/>+	rcu_read_unlock();<br/>+<br/>+	return ret;<br/>+}<br/>+<br/> static inline bool tun_not_capable(struct tun_struct *tun)<br/> {<br/> 	const struct cred *cred = current_cred();<br/>@@ -937,23 +967,10 @@ static int tun_net_close(struct net_device *dev)<br/> }<br/> <br/> /* Net device start xmit */<br/>-static netdev_tx_t tun_net_xmit(struct sk_buff *skb, struct net_device *dev)<br/>+static void tun_automq_xmit(struct tun_struct *tun, struct sk_buff *skb)<br/> {<br/>-	struct tun_struct *tun = netdev_priv(dev);<br/>-	int txq = skb-&gt;queue_mapping;<br/>-	struct tun_file *tfile;<br/>-	u32 numqueues = 0;<br/>-<br/>-	rcu_read_lock();<br/>-	tfile = rcu_dereference(tun-&gt;tfiles[txq]);<br/>-	numqueues = READ_ONCE(tun-&gt;numqueues);<br/>-<br/>-	/* Drop packet if interface is not attached */<br/>-	if (txq &gt;= numqueues)<br/>-		goto drop;<br/>-<br/> #ifdef CONFIG_RPS<br/>-	if (numqueues == 1 &amp;&amp; static_key_false(&amp;rps_needed)) {<br/>+	if (tun-&gt;numqueues == 1 &amp;&amp; static_key_false(&amp;rps_needed)) {<br/> 		/* Select queue was not called for the skbuff, so we extract the<br/> 		 * RPS hash and save it into the flow_table here.<br/> 		 */<br/>@@ -969,6 +986,26 @@ static netdev_tx_t tun_net_xmit(struct sk_buff *skb, struct net_device *dev)<br/> 		}<br/> 	}<br/> #endif<br/>+}<br/>+<br/>+/* Net device start xmit */<br/>+static netdev_tx_t tun_net_xmit(struct sk_buff *skb, struct net_device *dev)<br/>+{<br/>+	struct tun_struct *tun = netdev_priv(dev);<br/>+	int txq = skb-&gt;queue_mapping;<br/>+	struct tun_file *tfile;<br/>+	u32 numqueues = 0;<br/>+<br/>+	rcu_read_lock();<br/>+	tfile = rcu_dereference(tun-&gt;tfiles[txq]);<br/>+	numqueues = READ_ONCE(tun-&gt;numqueues);<br/>+<br/>+	/* Drop packet if interface is not attached */<br/>+	if (txq &gt;= numqueues)<br/>+		goto drop;<br/>+<br/>+	if (!rcu_dereference(tun-&gt;steering_prog))<br/>+		tun_automq_xmit(tun, skb);<br/> <br/> 	tun_debug(KERN_INFO, tun, "tun_net_xmit %d\n", skb-&gt;len);<br/> <br/>@@ -1551,7 +1588,7 @@ static ssize_t tun_get_user(struct tun_struct *tun, struct tun_file *tfile,<br/> 	int copylen;<br/> 	bool zerocopy = false;<br/> 	int err;<br/>-	u32 rxhash;<br/>+	u32 rxhash = 0;<br/> 	int skb_xdp = 1;<br/> 	bool frags = tun_napi_frags_enabled(tun);<br/> <br/>@@ -1739,7 +1776,10 @@ static ssize_t tun_get_user(struct tun_struct *tun, struct tun_file *tfile,<br/> 		rcu_read_unlock();<br/> 	}<br/> <br/>-	rxhash = __skb_get_hash_symmetric(skb);<br/>+	rcu_read_lock();<br/>+	if (!rcu_dereference(tun-&gt;steering_prog))<br/>+		rxhash = __skb_get_hash_symmetric(skb);<br/>+	rcu_read_unlock();<br/> <br/> 	if (frags) {<br/> 		/* Exercise flow dissector code path. */<br/>@@ -1783,7 +1823,9 @@ static ssize_t tun_get_user(struct tun_struct *tun, struct tun_file *tfile,<br/> 	u64_stats_update_end(&amp;stats-&gt;syncp);<br/> 	put_cpu_ptr(stats);<br/> <br/>-	tun_flow_update(tun, rxhash, tfile);<br/>+	if (rxhash)<br/>+		tun_flow_update(tun, rxhash, tfile);<br/>+<br/> 	return total_len;<br/> }<br/> <br/>@@ -1988,6 +2030,36 @@ static ssize_t tun_chr_read_iter(struct kiocb *iocb, struct iov_iter *to)<br/> 	return ret;<br/> }<br/> <br/>+static void tun_steering_prog_free(struct rcu_head *rcu)<br/>+{<br/>+	struct tun_steering_prog *prog = container_of(rcu,<br/>+					 struct tun_steering_prog, rcu);<br/>+<br/>+	bpf_prog_destroy(prog-&gt;prog);<br/>+	kfree(prog);<br/>+}<br/>+<br/>+static int __tun_set_steering_ebpf(struct tun_struct *tun,<br/>+				   struct bpf_prog *prog)<br/>+{<br/>+	struct tun_steering_prog *old, *new = NULL;<br/>+<br/>+	if (prog) {<br/>+		new = kmalloc(sizeof(*new), GFP_KERNEL);<br/>+		if (!new)<br/>+			return -ENOMEM;<br/>+		new-&gt;prog = prog;<br/>+	}<br/>+<br/>+	old = rtnl_dereference(tun-&gt;steering_prog);<br/>+	rcu_assign_pointer(tun-&gt;steering_prog, new);<br/>+<br/>+	if (old)<br/>+		call_rcu(&amp;old-&gt;rcu, tun_steering_prog_free);<br/>+<br/>+	return 0;<br/>+}<br/>+<br/> static void tun_free_netdev(struct net_device *dev)<br/> {<br/> 	struct tun_struct *tun = netdev_priv(dev);<br/>@@ -1996,6 +2068,9 @@ static void tun_free_netdev(struct net_device *dev)<br/> 	free_percpu(tun-&gt;pcpu_stats);<br/> 	tun_flow_uninit(tun);<br/> 	security_tun_dev_free_security(tun-&gt;security);<br/>+	rtnl_lock();<br/>+	__tun_set_steering_ebpf(tun, NULL);<br/>+	rtnl_unlock();<br/> }<br/> <br/> static void tun_setup(struct net_device *dev)<br/>@@ -2275,6 +2350,7 @@ static int tun_set_iff(struct net *net, struct file *file, struct ifreq *ifr)<br/> 		tun-&gt;filter_attached = false;<br/> 		tun-&gt;sndbuf = tfile-&gt;socket.sk-&gt;sk_sndbuf;<br/> 		tun-&gt;rx_batched = 0;<br/>+		RCU_INIT_POINTER(tun-&gt;steering_prog, NULL);<br/> <br/> 		tun-&gt;pcpu_stats = netdev_alloc_pcpu_stats(struct tun_pcpu_stats);<br/> 		if (!tun-&gt;pcpu_stats) {<br/>@@ -2467,6 +2543,25 @@ static int tun_set_queue(struct file *file, struct ifreq *ifr)<br/> 	return ret;<br/> }<br/> <br/>+static int tun_set_steering_ebpf(struct tun_struct *tun, void __user *data)<br/>+{<br/>+	struct bpf_prog *prog;<br/>+	int fd;<br/>+<br/>+	if (copy_from_user(&amp;fd, data, sizeof(fd)))<br/>+		return -EFAULT;<br/>+<br/>+	if (fd == -1) {<br/>+		prog = NULL;<br/>+	} else {<br/>+		prog = bpf_prog_get_type(fd, BPF_PROG_TYPE_SOCKET_FILTER);<br/>+		if (IS_ERR(prog))<br/>+			return PTR_ERR(prog);<br/>+	}<br/>+<br/>+	return __tun_set_steering_ebpf(tun, prog);<br/>+}<br/>+<br/> static long __tun_chr_ioctl(struct file *file, unsigned int cmd,<br/> 			    unsigned long arg, int ifreq_len)<br/> {<br/>@@ -2743,6 +2838,10 @@ static long __tun_chr_ioctl(struct file *file, unsigned int cmd,<br/> 		ret = 0;<br/> 		break;<br/> <br/>+	case TUNSETSTEERINGEBPF:<br/>+		ret = tun_set_steering_ebpf(tun, argp);<br/>+		break;<br/>+<br/> 	default:<br/> 		ret = -EINVAL;<br/> 		break;<br/>diff --git a/include/uapi/linux/if_tun.h b/include/uapi/linux/if_tun.h<br/>index 030d3e6..fb38c17 100644<br/>--- a/include/uapi/linux/if_tun.h<br/>+++ b/include/uapi/linux/if_tun.h<br/>@@ -57,6 +57,7 @@<br/>  */<br/> #define TUNSETVNETBE _IOW('T', 222, int)<br/> #define TUNGETVNETBE _IOR('T', 223, int)<br/>+#define TUNSETSTEERINGEBPF _IOR('T', 224, int)<br/> <br/> /* TUNSETIFF ifr flags */<br/> #define IFF_TUN		0x0001<br/>-- <br/>2.7.4<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:31    [W:0.038 / U:4.284 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

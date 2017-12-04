@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Daniel Borkmann: Re: netfilter: xt_bpf: Fix XT_BPF_MODE_FD_PINNED mode of 'xt_bpf_info_v1'
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Daniel Borkmann" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/151" onclick="this.href='/lkml/headers'+'/2017/12/4/151';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/151">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/11/30/1008">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/1/784">
+        Daniel Borkmann
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/2/274">
+          Al Viro
+         </a>
+         <ul>
+          <li>
+           <a href="/lkml/2017/12/2/306">
+            Al Viro
+           </a>
+           <ul>
+            <li>
+             <a href="/lkml/2017/12/2/347">
+              Willem de Bruijn
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li class="origin">
+           <a href="">
+            Daniel Borkmann
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           Re: netfilter: xt_bpf: Fix XT_BPF_MODE_FD_PINNED mode of 'xt_bpf_info_v1'
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Daniel Borkmann &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon, 4 Dec 2017 10:57:50 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">On 12/02/2017 07:48 PM, Al Viro wrote:<br/>&gt; On Fri, Dec 01, 2017 at 09:47:00PM +0100, Daniel Borkmann wrote:<br/>&gt;&gt;&gt; Might want to replace security_path_mknod() with something saner, while we are<br/>&gt;&gt;&gt; at it.<br/>&gt;&gt;&gt;<br/>&gt;&gt;&gt; Objections?<br/>&gt;&gt;<br/>&gt;&gt; No, thanks for looking into this, and sorry for this fugly hack! :( Not<br/>&gt;&gt; that this doesn't make it any better, but I think back then I took it<br/>&gt;&gt; over from mqueue implementation ... should have known better and looking<br/>&gt;&gt; into making this generic instead, sigh. The above looks good to me, so<br/>&gt;&gt; no objections from my side and thanks for working on it!<br/>&gt;&gt;<br/>&gt;&gt;&gt; PS: mqueue.c would also benefit from such primitive - do_create() there would<br/>&gt;&gt;&gt; simply pass attr as callback's argument into vfs_mkobj(), with callback being<br/>&gt;&gt;&gt; the guts of mqueue_create()...<br/>&gt; <br/>&gt; OK...  See vfs.git#untested.mkobj; it really needs testing, though - mq_open(2)<br/>&gt; passes LTP tests, but that's not saying much, and BPF side is completely<br/>&gt; untested.<br/><br/>I pulled vfs.git#untested.mkobj into my local tree and ran tests for both<br/>progs and maps on it, all went fine and the patch looks good to me.<br/><br/>For 'bpf_obj_do_pin(): switch to vfs_mkobj(), quit abusing -&gt;mknod()' when<br/>you push the fix to Linus, feel free to add:<br/><br/>Acked-by: Daniel Borkmann &lt;daniel@iogearbox.net&gt;<br/><br/>Thanks for your help, Al!<br/><br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:59    [W:0.020 / U:5.160 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

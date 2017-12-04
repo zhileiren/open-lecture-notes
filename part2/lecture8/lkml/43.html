@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Hendrik Brueckner: [PATCH v2 1/6] bpf: correct broken uapi for BPF_PROG_TYPE_PERF_EVENT program type
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Hendrik Brueckner" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/154" onclick="this.href='/lkml/headers'+'/2017/12/4/154';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/154">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/146">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/146">
+        Hendrik Brueckner
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/147">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/148">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/149">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/150">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Hendrik Brueckner
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/156">
+          Hendrik Brueckner
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/154/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Hendrik Brueckner &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH v2 1/6] bpf: correct broken uapi for BPF_PROG_TYPE_PERF_EVENT program type
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 10:56:44 +0100
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">Commit 0515e5999a466dfe ("bpf: introduce BPF_PROG_TYPE_PERF_EVENT<br/>program type") introduced the bpf_perf_event_data structure which<br/>exports the pt_regs structure.  This is OK for multiple architectures<br/>but fail for s390 and arm64 which do not export pt_regs.  Programs<br/>using them, for example, the bpf selftest fail to compile on these<br/>architectures.<br/><br/>For s390, exporting the pt_regs is not an option because s390 wants<br/>to allow changes to it.  For arm64, there is a user_pt_regs structure<br/>that covers parts of the pt_regs structure for use by user space.<br/><br/>To solve the broken uapi for s390 and arm64, introduce an abstract<br/>type for pt_regs and add an asm/bpf_perf_event.h file that concretes<br/>the type.  An asm-generic header file covers the architectures that<br/>export pt_regs today.<br/><br/>The arch-specific enablement for s390 and arm64 follows in separate<br/>commits.<br/><br/>Reported-by: Thomas Richter &lt;tmricht@linux.vnet.ibm.com&gt;<br/>Fixes: 0515e5999a466dfe ("bpf: introduce BPF_PROG_TYPE_PERF_EVENT program type")<br/>Signed-off-by: Hendrik Brueckner &lt;brueckner@linux.vnet.ibm.com&gt;<br/>Reviewed-and-tested-by: Thomas Richter &lt;tmricht@linux.vnet.ibm.com&gt;<br/>Acked-by: Alexei Starovoitov &lt;ast@kernel.org&gt;<br/>Cc: Arnaldo Carvalho de Melo &lt;acme@kernel.org&gt;<br/>Cc: Peter Zijlstra &lt;peterz@infradead.org&gt;<br/>Cc: Ingo Molnar &lt;mingo@redhat.com&gt;<br/>Cc: Alexander Shishkin &lt;alexander.shishkin@linux.intel.com&gt;<br/>Cc: Jiri Olsa &lt;jolsa@redhat.com&gt;<br/>Cc: Namhyung Kim &lt;namhyung@kernel.org&gt;<br/>Cc: Arnd Bergmann &lt;arnd@arndb.de&gt;<br/>Cc: Daniel Borkmann &lt;daniel@iogearbox.net&gt;<br/>---<br/> arch/alpha/include/uapi/asm/Kbuild        | 2 ++<br/> arch/arc/include/uapi/asm/Kbuild          | 1 +<br/> arch/arm/include/uapi/asm/Kbuild          | 1 +<br/> arch/blackfin/include/uapi/asm/Kbuild     | 1 +<br/> arch/c6x/include/uapi/asm/Kbuild          | 1 +<br/> arch/cris/include/uapi/asm/Kbuild         | 1 +<br/> arch/frv/include/uapi/asm/Kbuild          | 2 ++<br/> arch/h8300/include/uapi/asm/Kbuild        | 1 +<br/> arch/hexagon/include/uapi/asm/Kbuild      | 1 +<br/> arch/ia64/include/uapi/asm/Kbuild         | 1 +<br/> arch/m32r/include/uapi/asm/Kbuild         | 1 +<br/> arch/m68k/include/uapi/asm/Kbuild         | 1 +<br/> arch/metag/include/uapi/asm/Kbuild        | 1 +<br/> arch/microblaze/include/uapi/asm/Kbuild   | 1 +<br/> arch/mips/include/uapi/asm/Kbuild         | 1 +<br/> arch/mn10300/include/uapi/asm/Kbuild      | 1 +<br/> arch/nios2/include/uapi/asm/Kbuild        | 1 +<br/> arch/openrisc/include/uapi/asm/Kbuild     | 1 +<br/> arch/parisc/include/uapi/asm/Kbuild       | 1 +<br/> arch/powerpc/include/uapi/asm/Kbuild      | 1 +<br/> arch/riscv/include/uapi/asm/Kbuild        | 1 +<br/> arch/score/include/uapi/asm/Kbuild        | 1 +<br/> arch/sh/include/uapi/asm/Kbuild           | 1 +<br/> arch/sparc/include/uapi/asm/Kbuild        | 1 +<br/> arch/tile/include/uapi/asm/Kbuild         | 1 +<br/> arch/unicore32/include/uapi/asm/Kbuild    | 1 +<br/> arch/x86/include/uapi/asm/Kbuild          | 1 +<br/> arch/xtensa/include/uapi/asm/Kbuild       | 1 +<br/> include/linux/perf_event.h                | 6 +++++-<br/> include/uapi/asm-generic/bpf_perf_event.h | 9 +++++++++<br/> include/uapi/linux/bpf_perf_event.h       | 5 ++---<br/> kernel/events/core.c                      | 2 +-<br/> 32 files changed, 47 insertions(+), 5 deletions(-)<br/> create mode 100644 include/uapi/asm-generic/bpf_perf_event.h<br/><br/>diff --git a/arch/alpha/include/uapi/asm/Kbuild b/arch/alpha/include/uapi/asm/Kbuild<br/>index b15bf6b..14a2e9a 100644<br/>--- a/arch/alpha/include/uapi/asm/Kbuild<br/>+++ b/arch/alpha/include/uapi/asm/Kbuild<br/>@@ -1,2 +1,4 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/>+<br/>+generic-y += bpf_perf_event.h<br/>diff --git a/arch/arc/include/uapi/asm/Kbuild b/arch/arc/include/uapi/asm/Kbuild<br/>index fa6d0ff..170b5db 100644<br/>--- a/arch/arc/include/uapi/asm/Kbuild<br/>+++ b/arch/arc/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/arm/include/uapi/asm/Kbuild b/arch/arm/include/uapi/asm/Kbuild<br/>index 4d53de3..4d1cc18 100644<br/>--- a/arch/arm/include/uapi/asm/Kbuild<br/>+++ b/arch/arm/include/uapi/asm/Kbuild<br/>@@ -7,6 +7,7 @@ generated-y += unistd-oabi.h<br/> generated-y += unistd-eabi.h<br/> <br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += ioctl.h<br/> generic-y += ipcbuf.h<br/>diff --git a/arch/blackfin/include/uapi/asm/Kbuild b/arch/blackfin/include/uapi/asm/Kbuild<br/>index aa624b4..2240b38 100644<br/>--- a/arch/blackfin/include/uapi/asm/Kbuild<br/>+++ b/arch/blackfin/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += ioctl.h<br/> generic-y += ipcbuf.h<br/>diff --git a/arch/c6x/include/uapi/asm/Kbuild b/arch/c6x/include/uapi/asm/Kbuild<br/>index 67ee896..26644e1 100644<br/>--- a/arch/c6x/include/uapi/asm/Kbuild<br/>+++ b/arch/c6x/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/cris/include/uapi/asm/Kbuild b/arch/cris/include/uapi/asm/Kbuild<br/>index 3687b54..3470c6e 100644<br/>--- a/arch/cris/include/uapi/asm/Kbuild<br/>+++ b/arch/cris/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/frv/include/uapi/asm/Kbuild b/arch/frv/include/uapi/asm/Kbuild<br/>index b15bf6b..14a2e9a 100644<br/>--- a/arch/frv/include/uapi/asm/Kbuild<br/>+++ b/arch/frv/include/uapi/asm/Kbuild<br/>@@ -1,2 +1,4 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/>+<br/>+generic-y += bpf_perf_event.h<br/>diff --git a/arch/h8300/include/uapi/asm/Kbuild b/arch/h8300/include/uapi/asm/Kbuild<br/>index 187aed8..2f65f78 100644<br/>--- a/arch/h8300/include/uapi/asm/Kbuild<br/>+++ b/arch/h8300/include/uapi/asm/Kbuild<br/>@@ -2,6 +2,7 @@<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/hexagon/include/uapi/asm/Kbuild b/arch/hexagon/include/uapi/asm/Kbuild<br/>index cb5df3a..41a176d 100644<br/>--- a/arch/hexagon/include/uapi/asm/Kbuild<br/>+++ b/arch/hexagon/include/uapi/asm/Kbuild<br/>@@ -2,6 +2,7 @@<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/ia64/include/uapi/asm/Kbuild b/arch/ia64/include/uapi/asm/Kbuild<br/>index 13a97aa..f5c6967 100644<br/>--- a/arch/ia64/include/uapi/asm/Kbuild<br/>+++ b/arch/ia64/include/uapi/asm/Kbuild<br/>@@ -1,4 +1,5 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y += bpf_perf_event.h<br/> generic-y += kvm_para.h<br/>diff --git a/arch/m32r/include/uapi/asm/Kbuild b/arch/m32r/include/uapi/asm/Kbuild<br/>index 1c44d3b..451bf60 100644<br/>--- a/arch/m32r/include/uapi/asm/Kbuild<br/>+++ b/arch/m32r/include/uapi/asm/Kbuild<br/>@@ -1,5 +1,6 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y += bpf_perf_event.h<br/> generic-y += kvm_para.h<br/> generic-y += siginfo.h<br/>diff --git a/arch/m68k/include/uapi/asm/Kbuild b/arch/m68k/include/uapi/asm/Kbuild<br/>index 3717b64..c2e26a4 100644<br/>--- a/arch/m68k/include/uapi/asm/Kbuild<br/>+++ b/arch/m68k/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += ioctl.h<br/> generic-y += ipcbuf.h<br/>diff --git a/arch/metag/include/uapi/asm/Kbuild b/arch/metag/include/uapi/asm/Kbuild<br/>index 6ac763d..f9eaf07 100644<br/>--- a/arch/metag/include/uapi/asm/Kbuild<br/>+++ b/arch/metag/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/microblaze/include/uapi/asm/Kbuild b/arch/microblaze/include/uapi/asm/Kbuild<br/>index 06609ca..2c6a6bf 100644<br/>--- a/arch/microblaze/include/uapi/asm/Kbuild<br/>+++ b/arch/microblaze/include/uapi/asm/Kbuild<br/>@@ -2,6 +2,7 @@<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/mips/include/uapi/asm/Kbuild b/arch/mips/include/uapi/asm/Kbuild<br/>index a0266fe..7a4becd 100644<br/>--- a/arch/mips/include/uapi/asm/Kbuild<br/>+++ b/arch/mips/include/uapi/asm/Kbuild<br/>@@ -1,4 +1,5 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y += bpf_perf_event.h<br/> generic-y += ipcbuf.h<br/>diff --git a/arch/mn10300/include/uapi/asm/Kbuild b/arch/mn10300/include/uapi/asm/Kbuild<br/>index c94ee54..81271d3 100644<br/>--- a/arch/mn10300/include/uapi/asm/Kbuild<br/>+++ b/arch/mn10300/include/uapi/asm/Kbuild<br/>@@ -1,4 +1,5 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y	+= bpf_perf_event.h<br/> generic-y	+= siginfo.h<br/>diff --git a/arch/nios2/include/uapi/asm/Kbuild b/arch/nios2/include/uapi/asm/Kbuild<br/>index ffca24d..13a3d77 100644<br/>--- a/arch/nios2/include/uapi/asm/Kbuild<br/>+++ b/arch/nios2/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/openrisc/include/uapi/asm/Kbuild b/arch/openrisc/include/uapi/asm/Kbuild<br/>index 62286db..130c16c 100644<br/>--- a/arch/openrisc/include/uapi/asm/Kbuild<br/>+++ b/arch/openrisc/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/parisc/include/uapi/asm/Kbuild b/arch/parisc/include/uapi/asm/Kbuild<br/>index 196d2a4..286ef5a 100644<br/>--- a/arch/parisc/include/uapi/asm/Kbuild<br/>+++ b/arch/parisc/include/uapi/asm/Kbuild<br/>@@ -2,6 +2,7 @@<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += kvm_para.h<br/> generic-y += param.h<br/> generic-y += poll.h<br/>diff --git a/arch/powerpc/include/uapi/asm/Kbuild b/arch/powerpc/include/uapi/asm/Kbuild<br/>index 0d960ef..1a6ed59 100644<br/>--- a/arch/powerpc/include/uapi/asm/Kbuild<br/>+++ b/arch/powerpc/include/uapi/asm/Kbuild<br/>@@ -1,6 +1,7 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y += bpf_perf_event.h<br/> generic-y += param.h<br/> generic-y += poll.h<br/> generic-y += resource.h<br/>diff --git a/arch/riscv/include/uapi/asm/Kbuild b/arch/riscv/include/uapi/asm/Kbuild<br/>index 5ded96b..7e91f48 100644<br/>--- a/arch/riscv/include/uapi/asm/Kbuild<br/>+++ b/arch/riscv/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += setup.h<br/> generic-y += unistd.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/score/include/uapi/asm/Kbuild b/arch/score/include/uapi/asm/Kbuild<br/>index c94ee54..81271d3 100644<br/>--- a/arch/score/include/uapi/asm/Kbuild<br/>+++ b/arch/score/include/uapi/asm/Kbuild<br/>@@ -1,4 +1,5 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y	+= bpf_perf_event.h<br/> generic-y	+= siginfo.h<br/>diff --git a/arch/sh/include/uapi/asm/Kbuild b/arch/sh/include/uapi/asm/Kbuild<br/>index e285313..ba4d39c 100644<br/>--- a/arch/sh/include/uapi/asm/Kbuild<br/>+++ b/arch/sh/include/uapi/asm/Kbuild<br/>@@ -2,6 +2,7 @@<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/sparc/include/uapi/asm/Kbuild b/arch/sparc/include/uapi/asm/Kbuild<br/>index 2178c78..4680ba2 100644<br/>--- a/arch/sparc/include/uapi/asm/Kbuild<br/>+++ b/arch/sparc/include/uapi/asm/Kbuild<br/>@@ -1,4 +1,5 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y += bpf_perf_event.h<br/> generic-y += types.h<br/>diff --git a/arch/tile/include/uapi/asm/Kbuild b/arch/tile/include/uapi/asm/Kbuild<br/>index 5711de0..cc43961 100644<br/>--- a/arch/tile/include/uapi/asm/Kbuild<br/>+++ b/arch/tile/include/uapi/asm/Kbuild<br/>@@ -1,6 +1,7 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/unicore32/include/uapi/asm/Kbuild b/arch/unicore32/include/uapi/asm/Kbuild<br/>index 759a714..8611ef9 100644<br/>--- a/arch/unicore32/include/uapi/asm/Kbuild<br/>+++ b/arch/unicore32/include/uapi/asm/Kbuild<br/>@@ -3,6 +3,7 @@ include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += auxvec.h<br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/arch/x86/include/uapi/asm/Kbuild b/arch/x86/include/uapi/asm/Kbuild<br/>index da1489c..1e901e4 100644<br/>--- a/arch/x86/include/uapi/asm/Kbuild<br/>+++ b/arch/x86/include/uapi/asm/Kbuild<br/>@@ -1,6 +1,7 @@<br/> # UAPI Header export list<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/>+generic-y += bpf_perf_event.h<br/> generated-y += unistd_32.h<br/> generated-y += unistd_64.h<br/> generated-y += unistd_x32.h<br/>diff --git a/arch/xtensa/include/uapi/asm/Kbuild b/arch/xtensa/include/uapi/asm/Kbuild<br/>index a5bcdfb..837d4dd 100644<br/>--- a/arch/xtensa/include/uapi/asm/Kbuild<br/>+++ b/arch/xtensa/include/uapi/asm/Kbuild<br/>@@ -2,6 +2,7 @@<br/> include include/uapi/asm-generic/Kbuild.asm<br/> <br/> generic-y += bitsperlong.h<br/>+generic-y += bpf_perf_event.h<br/> generic-y += errno.h<br/> generic-y += fcntl.h<br/> generic-y += ioctl.h<br/>diff --git a/include/linux/perf_event.h b/include/linux/perf_event.h<br/>index 2c9c87d..7546822 100644<br/>--- a/include/linux/perf_event.h<br/>+++ b/include/linux/perf_event.h<br/>@@ -15,6 +15,7 @@<br/> #define _LINUX_PERF_EVENT_H<br/> <br/> #include &lt;uapi/linux/perf_event.h&gt;<br/>+#include &lt;uapi/linux/bpf_perf_event.h&gt;<br/> <br/> /*<br/>  * Kernel-internal data types and definitions:<br/>@@ -787,7 +788,7 @@ struct perf_output_handle {<br/> };<br/> <br/> struct bpf_perf_event_data_kern {<br/>-	struct pt_regs *regs;<br/>+	bpf_user_pt_regs_t *regs;<br/> 	struct perf_sample_data *data;<br/> 	struct perf_event *event;<br/> };<br/>@@ -1177,6 +1178,9 @@ extern void perf_tp_event(u16 event_type, u64 count, void *record,<br/> 		(user_mode(regs) ? PERF_RECORD_MISC_USER : PERF_RECORD_MISC_KERNEL)<br/> # define perf_instruction_pointer(regs)	instruction_pointer(regs)<br/> #endif<br/>+#ifndef perf_arch_bpf_user_pt_regs<br/>+# define perf_arch_bpf_user_pt_regs(regs) regs<br/>+#endif<br/> <br/> static inline bool has_branch_stack(struct perf_event *event)<br/> {<br/>diff --git a/include/uapi/asm-generic/bpf_perf_event.h b/include/uapi/asm-generic/bpf_perf_event.h<br/>new file mode 100644<br/>index 0000000..53815d2<br/>--- /dev/null<br/>+++ b/include/uapi/asm-generic/bpf_perf_event.h<br/>@@ -0,0 +1,9 @@<br/>+#ifndef _UAPI__ASM_GENERIC_BPF_PERF_EVENT_H__<br/>+#define _UAPI__ASM_GENERIC_BPF_PERF_EVENT_H__<br/>+<br/>+#include &lt;linux/ptrace.h&gt;<br/>+<br/>+/* Export kernel pt_regs structure */<br/>+typedef struct pt_regs bpf_user_pt_regs_t;<br/>+<br/>+#endif /* _UAPI__ASM_GENERIC_BPF_PERF_EVENT_H__ */<br/>diff --git a/include/uapi/linux/bpf_perf_event.h b/include/uapi/linux/bpf_perf_event.h<br/>index af549d4..8f95303 100644<br/>--- a/include/uapi/linux/bpf_perf_event.h<br/>+++ b/include/uapi/linux/bpf_perf_event.h<br/>@@ -8,11 +8,10 @@<br/> #ifndef _UAPI__LINUX_BPF_PERF_EVENT_H__<br/> #define _UAPI__LINUX_BPF_PERF_EVENT_H__<br/> <br/>-#include &lt;linux/types.h&gt;<br/>-#include &lt;linux/ptrace.h&gt;<br/>+#include &lt;asm/bpf_perf_event.h&gt;<br/> <br/> struct bpf_perf_event_data {<br/>-	struct pt_regs regs;<br/>+	bpf_user_pt_regs_t regs;<br/> 	__u64 sample_period;<br/> };<br/> <br/>diff --git a/kernel/events/core.c b/kernel/events/core.c<br/>index 16beab4..ba957b9 100644<br/>--- a/kernel/events/core.c<br/>+++ b/kernel/events/core.c<br/>@@ -7987,11 +7987,11 @@ static void bpf_overflow_handler(struct perf_event *event,<br/> {<br/> 	struct bpf_perf_event_data_kern ctx = {<br/> 		.data = data,<br/>-		.regs = regs,<br/> 		.event = event,<br/> 	};<br/> 	int ret = 0;<br/> <br/>+	ctx.regs = perf_arch_bpf_user_pt_regs(regs);<br/> 	preempt_disable();<br/> 	if (unlikely(__this_cpu_inc_return(bpf_prog_active) != 1))<br/> 		goto out;<br/>-- <br/>1.8.3.1<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 11:00    [W:0.082 / U:7.672 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

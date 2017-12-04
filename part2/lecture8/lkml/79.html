@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   LKML: Jiaxun Yang: [PATCH RESEND v3 3/4] MIPS: Loongson64: Yeeloong add platform driver
+  </title>
+  <link href="/css/message.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/wrap.css" rel="alternate stylesheet" title="wrap" type="text/css"/>
+  <link href="/css/nowrap.css" rel="stylesheet" title="nowrap" type="text/css"/>
+  <link href="/css/shariff.complete.css" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="/rss.php" rel="alternate" title="lkml.org : last 100 messages" type="application/rss+xml"/>
+  <link href="/groupie.php?aid=" rel="alternate" title="lkml.org : last messages by Jiaxun Yang" type="application/rss+xml"/>
+ </head>
+ <body itemscope="itemscope" itemtype="http://schema.org/BlogPosting" onload="es.jasper.simpleCalendar.init();">
+  <!--BuySellAds Ad Code-->
+  <!--End BuySellAds Ad Code-->
+  <table border="0" cellpadding="0" cellspacing="0">
+   <tr>
+    <td align="center" width="180">
+     <a href="/">
+      <img alt="lkml.org" src="/images/toprowlk.gif" style="border:0;width:135px;height:32px"/>
+     </a>
+    </td>
+    <td width="32">
+    </td>
+    <td class="nb">
+     <div>
+      <a class="nb" href="/lkml">
+       [lkml]
+      </a>
+      <a class="nb" href="/lkml/2017">
+       [2017]
+      </a>
+      <a class="nb" href="/lkml/2017/12">
+       [Dec]
+      </a>
+      <a class="nb" href="/lkml/2017/12/4">
+       [4]
+      </a>
+      <a class="nb" href="/lkml/last100">
+       [last100]
+      </a>
+      <a href="/rss.php">
+       <img alt="RSS Feed" border="0" src="/images/rss-or.gif"/>
+      </a>
+     </div>
+     <div>
+      Views:
+      <a class="nowrap" href="#" onclick="setActiveStyleSheet('wrap');return false;">
+       [wrap]
+      </a>
+      <a class="wrap" href="#" onclick="setActiveStyleSheet('nowrap');return false;">
+       [no wrap]
+      </a>
+      <a class="nb" href="/lkml/mheaders/2017/12/4/118" onclick="this.href='/lkml/headers'+'/2017/12/4/118';">
+       [headers]
+      </a>
+      <a href="/lkml/bounce/2017/12/4/118">
+       [forward]
+      </a>
+     </div>
+    </td>
+    <td width="32">
+    </td>
+   </tr>
+   <tr>
+    <td valign="top">
+     <div baseurl="/lkml/" class="es-jasper-simpleCalendar">
+     </div>
+     <div class="threadlist">
+      Messages in this thread
+     </div>
+     <ul class="threadlist">
+      <li class="root">
+       <a href="/lkml/2017/12/4/121">
+        First message in thread
+       </a>
+      </li>
+      <li>
+       <a href="/lkml/2017/12/4/121">
+        Jiaxun Yang
+       </a>
+       <ul>
+        <li>
+         <a href="/lkml/2017/12/4/116">
+          Jiaxun Yang
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/117">
+          Jiaxun Yang
+         </a>
+        </li>
+        <li class="origin">
+         <a href="">
+          Jiaxun Yang
+         </a>
+        </li>
+        <li>
+         <a href="/lkml/2017/12/4/119">
+          Jiaxun Yang
+         </a>
+        </li>
+       </ul>
+      </li>
+     </ul>
+     <div class="threadlist">
+      Patch in this message
+     </div>
+     <ul class="threadlist">
+      <li>
+       <a href="/lkml/diff/2017/12/4/118/1">
+        Get diff 1
+       </a>
+      </li>
+     </ul>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="/" height="32" src="/images/icornerl.gif" width="32"/>
+    </td>
+    <td class="c" rowspan="2" style="padding-top: 1em" valign="top">
+     <table>
+      <tr>
+       <td colspan="2">
+        <!--BuySellAds Zone Code-->
+        <div class="bsarocks bsap_5aa49c00cc06c882289a1dd6a5e50b62" id="bsap_1297613">
+        </div>
+        <!--End BuySellAds Zone Code-->
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <table>
+         <tr>
+          <td class="lp">
+           From
+          </td>
+          <td class="rp" itemprop="author">
+           Jiaxun Yang &lt;&gt;
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Subject
+          </td>
+          <td class="rp" itemprop="name">
+           [PATCH RESEND v3 3/4] MIPS: Loongson64: Yeeloong add platform driver
+          </td>
+         </tr>
+         <tr>
+          <td class="lp">
+           Date
+          </td>
+          <td class="rp" itemprop="datePublished">
+           Mon,  4 Dec 2017 17:23:11 +0800
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td>
+        <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+        </div>
+       </td>
+      </tr>
+     </table>
+     <pre itemprop="articleBody">Yeeloong is a laptop with a MIPS Loongson 2F processor, AMD CS5536<br/>chipset, and KB3310B controller.<br/><br/>This yeeloong_laptop module enables access to sensors, battery,<br/>video camera switch, external video connector event, and some<br/>additional buttons.<br/><br/>This driver was orginally from linux-loongson-community. I Just do<br/>some clean up and port to mainline kernel tree.<br/><br/>Signed-off-by: Jiaxun Yang &lt;jiaxun.yang@flygoat.com&gt;<br/>---<br/> drivers/platform/mips/Kconfig           |   19 +<br/> drivers/platform/mips/Makefile          |    3 +<br/> drivers/platform/mips/yeeloong_laptop.c | 1142 +++++++++++++++++++++++++++++++<br/> 3 files changed, 1164 insertions(+)<br/> create mode 100644 drivers/platform/mips/yeeloong_laptop.c<br/><br/>diff --git a/drivers/platform/mips/Kconfig b/drivers/platform/mips/Kconfig<br/>index b3ae30a4c67b..acd27e36710b 100644<br/>--- a/drivers/platform/mips/Kconfig<br/>+++ b/drivers/platform/mips/Kconfig<br/>@@ -23,4 +23,23 @@ config CPU_HWMON<br/> 	help<br/> 	  Loongson-3A/3B CPU Hwmon (temperature sensor) driver.<br/> <br/>+config LEMOTE_YEELOONG2F<br/>+	tristate "Lemote YeeLoong Laptop"<br/>+	depends on LEMOTE_MACH2F<br/>+	select BACKLIGHT_LCD_SUPPORT<br/>+	select LCD_CLASS_DEVICE<br/>+	select BACKLIGHT_CLASS_DEVICE<br/>+	select POWER_SUPPLY<br/>+	select HWMON<br/>+	select INPUT<br/>+	select INPUT_MISC<br/>+	select INPUT_SPARSEKMAP<br/>+	select INPUT_EVDEV<br/>+	default m<br/>+	help<br/>+	  YeeLoong netbook is a mini laptop made by Lemote, which is basically<br/>+	  compatible to FuLoong2F mini PC, but it has an extra Embedded<br/>+	  Controller(kb3310b) for battery, hotkey, backlight, temperature and<br/>+	  fan management.<br/>+<br/> endif # MIPS_PLATFORM_DEVICES<br/>diff --git a/drivers/platform/mips/Makefile b/drivers/platform/mips/Makefile<br/>index 8dfd03924c37..b3172b081a2f 100644<br/>--- a/drivers/platform/mips/Makefile<br/>+++ b/drivers/platform/mips/Makefile<br/>@@ -1 +1,4 @@<br/> obj-$(CONFIG_CPU_HWMON) += cpu_hwmon.o<br/>+<br/>+obj-$(CONFIG_LEMOTE_YEELOONG2F)	+= yeeloong_laptop.o<br/>+CFLAGS_yeeloong_laptop.o = -I$(srctree)/arch/mips/loongson/lemote-2f<br/>diff --git a/drivers/platform/mips/yeeloong_laptop.c b/drivers/platform/mips/yeeloong_laptop.c<br/>new file mode 100644<br/>index 000000000000..61353c3e894c<br/>--- /dev/null<br/>+++ b/drivers/platform/mips/yeeloong_laptop.c<br/>@@ -0,0 +1,1142 @@<br/>+/*<br/>+ * Driver for YeeLoong laptop extras<br/>+ *<br/>+ *  Copyright (C) 2017 Jiaxun Yang.<br/>+ *  Author: Jiaxun Yang &lt;jiaxun.yang@flygoat.com&gt;<br/>+ *<br/>+ *  Copyright (C) 2009 Lemote Inc.<br/>+ *  Author: Wu Zhangjin &lt;wuzhangjin@gmail.com&gt;, Liu Junliang &lt;liujl@lemote.com&gt;<br/>+ *<br/>+ *  Fixes: Petr Pisar &lt;petr.pisar@atlas.cz&gt;, 2012, 2013, 2014, 2015.<br/>+ *<br/>+ *  This program is free software; you can redistribute it and/or modify<br/>+ *  it under the terms of the GNU General Public License version 2 as<br/>+ *  published by the Free Software Foundation.<br/>+ */<br/>+<br/>+#include &lt;linux/err.h&gt;<br/>+#include &lt;linux/platform_device.h&gt;<br/>+#include &lt;linux/backlight.h&gt;	/* for backlight subdriver */<br/>+#include &lt;linux/fb.h&gt;<br/>+#include &lt;linux/hwmon.h&gt;	/* for hwmon subdriver */<br/>+#include &lt;linux/hwmon-sysfs.h&gt;<br/>+#include &lt;linux/kernel.h&gt;   /* for clamp_val() */<br/>+#include &lt;linux/input.h&gt;	/* for hotkey subdriver */<br/>+#include &lt;linux/input/sparse-keymap.h&gt;<br/>+#include &lt;linux/interrupt.h&gt;<br/>+#include &lt;linux/delay.h&gt;<br/>+#include &lt;linux/power_supply.h&gt;	/* for AC &amp; Battery subdriver */<br/>+#include &lt;linux/module.h&gt;   /* For MODULE_DEVICE_TABLE() */<br/>+<br/>+#include &lt;asm/bootinfo.h&gt;<br/>+<br/>+#include &lt;cs5536/cs5536.h&gt;<br/>+<br/>+#include &lt;loongson.h&gt;		/* for loongson_cmdline */<br/>+#include &lt;ec_kb3310b.h&gt;<br/>+<br/>+/* common function */<br/>+#define EC_VER_LEN 64<br/>+<br/>+static int ec_version_before(char *version)<br/>+{<br/>+	char *p, ec_ver[EC_VER_LEN];<br/>+<br/>+	p = strstr(loongson_cmdline, "EC_VER=");<br/>+	if (!p)<br/>+		memset(ec_ver, 0, EC_VER_LEN);<br/>+	else {<br/>+		strncpy(ec_ver, p, EC_VER_LEN);<br/>+		p = strstr(ec_ver, " ");<br/>+		if (p)<br/>+			*p = '\0';<br/>+	}<br/>+<br/>+	return (strncasecmp(ec_ver, version, 64) &lt; 0);<br/>+}<br/>+<br/>+/* backlight subdriver */<br/>+#define MAX_BRIGHTNESS	8<br/>+<br/>+static int yeeloong_set_brightness(struct backlight_device *bd)<br/>+{<br/>+	unsigned int level, current_level;<br/>+	static unsigned int old_level;<br/>+<br/>+	level = (bd-&gt;props.fb_blank == FB_BLANK_UNBLANK &amp;&amp;<br/>+		 bd-&gt;props.power == FB_BLANK_UNBLANK) ?<br/>+	    bd-&gt;props.brightness : 0;<br/>+<br/>+	level = clamp_val(level, 0, MAX_BRIGHTNESS);<br/>+<br/>+	/* Avoid to modify the brightness when EC is tuning it */<br/>+	if (old_level != level) {<br/>+		current_level = ec_read(REG_DISPLAY_BRIGHTNESS);<br/>+		if (old_level == current_level)<br/>+			ec_write(REG_DISPLAY_BRIGHTNESS, level);<br/>+		old_level = level;<br/>+	}<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static int yeeloong_get_brightness(struct backlight_device *bd)<br/>+{<br/>+	return ec_read(REG_DISPLAY_BRIGHTNESS);<br/>+}<br/>+<br/>+const struct backlight_ops backlight_ops = {<br/>+	.get_brightness = yeeloong_get_brightness,<br/>+	.update_status = yeeloong_set_brightness,<br/>+};<br/>+<br/>+static struct backlight_device *yeeloong_backlight_dev;<br/>+<br/>+static int yeeloong_backlight_init(void)<br/>+{<br/>+	int ret;<br/>+	struct backlight_properties props;<br/>+<br/>+	memset(&amp;props, 0, sizeof(struct backlight_properties));<br/>+	props.type = BACKLIGHT_RAW;<br/>+	props.max_brightness = MAX_BRIGHTNESS;<br/>+	yeeloong_backlight_dev = backlight_device_register("backlight0", NULL,<br/>+			NULL, &amp;backlight_ops, &amp;props);<br/>+<br/>+	if (IS_ERR(yeeloong_backlight_dev)) {<br/>+		ret = PTR_ERR(yeeloong_backlight_dev);<br/>+		yeeloong_backlight_dev = NULL;<br/>+		return ret;<br/>+	}<br/>+<br/>+	yeeloong_backlight_dev-&gt;props.brightness =<br/>+		yeeloong_get_brightness(yeeloong_backlight_dev);<br/>+	backlight_update_status(yeeloong_backlight_dev);<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static void yeeloong_backlight_exit(void)<br/>+{<br/>+	if (yeeloong_backlight_dev) {<br/>+		backlight_device_unregister(yeeloong_backlight_dev);<br/>+		yeeloong_backlight_dev = NULL;<br/>+	}<br/>+}<br/>+<br/>+/* AC &amp; Battery subdriver */<br/>+<br/>+static struct power_supply *yeeloong_ac, *yeeloong_bat;<br/>+<br/>+#define RET (val-&gt;intval)<br/>+<br/>+static inline bool is_ac_in(void)<br/>+{<br/>+	return !!(ec_read(REG_BAT_POWER) &amp; BIT_BAT_POWER_ACIN);<br/>+}<br/>+<br/>+static int yeeloong_get_ac_props(struct power_supply *psy,<br/>+				enum power_supply_property psp,<br/>+				union power_supply_propval *val)<br/>+{<br/>+	switch (psp) {<br/>+	case POWER_SUPPLY_PROP_ONLINE:<br/>+		RET = is_ac_in();<br/>+		break;<br/>+	default:<br/>+		return -EINVAL;<br/>+	}<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static enum power_supply_property yeeloong_ac_props[] = {<br/>+	POWER_SUPPLY_PROP_ONLINE,<br/>+};<br/>+<br/>+static const struct power_supply_desc yeeloong_ac_desc = {<br/>+	.name = "yeeloong-ac",<br/>+	.type = POWER_SUPPLY_TYPE_MAINS,<br/>+	.properties = yeeloong_ac_props,<br/>+	.num_properties = ARRAY_SIZE(yeeloong_ac_props),<br/>+	.get_property = yeeloong_get_ac_props,<br/>+};<br/>+<br/>+#define BAT_CAP_CRITICAL 5<br/>+#define BAT_CAP_HIGH     95<br/>+<br/>+#define get_bat_info(type) \<br/>+	((ec_read(REG_BAT_##type##_HIGH) &lt;&lt; 8) | \<br/>+	 (ec_read(REG_BAT_##type##_LOW)))<br/>+<br/>+static inline bool is_bat_in(void)<br/>+{<br/>+	return !!(ec_read(REG_BAT_STATUS) &amp; BIT_BAT_STATUS_IN);<br/>+}<br/>+<br/>+static inline int get_bat_status(void)<br/>+{<br/>+	return ec_read(REG_BAT_STATUS);<br/>+}<br/>+<br/>+static int get_battery_temp(void)<br/>+{<br/>+	int value;<br/>+<br/>+	value = get_bat_info(TEMPERATURE);<br/>+<br/>+	return value * 1000;<br/>+}<br/>+<br/>+static int get_battery_current(void)<br/>+{<br/>+	s16 value;<br/>+<br/>+	value = get_bat_info(CURRENT);<br/>+<br/>+	return -value;<br/>+}<br/>+<br/>+static int get_battery_voltage(void)<br/>+{<br/>+	int value;<br/>+<br/>+	value = get_bat_info(VOLTAGE);<br/>+<br/>+	return value;<br/>+}<br/>+<br/>+static inline char *get_manufacturer(void)<br/>+{<br/>+	return (ec_read(REG_BAT_VENDOR) == FLAG_BAT_VENDOR_SANYO) ? "SANYO" :<br/>+		"SIMPLO";<br/>+}<br/>+<br/>+static int yeeloong_get_bat_props(struct power_supply *psy,<br/>+				     enum power_supply_property psp,<br/>+				     union power_supply_propval *val)<br/>+{<br/>+	switch (psp) {<br/>+	/* Fixed information */<br/>+	case POWER_SUPPLY_PROP_VOLTAGE_MAX_DESIGN:<br/>+		/* mV -&gt; µV */<br/>+		RET = get_bat_info(DESIGN_VOL) * 1000;<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_CHARGE_FULL_DESIGN:<br/>+		/* mAh-&gt;µAh */<br/>+		RET = get_bat_info(DESIGN_CAP) * 1000;<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_CHARGE_FULL:<br/>+		/* µAh */<br/>+		RET = get_bat_info(FULLCHG_CAP) * 1000;<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_MANUFACTURER:<br/>+		val-&gt;strval = get_manufacturer();<br/>+		break;<br/>+	/* Dynamic information */<br/>+	case POWER_SUPPLY_PROP_PRESENT:<br/>+		RET = is_bat_in();<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_CURRENT_NOW:<br/>+		/* mA -&gt; µA */<br/>+		RET = is_bat_in() ? get_battery_current() * 1000 : 0;<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_VOLTAGE_NOW:<br/>+		/* mV -&gt; µV */<br/>+		RET = is_bat_in() ? get_battery_voltage() * 1000 : 0;<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_TEMP:<br/>+		/* Celcius */<br/>+		RET = is_bat_in() ? get_battery_temp() : 0;<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_CAPACITY:<br/>+		RET = is_bat_in() ? get_bat_info(RELATIVE_CAP) : 0;<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_CAPACITY_LEVEL:<br/>+		{<br/>+		int status;<br/>+<br/>+		if (!is_bat_in()) {<br/>+			RET = POWER_SUPPLY_CAPACITY_LEVEL_UNKNOWN;<br/>+			break;<br/>+		}<br/>+<br/>+		status = get_bat_status();<br/>+		RET = POWER_SUPPLY_CAPACITY_LEVEL_NORMAL;<br/>+<br/>+		if (unlikely(status &amp; BIT_BAT_STATUS_DESTROY)) {<br/>+			RET = POWER_SUPPLY_CAPACITY_LEVEL_UNKNOWN;<br/>+			break;<br/>+		}<br/>+<br/>+		if (status &amp; BIT_BAT_STATUS_LOW)<br/>+			RET = POWER_SUPPLY_CAPACITY_LEVEL_LOW;<br/>+		else if (status &amp; BIT_BAT_STATUS_FULL)<br/>+			RET = POWER_SUPPLY_CAPACITY_LEVEL_FULL;<br/>+		else {<br/>+			int curr_cap;<br/>+<br/>+			curr_cap = get_bat_info(RELATIVE_CAP);<br/>+<br/>+			if (curr_cap &gt;= BAT_CAP_HIGH)<br/>+				RET = POWER_SUPPLY_CAPACITY_LEVEL_HIGH;<br/>+			else if (curr_cap &lt;= BAT_CAP_CRITICAL)<br/>+				RET = POWER_SUPPLY_CAPACITY_LEVEL_CRITICAL;<br/>+		}<br/>+<br/>+		} break;<br/>+	case POWER_SUPPLY_PROP_TIME_TO_EMPTY_NOW:<br/>+		/* seconds */<br/>+		RET = is_bat_in() ?<br/>+			(get_bat_info(RELATIVE_CAP) - 3) * 54 + 142<br/>+			: 0;<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_STATUS:<br/>+		{<br/>+			int charge = ec_read(REG_BAT_CHARGE);<br/>+<br/>+			if (charge &amp; FLAG_BAT_CHARGE_DISCHARGE)<br/>+				RET = POWER_SUPPLY_STATUS_DISCHARGING;<br/>+			else if (charge &amp; FLAG_BAT_CHARGE_CHARGE)<br/>+				RET = POWER_SUPPLY_STATUS_CHARGING;<br/>+			else<br/>+				RET = POWER_SUPPLY_STATUS_NOT_CHARGING;<br/>+		}<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_HEALTH:<br/>+		{<br/>+			int status;<br/>+<br/>+			if (!is_bat_in()) {<br/>+				RET = POWER_SUPPLY_HEALTH_UNKNOWN;<br/>+				break;<br/>+			}<br/>+<br/>+			status = get_bat_status();<br/>+<br/>+			RET = POWER_SUPPLY_HEALTH_GOOD;<br/>+			if (status &amp; (BIT_BAT_STATUS_DESTROY |<br/>+						BIT_BAT_STATUS_LOW))<br/>+				RET = POWER_SUPPLY_HEALTH_DEAD;<br/>+			if (ec_read(REG_BAT_CHARGE_STATUS) &amp;<br/>+					BIT_BAT_CHARGE_STATUS_OVERTEMP)<br/>+				RET = POWER_SUPPLY_HEALTH_OVERHEAT;<br/>+		}<br/>+		break;<br/>+	case POWER_SUPPLY_PROP_CHARGE_NOW:	/* 1/100(%)*1000 µAh */<br/>+		RET = get_bat_info(RELATIVE_CAP) *<br/>+			get_bat_info(FULLCHG_CAP) * 10;<br/>+		break;<br/>+	default:<br/>+		return -EINVAL;<br/>+	}<br/>+	return 0;<br/>+}<br/>+#undef RET<br/>+<br/>+static enum power_supply_property yeeloong_bat_props[] = {<br/>+	POWER_SUPPLY_PROP_STATUS,<br/>+	POWER_SUPPLY_PROP_PRESENT,<br/>+	POWER_SUPPLY_PROP_VOLTAGE_MAX_DESIGN,<br/>+	POWER_SUPPLY_PROP_CHARGE_FULL_DESIGN,<br/>+	POWER_SUPPLY_PROP_CHARGE_FULL,<br/>+	POWER_SUPPLY_PROP_CHARGE_NOW,<br/>+	POWER_SUPPLY_PROP_CURRENT_NOW,<br/>+	POWER_SUPPLY_PROP_VOLTAGE_NOW,<br/>+	POWER_SUPPLY_PROP_HEALTH,<br/>+	POWER_SUPPLY_PROP_TIME_TO_EMPTY_NOW,<br/>+	POWER_SUPPLY_PROP_CAPACITY,<br/>+	POWER_SUPPLY_PROP_CAPACITY_LEVEL,<br/>+	POWER_SUPPLY_PROP_TEMP,<br/>+	POWER_SUPPLY_PROP_MANUFACTURER,<br/>+};<br/>+<br/>+static const struct power_supply_desc yeeloong_bat_desc = {<br/>+	.name = "yeeloong-bat",<br/>+	.type = POWER_SUPPLY_TYPE_BATTERY,<br/>+	.properties = yeeloong_bat_props,<br/>+	.num_properties = ARRAY_SIZE(yeeloong_bat_props),<br/>+	.get_property = yeeloong_get_bat_props,<br/>+};<br/>+<br/>+static int ac_bat_initialized;<br/>+<br/>+static int yeeloong_bat_init(void)<br/>+{<br/>+	yeeloong_ac = power_supply_register(NULL, &amp;yeeloong_ac_desc, NULL);<br/>+	if (IS_ERR(yeeloong_ac))<br/>+		return PTR_ERR(yeeloong_ac);<br/>+	yeeloong_bat = power_supply_register(NULL, &amp;yeeloong_bat_desc, NULL);<br/>+	if (IS_ERR(yeeloong_bat)) {<br/>+		power_supply_unregister(yeeloong_ac);<br/>+		return PTR_ERR(yeeloong_bat);<br/>+	}<br/>+	ac_bat_initialized = 1;<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static void yeeloong_bat_exit(void)<br/>+{<br/>+	if (ac_bat_initialized) {<br/>+		ac_bat_initialized = 0;<br/>+<br/>+		power_supply_unregister(yeeloong_ac);<br/>+		power_supply_unregister(yeeloong_bat);<br/>+	}<br/>+}<br/>+/* hwmon subdriver */<br/>+<br/>+#define MIN_FAN_SPEED 0<br/>+#define MAX_FAN_SPEED 3<br/>+<br/>+static int get_fan_pwm_enable(void)<br/>+{<br/>+	int level, mode;<br/>+<br/>+	level = ec_read(REG_FAN_SPEED_LEVEL);<br/>+	mode = ec_read(REG_FAN_AUTO_MAN_SWITCH);<br/>+<br/>+	if (level == MAX_FAN_SPEED &amp;&amp; mode == BIT_FAN_MANUAL)<br/>+		mode = 0;<br/>+	else if (mode == BIT_FAN_MANUAL)<br/>+		mode = 1;<br/>+	else<br/>+		mode = 2;<br/>+<br/>+	return mode;<br/>+}<br/>+<br/>+static void set_fan_pwm_enable(int mode)<br/>+{<br/>+	switch (mode) {<br/>+	case 0:<br/>+		/* fullspeed */<br/>+		ec_write(REG_FAN_AUTO_MAN_SWITCH, BIT_FAN_MANUAL);<br/>+		ec_write(REG_FAN_SPEED_LEVEL, MAX_FAN_SPEED);<br/>+		break;<br/>+	case 1:<br/>+		ec_write(REG_FAN_AUTO_MAN_SWITCH, BIT_FAN_MANUAL);<br/>+		break;<br/>+	case 2:<br/>+		ec_write(REG_FAN_AUTO_MAN_SWITCH, BIT_FAN_AUTO);<br/>+		break;<br/>+	default:<br/>+		break;<br/>+	}<br/>+}<br/>+<br/>+static int get_fan_pwm(void)<br/>+{<br/>+	return ec_read(REG_FAN_SPEED_LEVEL);<br/>+}<br/>+<br/>+static void set_fan_pwm(int value)<br/>+{<br/>+	int mode;<br/>+<br/>+	mode = ec_read(REG_FAN_AUTO_MAN_SWITCH);<br/>+	if (mode != BIT_FAN_MANUAL)<br/>+		return;<br/>+<br/>+	value = clamp_val(value, 0, 3);<br/>+<br/>+	/* We must ensure the fan is on */<br/>+	if (value &gt; 0)<br/>+		ec_write(REG_FAN_CONTROL, ON);<br/>+<br/>+	ec_write(REG_FAN_SPEED_LEVEL, value);<br/>+}<br/>+<br/>+static int get_fan_rpm(void)<br/>+{<br/>+	int value;<br/>+<br/>+	value = FAN_SPEED_DIVIDER /<br/>+	    (((ec_read(REG_FAN_SPEED_HIGH) &amp; 0x0f) &lt;&lt; 8) |<br/>+	     ec_read(REG_FAN_SPEED_LOW));<br/>+<br/>+	return value;<br/>+}<br/>+<br/>+static int get_cpu_temp(void)<br/>+{<br/>+	s8 value;<br/>+<br/>+	value = ec_read(REG_TEMPERATURE_VALUE);<br/>+<br/>+	return value * 1000;<br/>+}<br/>+<br/>+static int get_cpu_temp_max(void)<br/>+{<br/>+	return 60 * 1000;<br/>+}<br/>+<br/>+static int get_battery_temp_alarm(void)<br/>+{<br/>+	int status;<br/>+<br/>+	status = (ec_read(REG_BAT_CHARGE_STATUS) &amp;<br/>+			BIT_BAT_CHARGE_STATUS_OVERTEMP);<br/>+<br/>+	return !!status;<br/>+}<br/>+<br/>+static ssize_t store_sys_hwmon(void (*set) (int), const char *buf, size_t count)<br/>+{<br/>+	int ret;<br/>+	unsigned long value;<br/>+<br/>+	if (!count)<br/>+		return 0;<br/>+<br/>+	ret = kstrtoul(buf, 10, &amp;value);<br/>+	if (ret)<br/>+		return ret;<br/>+<br/>+	set(value);<br/>+<br/>+	return count;<br/>+}<br/>+<br/>+static ssize_t show_sys_hwmon(int (*get) (void), char *buf)<br/>+{<br/>+	return sprintf(buf, "%d\n", get());<br/>+}<br/>+<br/>+#define CREATE_SENSOR_ATTR(_name, _mode, _set, _get)		\<br/>+	static ssize_t show_##_name(struct device *dev,			\<br/>+				    struct device_attribute *attr,	\<br/>+				    char *buf)				\<br/>+	{								\<br/>+		return show_sys_hwmon(_set, buf);			\<br/>+	}								\<br/>+	static ssize_t store_##_name(struct device *dev,		\<br/>+				     struct device_attribute *attr,	\<br/>+				     const char *buf, size_t count)	\<br/>+	{								\<br/>+		return store_sys_hwmon(_get, buf, count);		\<br/>+	}								\<br/>+	static SENSOR_DEVICE_ATTR(_name, _mode, show_##_name, store_##_name, 0)<br/>+<br/>+CREATE_SENSOR_ATTR(fan1_input, 0444, get_fan_rpm, NULL);<br/>+CREATE_SENSOR_ATTR(pwm1, 0444 | 0644, get_fan_pwm, set_fan_pwm);<br/>+CREATE_SENSOR_ATTR(pwm1_enable, 0444 | 0644, get_fan_pwm_enable,<br/>+		set_fan_pwm_enable);<br/>+CREATE_SENSOR_ATTR(temp1_input, 0444, get_cpu_temp, NULL);<br/>+CREATE_SENSOR_ATTR(temp1_max, 0444, get_cpu_temp_max, NULL);<br/>+CREATE_SENSOR_ATTR(temp2_input, 0444, get_battery_temp, NULL);<br/>+CREATE_SENSOR_ATTR(temp2_max_alarm, 0444, get_battery_temp_alarm, NULL);<br/>+CREATE_SENSOR_ATTR(curr1_input, 0444, get_battery_current, NULL);<br/>+CREATE_SENSOR_ATTR(in1_input, 0444, get_battery_voltage, NULL);<br/>+<br/>+static ssize_t<br/>+show_name(struct device *dev, struct device_attribute *attr, char *buf)<br/>+{<br/>+	return sprintf(buf, "yeeloong\n");<br/>+}<br/>+<br/>+static SENSOR_DEVICE_ATTR(name, 0444, show_name, NULL, 0);<br/>+<br/>+static struct attribute *hwmon_attributes[] = {<br/>+	&amp;sensor_dev_attr_pwm1.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_pwm1_enable.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_fan1_input.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_temp1_input.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_temp1_max.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_temp2_input.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_temp2_max_alarm.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_curr1_input.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_in1_input.dev_attr.attr,<br/>+	&amp;sensor_dev_attr_name.dev_attr.attr,<br/>+	NULL<br/>+};<br/>+<br/>+static struct attribute_group hwmon_attribute_group = {<br/>+	.attrs = hwmon_attributes<br/>+};<br/>+<br/>+static struct device *yeeloong_hwmon_dev;<br/>+<br/>+static int yeeloong_hwmon_init(void)<br/>+{<br/>+	int ret;<br/>+<br/>+	yeeloong_hwmon_dev = hwmon_device_register(NULL);<br/>+	if (IS_ERR(yeeloong_hwmon_dev)) {<br/>+		pr_err("Fail to register yeeloong hwmon device\n");<br/>+		yeeloong_hwmon_dev = NULL;<br/>+		return PTR_ERR(yeeloong_hwmon_dev);<br/>+	}<br/>+	ret = sysfs_create_group(&amp;yeeloong_hwmon_dev-&gt;kobj,<br/>+				 &amp;hwmon_attribute_group);<br/>+	if (ret) {<br/>+		hwmon_device_unregister(yeeloong_hwmon_dev);<br/>+		yeeloong_hwmon_dev = NULL;<br/>+		return ret;<br/>+	}<br/>+	/* ensure fan is set to auto mode */<br/>+	set_fan_pwm_enable(2);<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static void yeeloong_hwmon_exit(void)<br/>+{<br/>+	if (yeeloong_hwmon_dev) {<br/>+		sysfs_remove_group(&amp;yeeloong_hwmon_dev-&gt;kobj,<br/>+				   &amp;hwmon_attribute_group);<br/>+		hwmon_device_unregister(yeeloong_hwmon_dev);<br/>+		yeeloong_hwmon_dev = NULL;<br/>+	}<br/>+}<br/>+<br/>+/* video output controller */<br/>+<br/>+<br/>+#define LCD	0<br/>+#define CRT	1<br/>+<br/>+static void display_vo_set(int display, int on)<br/>+{<br/>+	int addr;<br/>+	unsigned long value;<br/>+<br/>+	addr = (display == LCD) ? 0x31 : 0x21;<br/>+<br/>+	outb(addr, 0x3c4);<br/>+	value = inb(0x3c5);<br/>+<br/>+	if (display == LCD)<br/>+		value |= (on ? 0x03 : 0x02);<br/>+	else {<br/>+		if (on)<br/>+			clear_bit(7, &amp;value);<br/>+		else<br/>+			set_bit(7, &amp;value);<br/>+	}<br/>+<br/>+	outb(addr, 0x3c4);<br/>+	outb(value, 0x3c5);<br/>+}<br/>+<br/>+<br/>+<br/>+/* hotkey subdriver */<br/>+<br/>+static struct input_dev *yeeloong_hotkey_dev;<br/>+<br/>+static const struct key_entry yeeloong_keymap[] = {<br/>+	{KE_SW, EVENT_LID, {SW_LID} },<br/>+	/* Fn + ESC */<br/>+	{KE_KEY, EVENT_CAMERA, {KEY_CAMERA} },<br/>+	/* Fn + F1 */<br/>+	{KE_KEY, EVENT_SLEEP, {KEY_SLEEP} },<br/>+	/* Fn + F2 */<br/>+	{KE_KEY, EVENT_DISPLAYTOGGLE, {KEY_DISPLAYTOGGLE} },<br/>+	/* Fn + F3 */<br/>+	{KE_KEY, EVENT_SWITCHVIDEOMODE, {KEY_SWITCHVIDEOMODE} },<br/>+	/* Fn + F4 */<br/>+	{KE_KEY, EVENT_AUDIO_MUTE, {KEY_MUTE} },<br/>+	/* Fn + F5 */<br/>+	{KE_KEY, EVENT_WLAN, {KEY_WLAN} },<br/>+	/* Fn + up */<br/>+	{KE_KEY, EVENT_DISPLAY_BRIGHTNESS, {KEY_BRIGHTNESSUP} },<br/>+	/* Fn + down */<br/>+	{KE_KEY, EVENT_DISPLAY_BRIGHTNESS, {KEY_BRIGHTNESSDOWN} },<br/>+	/* Fn + right */<br/>+	{KE_KEY, EVENT_AUDIO_VOLUME, {KEY_VOLUMEUP} },<br/>+	/* Fn + left */<br/>+	{KE_KEY, EVENT_AUDIO_VOLUME, {KEY_VOLUMEDOWN} },<br/>+	{KE_END, 0} };<br/>+<br/>+static struct key_entry *get_event_key_entry(int event, int status)<br/>+{<br/>+	struct key_entry *ke;<br/>+	static int old_brightness_status = -1;<br/>+	static int old_volume_status = -1;<br/>+<br/>+	ke = sparse_keymap_entry_from_scancode(yeeloong_hotkey_dev, event);<br/>+	if (!ke)<br/>+		return NULL;<br/>+<br/>+	switch (event) {<br/>+	case EVENT_DISPLAY_BRIGHTNESS:<br/>+		/* current status &gt; old one, means up */<br/>+		if ((status == 0) || (status &lt; old_brightness_status))<br/>+			ke++;<br/>+		old_brightness_status = status;<br/>+		break;<br/>+	case EVENT_AUDIO_VOLUME:<br/>+		if ((status == 0) || (status &lt; old_volume_status))<br/>+			ke++;<br/>+		old_volume_status = status;<br/>+		break;<br/>+	default:<br/>+		break;<br/>+	}<br/>+<br/>+	return ke;<br/>+}<br/>+<br/>+static int report_lid_switch(int status)<br/>+{<br/>+	input_report_switch(yeeloong_hotkey_dev, SW_LID, !status);<br/>+	input_sync(yeeloong_hotkey_dev);<br/>+<br/>+	return status;<br/>+}<br/>+<br/>+static void yeeloong_vo_set(int lcd_status, int crt_status)<br/>+{<br/>+	display_vo_set(LCD, lcd_status);<br/>+	display_vo_set(CRT, crt_status);<br/>+}<br/>+<br/>+static int crt_detect_handler(int status)<br/>+{<br/>+	if (status)<br/>+		yeeloong_vo_set(ON, ON);<br/>+	else<br/>+		yeeloong_vo_set(ON, OFF);<br/>+<br/>+	return status;<br/>+}<br/>+<br/>+static int displaytoggle_handler(int status)<br/>+{<br/>+	/* EC(&gt;=PQ1D26) does this job for us, we can not do it again,<br/>+	 * otherwise, the brightness will not resume to the normal level!<br/>+	 */<br/>+	if (ec_version_before("EC_VER=PQ1D26"))<br/>+		display_vo_set(LCD, status);<br/>+<br/>+	return status;<br/>+}<br/>+<br/>+static int switchvideomode_handler(int status)<br/>+{<br/>+	static int video_output_status;<br/>+<br/>+	/* Only enable switch video output button<br/>+	 * when CRT is connected<br/>+	 */<br/>+	if (ec_read(REG_CRT_DETECT) == OFF)<br/>+		return 0;<br/>+	/* 0. no CRT connected: LCD on, CRT off<br/>+	 * 1. BOTH on<br/>+	 * 2. LCD off, CRT on<br/>+	 * 3. BOTH off<br/>+	 * 4. LCD on, CRT off<br/>+	 */<br/>+	video_output_status++;<br/>+	if (video_output_status &gt; 4)<br/>+		video_output_status = 1;<br/>+<br/>+	switch (video_output_status) {<br/>+	case 1:<br/>+		yeeloong_vo_set(ON, ON);<br/>+		break;<br/>+	case 2:<br/>+		yeeloong_vo_set(OFF, ON);<br/>+		break;<br/>+	case 3:<br/>+		yeeloong_vo_set(OFF, OFF);<br/>+		break;<br/>+	case 4:<br/>+		yeeloong_vo_set(ON, OFF);<br/>+		break;<br/>+	default:<br/>+		/* Ensure LCD is on */<br/>+		display_vo_set(LCD, ON);<br/>+		break;<br/>+	}<br/>+	return video_output_status;<br/>+}<br/>+<br/>+static int camera_handler(int status)<br/>+{<br/>+	int value;<br/>+<br/>+	value = ec_read(REG_CAMERA_CONTROL);<br/>+	ec_write(REG_CAMERA_CONTROL, value | (1 &lt;&lt; 1));<br/>+<br/>+	return status;<br/>+}<br/>+<br/>+static int usb2_handler(int status)<br/>+{<br/>+	pr_emerg("USB2 Over Current occurred\n");<br/>+<br/>+	return status;<br/>+}<br/>+<br/>+static int usb0_handler(int status)<br/>+{<br/>+	pr_emerg("USB0 Over Current occurred\n");<br/>+<br/>+	return status;<br/>+}<br/>+<br/>+static int ac_bat_handler(int status)<br/>+{<br/>+	if (ac_bat_initialized) {<br/>+		power_supply_changed(yeeloong_ac);<br/>+		power_supply_changed(yeeloong_bat);<br/>+	}<br/>+	return status;<br/>+}<br/>+<br/>+static void do_event_action(int event)<br/>+{<br/>+	sci_handler handler;<br/>+	int reg, status;<br/>+	struct key_entry *ke;<br/>+<br/>+	reg = 0;<br/>+	handler = NULL;<br/>+	status = 0;<br/>+<br/>+	switch (event) {<br/>+	case EVENT_LID:<br/>+		reg = REG_LID_DETECT;<br/>+		break;<br/>+	case EVENT_SWITCHVIDEOMODE:<br/>+		handler = switchvideomode_handler;<br/>+		break;<br/>+	case EVENT_CRT_DETECT:<br/>+		reg = REG_CRT_DETECT;<br/>+		handler = crt_detect_handler;<br/>+		break;<br/>+	case EVENT_CAMERA:<br/>+		reg = REG_CAMERA_STATUS;<br/>+		handler = camera_handler;<br/>+		break;<br/>+	case EVENT_USB_OC2:<br/>+		reg = REG_USB2_FLAG;<br/>+		handler = usb2_handler;<br/>+		break;<br/>+	case EVENT_USB_OC0:<br/>+		reg = REG_USB0_FLAG;<br/>+		handler = usb0_handler;<br/>+		break;<br/>+	case EVENT_DISPLAYTOGGLE:<br/>+		reg = REG_DISPLAY_LCD;<br/>+		handler = displaytoggle_handler;<br/>+		break;<br/>+	case EVENT_AUDIO_MUTE:<br/>+		reg = REG_AUDIO_MUTE;<br/>+		break;<br/>+	case EVENT_DISPLAY_BRIGHTNESS:<br/>+		reg = REG_DISPLAY_BRIGHTNESS;<br/>+		break;<br/>+	case EVENT_AUDIO_VOLUME:<br/>+		reg = REG_AUDIO_VOLUME;<br/>+		break;<br/>+	case EVENT_AC_BAT:<br/>+		handler = ac_bat_handler;<br/>+		break;<br/>+	default:<br/>+		break;<br/>+	}<br/>+<br/>+	if (reg != 0)<br/>+		status = ec_read(reg);<br/>+<br/>+	if (handler != NULL)<br/>+		status = handler(status);<br/>+<br/>+	pr_debug("%s: event: %d status: %d\n", __func__, event, status);<br/>+<br/>+	/* Report current key to user-space */<br/>+	ke = get_event_key_entry(event, status);<br/>+	if (ke) {<br/>+		if (ke-&gt;keycode == SW_LID)<br/>+			report_lid_switch(status);<br/>+		else<br/>+			sparse_keymap_report_entry(yeeloong_hotkey_dev, ke, 1,<br/>+					true);<br/>+	}<br/>+}<br/>+<br/>+/*<br/>+ * SCI(system control interrupt) main interrupt routine<br/>+ *<br/>+ * We will do the query and get event number together so the interrupt routine<br/>+ * should be longer than 120us now at least 3ms elpase for it.<br/>+ */<br/>+static irqreturn_t sci_irq_handler(int irq, void *dev_id)<br/>+{<br/>+	int ret, event;<br/>+<br/>+	if (irq != SCI_IRQ_NUM)<br/>+		return IRQ_NONE;<br/>+<br/>+	/* Query the event number */<br/>+	ret = ec_query_event_num();<br/>+	if (ret &lt; 0)<br/>+		return IRQ_NONE;<br/>+<br/>+	event = ec_get_event_num();<br/>+	if (event &lt; EVENT_START || event &gt; EVENT_END)<br/>+		return IRQ_NONE;<br/>+<br/>+	/* Execute corresponding actions */<br/>+	do_event_action(event);<br/>+<br/>+	return IRQ_HANDLED;<br/>+}<br/>+<br/>+/*<br/>+ * Config and init some msr and gpio register properly.<br/>+ */<br/>+static int sci_irq_init(void)<br/>+{<br/>+	u32 hi, lo;<br/>+	u32 gpio_base;<br/>+	unsigned long flags;<br/>+	int ret;<br/>+<br/>+	/* Get gpio base */<br/>+	_rdmsr(DIVIL_MSR_REG(DIVIL_LBAR_GPIO), &amp;hi, &amp;lo);<br/>+	gpio_base = lo &amp; 0xff00;<br/>+<br/>+	/* Filter the former kb3310 interrupt for security */<br/>+	ret = ec_query_event_num();<br/>+	if (ret)<br/>+		return ret;<br/>+<br/>+	/* For filtering next number interrupt */<br/>+	mdelay(10000);<br/>+<br/>+	/* Set gpio native registers and msrs for GPIO27 SCI EVENT PIN<br/>+	 * gpio :<br/>+	 *      input, pull-up, no-invert, event-count and value 0,<br/>+	 *      no-filter, no edge mode<br/>+	 *      gpio27 map to Virtual gpio0<br/>+	 * msr :<br/>+	 *      no primary and lpc<br/>+	 *      Unrestricted Z input to IG10 from Virtual gpio 0.<br/>+	 */<br/>+	local_irq_save(flags);<br/>+	_rdmsr(0x80000024, &amp;hi, &amp;lo);<br/>+	lo &amp;= ~(1 &lt;&lt; 10);<br/>+	_wrmsr(0x80000024, hi, lo);<br/>+	_rdmsr(0x80000025, &amp;hi, &amp;lo);<br/>+	lo &amp;= ~(1 &lt;&lt; 10);<br/>+	_wrmsr(0x80000025, hi, lo);<br/>+	_rdmsr(0x80000023, &amp;hi, &amp;lo);<br/>+	lo |= (0x0a &lt;&lt; 0);<br/>+	_wrmsr(0x80000023, hi, lo);<br/>+	local_irq_restore(flags);<br/>+<br/>+	/* Set gpio27 as sci interrupt<br/>+	 *<br/>+	 * input, pull-up, no-fliter, no-negedge, invert<br/>+	 * the sci event is just about 120us<br/>+	 */<br/>+<br/>+	/*  input enable */<br/>+	outl(0x00000800, (gpio_base | 0xA0));<br/>+	/*  revert the input */<br/>+	outl(0x00000800, (gpio_base | 0xA4));<br/>+	/*  event-int enable */<br/>+	outl(0x00000800, (gpio_base | 0xB8));<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static int yeeloong_hotkey_init(void)<br/>+{<br/>+	int ret;<br/>+<br/>+	ret = sci_irq_init();<br/>+	if (ret)<br/>+		return -EFAULT;<br/>+<br/>+	ret = request_threaded_irq(SCI_IRQ_NUM, NULL, &amp;sci_irq_handler,<br/>+			IRQF_ONESHOT, "sci", NULL);<br/>+	if (ret)<br/>+		return -EFAULT;<br/>+<br/>+	yeeloong_hotkey_dev = input_allocate_device();<br/>+<br/>+	if (!yeeloong_hotkey_dev) {<br/>+		free_irq(SCI_IRQ_NUM, NULL);<br/>+		return -ENOMEM;<br/>+	}<br/>+<br/>+	yeeloong_hotkey_dev-&gt;name = "HotKeys";<br/>+	yeeloong_hotkey_dev-&gt;phys = "button/input0";<br/>+	yeeloong_hotkey_dev-&gt;id.bustype = BUS_HOST;<br/>+	yeeloong_hotkey_dev-&gt;dev.parent = NULL;<br/>+<br/>+	ret = sparse_keymap_setup(yeeloong_hotkey_dev, yeeloong_keymap, NULL);<br/>+	if (ret) {<br/>+		pr_err("Fail to setup input device keymap\n");<br/>+		input_free_device(yeeloong_hotkey_dev);<br/>+		return ret;<br/>+	}<br/>+<br/>+	ret = input_register_device(yeeloong_hotkey_dev);<br/>+	if (ret) {<br/>+		input_free_device(yeeloong_hotkey_dev);<br/>+		return ret;<br/>+	}<br/>+<br/>+	/* Update the current status of LID */<br/>+	report_lid_switch(ON);<br/>+<br/>+#ifdef CONFIG_LOONGSON_SUSPEND<br/>+	/* Install the real yeeloong_report_lid_status for pm.c */<br/>+	yeeloong_report_lid_status = report_lid_switch;<br/>+#endif<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static void yeeloong_hotkey_exit(void)<br/>+{<br/>+	/* Free irq */<br/>+	free_irq(SCI_IRQ_NUM, NULL);<br/>+<br/>+#ifdef CONFIG_LOONGSON_SUSPEND<br/>+	/* Uninstall yeeloong_report_lid_status for pm.c */<br/>+	if (yeeloong_report_lid_status == report_lid_switch)<br/>+		yeeloong_report_lid_status = NULL;<br/>+#endif<br/>+<br/>+	if (yeeloong_hotkey_dev) {<br/>+		input_unregister_device(yeeloong_hotkey_dev);<br/>+		yeeloong_hotkey_dev = NULL;<br/>+	}<br/>+}<br/>+<br/>+#ifdef CONFIG_PM<br/>+static void usb_ports_set(int status)<br/>+{<br/>+	status = !!status;<br/>+<br/>+	ec_write(REG_USB0_FLAG, status);<br/>+	ec_write(REG_USB1_FLAG, status);<br/>+	ec_write(REG_USB2_FLAG, status);<br/>+}<br/>+<br/>+static int yeeloong_suspend(struct device *dev)<br/>+<br/>+{<br/>+	if (ec_version_before("EC_VER=PQ1D27"))<br/>+		display_vo_set(LCD, OFF);<br/>+	display_vo_set(CRT, OFF);<br/>+	usb_ports_set(OFF);<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static int yeeloong_resume(struct device *dev)<br/>+{<br/>+	int ret;<br/>+<br/>+	if (ec_version_before("EC_VER=PQ1D27"))<br/>+		display_vo_set(LCD, ON);<br/>+	display_vo_set(CRT, ON);<br/>+	usb_ports_set(ON);<br/>+<br/>+	ret = sci_irq_init();<br/>+	if (ret)<br/>+		return -EFAULT;<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static const SIMPLE_DEV_PM_OPS(yeeloong_pm_ops, yeeloong_suspend,<br/>+	yeeloong_resume);<br/>+#endif<br/>+<br/>+static struct platform_device_id platform_device_ids[] = {<br/>+	{<br/>+		.name = "yeeloong_laptop",<br/>+	},<br/>+	{}<br/>+};<br/>+<br/>+MODULE_DEVICE_TABLE(platform, platform_device_ids);<br/>+<br/>+static struct platform_driver platform_driver = {<br/>+	.driver = {<br/>+		.name = "yeeloong_laptop",<br/>+		.owner = THIS_MODULE,<br/>+#ifdef CONFIG_PM<br/>+		.pm = &amp;yeeloong_pm_ops,<br/>+#endif<br/>+	},<br/>+	.id_table = platform_device_ids,<br/>+};<br/>+<br/>+static int __init yeeloong_init(void)<br/>+{<br/>+	int ret;<br/>+<br/>+	if (mips_machtype != MACH_LEMOTE_YL2F89) {<br/>+		pr_err("Unsupported system.\n");<br/>+		return -ENODEV;<br/>+	}<br/>+<br/>+	pr_info("Load YeeLoong Laptop Platform Specific Driver.\n");<br/>+<br/>+	/* Register platform stuff */<br/>+	ret = platform_driver_register(&amp;platform_driver);<br/>+	if (ret) {<br/>+		pr_err("Fail to register yeeloong platform driver.\n");<br/>+		return ret;<br/>+	}<br/>+<br/>+	ret = yeeloong_backlight_init();<br/>+	if (ret) {<br/>+		pr_err("Fail to register yeeloong backlight driver.\n");<br/>+		yeeloong_backlight_exit();<br/>+		return ret;<br/>+	}<br/>+<br/>+	ret = yeeloong_bat_init();<br/>+	if (ret) {<br/>+		pr_err("Fail to register yeeloong battery driver.\n");<br/>+		yeeloong_bat_exit();<br/>+		return ret;<br/>+	}<br/>+<br/>+	ret = yeeloong_hwmon_init();<br/>+	if (ret) {<br/>+		pr_err("Fail to register yeeloong hwmon driver.\n");<br/>+		yeeloong_hwmon_exit();<br/>+		return ret;<br/>+	}<br/>+<br/>+	ret = yeeloong_hotkey_init();<br/>+	if (ret) {<br/>+		pr_err("Fail to register yeeloong hotkey driver.\n");<br/>+		yeeloong_hotkey_exit();<br/>+		return ret;<br/>+	}<br/>+<br/>+	return 0;<br/>+}<br/>+<br/>+static void __exit yeeloong_exit(void)<br/>+{<br/>+	yeeloong_hotkey_exit();<br/>+	yeeloong_hwmon_exit();<br/>+	yeeloong_bat_exit();<br/>+	yeeloong_backlight_exit();<br/>+	platform_driver_unregister(&amp;platform_driver);<br/>+<br/>+	pr_info("Unload YeeLoong Platform Specific Driver.\n");<br/>+}<br/>+<br/>+module_init(yeeloong_init);<br/>+module_exit(yeeloong_exit);<br/>+<br/>+MODULE_AUTHOR("Wu Zhangjin &lt;wuzhangjin@gmail.com&gt;; Liu Junliang &lt;liujl@lemote.com&gt;");<br/>+MODULE_DESCRIPTION("YeeLoong laptop driver");<br/>+MODULE_LICENSE("GPL");<br/>-- <br/>2.15.0<br/></pre>
+     <div align="center">
+      <div class="shariff" data-backend-url="/shariff/index.php" data-lang="en" data-services='["googleplus","reddit"]' data-theme="grey">
+      </div>
+     </div>
+    </td>
+    <td class="c" rowspan="2" valign="top" width="32">
+     <img alt="\" height="32" src="/images/icornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+   </tr>
+   <tr>
+    <td align="right" valign="bottom">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="\" height="32" src="/images/bcornerl.gif" width="32"/>
+    </td>
+    <td class="c">
+    </td>
+    <td class="c" style="padding-bottom: 0px" valign="bottom">
+     <img alt="/" height="32" src="/images/bcornerr.gif" width="32"/>
+    </td>
+   </tr>
+   <tr>
+    <td align="right" colspan="2" valign="top">
+    </td>
+    <td class="lm">
+     Last update: 2017-12-04 10:25    [W:0.093 / U:4.416 seconds]
+     <br/>
+     ©2003-2017
+     <a href="http://jasper.es/">
+      <span itemprop="editor">
+       Jasper Spaans
+      </span>
+     </a>
+     . hosted at
+     <a href="https://www.digitalocean.com/?refcode=9a8e99d24cf9">
+      Digital Ocean
+     </a>
+     <a href="https://buysellads.com/buy/detail/244952">
+      Advertise on this site
+     </a>
+    </td>
+    <td>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>
