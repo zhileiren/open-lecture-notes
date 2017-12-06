@@ -1,0 +1,334 @@
+\documentclass{beamer}
+
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}
+	\usecolortheme{beaver}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage{xeCJK}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{bibentry}
+\usepackage{verbatim}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\setCJKmainfont{WenQuanYi Micro Hei}
+
+
+\title[开源软件基础] 
+{开源软件基础}
+\subtitle{数据库sqlite3}
+
+\author[Zhilei Ren] 
+{Zhilei Ren}
+
+\institute[OSCAR Team] % (optional, but mostly needed)
+{
+\\\includegraphics[width=0.2\textwidth]{../../utils/logo.jpg}\\
+OSCAR Team, School of Software, 
+Dalian University of Technology
+}
+
+
+\subject{Open source software}
+
+
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{../../utils/logo.jpg}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry journal}{}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+%  \tableofcontents[currentsection,currentsubsection, 
+%    hideothersubsections, 
+%    sectionstyle=show,
+%]
+%\end{frame}
+
+\AtBeginSection[]
+{
+ \begin{frame}<beamer>
+ \frametitle{Outline}
+ \tableofcontents[currentsection]
+ \end{frame}
+}
+\section{调研结果} % (fold)
+\label{sec:调研结果}
+% section 调研结果 (end)
+
+\section{Sqlite3} % (fold)
+\label{sec:Sqlite3}
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+Source codeLib/sqlite3/
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+SQLite is a C library that provides a lightweight disk-based database that
+doesn't require a separate server process and allows accessing the database
+using a nonstandard variant of the SQL query language. Some applications can use
+SQLite for internal data storage.  It's also possible to prototype an
+application using SQLite and then port the code to a larger database such as
+PostgreSQL or Oracle.
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+The sqlite3 module was written by Gerhard Häring.  It provides a SQL interface
+compliant with the DB-API 2.0 specification described by PEP 249.
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+To use the module, you must first create a Connection object that
+represents the database.  Here the data will be stored in the
+example.db file:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+
+\begin{verbatim}
+
+
+import sqlite3
+conn = sqlite3.connect('example.db')
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+You can also supply the special name :memory: to create a database in RAM.
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+Once you have a Connection, you can create a Cursor  object
+and call its ~Cursor.execute method to perform SQL commands:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+
+\begin{verbatim}
+
+
+c = conn.cursor()
+
+# Create table
+c.execute('''CREATE TABLE stocks
+             (date text, trans text, symbol text, qty real, price real)''')
+
+# Insert a row of data
+c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
+
+# Save (commit) the changes
+conn.commit()
+
+# We can also close the connection if we are done with it.
+# Just be sure any changes have been committed or they will be lost.
+conn.close()
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+The data you've saved is persistent and is available in subsequent sessions:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+
+\begin{verbatim}
+
+
+import sqlite3
+conn = sqlite3.connect('example.db')
+c = conn.cursor()
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+Usually your SQL operations will need to use values from Python variables.  You
+shouldn't assemble your query using Python's string operations because doing so
+is insecure; it makes your program vulnerable to an SQL injection attack
+(see https://xkcd.com/327/ for humorous example of what can go wrong).
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+Instead, use the DB-API's parameter substitution.  Put ? as a placeholder
+wherever you want to use a value, and then provide a tuple of values as the
+second argument to the cursor's ~Cursor.execute method.  (Other database
+modules may use a different placeholder, such as \%s or :1.) For
+example:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+
+\begin{verbatim}
+
+
+# Never do this -- insecure!
+symbol = 'RHAT'
+c.execute("SELECT * FROM stocks WHERE symbol = '%s'" % symbol)
+
+# Do this instead
+t = ('RHAT',)
+c.execute('SELECT * FROM stocks WHERE symbol=?', t)
+print(c.fetchone())
+
+# Larger example that inserts many records at a time
+purchases = [('2006-03-28', 'BUY', 'IBM', 1000, 45.00),
+             ('2006-04-05', 'BUY', 'MSFT', 1000, 72.00),
+             ('2006-04-06', 'SELL', 'IBM', 500, 53.00),
+            ]
+c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', purchases)
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+To retrieve data after executing a SELECT statement, you can either treat the
+cursor as an iterator, call the cursor's ~Cursor.fetchone method to
+retrieve a single matching row, or call ~Cursor.fetchall to get a list of the
+matching rows.
+
+\end{frame}
+
+
+\begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+This example uses the iterator form:
+
+\end{frame}
+
+
+\begin{frame}[t,fragile]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
+
+
+\begin{verbatim}
+
+
+>>> for row in c.execute('SELECT * FROM stocks ORDER BY price'):
+        print(row)
+
+('2006-01-05', 'BUY', 'RHAT', 100, 35.14)
+('2006-03-28', 'BUY', 'IBM', 1000, 45.0)
+('2006-04-06', 'SELL', 'IBM', 500, 53.0)
+('2006-04-05', 'BUY', 'MSFT', 1000, 72.0)
+
+
+\end{verbatim}
+
+
+\end{frame}
+
+\begin{frame}[t]{类型对应}
+    
+SQLite默认支持如下类型: NULL, INTEGER, REAL, TEXT, BLOB.
+
+\begin{table}
+\caption{与Python类型间对应关系}
+\begin{tabular}{lr}
+    \hline
+Python type 	&SQLite type\\
+    \hline
+None 	&NULL    \\
+int 	&INTEGER \\
+float 	&REAL    \\
+str 	&TEXT    \\
+bytes 	&BLOB    \\
+    \hline
+    
+\end{tabular}
+    
+\end{table}
+
+\end{frame}
+
+% section Sqlite3 (end)
+
+
+\end{document}
