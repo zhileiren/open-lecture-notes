@@ -448,6 +448,43 @@ $ python3
 	
 \end{frame}
 
+\begin{frame}[t,fragile]{Row Objects}
+
+
+\begin{verbatim}
+
+
+>>> conn.row_factory = sqlite3.Row
+>>> c = conn.cursor()
+>>> c.execute('select * from stocks')
+<sqlite3.Cursor object at 0x7f4e7dd8fa80>
+>>> r = c.fetchone()
+>>> type(r)
+<class 'sqlite3.Row'>
+>>> tuple(r)
+('2006-01-05', 'BUY', 'RHAT', 100.0, 35.14)
+>>> len(r)
+5
+>>> r[2]
+'RHAT'
+>>> r.keys()
+['date', 'trans', 'symbol', 'qty', 'price']
+>>> r['qty']
+100.0
+>>> for member in r:
+...     print(member)
+...
+2006-01-05
+BUY
+RHAT
+100.0
+35.14
+
+
+\end{verbatim}
+\end{frame}
+
+
 
 \begin{frame}[t]{sqlite3 --- DB-API 2.0 interface for SQLite databases}
 
