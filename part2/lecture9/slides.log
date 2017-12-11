@@ -1,8 +1,8 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  7 DEC 2017 23:52
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  11 DEC 2017 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**slides
+**slides.tex
 (./slides.tex
 LaTeX2e <2017-04-15>
 Babel <3.13> and hyphenation patterns for 32 language(s) loaded.
@@ -1849,18 +1849,17 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 . 
 . Redefining command \Pifont with sig. 'm' on line 73.
 .................................................
-No file slides.nav.
+(./slides.nav)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[1
+ [1
 
-]
-No file slides.toc.
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[2
+ [2
 
 ]
 File: chart1.png Graphic file (type bmp)
@@ -1893,15 +1892,15 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 129.
 
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 129.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[7
+ [7
 
 ]
 LaTeX Font Info:    Try loading font information for TU+ptm on input line 141.
@@ -1969,10 +1968,10 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [11
 
 ]
-No file slides.toc.
+(./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[12
+ [12
 
 ]
 \openout4 = `slides.vrb'.
@@ -1990,10 +1989,10 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [14
 
-]
-No file slides.toc.
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
+
 [15
 
 ]
@@ -2014,11 +2013,10 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [18
 
-]
-No file slides.toc.
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[19
+ [19
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2038,7 +2036,8 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 \openout4 = `slides.vrb'.
 
- (./slides.vrb)
+
+(./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [23
@@ -2144,11 +2143,10 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [36
 
-]
-No file slides.toc.
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[37
+ [37
 
 ]
 File: definitive-vs-good.jpg Graphic file (type bmp)
@@ -2218,12 +2216,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 36407 strings out of 494499
- 722268 string characters out of 6165137
- 801225 words of memory out of 5000000
- 39717 multiletter control sequences out of 15000+600000
+ 36557 strings out of 494499
+ 724294 string characters out of 6165137
+ 803183 words of memory out of 5000000
+ 39855 multiletter control sequences out of 15000+600000
  574969 words of font info for 102 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 50i,15n,62p,10436b,778s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,15n,62p,10440b,779s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on slides.pdf (42 pages).
