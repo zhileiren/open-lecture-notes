@@ -2,11 +2,11 @@
 \scriptsize
 \begin{verbatim}
 #initialization
-\$ git init
+$ git init
 
 #configuration
-$ git config --global user.name "Your name"
-$ git config --global user.email "a@a.a"
+$ git config --global user.name "Your Name"
+$ git config --global user.email "you@your.server"
 
 # First commit
 $ git add example.py

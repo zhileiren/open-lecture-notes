@@ -108,6 +108,37 @@ Dalian University of Technology
 \begin{frame}[t]{编辑器效率对比}
 	\includegraphics[width=.5\textwidth]{curve.png}
 \end{frame}
+\begin{frame}
+  \frametitle{Real Programmer\footnote{\url{https://www.xkcd.com/378/}}}
+	\centering
+	\includegraphics[width=.7\textwidth]{real-programmers.png}
+\end{frame}
+\begin{frame}
+	\frametitle{今天就能开始用的小知识}
+	\begin{block}
+		{开源软件中的Diss与Respect}
+		\begin{itemize}
+			\item vi by Bill Joy
+			\item vim by Bram Moolenaar
+			\item neovim by Thiago de Arruda\footnote{\url{https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/}}
+		\end{itemize}
+	\end{block}
+	
+\end{frame}
+\begin{frame}
+  \frametitle{Bram Moolenaar on neovim}
+	\begin{block}
+		{}
+		It's going to be an awful lot of work, with the result that not all 
+		systems will be supported, new bugs introduced and what's the gain 
+		for the end user exactly? 
+
+		Total refactoring is not a solution.  It's much better to improve what 
+		we have.  Perhaps with some small refactorings specifically aimed at 
+		making Vim work better for users.\footnote{\url{https://groups.google.com/forum/m/\#!topic/vim\_dev/x0BF9Y0Uby8}}
+\end{block}
+	
+\end{frame}
 \begin{frame}[t]{高效编辑}
 	\begin{itemize}
 		\item 基于模式
@@ -178,7 +209,7 @@ Dalian University of Technology
 \begin{frame}[t]{Git}
     \begin{block}
         {}
-git（/ɡɪt/）是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。
+git是一个分布式版本控制软件，最初由林纳斯·托瓦兹创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。
 
 git最初的开发动力来自于BitKeeper和Monotone。很多著名的软件都使用git进行版本控制，其中包括Linux内核、X.Org服务器和OLPC内核等项目的开发流程。
     \end{block}
@@ -192,18 +223,19 @@ I'm an egotistical bastard, and I name all my projects after myself. First Linux
     \end{block}
 \end{frame}
 \begin{frame}[t]{Git命令初步}
-    \includegraphics[width=.8\textwidth]{staging-area.png}
+	\centering
+    \includegraphics[width=.5\textwidth]{staging-area.png}
     
 \end{frame}
 \begin{frame}[t,fragile]{Git命令初步}
     \scriptsize
 \begin{verbatim}
 #initialization
-\$ git init
+$ git init
 
 #configuration
-$ git config --global user.name "Your name"
-$ git config --global user.email "a@a.a"
+$ git config --global user.name "Your Name"
+$ git config --global user.email "you@your.server"
 
 # First commit
 $ git add example.py
