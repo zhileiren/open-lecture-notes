@@ -1,3 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
 \select@language {english}
 \beamer@sectionintoc {1}{Before Git}{2}{0}{1}
 \beamer@sectionintoc {2}{Git入门}{20}{0}{2}
