@@ -1,0 +1,23 @@
+\frametitle{Git命令初步}
+\scriptsize
+\begin{verbatim}
+#initialization
+\$ git init
+
+#configuration
+$ git config --global user.name "Your name"
+$ git config --global user.email "a@a.a"
+
+# First commit
+$ git add example.py
+
+# adds file to the staging area
+$ git commit -m "First commit"
+
+# Second commit
+$ git add another.py
+
+# adds file to the staging area
+$ git commit -m "Second commit"
+\end{verbatim}
+
