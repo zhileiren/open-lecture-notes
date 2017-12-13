@@ -169,30 +169,20 @@ for tests, aggregation of tests into collections, and independence of the
 tests from the reporting framework.
 
 \end{frame}
-
-
 % section 基本概念 (end)
 
 \section{unittest模块} % (fold)
 \label{sec:unittest模块}
 
-\begin{frame}[t]{Basic example}
-
-Here is a short script to test three string methods:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Basic example}
 
-
+\scriptsize
 \begin{verbatim}
-
-
 import unittest
 
 class TestStringMethods(unittest.TestCase):
-
     def test_upper(self):
         self.assertEqual('foo'.upper(), 'FOO')
 
@@ -209,8 +199,6 @@ class TestStringMethods(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-
 \end{verbatim}
 
 
@@ -1345,10 +1333,5 @@ along with their deprecated aliases:
 \end{frame}
 
 % section unittest模块 (end)
-
-\section{unittest.mock} % (fold)
-\label{sec:unittest.mock}
-
-% section unittest.mock (end)
 
 \end{document}
