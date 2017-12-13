@@ -1,13 +1,13 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.11.6)  13 DEC 2017 14:21
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  13 DEC 2017 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **slides.tex
 (./slides.tex
 LaTeX2e <2017-04-15>
-Babel <3.13> and hyphenation patterns for 32 language(s) loaded.
+Babel <3.13> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
-Document Class: beamer 2017/08/22 v3.43 A class for typesetting presentations
+Document Class: beamer 2017/07/13 v3.42 A class for typesetting presentations
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
@@ -493,6 +493,12 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+Package: sansmathaccent 2013/03/28
+
+(/usr/share/texlive/texmf-dist/tex/latex/filehook/filehook.sty
+Package: filehook 2011/10/12 v0.5d Hooks for input files
 )))
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator.sty
@@ -544,11 +550,7 @@ mappings.tex)))
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
 \beamer@footins=\box45
 )
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
-\beamer@bg@ht=\dimen170
-\beamer@bg@wd=\dimen171
-\beamer@bg@dp=\dimen172
-)
+(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
 \beamer@frameboxcopy=\box46
 )
@@ -563,12 +565,12 @@ mappings.tex)))
 \bmb@boxshadow=\box49
 \bmb@boxshadowball=\box50
 \bmb@boxshadowballlarge=\box51
-\bmb@temp=\dimen173
-\bmb@dima=\dimen174
-\bmb@dimb=\dimen175
-\bmb@prevheight=\dimen176
+\bmb@temp=\dimen170
+\bmb@dima=\dimen171
+\bmb@dimb=\dimen172
+\bmb@prevheight=\dimen173
 )
-\beamer@blockheadheight=\dimen177
+\beamer@blockheadheight=\dimen174
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.sty
 (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
@@ -581,7 +583,7 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \belowcaptionskip=\skip50
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
-\beamer@section@min@dim=\dimen178
+\beamer@section@min@dim=\dimen175
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
@@ -595,11 +597,11 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks32
-\ex@=\dimen179
+\ex@=\dimen176
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen180
+\pmbraise@=\dimen177
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
@@ -616,7 +618,7 @@ LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box52
 \strutbox@=\box53
-\big@size=\dimen181
+\big@size=\dimen178
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count148
@@ -629,12 +631,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \column@=\count153
 \maxfields@=\count154
 \andhelp@=\toks34
-\eqnshift@=\dimen182
-\alignsep@=\dimen183
-\tagshift@=\dimen184
-\tagwidth@=\dimen185
-\totwidth@=\dimen186
-\lineht@=\dimen187
+\eqnshift@=\dimen179
+\alignsep@=\dimen180
+\tagshift@=\dimen181
+\tagwidth@=\dimen182
+\totwidth@=\dimen183
+\lineht@=\dimen184
 \@envbody=\toks35
 \multlinegap=\skip52
 \multlinetaggap=\skip53
@@ -665,8 +667,8 @@ ult.sty)
 fault.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/inner/beamerinnerthemede
 fault.sty
-\beamer@dima=\dimen188
-\beamer@dimb=\dimen189
+\beamer@dima=\dimen185
+\beamer@dimb=\dimen186
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemede
 fault.sty)))
@@ -679,10 +681,10 @@ folines.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemebe
 aver.sty)) (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2017/09/18 L3 programming layer (loader) 
+Package: expl3 2017/07/19 L3 programming layer (loader) 
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2017/09/18 L3 programming layer (code)
+Package: expl3 2017/07/19 L3 programming layer (code)
 \c_max_int=\count156
 \l_tmpa_int=\count157
 \l_tmpb_int=\count158
@@ -695,12 +697,12 @@ Package: expl3 2017/09/18 L3 programming layer (code)
 \l__iow_line_target_int=\count165
 \l__iow_one_indent_int=\count166
 \l__iow_indent_int=\count167
-\c_zero_dim=\dimen190
-\c_max_dim=\dimen191
-\l_tmpa_dim=\dimen192
-\l_tmpb_dim=\dimen193
-\g_tmpa_dim=\dimen194
-\g_tmpb_dim=\dimen195
+\c_zero_dim=\dimen187
+\c_max_dim=\dimen188
+\l_tmpa_dim=\dimen189
+\l_tmpb_dim=\dimen190
+\g_tmpa_dim=\dimen191
+\g_tmpb_dim=\dimen192
 \c_zero_skip=\skip57
 \c_max_skip=\skip58
 \l_tmpa_skip=\skip59
@@ -784,23 +786,23 @@ Package: expl3 2017/09/18 L3 programming layer (code)
 \l_tmpb_box=\box56
 \g_tmpa_box=\box57
 \g_tmpb_box=\box58
-\l__box_top_dim=\dimen196
-\l__box_bottom_dim=\dimen197
-\l__box_left_dim=\dimen198
-\l__box_right_dim=\dimen199
-\l__box_top_new_dim=\dimen256
-\l__box_bottom_new_dim=\dimen257
-\l__box_left_new_dim=\dimen258
-\l__box_right_new_dim=\dimen259
+\l__box_top_dim=\dimen193
+\l__box_bottom_dim=\dimen194
+\l__box_left_dim=\dimen195
+\l__box_right_dim=\dimen196
+\l__box_top_new_dim=\dimen197
+\l__box_bottom_new_dim=\dimen198
+\l__box_left_new_dim=\dimen199
+\l__box_right_new_dim=\dimen256
 \l__box_internal_box=\box59
 \l__coffin_internal_box=\box60
-\l__coffin_internal_dim=\dimen260
-\l__coffin_offset_x_dim=\dimen261
-\l__coffin_offset_y_dim=\dimen262
-\l__coffin_x_dim=\dimen263
-\l__coffin_y_dim=\dimen264
-\l__coffin_x_prime_dim=\dimen265
-\l__coffin_y_prime_dim=\dimen266
+\l__coffin_internal_dim=\dimen257
+\l__coffin_offset_x_dim=\dimen258
+\l__coffin_offset_y_dim=\dimen259
+\l__coffin_x_dim=\dimen260
+\l__coffin_y_dim=\dimen261
+\l__coffin_x_prime_dim=\dimen262
+\l__coffin_y_prime_dim=\dimen263
 \c_empty_coffin=\box61
 \l__coffin_aligned_coffin=\box62
 \l__coffin_aligned_internal_coffin=\box63
@@ -809,16 +811,16 @@ Package: expl3 2017/09/18 L3 programming layer (code)
 \l__coffin_display_coffin=\box66
 \l__coffin_display_coord_coffin=\box67
 \l__coffin_display_pole_coffin=\box68
-\l__coffin_display_offset_dim=\dimen267
-\l__coffin_display_x_dim=\dimen268
-\l__coffin_display_y_dim=\dimen269
-\l__coffin_bounding_shift_dim=\dimen270
-\l__coffin_left_corner_dim=\dimen271
-\l__coffin_right_corner_dim=\dimen272
-\l__coffin_bottom_corner_dim=\dimen273
-\l__coffin_top_corner_dim=\dimen274
-\l__coffin_scaled_total_height_dim=\dimen275
-\l__coffin_scaled_width_dim=\dimen276
+\l__coffin_display_offset_dim=\dimen264
+\l__coffin_display_x_dim=\dimen265
+\l__coffin_display_y_dim=\dimen266
+\l__coffin_bounding_shift_dim=\dimen267
+\l__coffin_left_corner_dim=\dimen268
+\l__coffin_right_corner_dim=\dimen269
+\l__coffin_bottom_corner_dim=\dimen270
+\l__coffin_top_corner_dim=\dimen271
+\l__coffin_scaled_total_height_dim=\dimen272
+\l__coffin_scaled_width_dim=\dimen273
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
 File: l3xdvidpfmx.def 2017/03/18 v L3 Experimental driver: xdvipdfmx
@@ -828,14 +830,14 @@ File: l3xdvidpfmx.def 2017/03/18 v L3 Experimental driver: xdvipdfmx
 Package: xeCJK 2017/08/07 v3.5.0 Typesetting CJK scripts with XeLaTeX
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
-Package: xtemplate 2017/09/18 L3 Experimental prototype document functions
-\l__xtemplate_tmp_dim=\dimen277
+Package: xtemplate 2017/07/19 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen274
 \l__xtemplate_tmp_int=\count301
 \l__xtemplate_tmp_muskip=\muskip18
 \l__xtemplate_tmp_skip=\skip63
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2017/09/18 L3 Experimental document command parser
+Package: xparse 2017/07/19 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count302
 \g__xparse_grabber_int=\count303
 \l__xparse_m_args_int=\count304
@@ -843,11 +845,11 @@ Package: xparse 2017/09/18 L3 Experimental document command parser
 \l__xparse_v_nesting_int=\count306
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2017/09/18 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2017/07/19 LaTeX2e option processing using LaTeX3 keys
 )
 \l__xeCJK_tmp_int=\count307
 \l__xeCJK_tmp_box=\box70
-\l__xeCJK_tmp_dim=\dimen278
+\l__xeCJK_tmp_dim=\dimen275
 \l__xeCJK_tmp_skip=\skip64
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -904,12 +906,12 @@ Package: l3keys2e 2017/09/18 LaTeX2e option processing using LaTeX3 keys
 .................................................
 \l__xeCJK_last_skip=\skip65
 \g__xeCJK_node_int=\count311
-\c__xeCJK_CJK_node_dim=\dimen279
-\c__xeCJK_CJK-space_node_dim=\dimen280
-\c__xeCJK_default_node_dim=\dimen281
-\c__xeCJK_default-space_node_dim=\dimen282
-\c__xeCJK_CJK-widow_node_dim=\dimen283
-\c__xeCJK_normalspace_node_dim=\dimen284
+\c__xeCJK_CJK_node_dim=\dimen276
+\c__xeCJK_CJK-space_node_dim=\dimen277
+\c__xeCJK_default_node_dim=\dimen278
+\c__xeCJK_default-space_node_dim=\dimen279
+\c__xeCJK_CJK-widow_node_dim=\dimen280
+\c__xeCJK_normalspace_node_dim=\dimen281
 \l__xeCJK_ccglue_skip=\skip66
 \l__xeCJK_ecglue_skip=\skip67
 .................................................
@@ -949,25 +951,25 @@ Package: l3keys2e 2017/09/18 LaTeX2e option processing using LaTeX3 keys
 . 
 . Declaring object type 'xeCJK/punctuation' taking 0 argument(s) on line 1921.
 .................................................
-\l__xeCJK_fixed_punct_width_dim=\dimen285
-\l__xeCJK_mixed_punct_width_dim=\dimen286
-\l__xeCJK_middle_punct_width_dim=\dimen287
-\l__xeCJK_fixed_margin_width_dim=\dimen288
-\l__xeCJK_mixed_margin_width_dim=\dimen289
-\l__xeCJK_middle_margin_width_dim=\dimen290
-\l__xeCJK_bound_punct_width_dim=\dimen291
-\l__xeCJK_bound_margin_width_dim=\dimen292
-\l__xeCJK_margin_minimum_dim=\dimen293
-\l__xeCJK_kerning_total_width_dim=\dimen294
-\l__xeCJK_same_align_margin_dim=\dimen295
-\l__xeCJK_different_align_margin_dim=\dimen296
-\l__xeCJK_kerning_margin_width_dim=\dimen297
-\l__xeCJK_kerning_margin_minimum_dim=\dimen298
-\l__xeCJK_bound_dim=\dimen299
-\l__xeCJK_reverse_bound_dim=\dimen300
-\l__xeCJK_minimum_bound_dim=\dimen301
-\l__xeCJK_kerning_margin_dim=\dimen302
-\l__xeCJK_original_margin_dim=\dimen303
+\l__xeCJK_fixed_punct_width_dim=\dimen282
+\l__xeCJK_mixed_punct_width_dim=\dimen283
+\l__xeCJK_middle_punct_width_dim=\dimen284
+\l__xeCJK_fixed_margin_width_dim=\dimen285
+\l__xeCJK_mixed_margin_width_dim=\dimen286
+\l__xeCJK_middle_margin_width_dim=\dimen287
+\l__xeCJK_bound_punct_width_dim=\dimen288
+\l__xeCJK_bound_margin_width_dim=\dimen289
+\l__xeCJK_margin_minimum_dim=\dimen290
+\l__xeCJK_kerning_total_width_dim=\dimen291
+\l__xeCJK_same_align_margin_dim=\dimen292
+\l__xeCJK_different_align_margin_dim=\dimen293
+\l__xeCJK_kerning_margin_width_dim=\dimen294
+\l__xeCJK_kerning_margin_minimum_dim=\dimen295
+\l__xeCJK_bound_dim=\dimen296
+\l__xeCJK_reverse_bound_dim=\dimen297
+\l__xeCJK_minimum_bound_dim=\dimen298
+\l__xeCJK_kerning_margin_dim=\dimen299
+\l__xeCJK_original_margin_dim=\dimen300
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1063,10 +1065,10 @@ Package: l3keys2e 2017/09/18 LaTeX2e option processing using LaTeX3 keys
 \l__xeCJK_verb_exspace_skip=\skip68
 
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
-Package: fontspec 2017/09/22 v2.6e Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2017/08/14 v2.6d Font selection for XeLaTeX and LuaLaTeX
 
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2017/09/22 v2.6e Font selection for XeLaTeX and LuaLaTe
+Package: fontspec-xetex 2017/08/14 v2.6d Font selection for XeLaTeX and LuaLaTe
 X
 \l__fontspec_script_int=\count317
 \l__fontspec_language_int=\count318
@@ -1076,9 +1078,9 @@ X
 \l__fontspec_emdef_int=\count322
 \l__fontspec_strong_int=\count323
 \l__fontspec_strongdef_int=\count324
-\l__fontspec_tmpa_dim=\dimen304
-\l__fontspec_tmpb_dim=\dimen305
-\l__fontspec_tmpc_dim=\dimen306
+\l__fontspec_tmpa_dim=\dimen301
+\l__fontspec_tmpb_dim=\dimen302
+\l__fontspec_tmpc_dim=\dimen303
 \g__file_internal_ior=\read2
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
@@ -1091,184 +1093,179 @@ LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \fontspec with sig. 'O{}mO{}' on line 479.
+. Defining command \fontspec with sig. 'O{}mO{}' on line 474.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmainfont with sig. 'O{}mO{}' on line 483.
+. Defining command \setmainfont with sig. 'O{}mO{}' on line 485.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setsansfont with sig. 'O{}mO{}' on line 487.
+. Defining command \setsansfont with sig. 'O{}mO{}' on line 505.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmonofont with sig. 'O{}mO{}' on line 491.
+. Defining command \setmonofont with sig. 'O{}mO{}' on line 525.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathrm with sig. 'O{}mO{}' on line 495.
+. Defining command \setromanfont with sig. 'O{}mO{}' on line 545.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 499.
+. Defining command \setmathrm with sig. 'O{}mO{}' on line 549.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathsf with sig. 'O{}mO{}' on line 503.
+. Defining command \setboldmathrm with sig. 'O{}mO{}' on line 557.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setmathtt with sig. 'O{}mO{}' on line 507.
+. Defining command \setmathsf with sig. 'O{}mO{}' on line 565.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setromanfont with sig. 'O{}mO{}' on line 511.
+. Defining command \setmathtt with sig. 'O{}mO{}' on line 573.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 515.
+. Defining command \newfontfamily with sig. 'mO{}mO{}' on line 588.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontface with sig. 'mO{}mO{}' on line 519.
+. Defining command \newfontface with sig. 'mO{}mO{}' on line 605.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \defaultfontfeatures with sig. 't+om' on line 523.
+. Defining command \defaultfontfeatures with sig. 't+om' on line 616.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addfontfeatures with sig. 'm' on line 527.
+. Defining command \addfontfeatures with sig. 'm' on line 647.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addfontfeature with sig. 'm' on line 531.
+. Defining command \newfontfeature with sig. 'mm' on line 674.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontfeature with sig. 'mm' on line 535.
+. Defining command \newAATfeature with sig. 'mmmm' on line 688.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newAATfeature with sig. 'mmmm' on line 539.
+. Defining command \newopentypefeature with sig. 'mmm' on line 702.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newopentypefeature with sig. 'mmm' on line 543.
+. Defining command \newICUfeature with sig. 'mmm' on line 722.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newICUfeature with sig. 'mmm' on line 547.
+. Defining command \aliasfontfeature with sig. 'mm' on line 726.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \aliasfontfeature with sig. 'mm' on line 551.
+. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 747.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \aliasfontfeatureoption with sig. 'mmm' on line 555.
+. Defining command \newfontscript with sig. 'mm' on line 780.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontscript with sig. 'mm' on line 559.
+. Defining command \newfontlanguage with sig. 'mm' on line 784.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newfontlanguage with sig. 'mm' on line 563.
+. Defining command \DeclareFontsExtensions with sig. 'm' on line 788.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareFontsExtensions with sig. 'm' on line 567.
+. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 799.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \IfFontFeatureActiveTF with sig. 'mmm' on line 571.
+. Defining command \EncodingCommand with sig. 'mO{}m' on line 3538.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingCommand with sig. 'mO{}m' on line 3563.
+. Defining command \EncodingAccent with sig. 'mm' on line 3544.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingAccent with sig. 'mm' on line 3569.
+. Defining command \EncodingSymbol with sig. 'mm' on line 3550.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingSymbol with sig. 'mm' on line 3575.
+. Defining command \EncodingComposite with sig. 'mmm' on line 3556.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingComposite with sig. 'mmm' on line 3581.
+. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3562.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \EncodingCompositeCommand with sig. 'mmm' on line 3587.
+. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3587.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareUnicodeEncoding with sig. 'mm' on line 3612.
+. Defining command \UndeclareSymbol with sig. 'm' on line 3593.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \UndeclareSymbol with sig. 'm' on line 3618.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \UndeclareComposite with sig. 'mm' on line 3626.
+. Defining command \UndeclareComposite with sig. 'mm' on line 3601.
 .................................................
 
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)
-LaTeX Info: Redefining \itshape on input line 3804.
-LaTeX Info: Redefining \slshape on input line 3809.
-LaTeX Info: Redefining \scshape on input line 3814.
-LaTeX Info: Redefining \upshape on input line 3819.
-LaTeX Info: Redefining \em on input line 3849.
-LaTeX Info: Redefining \emph on input line 3874.
+LaTeX Info: Redefining \itshape on input line 3786.
+LaTeX Info: Redefining \slshape on input line 3791.
+LaTeX Info: Redefining \scshape on input line 3796.
+LaTeX Info: Redefining \upshape on input line 3801.
+LaTeX Info: Redefining \em on input line 3831.
+LaTeX Info: Redefining \emph on input line 3856.
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 3924.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 3906.
 
-LaTeX Info: Redefining \- on input line 3925.
+LaTeX Info: Redefining \- on input line 3907.
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \oldstylenums with sig. 'm' on line 4020.
+. Redefining command \oldstylenums with sig. 'm' on line 4002.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \liningnums with sig. 'm' on line 4024.
+. Defining command \liningnums with sig. 'm' on line 4006.
 .................................................
 ))
 (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xunicode-addon.sty
@@ -1529,14 +1526,12 @@ File: babel.def 2017/09/18 3.13 Babel common definitions
 File: switch.def 2017/09/18 3.13 Babel switching mechanism
 )
 \babel@savecnt=\count326
-\U@D=\dimen307
+\U@D=\dimen304
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/xebabel.def)
 LaTeX Info: Redefining \textlatin on input line 1739.
 \bbl@dirlevel=\count327
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -1894,26 +1889,26 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [2
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 102.
 
 *************************************************
 * xeCJK warning: "CJKfamily-Unknown"
@@ -1922,7 +1917,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
 * 
 * Try to use `\setCJKmonofont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 101.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 102.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -1940,6 +1935,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [4
 
 ]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 123.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [5
@@ -1952,13 +1955,18 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[7
+ [7
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [8
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[9
 
 ]
 Missing character: There is no 单 in font pcrr8t!
@@ -1967,22 +1975,22 @@ Missing character: There is no 测 in font pcrr8t!
 Missing character: There is no 试 in font pcrr8t!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [9
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [10
 
-] (./slides.toc)
+]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [11
 
-]
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [12
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [13
 
 ]
 \openout4 = `slides.vrb'.
@@ -1999,17 +2007,12 @@ t a string[]
  []
 
 )
-Overfull \vbox (126.31206pt too high) detected at line 200
+Overfull \vbox (126.31206pt too high) detected at line 217
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[13
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [14
+[14
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2027,6 +2030,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [17
 
 ]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [18
+
+]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
@@ -2038,12 +2046,12 @@ Overfull \hbox (117.60408pt too wide) in paragraph at lines 8--8
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [18
+ [19
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [19
+ [20
 
 ]
 \openout4 = `slides.vrb'.
@@ -2057,11 +2065,6 @@ Overfull \hbox (117.60408pt too wide) in paragraph at lines 11--11
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [20
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [21
 
 ]
@@ -2070,14 +2073,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [22
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [23
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [24
@@ -2088,14 +2091,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [25
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [26
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [27
@@ -2103,34 +2106,39 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
+ [28
 
-[28
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[29
 
 ]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [29
-
-]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [30
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [31
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [32
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [33
 
 ]
 \openout4 = `slides.vrb'.
@@ -2138,15 +2146,10 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [33
-
-]
-(./slides.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [34
 
 ]
+(./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [35
@@ -2167,14 +2170,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [38
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [39
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [40
@@ -2192,8 +2195,13 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
+ [43
 
-[43
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[44
 
 ]
 \openout4 = `slides.vrb'.
@@ -2211,11 +2219,6 @@ Overfull \hbox (32.19418pt too wide) in paragraph at lines 8--8
  []
 
 )
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [44
-
-]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [45
@@ -2261,23 +2264,28 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [53
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [54
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[55
+ [55
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [56
+
+[56
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [57
 
 ]
 \openout4 = `slides.vrb'.
@@ -2293,17 +2301,12 @@ Overfull \hbox (19.0542pt too wide) in paragraph at lines 19--19
  []
 
 )
-Overfull \vbox (44.71202pt too high) detected at line 681
+Overfull \vbox (44.71202pt too high) detected at line 698
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[57
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [58
+[58
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2321,14 +2324,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [61
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [62
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [63
@@ -2349,6 +2352,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [66
 
 ]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [67
+
+]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
@@ -2357,11 +2365,6 @@ Overfull \hbox (12.4842pt too wide) in paragraph at lines 9--9
  []
 
 )
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [67
-
-]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [68
@@ -2382,17 +2385,22 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [71
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [72
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [73
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [74
 
 ]
 \openout4 = `slides.vrb'.
@@ -2410,11 +2418,6 @@ ngDB)[]
  []
 
 )
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [74
-
-]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [75
@@ -2445,6 +2448,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [80
 
 ]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [81
+
+]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
@@ -2466,17 +2474,17 @@ equires Windows")[]
  []
 
 )
-Overfull \vbox (71.91203pt too high) detected at line 949
+Overfull \vbox (71.91203pt too high) detected at line 966
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[81
+[82
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [82
+ [83
 
 ]
 \openout4 = `slides.vrb'.
@@ -2508,22 +2516,17 @@ Overfull \hbox (117.60408pt too wide) in paragraph at lines 11--11
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [83
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [84
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [85
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [86
@@ -2534,17 +2537,22 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [87
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [88
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [89
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [90
 
 ]
 \openout4 = `slides.vrb'.
@@ -2557,11 +2565,6 @@ j, attr))[]
  []
 
 )
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [90
-
-]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [91
@@ -2582,6 +2585,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [94
 
 ]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [95
+
+]
 \openout4 = `slides.vrb'.
 
  (./slides.vrb
@@ -2592,12 +2600,12 @@ Overfull \hbox (19.0542pt too wide) in paragraph at lines 11--11
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [95
+ [96
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [96
+ [97
 
 ]
 \openout4 = `slides.vrb'.
@@ -2639,17 +2647,17 @@ Overfull \hbox (117.60408pt too wide) in paragraph at lines 25--25
  []
 
 )
-Overfull \vbox (167.11208pt too high) detected at line 1162
+Overfull \vbox (167.11208pt too high) detected at line 1179
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[97
+[98
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [98
+ [99
 
 ]
 \openout4 = `slides.vrb'.
@@ -2669,19 +2677,14 @@ Overfull \hbox (117.60408pt too wide) in paragraph at lines 9--9
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [99
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [100
 
-] (./slides.toc)
+]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [101
 
-]
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [102
@@ -2719,13 +2722,13 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[109
+ [109
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [110
+
+[110
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2752,10 +2755,15 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [115
 
-] (./slides.toc)
+]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [116
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [117
 
 ]
 \tf@nav=\write6
@@ -2767,23 +2775,19 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1337.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1337.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1354.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1354.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1337.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1337.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1354.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1354.
  ) 
 Here is how much of TeX's memory you used:
- 36375 strings out of 494499
- 720843 string characters out of 6165137
- 800972 words of memory out of 5000000
- 39660 multiletter control sequences out of 15000+600000
- 563264 words of font info for 85 fonts, out of 8000000 for 9000
- 264 hyphenation exceptions out of 8191
- 50i,15n,65p,10440b,661s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36758 strings out of 492998
+ 726803 string characters out of 6136604
+ 813016 words of memory out of 5000000
+ 40116 multiletter control sequences out of 15000+600000
+ 565000 words of font info for 86 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 56i,17n,66p,10440b,715s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (116 pages).
+Output written on slides.pdf (117 pages).
