@@ -1,0 +1,18 @@
+\frametitle{Distinguishing test iterations using subtests}
+
+
+\begin{verbatim}
+
+
+======================================================================
+FAIL: test_even (__main__.NumbersTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "subtests.py", line 32, in test_even
+    self.assertEqual(i % 2, 0)
+AssertionError: 1 != 0
+
+
+\end{verbatim}
+
+
