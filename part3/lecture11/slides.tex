@@ -178,25 +178,22 @@ tests from the reporting framework.
 
 \begin{frame}[t,fragile]{Basic example}
 
-\scriptsize
+\footnotesize
 \begin{verbatim}
 import unittest
 
 class TestStringMethods(unittest.TestCase):
     def test_upper(self):
         self.assertEqual('foo'.upper(), 'FOO')
-
     def test_isupper(self):
         self.assertTrue('FOO'.isupper())
         self.assertFalse('Foo'.isupper())
-
     def test_split(self):
         s = 'hello world'
         self.assertEqual(s.split(), ['hello', 'world'])
         # check that s.split fails when the separator is not a string
         with self.assertRaises(TypeError):
             s.split(2)
-
 if __name__ == '__main__':
     unittest.main()
 \end{verbatim}
@@ -451,144 +448,6 @@ tests in a project or just a subset.
 \end{frame}
 
 
-\begin{frame}[t]{Test Discovery}
-
-Unittest supports simple test discovery. In order to be compatible with test
-discovery, all of the test files must be modules <tut-modules> or
-packages <tut-packages> (including :term:`namespace packages
-<namespace package>`) importable from the top-level directory of
-the project (this means that their filenames must be valid :ref:`identifiers
-<identifiers>`).
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-Test discovery is implemented in TestLoader.discover, but can also be
-used from the command line. The basic command-line usage is:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Test Discovery}
-
-
-\begin{verbatim}
-
-
-cd project_directory
-python -m unittest discover
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-Note
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-As a shortcut, python -m unittest is the equivalent of
-python -m unittest discover. If you want to pass arguments to test
-discovery the discover sub-command must be used explicitly.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-The discover sub-command has the following options:
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-The -s, -p, and -t options can be passed in
-as positional arguments in that order. The following two command lines
-are equivalent:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Test Discovery}
-
-
-\begin{verbatim}
-
-
-python -m unittest discover -s project_directory -p "*_test.py"
-python -m unittest discover project_directory "*_test.py"
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-As well as being a path it is possible to pass a package name, for example
-myproject.subpackage.test, as the start directory. The package name you
-supply will then be imported and its location on the filesystem will be used
-as the start directory.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-Caution!
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-Test discovery loads tests by importing them. Once test discovery has found
-all the test files from the start directory you specify it turns the paths
-into package names to import. For example foo/bar/baz.py will be
-imported as foo.bar.baz.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-If you have a package installed globally and attempt test discovery on
-a different copy of the package then the import could happen from the
-wrong place. If this happens test discovery will warn you and exit.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-If you supply the start directory as a package name rather than a
-path to a directory then discover assumes that whichever location it
-imports from is the location you intended, so you will not get the
-warning.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test Discovery}
-
-Test modules and packages can customize test loading and discovery by through
-the load\_tests protocol.
-
-\end{frame}
-
-
 \begin{frame}[t]{Organizing test code}
 
 The basic building blocks of unit testing are test cases --- single
@@ -688,13 +547,6 @@ class WidgetTestCase(unittest.TestCase):
 
 \begin{frame}[t]{Organizing test code}
 
-Note
-
-\end{frame}
-
-
-\begin{frame}[t]{Organizing test code}
-
 The order in which the various tests will be run is determined
 by sorting the test method names with respect to the built-in
 ordering for strings.
@@ -749,12 +601,6 @@ run whether the test method succeeded or not.
 \end{frame}
 
 
-\begin{frame}[t]{Organizing test code}
-
-Such a working environment for the testing code is called a fixture.
-
-\end{frame}
-
 
 \begin{frame}[t]{Organizing test code}
 
@@ -804,99 +650,6 @@ test\_widget.py:
 \end{frame}
 
 
-\begin{frame}[t]{Re-using old test code}
-
-Some users will find that they have existing test code that they would like to
-run from unittest, without converting every old test function to a
-TestCase subclass.
-
-\end{frame}
-
-
-\begin{frame}[t]{Re-using old test code}
-
-For this reason, unittest provides a FunctionTestCase class.
-This subclass of TestCase can be used to wrap an existing test
-function.  Set-up and tear-down functions can also be provided.
-
-\end{frame}
-
-
-\begin{frame}[t]{Re-using old test code}
-
-Given the following test function:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Re-using old test code}
-
-
-\begin{verbatim}
-
-
-def testSomething():
-    something = makeSomething()
-    assert something.name is not None
-    # ...
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Re-using old test code}
-
-one can create an equivalent test case instance as follows, with optional
-set-up and tear-down methods:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Re-using old test code}
-
-
-\begin{verbatim}
-
-
-testcase = unittest.FunctionTestCase(testSomething,
-                                     setUp=makeSomethingDB,
-                                     tearDown=deleteSomethingDB)
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Re-using old test code}
-
-Note
-
-\end{frame}
-
-
-\begin{frame}[t]{Re-using old test code}
-
-Even though FunctionTestCase can be used to quickly convert an
-existing test base over to a unittest-based system, this approach is
-not recommended.  Taking the time to set up proper TestCase
-subclasses will make future test refactorings infinitely easier.
-
-\end{frame}
-
-
-\begin{frame}[t]{Re-using old test code}
-
-In some cases, the existing tests may have been written using the doctest
-module.  If so, doctest provides a DocTestSuite class that can
-automatically build unittest.TestSuite instances from the existing
-doctest-based tests.
-
-\end{frame}
 
 
 \begin{frame}[t]{Skipping tests and expected failures}
