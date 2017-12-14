@@ -204,42 +204,18 @@ if __name__ == '__main__':
 
 \begin{frame}[t]{Basic example}
 
-A testcase is created by subclassing unittest.TestCase.  The three
-individual tests are defined with methods whose names start with the letters
-test.  This naming convention informs the test runner about which methods
-represent tests.
+    \begin{itemize}
+        \item 测试用例由unittest.TestCase子类的实例
+        \item 每个测试函数均由test几个字符开始
+        \item 使用TestCase父类的assert*方法来进行判断
+        \item 使用setUp和tearDown方法来初始化和结束（类似构造和析构）
+        \item 使用unittest.main()调用测试用例
+        \item 使用-v参数输出详细信息
+        \item 执行顺序按测试函数字母顺序执行
+    \end{itemize}
 
 \end{frame}
 
-
-\begin{frame}[t]{Basic example}
-
-The crux of each test is a call to ~TestCase.assertEqual to check for an
-expected result; ~TestCase.assertTrue or ~TestCase.assertFalse
-to verify a condition; or ~TestCase.assertRaises to verify that a
-specific exception gets raised.  These methods are used instead of the
-assert statement so the test runner can accumulate all test results
-and produce a report.
-
-\end{frame}
-
-
-\begin{frame}[t]{Basic example}
-
-The ~TestCase.setUp and ~TestCase.tearDown methods allow you
-to define instructions that will be executed before and after each test method.
-They are covered in more detail in the section organizing-tests.
-
-\end{frame}
-
-
-\begin{frame}[t]{Basic example}
-
-The final block shows a simple way to run the tests. unittest.main
-provides a command-line interface to the test script.  When run from the command
-line, the above script produces an output that looks like this:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Basic example}
@@ -260,13 +236,6 @@ OK
 
 \end{frame}
 
-
-\begin{frame}[t]{Basic example}
-
-Passing the -v option to your test script will instruct unittest.main
-to enable a higher level of verbosity, and produce the following output:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Basic example}
@@ -291,19 +260,34 @@ OK
 \end{frame}
 
 
-\begin{frame}[t]{Basic example}
-
-The above examples show the most commonly used unittest features which
-are sufficient to meet many everyday testing needs.  The remainder of the
-documentation explores the full feature set from first principles.
-
+\begin{frame}[t]{Assertions}
+    \begin{table}
+        \begin{tabular}{lr}
+            \hline
+            方法           & 检测条件           \\
+            \hline
+assertAlmostEqual(a, b)    & round(a-b, 7) == 0 \\
+assertNotAlmostEqual(a, b) & round(a-b, 7) != 0 \\
+assertGreater(a, b)        & a > b              \\
+assertGreaterEqual(a, b)   & a >= b             \\
+assertLess(a, b)           & a < b              \\
+assertLessEqual(a, b)      & a <= b             \\
+assertRegex(s, r)          & r.search(s)        \\
+assertNotRegex(s, r)       & not r.search(s)    \\
+            \hline
+        \end{tabular}
+    \end{table}
 \end{frame}
 
 
 \begin{frame}[t]{Command-Line Interface}
 
-The unittest module can be used from the command line to run tests from
-modules, classes or even individual test methods:
+    \begin{itemize}
+        \item 除了在脚本中调用，也可以在命令行调用
+        \item 调用某个文件中的测试用例时，省去文件后缀.py，路径分割符改为"."（类似Java）
+        \item 同样可以使用-v输出详细信息
+        \item 不加参数直接使用python -m unittest时，开启discovery模式
+    \end{itemize}
 
 \end{frame}
 
@@ -324,55 +308,6 @@ python -m unittest test_module.TestClass.test_method
 
 \end{frame}
 
-
-\begin{frame}[t]{Command-Line Interface}
-
-You can pass in a list with any combination of module names, and fully
-qualified class or method names.
-
-\end{frame}
-
-
-\begin{frame}[t]{Command-Line Interface}
-
-Test modules can be specified by file path as well:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Command-Line Interface}
-
-
-\begin{verbatim}
-
-
-python -m unittest tests/test_something.py
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Command-Line Interface}
-
-This allows you to use the shell filename completion to specify the test module.
-The file specified must still be importable as a module. The path is converted
-to a module name by removing the '.py' and converting path separators into '.'.
-If you want to execute a test file that isn't importable as a module you should
-execute the file directly instead.
-
-\end{frame}
-
-
-\begin{frame}[t]{Command-Line Interface}
-
-You can run tests with more detail (higher verbosity) by passing in the -v flag:
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{Command-Line Interface}
 
 
@@ -388,11 +323,6 @@ python -m unittest -v test_module
 \end{frame}
 
 
-\begin{frame}[t]{Command-Line Interface}
-
-When executed without arguments unittest-test-discovery is started:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Command-Line Interface}
@@ -403,76 +333,10 @@ When executed without arguments unittest-test-discovery is started:
 
 python -m unittest
 
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Command-Line Interface}
-
-For a list of all the command-line options:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Command-Line Interface}
-
-
-\begin{verbatim}
-
-
 python -m unittest -h
 
 
 \end{verbatim}
-
-
-\end{frame}
-
-\section{Command-line options}
-
-\begin{frame}[t]{Command-line options}
-
-unittest supports these command-line options:
-
-\end{frame}
-
-
-\begin{frame}[t]{Command-line options}
-
-The command line can also be used for test discovery, for running all of the
-tests in a project or just a subset.
-
-\end{frame}
-
-
-\begin{frame}[t]{Organizing test code}
-
-The basic building blocks of unit testing are test cases --- single
-scenarios that must be set up and checked for correctness.  In unittest,
-test cases are represented by unittest.TestCase instances.
-To make your own test cases you must write subclasses of
-TestCase or use FunctionTestCase.
-
-\end{frame}
-
-
-\begin{frame}[t]{Organizing test code}
-
-The testing code of a TestCase instance should be entirely self
-contained, such that it can be run either in isolation or in arbitrary
-combination with any number of other test cases.
-
-\end{frame}
-
-
-\begin{frame}[t]{Organizing test code}
-
-The simplest TestCase subclass will simply implement a test method
-(i.e. a method whose name starts with test) in order to perform specific
-testing code:
 
 \end{frame}
 
@@ -497,32 +361,11 @@ class DefaultWidgetSizeTestCase(unittest.TestCase):
 \end{frame}
 
 
-\begin{frame}[t]{Organizing test code}
-
-Note that in order to test something, we use one of the assert\textbackslash *
-methods provided by the TestCase base class.  If the test fails, an
-exception will be raised, and unittest will identify the test case as a
-failure.  Any other exceptions will be treated as errors.
-
-\end{frame}
-
-
-\begin{frame}[t]{Organizing test code}
-
-Tests can be numerous, and their set-up can be repetitive.  Luckily, we
-can factor out set-up code by implementing a method called
-~TestCase.setUp, which the testing framework will automatically
-call for every single test we run:
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{Organizing test code}
 
 
 \begin{verbatim}
-
-
 import unittest
 
 class WidgetTestCase(unittest.TestCase):
@@ -537,38 +380,12 @@ class WidgetTestCase(unittest.TestCase):
         self.widget.resize(100,150)
         self.assertEqual(self.widget.size(), (100,150),
                          'wrong size after resize')
-
-
 \end{verbatim}
 
 
 \end{frame}
 
 
-\begin{frame}[t]{Organizing test code}
-
-The order in which the various tests will be run is determined
-by sorting the test method names with respect to the built-in
-ordering for strings.
-
-\end{frame}
-
-
-\begin{frame}[t]{Organizing test code}
-
-If the ~TestCase.setUp method raises an exception while the test is
-running, the framework will consider the test to have suffered an error, and
-the test method will not be executed.
-
-\end{frame}
-
-
-\begin{frame}[t]{Organizing test code}
-
-Similarly, we can provide a ~TestCase.tearDown method that tidies up
-after the test method has been run:
-
-\end{frame}
 
 
 \begin{frame}[t,fragile]{Organizing test code}
@@ -591,500 +408,48 @@ class WidgetTestCase(unittest.TestCase):
 
 
 \end{frame}
+\section{测试驱动的开发}
 
+\begin{frame}[t]{测试驱动开发\footnote{\url{https://en.wikipedia.org/wiki/Test-driven_development}}}
+    \includegraphics[width=0.8\linewidth]{TDD-Global-Lifecycle.png}
+    
+\end{frame}
 
-\begin{frame}[t]{Organizing test code}
-
-If ~TestCase.setUp succeeded, ~TestCase.tearDown will be
-run whether the test method succeeded or not.
-
+\begin{frame}[t]{Add a test}
+In test-driven development, each new feature begins with writing a test. Write a test that defines a function or improvements of a function, which should be very succinct. To write a test, the developer must clearly understand the feature's specification and requirements. The developer can accomplish this through use cases and user stories to cover the requirements and exception conditions, and can write the test in whatever testing framework is appropriate to the software environment. It could be a modified version of an existing test. This is a differentiating feature of test-driven development versus writing unit tests after the code is written: it makes the developer focus on the requirements before writing the code, a subtle but important difference.
+    
 \end{frame}
 
 
+\begin{frame}[t]{Run all tests and see if the new test fails}
+This validates that the test harness is working correctly, shows that the new test does not pass without requiring new code because the required behavior already exists, and it rules out the possibility that the new test is flawed and will always pass. The new test should fail for the expected reason. This step increases the developer's confidence in the new test.
+    
+\end{frame}
 
-\begin{frame}[t]{Organizing test code}
-
-Test case instances are grouped together according to the features they test.
-unittest provides a mechanism for thistest suite,
-represented by unittest's TestSuite class.  In most cases,
-calling unittest.main will do the right thing and collect all the
-module's test cases for you, and then execute them.
-
+\begin{frame}[t]{Write the code}
+The next step is to write some code that causes the test to pass. The new code written at this stage is not perfect and may, for example, pass the test in an inelegant way. That is acceptable because it will be improved and honed in Step 5.
+    
+At this point, the only purpose of the written code is to pass the test. The programmer must not write code that is beyond the functionality that the test checks.
 \end{frame}
 
 
-\begin{frame}[t]{Organizing test code}
-
-However, should you want to customize the building of your test suite,
-you can do it yourself:
-
+\begin{frame}[t]{Run tests}
+If all test cases now pass, the programmer can be confident that the new code meets the test requirements, and does not break or degrade any existing features. If they do not, the new code must be adjusted until they do.
+    
 \end{frame}
 
 
-\begin{frame}[t,fragile]{Organizing test code}
-
-
-\begin{verbatim}
-
-
-def suite():
-    suite = unittest.TestSuite()
-    suite.addTest(WidgetTestCase('test_default_size'))
-    suite.addTest(WidgetTestCase('test_resize'))
-    return suite
-
-
-\end{verbatim}
-
-
+\begin{frame}[t]{Refactor code}
+The growing code base must be cleaned up regularly during test-driven development. New code can be moved from where it was convenient for passing a test to where it more logically belongs. Duplication must be removed. Object, class, module, variable and method names should clearly represent their current purpose and use, as extra functionality is added. As features are added, method bodies can get longer and other objects larger. They benefit from being split and their parts carefully named to improve readability and maintainability, which will be increasingly valuable later in the software lifecycle. 
+    
 \end{frame}
 
 
-\begin{frame}[t]{Organizing test code}
-
-You can place the definitions of test cases and test suites in the same modules
-as the code they are to test (such as widget.py), but there are several
-advantages to placing the test code in a separate module, such as
-test\_widget.py:
-
+\begin{frame}[t]{Repeat}
+    
+Starting with another new test, the cycle is then repeated to push forward the functionality. The size of the steps should always be small, with as few as 1 to 10 edits between each test run. If new code does not rapidly satisfy a new test, or other tests fail unexpectedly, the programmer should undo or revert in preference to excessive debugging. Continuous integration helps by providing revertible checkpoints. When using external libraries it is important not to make increments that are so small as to be effectively merely testing the library itself,[4] unless there is some reason to believe that the library is buggy or is not sufficiently feature-complete to serve all the needs of the software under development.
 \end{frame}
 
 
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-Unittest supports skipping individual test methods and even whole classes of
-tests.  In addition, it supports marking a test as an "expected failure," a test
-that is broken and will fail, but shouldn't be counted as a failure on a
-TestResult.
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-Skipping a test is simply a matter of using the skip decorator
-or one of its conditional variants.
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-Basic skipping looks like this:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Skipping tests and expected failures}
-
-
-\begin{verbatim}
-
-
-class MyTestCase(unittest.TestCase):
-
-    @unittest.skip("demonstrating skipping")
-    def test_nothing(self):
-        self.fail("shouldn't happen")
-
-    @unittest.skipIf(mylib.__version__ < (1, 3),
-                     "not supported in this library version")
-    def test_format(self):
-        # Tests that work for only a certain version of the library.
-        pass
-
-    @unittest.skipUnless(sys.platform.startswith("win"), "requires Windows")
-    def test_windows_support(self):
-        # windows specific testing code
-        pass
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-This is the output of running the example above in verbose mode:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Skipping tests and expected failures}
-
-
-\begin{verbatim}
-
-
-test_format (__main__.MyTestCase) ... skipped 'not supported in this library version'
-test_nothing (__main__.MyTestCase) ... skipped 'demonstrating skipping'
-test_windows_support (__main__.MyTestCase) ... skipped 'requires Windows'
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.005s
-
-OK (skipped=3)
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-Classes can be skipped just like methods:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Skipping tests and expected failures}
-
-
-\begin{verbatim}
-
-
-@unittest.skip("showing class skipping")
-class MySkippedTestCase(unittest.TestCase):
-    def test_not_run(self):
-        pass
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-TestCase.setUp can also skip the test.  This is useful when a resource
-that needs to be set up is not available.
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-Expected failures use the expectedFailure decorator.
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Skipping tests and expected failures}
-
-
-\begin{verbatim}
-
-
-class ExpectedFailureTestCase(unittest.TestCase):
-    @unittest.expectedFailure
-    def test_fail(self):
-        self.assertEqual(1, 0, "broken")
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-It's easy to roll your own skipping decorators by making a decorator that calls
-skip on the test when it wants it to be skipped.  This decorator skips
-the test unless the passed object has a certain attribute:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Skipping tests and expected failures}
-
-
-\begin{verbatim}
-
-
-def skipUnlessHasattr(obj, attr):
-    if hasattr(obj, attr):
-        return lambda func: func
-    return unittest.skip("{!r} doesn't have {!r}".format(obj, attr))
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-The following decorators implement test skipping and expected failures:
-
-\end{frame}
-
-
-\begin{frame}[t]{Skipping tests and expected failures}
-
-Skipped tests will not have ~TestCase.setUp or ~TestCase.tearDown run around them.
-Skipped classes will not have ~TestCase.setUpClass or ~TestCase.tearDownClass run.
-Skipped modules will not have setUpModule or tearDownModule run.
-
-\end{frame}
-
-
-\begin{frame}[t]{Distinguishing test iterations using subtests}
-
-When some of your tests differ only by a some very small differences, for
-instance some parameters, unittest allows you to distinguish them inside
-the body of a test method using the ~TestCase.subTest context manager.
-
-\end{frame}
-
-
-\begin{frame}[t]{Distinguishing test iterations using subtests}
-
-For example, the following test:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Distinguishing test iterations using subtests}
-
-
-\begin{verbatim}
-
-
-class NumbersTest(unittest.TestCase):
-
-    def test_even(self):
-        """
-        Test that numbers between 0 and 5 are all even.
-        """
-        for i in range(0, 6):
-            with self.subTest(i=i):
-                self.assertEqual(i % 2, 0)
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Distinguishing test iterations using subtests}
-
-will produce the following output:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Distinguishing test iterations using subtests}
-
-
-\begin{verbatim}
-
-
-======================================================================
-FAIL: test_even (__main__.NumbersTest) (i=1)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "subtests.py", line 32, in test_even
-    self.assertEqual(i % 2, 0)
-AssertionError: 1 != 0
-
-======================================================================
-FAIL: test_even (__main__.NumbersTest) (i=3)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "subtests.py", line 32, in test_even
-    self.assertEqual(i % 2, 0)
-AssertionError: 1 != 0
-
-======================================================================
-FAIL: test_even (__main__.NumbersTest) (i=5)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "subtests.py", line 32, in test_even
-    self.assertEqual(i % 2, 0)
-AssertionError: 1 != 0
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Distinguishing test iterations using subtests}
-
-Without using a subtest, execution would stop after the first failure,
-and the error would be less easy to diagnose because the value of i
-wouldn't be displayed:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{Distinguishing test iterations using subtests}
-
-
-\begin{verbatim}
-
-
-======================================================================
-FAIL: test_even (__main__.NumbersTest)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "subtests.py", line 32, in test_even
-    self.assertEqual(i % 2, 0)
-AssertionError: 1 != 0
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{Classes and functions}
-
-This section describes in depth the API of unittest.
-
-\end{frame}
-
-\section{Test cases}
-
-\begin{frame}[t]{Test cases}
-
-Instances of the TestCase class represent the logical test units
-in the unittest universe.  This class is intended to be used as a base
-class, with specific tests being implemented by concrete subclasses.  This class
-implements the interface needed by the test runner to allow it to drive the
-tests, and methods that the test code can use to check for and report various
-kinds of failure.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-Each instance of TestCase will run a single base method: the method
-named methodName.
-In most uses of TestCase, you will neither change
-the methodName nor reimplement the default runTest() method.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-TestCase instances provide three groups of methods: one group used
-to run the test, another used by the test implementation to check conditions
-and report failures, and some inquiry methods allowing information about the
-test itself to be gathered.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-Methods in the first group (running the test) are:
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-The TestCase class provides several assert methods to check for and
-report failures.  The following table lists the most commonly used methods
-(see the tables below for more assert methods):
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-All the assert methods accept a msg argument that, if specified, is used
-as the error message on failure (see also longMessage).
-Note that the msg keyword argument can be passed to assertRaises,
-assertRaisesRegex, assertWarns, assertWarnsRegex
-only when they are used as a context manager.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-It is also possible to check the production of exceptions, warnings, and
-log messages using the following methods:
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-There are also other methods used to perform more specific checks, such as:
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-The assertEqual method dispatches the equality check for objects of
-the same type to different type-specific methods.  These methods are already
-implemented for most of the built-in types, but it's also possible to
-register new methods using addTypeEqualityFunc:
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-The list of type-specific methods automatically used by
-~TestCase.assertEqual are summarized in the following table.  Note
-that it's usually not necessary to invoke these methods directly.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-Finally the TestCase provides the following methods and attributes:
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-Testing frameworks can use the following methods to collect information on
-the test:
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-This class implements the portion of the TestCase interface which
-allows the test runner to drive the test, but does not provide the methods
-which test code can use to check and report errors.  This is used to create
-test cases using legacy test code, allowing it to be integrated into a
-unittest-based test framework.
-
-\end{frame}
-
-
-\begin{frame}[t]{Test cases}
-
-For historical reasons, some of the TestCase methods had one or more
-aliases that are now deprecated.  The following table lists the correct names
-along with their deprecated aliases:
-
-\end{frame}
-
-% section unittest模块 (end)
 
 \end{document}

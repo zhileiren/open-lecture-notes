@@ -1,16 +1,17 @@
-\frametitle{Distinguishing test iterations using subtests}
+\frametitle{Organizing test code}
 
 
 \begin{verbatim}
 
 
-======================================================================
-FAIL: test_even (__main__.NumbersTest)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "subtests.py", line 32, in test_even
-    self.assertEqual(i % 2, 0)
-AssertionError: 1 != 0
+import unittest
+
+class WidgetTestCase(unittest.TestCase):
+    def setUp(self):
+        self.widget = Widget('The widget')
+
+    def tearDown(self):
+        self.widget.dispose()
 
 
 \end{verbatim}
