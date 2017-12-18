@@ -7,6 +7,37 @@
 
 coverage = {};
 
+// Find all the elements with shortkey_* class, and use them to assign a shortcut key.
+coverage.assign_shortkeys = function () {
+    $("*[class*='shortkey_']").each(function (i, e) {
+        $.each($(e).attr("class").split(" "), function (i, c) {
+            if (/^shortkey_/.test(c)) {
+                $(document).bind('keydown', c.substr(9), function () {
+                    $(e).click();
+                });
+            }
+        });
+    });
+};
+
+// Create the events for the help panel.
+coverage.wire_up_help_panel = function () {
+    $("#keyboard_icon").click(function () {
+        // Show the help panel, and position it so the keyboard icon in the
+        // panel is in the same place as the keyboard icon in the header.
+        $(".help_panel").show();
+        var koff = $("#keyboard_icon").offset();
+        var poff = $("#panel_icon").position();
+        $(".help_panel").offset({
+            top: koff.top-poff.top,
+            left: koff.left-poff.left
+        });
+    });
+    $("#panel_icon").click(function () {
+        $(".help_panel").hide();
+    });
+};
+
 // Create the events for the filter box.
 coverage.wire_up_filter = function () {
     // Cache elements.
@@ -194,6 +225,8 @@ coverage.index_ready = function ($) {
         headers: headers
     });
 
+    coverage.assign_shortkeys();
+    coverage.wire_up_help_panel();
     coverage.wire_up_filter();
 
     // Watch for page unload events so we can save the final sort settings:
@@ -215,10 +248,20 @@ coverage.pyfile_ready = function ($) {
         coverage.set_sel(0);
     }
 
+    $(document)
+        .bind('keydown', 'j', coverage.to_next_chunk_nicely)
+        .bind('keydown', 'k', coverage.to_prev_chunk_nicely)
+        .bind('keydown', '0', coverage.to_top)
+        .bind('keydown', '1', coverage.to_first_chunk)
+        ;
+
     $(".button_toggle_run").click(function (evt) {coverage.toggle_lines(evt.target, "run");});
     $(".button_toggle_exc").click(function (evt) {coverage.toggle_lines(evt.target, "exc");});
     $(".button_toggle_mis").click(function (evt) {coverage.toggle_lines(evt.target, "mis");});
     $(".button_toggle_par").click(function (evt) {coverage.toggle_lines(evt.target, "par");});
+
+    coverage.assign_shortkeys();
+    coverage.wire_up_help_panel();
 
     coverage.init_scroll_markers();
 

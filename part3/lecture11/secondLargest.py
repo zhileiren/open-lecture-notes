@@ -1,0 +1,24 @@
+#!/usr/bin/python
+
+def secondLargest(lst):
+    largest = float('-inf')
+    second = float('-inf')
+
+    for i in lst:
+        if i > second:
+            if i > largest:
+                second = largest
+                largest = i
+            else:
+                second = i
+
+    if second == float('-inf'):
+        return None
+    else:
+        return second
+
+if __name__ == "__main__":
+    print(secondLargest([]))
+    print(secondLargest([1]))
+    print(secondLargest([1, 2]))
+    print(secondLargest([1, 2, 1.5]))
