@@ -169,8 +169,65 @@ for tests, aggregation of tests into collections, and independence of the
 tests from the reporting framework.
 
 \end{frame}
+\begin{frame}[t]{今天就能开始用的小知识}
+	\begin{block}
+		{Xfce Bug \#12117}The defualt wallpaper is having my animal scritch all the plastic off my LED MONITOR! Can we choose a different wallpaper? I cannot expect the scratches and whu not? Let's end the mouse games over here.\footnote{\url{https://bugzilla.xfce.org/show_bug.cgi?id=12117}}
+		
+	\end{block}
+	
+\end{frame}
+\begin{frame}[t]{今天就能开始用的小知识}
+	\centering
+	\includegraphics[width=0.5\linewidth]{cat-xfce-bug-2.jpg}
+	
+\end{frame}
+\begin{frame}[t]{今天就能开始用的小知识}
+	\includegraphics[width=0.8\linewidth]{patched-wallpaper.jpg}
+	
+\end{frame}
 % section 基本概念 (end)
 
+\section{测试驱动的开发}
+
+\begin{frame}[t]{测试驱动开发\footnote{\url{https://en.wikipedia.org/wiki/Test-driven_development}}}
+    \includegraphics[width=0.8\linewidth]{TDD-Global-Lifecycle.png}
+    
+\end{frame}
+
+\begin{frame}[t]{Add a test}
+In test-driven development, each new feature begins with writing a test. Write a test that defines a function or improvements of a function, which should be very succinct. To write a test, the developer must clearly understand the feature's specification and requirements. The developer can accomplish this through use cases and user stories to cover the requirements and exception conditions, and can write the test in whatever testing framework is appropriate to the software environment. It could be a modified version of an existing test. This is a differentiating feature of test-driven development versus writing unit tests after the code is written: it makes the developer focus on the requirements before writing the code, a subtle but important difference.
+    
+\end{frame}
+
+
+\begin{frame}[t]{Run all tests and see if the new test fails}
+This validates that the test harness is working correctly, shows that the new test does not pass without requiring new code because the required behavior already exists, and it rules out the possibility that the new test is flawed and will always pass. The new test should fail for the expected reason. This step increases the developer's confidence in the new test.
+    
+\end{frame}
+
+\begin{frame}[t]{Write the code}
+The next step is to write some code that causes the test to pass. The new code written at this stage is not perfect and may, for example, pass the test in an inelegant way. That is acceptable because it will be improved and honed in Step 5.
+    
+At this point, the only purpose of the written code is to pass the test. The programmer must not write code that is beyond the functionality that the test checks.
+\end{frame}
+
+
+\begin{frame}[t]{Run tests}
+If all test cases now pass, the programmer can be confident that the new code meets the test requirements, and does not break or degrade any existing features. If they do not, the new code must be adjusted until they do.
+    
+\end{frame}
+
+
+\begin{frame}[t]{Refactor code}
+The growing code base must be cleaned up regularly during test-driven development. New code can be moved from where it was convenient for passing a test to where it more logically belongs. Duplication must be removed. Object, class, module, variable and method names should clearly represent their current purpose and use, as extra functionality is added. As features are added, method bodies can get longer and other objects larger. They benefit from being split and their parts carefully named to improve readability and maintainability, which will be increasingly valuable later in the software lifecycle. 
+    
+\end{frame}
+
+
+\begin{frame}[t]{Repeat}
+    
+Starting with another new test, the cycle is then repeated to push forward the functionality. The size of the steps should always be small, with as few as 1 to 10 edits between each test run. If new code does not rapidly satisfy a new test, or other tests fail unexpectedly, the programmer should undo or revert in preference to excessive debugging. Continuous integration helps by providing revertible checkpoints. When using external libraries it is important not to make increments that are so small as to be effectively merely testing the library itself,[4] unless there is some reason to believe that the library is buggy or is not sufficiently feature-complete to serve all the needs of the software under development.
+\end{frame}
 \section{unittest模块} % (fold)
 \label{sec:unittest模块}
 
@@ -408,47 +465,8 @@ class WidgetTestCase(unittest.TestCase):
 
 
 \end{frame}
-\section{测试驱动的开发}
+\section{coverage模块}
 
-\begin{frame}[t]{测试驱动开发\footnote{\url{https://en.wikipedia.org/wiki/Test-driven_development}}}
-    \includegraphics[width=0.8\linewidth]{TDD-Global-Lifecycle.png}
-    
-\end{frame}
-
-\begin{frame}[t]{Add a test}
-In test-driven development, each new feature begins with writing a test. Write a test that defines a function or improvements of a function, which should be very succinct. To write a test, the developer must clearly understand the feature's specification and requirements. The developer can accomplish this through use cases and user stories to cover the requirements and exception conditions, and can write the test in whatever testing framework is appropriate to the software environment. It could be a modified version of an existing test. This is a differentiating feature of test-driven development versus writing unit tests after the code is written: it makes the developer focus on the requirements before writing the code, a subtle but important difference.
-    
-\end{frame}
-
-
-\begin{frame}[t]{Run all tests and see if the new test fails}
-This validates that the test harness is working correctly, shows that the new test does not pass without requiring new code because the required behavior already exists, and it rules out the possibility that the new test is flawed and will always pass. The new test should fail for the expected reason. This step increases the developer's confidence in the new test.
-    
-\end{frame}
-
-\begin{frame}[t]{Write the code}
-The next step is to write some code that causes the test to pass. The new code written at this stage is not perfect and may, for example, pass the test in an inelegant way. That is acceptable because it will be improved and honed in Step 5.
-    
-At this point, the only purpose of the written code is to pass the test. The programmer must not write code that is beyond the functionality that the test checks.
-\end{frame}
-
-
-\begin{frame}[t]{Run tests}
-If all test cases now pass, the programmer can be confident that the new code meets the test requirements, and does not break or degrade any existing features. If they do not, the new code must be adjusted until they do.
-    
-\end{frame}
-
-
-\begin{frame}[t]{Refactor code}
-The growing code base must be cleaned up regularly during test-driven development. New code can be moved from where it was convenient for passing a test to where it more logically belongs. Duplication must be removed. Object, class, module, variable and method names should clearly represent their current purpose and use, as extra functionality is added. As features are added, method bodies can get longer and other objects larger. They benefit from being split and their parts carefully named to improve readability and maintainability, which will be increasingly valuable later in the software lifecycle. 
-    
-\end{frame}
-
-
-\begin{frame}[t]{Repeat}
-    
-Starting with another new test, the cycle is then repeated to push forward the functionality. The size of the steps should always be small, with as few as 1 to 10 edits between each test run. If new code does not rapidly satisfy a new test, or other tests fail unexpectedly, the programmer should undo or revert in preference to excessive debugging. Continuous integration helps by providing revertible checkpoints. When using external libraries it is important not to make increments that are so small as to be effectively merely testing the library itself,[4] unless there is some reason to believe that the library is buggy or is not sufficiently feature-complete to serve all the needs of the software under development.
-\end{frame}
 
 
 

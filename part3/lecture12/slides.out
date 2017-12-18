@@ -1,7 +1,6 @@
-\BOOKMARK [2][]{Outline0.1}{Quickstart}{}% 1
-\BOOKMARK [3][]{Outline0.1.1.2}{A\040Minimal\040Application}{Outline0.1}% 2
-\BOOKMARK [3][]{Outline0.1.2.9}{Routing}{Outline0.1}% 3
-\BOOKMARK [3][]{Outline0.1.3.15}{Rendering\040Templates}{Outline0.1}% 4
-\BOOKMARK [3][]{Outline0.1.4.23}{Accessing\040Request\040Data}{Outline0.1}% 5
-\BOOKMARK [3][]{Outline0.1.5.26}{Redirects\040and\040Errors}{Outline0.1}% 6
-\BOOKMARK [3][]{Outline0.1.6.30}{Sessions}{Outline0.1}% 7
+\BOOKMARK [2][]{Outline0.1}{A\040Minimal\040Application}{}% 1
+\BOOKMARK [2][]{Outline0.2}{Routing}{}% 2
+\BOOKMARK [2][]{Outline0.3}{Rendering\040Templates}{}% 3
+\BOOKMARK [2][]{Outline0.4}{Accessing\040Request\040Data}{}% 4
+\BOOKMARK [2][]{Outline0.5}{Redirects\040and\040Errors}{}% 5
+\BOOKMARK [2][]{Outline0.6}{Sessions}{}% 6

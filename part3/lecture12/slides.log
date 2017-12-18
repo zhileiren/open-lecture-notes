@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  18 DEC 2017 16:19
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2017.10.18)  18 DEC 2017 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1881,16 +1881,6 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [1
 
-] (./slides.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [2
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [3
-
 ]
 \openout4 = `slides.vrb'.
 
@@ -1908,20 +1898,20 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [4
+ [2
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 125.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 117.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsphv.fd
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 125.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 117.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [5
+ [3
 
 ]
 \openout4 = `slides.vrb'.
@@ -1933,6 +1923,19 @@ Windows)[]
  []
 
 )
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [4
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [5
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [6
@@ -1950,7 +1953,16 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [8
 
-] (./slides.toc)
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb
+Overfull \hbox (45.33417pt too wide) in paragraph at lines 13--13
+[]    \T1/pcr/m/n/10.95 # show the post with the given id, the id is an integer
+[] 
+ []
+
+)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [9
@@ -1969,16 +1981,6 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [11
 
 ]
-\openout4 = `slides.vrb'.
-
-
-(./slides.vrb
-Overfull \hbox (45.33417pt too wide) in paragraph at lines 13--13
-[]    \T1/pcr/m/n/10.95 # show the post with the given id, the id is an integer
-[] 
- []
-
-)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [12
@@ -1996,10 +1998,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [14
 
-] (./slides.toc)
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [15
+
+[15
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2007,6 +2013,9 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [16
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [17
@@ -2017,43 +2026,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[18
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [19
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [20
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [21
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [22
-
-]
-(./slides.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [23
+ [18
 
 ]
 \openout4 = `slides.vrb'.
@@ -2075,12 +2048,12 @@ Overfull \hbox (5.91422pt too wide) in paragraph at lines 17--17
  []
 
 )
-Overfull \vbox (3.912pt too high) detected at line 392
+Overfull \vbox (3.912pt too high) detected at line 384
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[24
+[19
 
 ]
 \openout4 = `slides.vrb'.
@@ -2088,17 +2061,12 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [25
-
-] (./slides.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [26
+ [20
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [27
+ [21
 
 ]
 \openout4 = `slides.vrb'.
@@ -2106,23 +2074,17 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [28
+ [22
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [29
-
-]
-(./slides.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [30
+ [23
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [31
+ [24
 
 ]
 \openout4 = `slides.vrb'.
@@ -2151,12 +2113,12 @@ Overfull \hbox (25.62419pt too wide) in paragraph at lines 30--30
  []
 
 )
-Overfull \vbox (248.71211pt too high) detected at line 503
+Overfull \vbox (248.71211pt too high) detected at line 495
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[32
+[25
 
 ]
 \openout4 = `slides.vrb'.
@@ -2176,7 +2138,7 @@ ou're done.[]
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [33
+ [26
 
 ]
 \tf@nav=\write6
@@ -2188,19 +2150,19 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 524.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 524.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 516.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 516.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 524.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 524.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 516.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 516.
  ) 
 Here is how much of TeX's memory you used:
- 36298 strings out of 492998
- 713369 string characters out of 6136604
- 807107 words of memory out of 5000000
- 39704 multiletter control sequences out of 15000+600000
- 545040 words of font info for 45 fonts, out of 8000000 for 9000
+ 36215 strings out of 492998
+ 711231 string characters out of 6136604
+ 805923 words of memory out of 5000000
+ 39633 multiletter control sequences out of 15000+600000
+ 543304 words of font info for 44 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 56i,17n,66p,10440b,639s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,66p,10440b,638s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (33 pages).
+Output written on slides.pdf (26 pages).
