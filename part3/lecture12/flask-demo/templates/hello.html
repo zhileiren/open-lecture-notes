@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<p>
+			Hello, {{ name }}
+		</p>
+		<table border=1>
+			{% for row in results %}
+			<tr>
+				<td>{{row[0]}}</td>
+				<td>{{row[1]}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
