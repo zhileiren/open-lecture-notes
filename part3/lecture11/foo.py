@@ -1,5 +1,5 @@
-\frametitle{测试程序}
-^^I\begin{verbatim}
+#!/usr/bin/python3
+
 def foo(a, b, x):
     if a > 1 and b == 0:
         x = x / a
@@ -10,6 +10,3 @@ def foo(a, b, x):
 
 if __name__ == "__main__":
     foo(0, 0, 4)
-
-\end{verbatim}
-

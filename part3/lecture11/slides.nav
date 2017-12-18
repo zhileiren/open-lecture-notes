@@ -1,3 +1,4 @@
+\beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\sectionentry {1}{基本概念}{2}{基本概念}{0}}
@@ -82,8 +83,14 @@
 \headcommand {\beamer@subsectionpages {23}{35}}
 \headcommand {\slideentry {4}{0}{1}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\beamer@partpages {1}{36}}
-\headcommand {\beamer@subsectionpages {36}{36}}
-\headcommand {\beamer@sectionpages {36}{36}}
-\headcommand {\beamer@documentpages {36}}
-\headcommand {\def \inserttotalframenumber {36}}
+\headcommand {\slideentry {4}{0}{2}{37/37}{}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {4}{0}{3}{38/38}{}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {4}{0}{4}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\beamer@partpages {1}{39}}
+\headcommand {\beamer@subsectionpages {36}{39}}
+\headcommand {\beamer@sectionpages {36}{39}}
+\headcommand {\beamer@documentpages {39}}
+\headcommand {\def \inserttotalframenumber {39}}

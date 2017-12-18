@@ -30,7 +30,7 @@
 
 \title[开源软件基础] 
 {开源软件基础}
-\subtitle{Git与版本控制}
+\subtitle{基于Flask的Web开发}
 
 \author[Zhilei Ren] 
 {Zhilei Ren}
@@ -74,16 +74,39 @@ Dalian University of Technology
 
 \begin{document}
 
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+%  \tableofcontents[currentsection,currentsubsection, 
+%    hideothersubsections, 
+%    sectionstyle=show,
+%]
+%\end{frame}
+
+\AtBeginSection[]
+{
+ \begin{frame}<beamer>
+ \frametitle{Outline}
+ \tableofcontents[currentsection]
+ \end{frame}
+}
 
 
 \section{A Minimal Application}
-
-\begin{frame}[t]{A Minimal Application}
-
-A minimal Flask application looks something like this:
-
+\begin{frame}
+  \frametitle{安装}
+	\begin{block}
+		{Flask}
+		\begin{itemize}
+			\item pip install flask
+			\item conda install flask
+		\end{itemize}
+	\end{block}
+	\centering
+	\includegraphics[width=.3\textwidth]{logo.png}
 \end{frame}
-
 
 \begin{frame}[t,fragile]{A Minimal Application}
 
