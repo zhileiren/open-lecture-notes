@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  18 DEC 2017 19:58
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2017.4.23)  21 DEC 2017 21:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1854,6 +1854,11 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 File: ../../utils/logo.jpg Graphic file (type QTm)
  <use  "../../utils/logo.jpg" > [2
 
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [3
+
 ]
 LaTeX Font Info:    Try loading font information for OMS+phv on input line 109.
 
@@ -1867,7 +1872,7 @@ File: logo.png Graphic file (type QTm)
  <use  "logo.png" >
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [3
+<use  "../../utils/logo.jpg" > [4
 
 ]
 \openout4 = `slides.vrb'.
@@ -1886,11 +1891,11 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [4
+<use  "../../utils/logo.jpg" > [5
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [5
+ <use  "../../utils/logo.jpg" > [6
 
 ]
 \openout4 = `slides.vrb'.
@@ -1904,11 +1909,11 @@ Windows)[]
 
 )
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [6
+ <use  "../../utils/logo.jpg" > [7
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [7
+ <use  "../../utils/logo.jpg" > [8
 
 ]
 \openout4 = `slides.vrb'.
@@ -1916,16 +1921,16 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 
 (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [8
+ <use  "../../utils/logo.jpg" > [9
 
 ] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [9
+<use  "../../utils/logo.jpg" > [10
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [10
+ <use  "../../utils/logo.jpg" > [11
 
 ]
 \openout4 = `slides.vrb'.
@@ -1933,7 +1938,7 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 
 (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [11
+ <use  "../../utils/logo.jpg" > [12
 
 ]
 \openout4 = `slides.vrb'.
@@ -1946,11 +1951,11 @@ Overfull \hbox (45.33423pt too wide) in paragraph at lines 13--13
 
 )
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [12
+ <use  "../../utils/logo.jpg" > [13
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [13
+ <use  "../../utils/logo.jpg" > [14
 
 ]
 \openout4 = `slides.vrb'.
@@ -1958,26 +1963,18 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 
 (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [14
+ <use  "../../utils/logo.jpg" > [15
 
 ] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [15
+<use  "../../utils/logo.jpg" > [16
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [16
+ <use  "../../utils/logo.jpg" > [17
 
 ]
-File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [17
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
 <use  "../../utils/logo.jpg" > [18
@@ -1991,8 +1988,16 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 <use  "../../utils/logo.jpg" > [19
 
 ]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [20
+
+<use  "../../utils/logo.jpg" > [20
+
+]
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [21
 
 ]
 \openout4 = `slides.vrb'.
@@ -2000,7 +2005,7 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 
 (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [21
+ <use  "../../utils/logo.jpg" > [22
 
 ]
 \openout4 = `slides.vrb'.
@@ -2008,12 +2013,12 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [22
+<use  "../../utils/logo.jpg" > [23
 
 ] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [23
+<use  "../../utils/logo.jpg" > [24
 
 ]
 \openout4 = `slides.vrb'.
@@ -2039,7 +2044,7 @@ Overfull \vbox (3.912pt too high) detected at line 407
  []
 
 File: ../../utils/logo.jpg Graphic file (type QTm)
-<use  "../../utils/logo.jpg" > [24
+<use  "../../utils/logo.jpg" > [25
 
 ]
 \openout4 = `slides.vrb'.
@@ -2047,16 +2052,16 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [25
+<use  "../../utils/logo.jpg" > [26
 
 ] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
-<use  "../../utils/logo.jpg" > [26
+<use  "../../utils/logo.jpg" > [27
 
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [27
+ <use  "../../utils/logo.jpg" > [28
 
 ]
 \openout4 = `slides.vrb'.
@@ -2064,21 +2069,21 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 
 (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [28
+ <use  "../../utils/logo.jpg" > [29
 
 ]
-File: ../../utils/logo.jpg Graphic file (type QTm)
-
-<use  "../../utils/logo.jpg" > [29
-
-] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type QTm)
 
 <use  "../../utils/logo.jpg" > [30
 
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [31
+
 ]
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [31
+ <use  "../../utils/logo.jpg" > [32
 
 ]
 \openout4 = `slides.vrb'.
@@ -2112,7 +2117,7 @@ Overfull \vbox (248.71211pt too high) detected at line 518
  []
 
 File: ../../utils/logo.jpg Graphic file (type QTm)
-<use  "../../utils/logo.jpg" > [32
+<use  "../../utils/logo.jpg" > [33
 
 ]
 \openout4 = `slides.vrb'.
@@ -2131,7 +2136,39 @@ ou're done.[]
 
 )
 File: ../../utils/logo.jpg Graphic file (type QTm)
- <use  "../../utils/logo.jpg" > [33
+ <use  "../../utils/logo.jpg" > [34
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [35
+
+]
+File: screenshot.png Graphic file (type QTm)
+ <use  "screenshot.png" >
+LaTeX Font Info:    Try loading font information for U+msa on input line 542.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 542.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 542.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 542.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 542.
+File: ../../utils/logo.jpg Graphic file (type QTm)
+
+<use  "../../utils/logo.jpg" > [36
+
+]
+File: ../../utils/logo.jpg Graphic file (type QTm)
+ <use  "../../utils/logo.jpg" > [37
 
 ]
 \tf@nav=\write6
@@ -2143,20 +2180,21 @@ File: ../../utils/logo.jpg Graphic file (type QTm)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 539.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 539.
- (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 539.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 539.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 539.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 554.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 554.
+
+(./slides.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 554.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 554.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 554.
  ) 
 Here is how much of TeX's memory you used:
- 35569 strings out of 495232
- 693023 string characters out of 6180489
- 714640 words of memory out of 5000000
- 38282 multiletter control sequences out of 15000+600000
- 19257 words of font info for 42 fonts, out of 8000000 for 9000
+ 35651 strings out of 495232
+ 694442 string characters out of 6180489
+ 715871 words of memory out of 5000000
+ 38336 multiletter control sequences out of 15000+600000
+ 29197 words of font info for 65 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  56i,17n,72p,10440b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (33 pages).
+Output written on slides.pdf (37 pages).

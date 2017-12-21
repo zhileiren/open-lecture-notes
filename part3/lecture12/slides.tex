@@ -78,12 +78,12 @@ Dalian University of Technology
   \titlepage
 \end{frame}
 
-%\begin{frame}{Outline}
-%  \tableofcontents[currentsection,currentsubsection, 
-%    hideothersubsections, 
-%    sectionstyle=show,
-%]
-%\end{frame}
+\begin{frame}{Outline}
+  \tableofcontents[currentsection,currentsubsection, 
+    hideothersubsections, 
+    sectionstyle=show,
+]
+\end{frame}
 
 \AtBeginSection[]
 {
@@ -531,10 +531,25 @@ Just take that thing and copy/paste it into your code and you're done.
 
 
 \end{verbatim}
+\end{frame}
+\section{A Demo} % (fold)
+\label{sec:A Demo}
+\begin{frame}
+  \frametitle{Debian Release Critical Bug Summary}
+	\includegraphics[width=.5\textwidth]{screenshot.png}
 
-
+	\url{https://bugs.debian.org/release-critical/debian/all.html}
 \end{frame}
 
-
+\begin{frame}
+  \frametitle{四个步骤}
+	\begin{itemize}
+		\item 数据获取(requests)
+		\item 数据过滤(bs4)
+		\item 数据存储(sqlite3)
+		\item 数据展示(flask)
+	\end{itemize}
+\end{frame}
+% section A Demo (end)
 \end{document}
 
