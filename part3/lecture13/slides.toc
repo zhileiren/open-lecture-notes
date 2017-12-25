@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Line Plot}{5}{0}{1}
+\beamer@sectionintoc {2}{Histograms}{9}{0}{2}
+\beamer@sectionintoc {3}{Pie charts}{13}{0}{3}
+\beamer@sectionintoc {4}{Fill demo}{20}{0}{4}
+\beamer@sectionintoc {5}{Log plots}{25}{0}{5}
+\beamer@sectionintoc {6}{Legends}{29}{0}{6}
+\beamer@sectionintoc {7}{XKCD-style sketch plots}{33}{0}{7}
