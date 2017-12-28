@@ -1,0 +1,16 @@
+\frametitle{10 Minutes to pandas}
+
+
+^^I\scriptsize
+\begin{verbatim}
+
+>>> if pd.Series([False, True, False]):
+    print("I was true")
+Traceback
+    ...
+ValueError: The truth value of an array is ambiguous. Use a.empty, a.any() or a.all().
+
+
+\end{verbatim}
+
+
