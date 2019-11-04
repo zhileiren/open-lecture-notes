@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'slides1.blg'
-[22] biber:313> INFO - === 一 11月  4, 2019, 22:41:48
-[39] Biber.pm:371> INFO - Reading 'slides1.bcf'
-[84] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
-[92] Biber.pm:3981> INFO - Processing section 0
-[99] Biber.pm:4154> INFO - Looking for bibtex format file 'cite.bib' for section 0
-[99] bibtex.pm:1468> INFO - LaTeX decoding ...
-[101] bibtex.pm:1294> INFO - Found BibTeX data source 'cite.bib'
-[109] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[109] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[109] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[109] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[110] bbl.pm:617> INFO - Writing 'slides1.bbl' with encoding 'UTF-8'
-[111] bbl.pm:720> INFO - Output to slides1.bbl
+[20] biber:313> INFO - === 一 11月  4, 2019, 23:07:58
+[36] Biber.pm:371> INFO - Reading 'slides1.bcf'
+[75] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
+[83] Biber.pm:3981> INFO - Processing section 0
+[90] Biber.pm:4154> INFO - Looking for bibtex format file 'cite.bib' for section 0
+[90] bibtex.pm:1468> INFO - LaTeX decoding ...
+[92] bibtex.pm:1294> INFO - Found BibTeX data source 'cite.bib'
+[100] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[100] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[100] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[100] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[101] bbl.pm:617> INFO - Writing 'slides1.bbl' with encoding 'UTF-8'
+[101] bbl.pm:720> INFO - Output to slides1.bbl

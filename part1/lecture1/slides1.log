@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.5.23)  4 NOV 2019 22:41
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.5.23)  4 NOV 2019 23:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2164,7 +2164,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 File: cola.jpg Graphic file (type bmp)
 <cola.jpg>
 
-Overfull \hbox (163.22127pt too wide) in paragraph at lines 153--153
+Overfull \hbox (163.22127pt too wide) in paragraph at lines 154--154
 []\T1/phv/m/n/10.95 Tøyen Cola: []$\T1/pcr/m/n/8 https : / / distrita . com / t
 oyen-[]cola-[]is-[]a-[]speciality-[]in-[]oslo-[]norway-[]that-[]needs-[]to-[]be
 -[]tested/$[] 
@@ -2174,15 +2174,29 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [7
 
+]
+File: cola.jpg Graphic file (type bmp)
+<cola.jpg>
+
+Overfull \hbox (163.22127pt too wide) in paragraph at lines 162--162
+[]\T1/phv/m/n/10.95 Tøyen Cola: []$\T1/pcr/m/n/8 https : / / distrita . com / t
+oyen-[]cola-[]is-[]a-[]speciality-[]in-[]oslo-[]norway-[]that-[]needs-[]to-[]be
+-[]tested/$[] 
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[8
+
 ] (./slides1.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [8
+ [9
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [9
+ [10
 
 ]
 Missing character: There is no 理 in font pcrr8t!
@@ -2195,28 +2209,23 @@ File: olpc.jpg Graphic file (type bmp)
 <olpc.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [10
+ [11
 
 ]
 File: hhkb.jpg Graphic file (type bmp)
 <hhkb.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [11
+ [12
 
 ]
 File: book.png Graphic file (type bmp)
 <book.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [12
-
-] (./slides1.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [13
 
-]
+] (./slides1.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [14
@@ -2229,20 +2238,20 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[16
+ [16
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [17
 
-] (./slides1.toc)
+[17
+
+]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [18
 
-]
+] (./slides1.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [19
@@ -2253,22 +2262,22 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [20
 
 ]
-File: open-letter.jpg Graphic file (type bmp)
-<open-letter.jpg>
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 274.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [21
 
 ]
-File: eric.jpg Graphic file (type bmp)
-<eric.jpg>
+File: open-letter.jpg Graphic file (type bmp)
+<open-letter.jpg>
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 283.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [22
 
 ]
+File: eric.jpg Graphic file (type bmp)
+<eric.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [23
@@ -2296,13 +2305,13 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[28
+ [28
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [29
+
+[29
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2310,13 +2319,13 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [30
 
 ]
-File: license-choice.png Graphic file (type bmp)
-<license-choice.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [31
 
 ]
+File: license-choice.png Graphic file (type bmp)
+<license-choice.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [32
@@ -2332,6 +2341,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [34
 
 ]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [35
+
+]
 \tf@nav=\write8
 \openout8 = `slides1.nav'.
 
@@ -2341,11 +2355,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write10
 \openout10 = `slides1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 425.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 425.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
  (./slides1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 425.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 425.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 434.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 434.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2355,12 +2369,12 @@ Package logreq Info: Writing requests to 'slides1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43467 strings out of 493007
- 872137 string characters out of 6136719
- 1281615 words of memory out of 5000000
- 46829 multiletter control sequences out of 15000+600000
+ 43469 strings out of 493007
+ 872153 string characters out of 6136719
+ 1281640 words of memory out of 5000000
+ 46831 multiletter control sequences out of 15000+600000
  572928 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  60i,15n,64p,10437b,5105s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides1.pdf (34 pages).
+Output written on slides1.pdf (35 pages).
