@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.5.23)  5 NOV 2019 06:39
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.5.23)  7 NOV 2019 09:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**slides1
-(./slides1.tex
+**slides.tex
+(./slides.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
@@ -1522,6 +1522,18 @@ File: xunicode-extra.def 2018/02/27 v3.6.1 extra definition for xunicode
 (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2018/02/27 v3.6.1 Configuration file for xeCJK package
 ))
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box73
+\UL@hyphenbox=\box74
+\UL@skip=\skip70
+\UL@hook=\toks45
+\UL@height=\dimen309
+\UL@pe=\count328
+\UL@pixel=\dimen310
+\ULC@box=\box75
+Package: ulem 2012/05/18
+\ULdepth=\dimen311
+)
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2018/02/14 3.18 The Babel package
 
@@ -1533,13 +1545,13 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count328
-\U@D=\dimen309
+\babel@savecnt=\count329
+\U@D=\dimen312
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/xebabel.def
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def))
 LaTeX Info: Redefining \textlatin on input line 1839.
-\bbl@dirlevel=\count329
+\bbl@dirlevel=\count330
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -1547,8 +1559,8 @@ LaTeX Info: Redefining \textlatin on input line 1839.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks45
-\inpenc@posthook=\toks46
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
 
 
 Package inputenc Warning: inputenc package ignored with utf8 based engines.
@@ -1586,7 +1598,7 @@ Package: biblatex 2017/12/19 v3.10 programmable bibliographies (PK/JW/AB)
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count330
+\lrq@indent=\count331
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1597,142 +1609,142 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write5
-\integerpart=\count331
-\decimalpart=\count332
+\integerpart=\count332
+\decimalpart=\count333
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count333
-\c@listtotal=\count334
-\c@listcount=\count335
-\c@liststart=\count336
-\c@liststop=\count337
-\c@citecount=\count338
-\c@citetotal=\count339
-\c@multicitecount=\count340
-\c@multicitetotal=\count341
-\c@instcount=\count342
-\c@maxnames=\count343
-\c@minnames=\count344
-\c@maxitems=\count345
-\c@minitems=\count346
-\c@citecounter=\count347
-\c@savedcitecounter=\count348
-\c@uniquelist=\count349
-\c@uniquename=\count350
-\c@refsection=\count351
-\c@refsegment=\count352
-\c@maxextratitle=\count353
-\c@maxextratitleyear=\count354
-\c@maxextradate=\count355
-\c@maxextraalpha=\count356
-\c@abbrvpenalty=\count357
-\c@highnamepenalty=\count358
-\c@lownamepenalty=\count359
-\c@maxparens=\count360
-\c@parenlevel=\count361
-\blx@tempcnta=\count362
-\blx@tempcntb=\count363
-\blx@tempcntc=\count364
-\blx@maxsection=\count365
-\blx@maxsegment@0=\count366
-\blx@notetype=\count367
-\blx@parenlevel@text=\count368
-\blx@parenlevel@foot=\count369
-\blx@sectionciteorder@0=\count370
-\labelnumberwidth=\skip70
-\labelalphawidth=\skip71
-\biblabelsep=\skip72
-\bibitemsep=\skip73
-\bibnamesep=\skip74
-\bibinitsep=\skip75
-\bibparsep=\skip76
-\bibhang=\skip77
+\c@tabx@nest=\count334
+\c@listtotal=\count335
+\c@listcount=\count336
+\c@liststart=\count337
+\c@liststop=\count338
+\c@citecount=\count339
+\c@citetotal=\count340
+\c@multicitecount=\count341
+\c@multicitetotal=\count342
+\c@instcount=\count343
+\c@maxnames=\count344
+\c@minnames=\count345
+\c@maxitems=\count346
+\c@minitems=\count347
+\c@citecounter=\count348
+\c@savedcitecounter=\count349
+\c@uniquelist=\count350
+\c@uniquename=\count351
+\c@refsection=\count352
+\c@refsegment=\count353
+\c@maxextratitle=\count354
+\c@maxextratitleyear=\count355
+\c@maxextradate=\count356
+\c@maxextraalpha=\count357
+\c@abbrvpenalty=\count358
+\c@highnamepenalty=\count359
+\c@lownamepenalty=\count360
+\c@maxparens=\count361
+\c@parenlevel=\count362
+\blx@tempcnta=\count363
+\blx@tempcntb=\count364
+\blx@tempcntc=\count365
+\blx@maxsection=\count366
+\blx@maxsegment@0=\count367
+\blx@notetype=\count368
+\blx@parenlevel@text=\count369
+\blx@parenlevel@foot=\count370
+\blx@sectionciteorder@0=\count371
+\labelnumberwidth=\skip71
+\labelalphawidth=\skip72
+\biblabelsep=\skip73
+\bibitemsep=\skip74
+\bibnamesep=\skip75
+\bibinitsep=\skip76
+\bibparsep=\skip77
+\bibhang=\skip78
 \blx@bcfin=\read3
 \blx@bcfout=\write6
-\c@mincomprange=\count371
-\c@maxcomprange=\count372
-\c@mincompwidth=\count373
+\c@mincomprange=\count372
+\c@maxcomprange=\count373
+\c@mincompwidth=\count374
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count374
-\c@savedafterword=\count375
-\c@annotator=\count376
-\c@savedannotator=\count377
-\c@author=\count378
-\c@savedauthor=\count379
-\c@bookauthor=\count380
-\c@savedbookauthor=\count381
-\c@commentator=\count382
-\c@savedcommentator=\count383
-\c@editor=\count384
-\c@savededitor=\count385
-\c@editora=\count386
-\c@savededitora=\count387
-\c@editorb=\count388
-\c@savededitorb=\count389
-\c@editorc=\count390
-\c@savededitorc=\count391
-\c@foreword=\count392
-\c@savedforeword=\count393
-\c@holder=\count394
-\c@savedholder=\count395
-\c@introduction=\count396
-\c@savedintroduction=\count397
-\c@namea=\count398
-\c@savednamea=\count399
-\c@nameb=\count400
-\c@savednameb=\count401
-\c@namec=\count402
-\c@savednamec=\count403
-\c@translator=\count404
-\c@savedtranslator=\count405
-\c@shortauthor=\count406
-\c@savedshortauthor=\count407
-\c@shorteditor=\count408
-\c@savedshorteditor=\count409
-\c@labelname=\count410
-\c@savedlabelname=\count411
-\c@institution=\count412
-\c@savedinstitution=\count413
-\c@lista=\count414
-\c@savedlista=\count415
-\c@listb=\count416
-\c@savedlistb=\count417
-\c@listc=\count418
-\c@savedlistc=\count419
-\c@listd=\count420
-\c@savedlistd=\count421
-\c@liste=\count422
-\c@savedliste=\count423
-\c@listf=\count424
-\c@savedlistf=\count425
-\c@location=\count426
-\c@savedlocation=\count427
-\c@organization=\count428
-\c@savedorganization=\count429
-\c@origlocation=\count430
-\c@savedoriglocation=\count431
-\c@origpublisher=\count432
-\c@savedorigpublisher=\count433
-\c@publisher=\count434
-\c@savedpublisher=\count435
-\c@language=\count436
-\c@savedlanguage=\count437
-\c@origlanguage=\count438
-\c@savedoriglanguage=\count439
-\c@pageref=\count440
-\c@savedpageref=\count441
-\shorthandwidth=\skip78
-\shortjournalwidth=\skip79
-\shortserieswidth=\skip80
-\shorttitlewidth=\skip81
-\shortauthorwidth=\skip82
-\shorteditorwidth=\skip83
+\c@afterword=\count375
+\c@savedafterword=\count376
+\c@annotator=\count377
+\c@savedannotator=\count378
+\c@author=\count379
+\c@savedauthor=\count380
+\c@bookauthor=\count381
+\c@savedbookauthor=\count382
+\c@commentator=\count383
+\c@savedcommentator=\count384
+\c@editor=\count385
+\c@savededitor=\count386
+\c@editora=\count387
+\c@savededitora=\count388
+\c@editorb=\count389
+\c@savededitorb=\count390
+\c@editorc=\count391
+\c@savededitorc=\count392
+\c@foreword=\count393
+\c@savedforeword=\count394
+\c@holder=\count395
+\c@savedholder=\count396
+\c@introduction=\count397
+\c@savedintroduction=\count398
+\c@namea=\count399
+\c@savednamea=\count400
+\c@nameb=\count401
+\c@savednameb=\count402
+\c@namec=\count403
+\c@savednamec=\count404
+\c@translator=\count405
+\c@savedtranslator=\count406
+\c@shortauthor=\count407
+\c@savedshortauthor=\count408
+\c@shorteditor=\count409
+\c@savedshorteditor=\count410
+\c@labelname=\count411
+\c@savedlabelname=\count412
+\c@institution=\count413
+\c@savedinstitution=\count414
+\c@lista=\count415
+\c@savedlista=\count416
+\c@listb=\count417
+\c@savedlistb=\count418
+\c@listc=\count419
+\c@savedlistc=\count420
+\c@listd=\count421
+\c@savedlistd=\count422
+\c@liste=\count423
+\c@savedliste=\count424
+\c@listf=\count425
+\c@savedlistf=\count426
+\c@location=\count427
+\c@savedlocation=\count428
+\c@organization=\count429
+\c@savedorganization=\count430
+\c@origlocation=\count431
+\c@savedoriglocation=\count432
+\c@origpublisher=\count433
+\c@savedorigpublisher=\count434
+\c@publisher=\count435
+\c@savedpublisher=\count436
+\c@language=\count437
+\c@savedlanguage=\count438
+\c@origlanguage=\count439
+\c@savedoriglanguage=\count440
+\c@pageref=\count441
+\c@savedpageref=\count442
+\shorthandwidth=\skip79
+\shortjournalwidth=\skip80
+\shortserieswidth=\skip81
+\shorttitlewidth=\skip82
+\shortauthorwidth=\skip83
+\shorteditorwidth=\skip84
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1748,13 +1760,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2017/12/19 v3.10 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count442
-\c@textcitetotal=\count443
-\c@textcitemaxnames=\count444
-\c@biburlnumpenalty=\count445
-\c@biburlucpenalty=\count446
-\c@biburllcpenalty=\count447
-\c@smartand=\count448
+\c@textcitecount=\count443
+\c@textcitetotal=\count444
+\c@textcitemaxnames=\count445
+\c@biburlnumpenalty=\count446
+\c@biburlucpenalty=\count447
+\c@biburllcpenalty=\count448
+\c@smartand=\count449
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1766,8 +1778,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2017/12/19 v3.10 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count449
-\c@bbx:relatedtotal=\count450
+\c@bbx:relatedcount=\count450
+\c@bbx:relatedtotal=\count451
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1797,8 +1809,8 @@ Package: bibentry 2007/10/30 1.5 (PWD)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks47
-\verbatim@line=\toks48
+\every@verbatim=\toks48
+\verbatim@line=\toks49
 \verbatim@in@stream=\read4
 )
 *************************************************
@@ -1807,7 +1819,7 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 * Font 'WenQuanYi Micro Hei' does not contain script 'CJK'.
 *  'Latin' script used instead.
 *************************************************
-\g__fontspec_family_WenQuanYiMicroHei_int=\count451
+\g__fontspec_family_WenQuanYiMicroHei_int=\count452
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -1823,7 +1835,7 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 . 
 . Could not resolve font "WenQuanYi Micro Hei/I" (it probably doesn't exist).
 .................................................
-LaTeX Font Info:    Try loading font information for T1+phv on input line 28.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 29.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
@@ -1848,8 +1860,89 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 * 
 * Try to use `\setCJKsansfont[...]{...}' to define it.
 *************************************************
+(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+Package: xeCJKfntef 2018/02/27 v3.6.1 xeCJK font effect
+
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(/usr/share/texmf/tex/latex/CJK/CJKfntef.sty
+Package: CJKfntef 2015/04/18 4.8.4
+\CJK@fntefSkip=\skip85
+\CJK@nest=\count453
+\CJK@fntefDimen=\dimen313
+\CJK@underdotBox=\box76
+\CJK@ULbox=\box77
+\CJK@underanyskip=\dimen314
+)
+\l__xeCJK_space_skip=\skip86
+\c__xeCJK_ulem-begin_node_dim=\dimen315
+\c__xeCJK_null_box=\box78
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xeCJKfntefon with sig. 'st-so' on line 657.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \CJKunderline with sig. 'st-so' on line 673.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \varCJKunderline with sig. '' on line 675.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \CJKunderwave with sig. 'st-so' on line 685.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \CJKunderdblline with sig. 'st-so' on line 709.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \CJKsout with sig. 'st-so' on line 728.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \CJKxout with sig. 'st-so' on line 745.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \CJKunderanyline with sig. 'st-somm' on line 766.
+.................................................
+\l__xeCJK_fntef_box=\box79
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \CJKunderanysymbol with sig. 'ommm' on line 940.
+.................................................
+.................................................
+. LaTeX info: "xparse/redefine-command"
+. 
+. Redefining command \CJKunderdot with sig. 'om' on line 949.
+.................................................
+\l__xeCJK_under_symbol_box=\box80
+.................................................
+. LaTeX info: "xparse/redefine-environment"
+. 
+. Redefining environment 'CJKfilltwosides' with sig. 'O{c}m' on line 1053.
+.................................................
+\c__xeCJK_filll_skip=\skip87
+)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
+
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 )
@@ -1857,35 +1950,35 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count452
-\@quotereset=\count453
-(./slides1.aux)
-\openout1 = `slides1.aux'.
+\@quotelevel=\count454
+\@quotereset=\count455
+(./slides.aux)
+\openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 81.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 82.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 82.
  (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    ... okay on input line 82.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1922,8 +2015,8 @@ LaTeX Font Info:    ... okay on input line 81.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box73
-Package hyperref Info: Link coloring OFF on input line 81.
+\AtBeginShipoutBox=\box81
+Package hyperref Info: Link coloring OFF on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1931,58 +2024,58 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count454
+\c@section@level=\count456
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
 
-(./slides1.out) (./slides1.out)
+(./slides.out) (./slides.out)
 \@outlinefile=\write7
-\openout7 = `slides1.out'.
+\openout7 = `slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 81.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 82.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 81.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 82.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/ptm/m/n on input line 81.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 81.
+(Font)                  OT1/cmss/m/n --> T1/ptm/m/n on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/phv/bx/n on input line 81.
+(Font)                  OT1/cmr/bx/n --> T1/phv/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/phv/bx/n on input line 81.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 81.
+(Font)                  OT1/cmr/bx/n --> T1/phv/bx/n on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 81.
+(Font)                  OT1/cmss/m/n --> T1/phv/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 81.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 81.
+(Font)                  OT1/cmss/bx/n --> T1/phv/m/n on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/phv/m/it on input line 81.
+(Font)                  OT1/cmr/m/it --> T1/phv/m/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/phv/m/it on input line 81.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 81.
+(Font)                  OT1/cmr/bx/it --> T1/phv/m/it on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/pcr/m/n on input line 81.
+(Font)                  OT1/cmtt/m/n --> T1/pcr/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/pcr/m/n on input line 81.
+(Font)                  OT1/cmtt/m/n --> T1/pcr/m/n on input line 82.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/bx/n on input line 81.
+(Font)                  T1/phv/m/n --> T1/phv/bx/n on input line 82.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/bx/it on input line 81.
+(Font)                  T1/phv/m/it --> T1/phv/bx/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/ptm/bx/n on input line 81.
+(Font)                  OT1/cmss/bx/n --> T1/ptm/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/phv/bx/n --> T1/phv/bx/n on input line 81.
+(Font)                  T1/phv/bx/n --> T1/phv/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/phv/m/n --> T1/phv/bx/n on input line 81.
+(Font)                  T1/phv/m/n --> T1/phv/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/phv/m/it --> T1/phv/bx/it on input line 81.
+(Font)                  T1/phv/m/it --> T1/phv/bx/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/pcr/m/n --> T1/pcr/bx/n on input line 81.
+(Font)                  T1/pcr/m/n --> T1/pcr/bx/n on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
 -English.dict
@@ -2015,57 +2108,57 @@ Dictionary: translator-theorem-dictionary, Language: English
 .................................................
 \symlegacymaths=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 81.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 81.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 81.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 81.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 81.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 81.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 81.
-LaTeX Font Info:    Redeclaring math accent \check on input line 81.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 81.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 81.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 81.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 81.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 81.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 82.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 82.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 82.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 82.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 82.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 82.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 82.
+LaTeX Font Info:    Redeclaring math accent \check on input line 82.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 82.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 82.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 82.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 82.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 81.
+(Font)              `operators' in the math version `normal' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/ptm/m/n on input line 81.
+(Font)                  OT1/cmss/m/n --> TU/ptm/m/n on input line 82.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 81.
+(Font)              `operators' in the math version `bold' on input line 82.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/ptm/m/n on input line 81.
+(Font)                  OT1/cmss/bx/n --> TU/ptm/m/n on input line 82.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 81.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 81.
+(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 82.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  T1/phv/m/it --> TU/ptm/m/it on input line 81.
+(Font)                  T1/phv/m/it --> TU/ptm/m/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  T1/phv/bx/n --> TU/ptm/bx/n on input line 81.
+(Font)                  T1/phv/bx/n --> TU/ptm/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  T1/phv/m/n --> TU/phv/m/n on input line 81.
+(Font)                  T1/phv/m/n --> TU/phv/m/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  T1/pcr/m/n --> TU/pcr/m/n on input line 81.
+(Font)                  T1/pcr/m/n --> TU/pcr/m/n on input line 82.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/ptm/m/n --> TU/ptm/bx/n on input line 81.
+(Font)                  TU/ptm/m/n --> TU/ptm/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/phv/bx/it --> TU/ptm/bx/it on input line 81.
+(Font)                  T1/phv/bx/it --> TU/ptm/bx/it on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/phv/bx/n --> TU/phv/bx/n on input line 81.
+(Font)                  T1/phv/bx/n --> TU/phv/bx/n on input line 82.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/pcr/bx/n --> TU/pcr/bx/n on input line 81.
+(Font)                  T1/pcr/bx/n --> TU/pcr/bx/n on input line 82.
 
 *** you should *not* be loading the inputenc package
 *** XeTeX expects the source to be in UTF8 encoding
@@ -2074,29 +2167,38 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout6 = `slides1.bcf'.
+\openout6 = `slides.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'slides1.bbl' found.
-(./slides1.bbl)
-Package biblatex Info: Reference section=0 on input line 81.
-Package biblatex Info: Reference segment=0 on input line 81.
+Package biblatex Info: ... file 'slides.bbl' not found.
+No file slides.bbl.
+Package biblatex Info: Reference section=0 on input line 82.
+Package biblatex Info: Reference segment=0 on input line 82.
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \Pifont with sig. 'm' on line 81.
+. Redefining command \Pifont with sig. 'm' on line 82.
 .................................................
- (./slides1.nav)
+(./slides.nav)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [1
 
-] (./slides1.toc)
+]
+File: ../../part1/lecture1/eric.jpg Graphic file (type bmp)
+<../../part1/lecture1/eric.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [2
+
+]
+File: jargon-file.jpg Graphic file (type bmp)
+<jargon-file.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [3
 
 ]
 LaTeX Font Info:    Try loading font information for TU+ptm on input line 124.
@@ -2121,6 +2223,8 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 124.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 124.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 124.
 
 *************************************************
 * xeCJK warning: "CJKfamily-Unknown"
@@ -2133,19 +2237,12 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 124.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 124.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 124.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 124.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 124.
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [3
-
-]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 136.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [4
@@ -2156,28 +2253,24 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [5
 
 ]
+File: Cathedral-and-the-Bazaar-book-cover.jpg Graphic file (type bmp)
+<Cathedral-and-the-Bazaar-book-cover.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [6
 
 ]
-File: cola.jpg Graphic file (type bmp)
-<cola.jpg>
-
-Overfull \hbox (163.22127pt too wide) in paragraph at lines 155--155
-[]\T1/phv/m/n/10.95 Tøyen Cola: []$\T1/pcr/m/n/8 https : / / distrita . com / t
-oyen-[]cola-[]is-[]a-[]speciality-[]in-[]oslo-[]norway-[]that-[]needs-[]to-[]be
--[]tested/$[] 
- []
-
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[7
+ [7
 
-] (./slides1.toc)
+]
+File: real_programmers.png Graphic file (type bmp)
+<real_programmers.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [8
+
+[8
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2185,182 +2278,42 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [9
 
 ]
-Missing character: There is no 理 in font pcrr8t!
-Missing character: There is no 查 in font pcrr8t!
-Missing character: There is no 德 in font pcrr8t!
-Missing character: There is no 斯 in font pcrr8t!
-Missing character: There is no 托 in font pcrr8t!
-Missing character: There is no 曼 in font pcrr8t!
-File: olpc.jpg Graphic file (type bmp)
-<olpc.jpg>
+File: friends.png Graphic file (type bmp)
+<friends.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [10
 
 ]
-File: hhkb.jpg Graphic file (type bmp)
-<hhkb.jpg>
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [11
-
-]
-File: book.png Graphic file (type bmp)
-<book.png>
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [12
-
-] (./slides1.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [13
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [14
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [15
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
-
-[16
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [17
-
-] (./slides1.toc)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [18
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [19
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [20
-
-]
-File: open-letter.jpg Graphic file (type bmp)
-<open-letter.jpg>
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 276.
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [21
-
-]
-File: eric.jpg Graphic file (type bmp)
-<eric.jpg>
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [22
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [23
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [24
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [25
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [26
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [27
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
-
-[28
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [29
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [30
-
-]
-File: license-choice.png Graphic file (type bmp)
-<license-choice.png>
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [31
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [32
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [33
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [34
-
-]
 \tf@nav=\write8
-\openout8 = `slides1.nav'.
+\openout8 = `slides.nav'.
 
 \tf@toc=\write9
-\openout9 = `slides1.toc'.
+\openout9 = `slides.toc'.
 
 \tf@snm=\write10
-\openout10 = `slides1.snm'.
+\openout10 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 427.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 427.
- (./slides1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 427.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 427.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
+ (./slides.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 179.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 179.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package logreq Info: Writing requests to 'slides1.run.xml'.
-\openout1 = `slides1.run.xml'.
+Package logreq Info: Writing requests to 'slides.run.xml'.
+\openout1 = `slides.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43467 strings out of 493007
- 872137 string characters out of 6136719
- 1281614 words of memory out of 5000000
- 46829 multiletter control sequences out of 15000+600000
- 572928 words of font info for 94 fonts, out of 8000000 for 9000
+ 43234 strings out of 493007
+ 849775 string characters out of 6136719
+ 1281549 words of memory out of 5000000
+ 46592 multiletter control sequences out of 15000+600000
+ 570725 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,15n,64p,10437b,5105s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,62p,10430b,3590s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides1.pdf (34 pages).
+Output written on slides.pdf (10 pages).
