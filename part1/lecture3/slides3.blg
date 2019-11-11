@@ -1,15 +1,9 @@
-[0] Config.pm:354> INFO - This is Biber 2.7 (beta)
-[0] Config.pm:357> INFO - Logfile is 'slides3.blg'
-[16] biber:303> INFO - === 四 9月 21, 2017, 11:34:05
-[23] Biber.pm:360> INFO - Reading 'slides3.bcf'
-[63] Biber.pm:836> INFO - Found 1 citekeys in bib section 0
-[69] Biber.pm:3671> INFO - Processing section 0
-[76] Biber.pm:3841> INFO - Looking for bibtex format file 'cite.bib' for section 0
-[77] bibtex.pm:1424> INFO - Decoding LaTeX character macros into UTF-8
-[78] bibtex.pm:1281> INFO - Found BibTeX data source 'cite.bib'
-[84] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[84] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[84] Biber.pm:3500> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[84] Biber.pm:3506> INFO - No sort tailoring available for locale 'en-US'
-[85] bbl.pm:608> INFO - Writing 'slides3.bbl' with encoding 'UTF-8'
-[85] bbl.pm:712> INFO - Output to slides3.bbl
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'slides3.blg'
+[30] biber:313> INFO - === 日 11月 10, 2019, 09:26:08
+[53] Biber.pm:371> INFO - Reading 'slides3.bcf'
+[125] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
+[132] Utils.pm:169> WARN - The file 'slides3.bcf' does not contain any citations!
+[140] bbl.pm:617> INFO - Writing 'slides3.bbl' with encoding 'UTF-8'
+[140] bbl.pm:720> INFO - Output to slides3.bbl
+[140] Biber.pm:110> INFO - WARNINGS: 1

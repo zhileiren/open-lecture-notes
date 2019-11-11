@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.8 $
+% $ biblatex bbl format version 2.9 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,32 +16,5 @@
   {}
 \endgroup
 
-
-\refsection{0}
-  \sortlist[entry]{nty/global/}
-    \entry{krafft2005debian}{book}{}
-      \name{author}{1}{}{%
-        {{hash=f37ba52d8e94ce6088cf8eb00094179c}{%
-           family={Krafft},
-           familyi={K\bibinitperiod},
-           given={Martin\bibnamedelima F},
-           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {No Starch Press}%
-      }
-      \strng{namehash}{f37ba52d8e94ce6088cf8eb00094179c}
-      \strng{fullhash}{f37ba52d8e94ce6088cf8eb00094179c}
-      \strng{authornamehash}{f37ba52d8e94ce6088cf8eb00094179c}
-      \strng{authorfullhash}{f37ba52d8e94ce6088cf8eb00094179c}
-      \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The Debian system: concepts and techniques}
-      \field{year}{2005}
-    \endentry
-  \endsortlist
-\endrefsection
 \endinput
 
