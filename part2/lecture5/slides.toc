@@ -1,9 +1,11 @@
-\select@language {english}
+\babel@toc {english}{}
 \beamer@sectionintoc {1}{面向对象}{2}{0}{1}
 \beamer@sectionintoc {2}{函数式特性}{15}{0}{2}
-\beamer@subsectionintoc {2}{1}{List Comprehension}{25}{0}{2}
-\beamer@subsectionintoc {2}{2}{Map-Reduce}{27}{0}{2}
-\beamer@sectionintoc {3}{一点更多的数据结构}{29}{0}{3}
-\beamer@subsectionintoc {3}{1}{元组}{30}{0}{3}
-\beamer@subsectionintoc {3}{2}{字典}{36}{0}{3}
-\beamer@subsectionintoc {3}{3}{集合}{44}{0}{3}
+\beamer@subsectionintoc {2}{1}{Closure}{25}{0}{2}
+\beamer@subsectionintoc {2}{2}{Partial Function}{27}{0}{2}
+\beamer@subsectionintoc {2}{3}{List Comprehension}{29}{0}{2}
+\beamer@subsectionintoc {2}{4}{Map-Reduce}{31}{0}{2}
+\beamer@sectionintoc {3}{一点更多的数据结构}{33}{0}{3}
+\beamer@subsectionintoc {3}{1}{元组}{34}{0}{3}
+\beamer@subsectionintoc {3}{2}{字典}{40}{0}{3}
+\beamer@subsectionintoc {3}{3}{集合}{48}{0}{3}

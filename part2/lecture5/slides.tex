@@ -233,7 +233,6 @@ class B(A):
 
 b = B()
 b.foo()
-		
 \end{verbatim}
 	
 \end{frame}
@@ -252,7 +251,6 @@ b = B()
 b.foo()
 isinstance(b, B)
 isinstance(b, A)
-		
 \end{verbatim}
 	
 \end{frame}
@@ -402,6 +400,55 @@ add(10, 20)
 \end{verbatim}
 	
 \end{frame}
+
+\subsection{Closure}
+\label{sub:Closure}
+\begin{frame}[t,fragile]{闭包}
+    
+\begin{verbatim}
+def outer():
+    count = 0
+    def inner():
+        nonlocal count
+        count += 1
+        return count
+    return inner
+>>> counter = outer()
+>>> counter
+<function __main__.outer.<locals>.inner()>
+>>> counter()
+1
+>>> counter()
+2
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Partial Function}
+\label{sub:Partial Function}
+\begin{frame}[t,fragile]{偏函数}
+
+\begin{verbatim}
+
+from functools import partial
+def multiply(x, y):
+    return x * y
+
+>>> double = partial(multiply, 2)
+>>> triple = partial(multiply, 3)
+>>> double
+functools.partial(<function multiply at 0x7f79bcf27f28>, 2)
+>>> type(double)
+functools.partial
+>>> double(5)
+10
+>>>triple(20)
+60
+
+\end{verbatim}
+    
+\end{frame}
+
 \subsection{List Comprehension} % (fold)
 \label{sub:List Comprehension}
 
@@ -415,7 +462,6 @@ add(10, 20)
 colours = ["red", "green", "yellow", "blue"]
 things = ["house", "car", "tree"]
 combined =  [(x,y) for x in colours for y in things]
-		
 \end{verbatim}
 	
 \end{frame}
@@ -426,6 +472,7 @@ combined =  [(x,y) for x in colours for y in things]
 \begin{frame}[t,fragile]{Map/Filter/Reduce}
 \begin{verbatim}
 
+from functools import reduce
 map(lambda x: x ** 2, range(10)
 list(map(lambda x: x **2, range(10))
 
@@ -436,7 +483,6 @@ reduce(lambda x, y: x + y,
          filter(lambda x: x % 2 == 0, 
                   map(lambda x: x ** 2, range(10))))
          
-		
 \end{verbatim}
 
 	
