@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'slides1.blg'
-[20] biber:313> INFO - === 一 11月  4, 2019, 23:07:58
-[36] Biber.pm:371> INFO - Reading 'slides1.bcf'
-[75] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
-[83] Biber.pm:3981> INFO - Processing section 0
-[90] Biber.pm:4154> INFO - Looking for bibtex format file 'cite.bib' for section 0
-[90] bibtex.pm:1468> INFO - LaTeX decoding ...
-[92] bibtex.pm:1294> INFO - Found BibTeX data source 'cite.bib'
-[100] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[100] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[100] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[100] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[101] bbl.pm:617> INFO - Writing 'slides1.bbl' with encoding 'UTF-8'
-[101] bbl.pm:720> INFO - Output to slides1.bbl
+[22] biber:313> INFO - === 二 11月  5, 2019, 06:39:42
+[39] Biber.pm:371> INFO - Reading 'slides1.bcf'
+[86] Biber.pm:857> INFO - Found 1 citekeys in bib section 0
+[95] Biber.pm:3981> INFO - Processing section 0
+[102] Biber.pm:4154> INFO - Looking for bibtex format file 'cite.bib' for section 0
+[102] bibtex.pm:1468> INFO - LaTeX decoding ...
+[104] bibtex.pm:1294> INFO - Found BibTeX data source 'cite.bib'
+[112] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[112] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[113] Biber.pm:3809> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[113] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[114] bbl.pm:617> INFO - Writing 'slides1.bbl' with encoding 'UTF-8'
+[114] bbl.pm:720> INFO - Output to slides1.bbl
