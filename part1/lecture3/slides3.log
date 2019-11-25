@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.5.23)  10 NOV 2019 09:26
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.5.23)  12 NOV 2019 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2400,23 +2400,30 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [41
 
 ]
-File: debian-timeline.png Graphic file (type bmp)
-<debian-timeline.png>
+File: sid.jpg Graphic file (type bmp)
+<sid.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [42
 
 ]
+File: debian-timeline.png Graphic file (type bmp)
+<debian-timeline.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [43
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [44
 
 ]
 File: debian-package-cycle.png Graphic file (type bmp)
 <debian-package-cycle.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [44
+ [45
 
 ]
 \openout4 = `slides3.vrb'.
@@ -2430,7 +2437,7 @@ Overfull \hbox (3.30486pt too wide) in paragraph at lines 10--10
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [45
+ [46
 
 ]
 \openout4 = `slides3.vrb'.
@@ -2473,25 +2480,13 @@ Overfull \hbox (2.32138pt too wide) in paragraph at lines 2--27
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [46
+ [47
 
 ]
 File: vim.png Graphic file (type bmp)
 <vim.png>
 
-Overfull \vbox (12.75974pt too high) detected at line 618
- []
-
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
-[47
-
-]
-File: framework.png Graphic file (type bmp)
-<framework.png>
-
-Overfull \hbox (7.26933pt too wide) in paragraph at lines 630--630
-[]$[]$ $[]$[] 
+Overfull \vbox (12.75974pt too high) detected at line 627
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2499,11 +2494,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 [48
 
 ]
-File: Bug-Life-Cycle.jpg Graphic file (type bmp)
-<Bug-Life-Cycle.jpg>
+File: framework.png Graphic file (type bmp)
+<framework.png>
 
-Overfull \hbox (2.32138pt too wide) in paragraph at lines 645--645
-[]$[]$ $[]$ 
+Overfull \hbox (7.26933pt too wide) in paragraph at lines 639--639
+[]$[]$ $[]$[] 
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -2511,16 +2506,28 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 [49
 
 ]
+File: Bug-Life-Cycle.jpg Graphic file (type bmp)
+<Bug-Life-Cycle.jpg>
+
+Overfull \hbox (2.32138pt too wide) in paragraph at lines 654--654
+[]$[]$ $[]$ 
+ []
+
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [50
+[50
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [51
 
 ]
 File: bugs-all.png Graphic file (type bmp)
 <bugs-all.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [51
+ [52
 
 ]
 \tf@nav=\write8
@@ -2532,11 +2539,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write10
 \openout10 = `slides3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 677.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 677.
  (./slides3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 668.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 668.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 677.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 677.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2546,12 +2553,12 @@ Package logreq Info: Writing requests to 'slides3.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43167 strings out of 493007
- 856607 string characters out of 6136719
- 1277893 words of memory out of 5000000
- 46513 multiletter control sequences out of 15000+600000
+ 43173 strings out of 493007
+ 856666 string characters out of 6136719
+ 1277914 words of memory out of 5000000
+ 46518 multiletter control sequences out of 15000+600000
  567943 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  56i,15n,62p,10437b,3663s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides3.pdf (51 pages).
+Output written on slides3.pdf (52 pages).
