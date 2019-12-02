@@ -9,7 +9,7 @@ def tree(node, prefix, last):
         pass
     else:
         print(prefix +  last + node.name)
-        children = [c for c in node.children if c and not str(c).isspace()]
+        children = [c for c in node.children if isinstance(c, bs4.element.Tag)]
         if children:
             for child in children[:-1]:
                 tree(child, prefix + ' |', '--')
