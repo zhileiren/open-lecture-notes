@@ -1,0 +1,154 @@
+
+\documentclass{beamer}
+
+
+\mode<presentation>
+{
+  \usetheme{CambridgeUS}
+	\usecolortheme{beaver}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage{xeCJK}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{bibentry}
+\usepackage{verbatim}
+\usepackage{color}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\setCJKmainfont{WenQuanYi Micro Hei}
+\renewcommand{\raggedright}{\leftskip=0pt \rightskip=0pt plus 0cm}
+\raggedright
+
+\let\oldfootnotesize\footnotesize
+\renewcommand*{\footnotesize}{\oldfootnotesize\tiny}
+
+
+\title[开源软件基础] 
+{开源软件基础}
+\subtitle{基于z3的约束求解}
+
+\author[Zhilei Ren] 
+{Zhilei Ren}
+
+\institute[OSCAR Team] % (optional, but mostly needed)
+{
+\\\includegraphics[width=0.2\textwidth]{../../utils/logo.jpg}\\
+OSCAR Team, School of Software, 
+Dalian University of Technology
+}
+
+
+\subject{Open source}
+
+
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{../../utils/logo.jpg}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Outline}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+\setbeamertemplate{section in toc}[circle]
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry journal}{}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Outline}
+%  \tableofcontents[currentsection,currentsubsection, 
+%    hideothersubsections, 
+%    sectionstyle=show,
+%]
+%\end{frame}
+
+\AtBeginSection[]
+{
+ \begin{frame}<beamer>
+ \frametitle{Outline}
+ \tableofcontents[currentsection]
+ \end{frame}
+}
+\section{z3简介}
+\begin{frame}[t]{z3简介}
+    \begin{block}{概念}
+        Z3 is a theorem prover from Microsoft Research. It is licensed under the MIT license\footnote{\url{https://github.com/Z3Prover/z3}}.
+    \end{block}
+\end{frame}
+\begin{frame}[t]{约束求解的历史}
+
+    \begin{enumerate}
+        \item SAT: The satisfiability problem
+        \item SMT: Satisfiability modulo theories
+    \end{enumerate}
+    
+\end{frame}
+
+\begin{frame}[t]{约束求解示例}
+Consider the following puzzle. Spend exactly 100 dollars and buy exactly 100 animals. Dogs cost 15 dollars, cats cost 1 dollar, and mice cost 25 cents each. You have to buy at least one of each. How many of each should you buy?     
+\end{frame}
+
+\begin{frame}[t,fragile]{约束求解示例}
+    \begin{verbatim}
+import z3
+dog, cat, mouse = z3.Ints('dog cat mouse')
+z3.solve(dog >= 1,   # at least one dog
+      cat >= 1,      # at least one cat
+      mouse >= 1,    # at least one mouse
+      # we want to buy 100 animals
+      dog + cat + mouse == 100,
+      # We have 100 dollars (10000 cents):
+      #   dogs cost 15 dollars (1500 cents), 
+      #   cats cost 1 dollar (100 cents), and 
+      #   mice cost 25 cents 
+      1500 * dog + 100 * cat + 25 * mouse == 10000)
+\end{verbatim}
+    
+\end{frame}
+
+\begin{frame}[t,fragile]{程序生成/修复}
+\begin{verbatim}
+from z3 import *
+x = Int('x')
+y = Int('y')
+f = Function('f', IntSort(), IntSort())
+s = Solver()
+s.add(f(f(x)) == x, f(x) == y, x != y)
+print s.check()
+m = s.model()
+print("f(f(x)) =", m.evaluate(f(f(x))))
+print("f(x)    =", m.evaluate(f(x)))
+\end{verbatim}
+\end{frame}
+
+\end{document}
