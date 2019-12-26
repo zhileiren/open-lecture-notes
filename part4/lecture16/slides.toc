@@ -1,2 +1,4 @@
 \babel@toc {english}{}
-\beamer@sectionintoc {1}{z3简介}{2}{0}{1}
+\beamer@sectionintoc {1}{开始之前}{2}{0}{1}
+\beamer@sectionintoc {2}{z3简介}{5}{0}{2}
+\beamer@sectionintoc {3}{示例}{9}{0}{3}

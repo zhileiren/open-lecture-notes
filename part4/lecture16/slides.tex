@@ -99,6 +99,30 @@ Dalian University of Technology
  \tableofcontents[currentsection]
  \end{frame}
 }
+\section{开始之前}
+\label{sec:开始之前}
+\begin{frame}[t]{课堂效果的反思}
+
+    \begin{block}{不足之处}
+        \begin{enumerate}
+            \item 没有考虑到系统的差异
+            \item 节奏还是偏快
+        \end{enumerate}
+    
+    \end{block}
+    \begin{block}{采取措施}
+        \begin{enumerate}
+            \item 代码在windows系统下进行测试
+            \item 课堂演示也使用windows系统
+            \item 下周课程安排，根据调查结果调整
+        \end{enumerate}
+    \end{block}
+    \pause
+    \Huge
+    希望我们还是朋友
+    
+\end{frame}
+
 \section{z3简介}
 \begin{frame}[t]{z3简介}
     \begin{block}{概念}
@@ -114,26 +138,73 @@ Dalian University of Technology
     
 \end{frame}
 
+\begin{frame}[t]{可满足问题}
+    \begin{block}{SAT}
+        可满足性（Satisfiability）是用来解决给定的真值方程式，是否存在一组变量赋值，使问题为可满足。布尔可满足性问题（Boolean satisfiability problem；SAT)）属于决定性问题，也是第一个被证明属于NP完全的问题。此问题在计算机科学上许多领域的皆相当重要，包括计算机科学基础理论、算法、人工智能、硬件设计等等。\footnote{\url{https://zh.wikipedia.org/zh-cn/布尔可满足问题}}
+
+    \end{block}
+\end{frame}
+\section{示例}
+\label{sec:示例}
 \begin{frame}[t]{约束求解示例}
-Consider the following puzzle. Spend exactly 100 dollars and buy exactly 100 animals. Dogs cost 15 dollars, cats cost 1 dollar, and mice cost 25 cents each. You have to buy at least one of each. How many of each should you buy?     
+今有雉兔同笼，上有三十五头，下有九十四足，问雉兔各几何？
 \end{frame}
 
 \begin{frame}[t,fragile]{约束求解示例}
     \begin{verbatim}
 import z3
-dog, cat, mouse = z3.Ints('dog cat mouse')
-z3.solve(dog >= 1,   # at least one dog
-      cat >= 1,      # at least one cat
-      mouse >= 1,    # at least one mouse
-      # we want to buy 100 animals
-      dog + cat + mouse == 100,
-      # We have 100 dollars (10000 cents):
-      #   dogs cost 15 dollars (1500 cents), 
-      #   cats cost 1 dollar (100 cents), and 
-      #   mice cost 25 cents 
-      1500 * dog + 100 * cat + 25 * mouse == 10000)
+chicken, rabbits = z3.Ints('chicken rabbits')
+z3.solve(chicken >= 1,   # number of chicken
+      rabbits >= 1,      # number of rabbits
+      chicken + rabbits == 35,
+      chicken * 2 + rabbits * 4 == 94)
 \end{verbatim}
     
+\end{frame}
+
+\begin{frame}[t]{约束求解示例}
+    \includegraphics[width=0.5\textwidth]{puzzle.png}
+\end{frame}
+
+\begin{frame}[t,fragile]{约束求解示例}
+    \scriptsize
+    \begin{verbatim}
+from z3 import *
+circle, square, triangle = Ints('circle square triangle')
+s = Solver()
+s.add(circle+circle==10)
+s.add(circle*square+square==12)
+s.add(circle*square-triangle*circle==circle)
+print(s.check())
+print(s.model())
+\end{verbatim}
+    
+\end{frame}
+\begin{frame}[t]{八皇后问题}
+    \centering
+\includegraphics[width=0.5\textwidth]{queen.png}
+    
+\end{frame}
+
+\begin{frame}[t,fragile]{八皇后问题}
+    \scriptsize
+    \begin{verbatim}
+Q = [ Int('Q_%i' % (i + 1)) for i in range(8) ]
+
+# Each queen is in a column {1, ... 8 }
+val_c = [ And(1 <= Q[i], Q[i] <= 8) for i in range(8) ]
+
+# At most one queen per column
+col_c = [ Distinct(Q) ]
+
+# Diagonal constraint
+diag_c = [ If(i == j,
+              True,
+              And(Q[i] - Q[j] != i - j, Q[i] - Q[j] != j - i))
+           for i in range(8) for j in range(i) ]
+
+solve(val_c + col_c + diag_c) 
+    \end{verbatim}
 \end{frame}
 
 \begin{frame}[t,fragile]{程序生成/修复}
