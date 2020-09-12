@@ -1,5 +1,5 @@
-[0] Config.pm:302> INFO - This is Biber 2.9
-[0] Config.pm:305> INFO - Logfile is 'slides.blg'
-[19] biber:313> INFO - === 四 11月  7, 2019, 09:16:45
-[92] Utils.pm:185> ERROR - Cannot find control file 'slides.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
-[93] Biber.pm:114> INFO - ERRORS: 1
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'slides.blg'
+[14] biber:315> INFO - === 六 9月 12, 2020, 21:19:35
+[25] Biber.pm:371> INFO - Reading 'slides.bcf'
+[60] Utils.pm:193> WARN - No data sources defined!
