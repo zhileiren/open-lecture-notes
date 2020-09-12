@@ -3,8 +3,8 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {1}{关于我}{2}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{特色栏目}{8}{0}{2}
+\beamer@sectionintoc {2}{特色栏目}{11}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{教学内容}{13}{0}{3}
+\beamer@sectionintoc {3}{教学内容}{16}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{定义}{18}{0}{4}
+\beamer@sectionintoc {4}{定义}{21}{0}{4}
