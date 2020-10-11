@@ -1,6 +1,4 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {english}
+\babel@toc {english}{}
 \beamer@sectionintoc {1}{快速开始}{2}{0}{1}
-\beamer@sectionintoc {2}{对象的种类}{8}{0}{2}
-\beamer@sectionintoc {3}{遍历文档树}{18}{0}{3}
-\beamer@sectionintoc {4}{搜索文档树}{36}{0}{4}
+\beamer@sectionintoc {2}{遍历文档树}{8}{0}{2}
+\beamer@sectionintoc {3}{搜索文档树}{26}{0}{3}

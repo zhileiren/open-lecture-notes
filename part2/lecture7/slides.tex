@@ -232,140 +232,140 @@ for link in soup.find_all('a'):
 \end{verbatim}
 \end{frame}
 
-\section{对象的种类}
-
-
-\begin{frame}[t,fragile]{对象的种类}
-
-Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种: Tag , NavigableString , BeautifulSoup , Comment .
-
-\begin{verbatim}
-
-soup = BeautifulSoup('<b class="boldest">Extremely bold</b>')
-tag = soup.b
-type(tag)
-# <class 'bs4.element.Tag'>
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{对象的种类}
-
-Tag有很多方法和属性,在 遍历文档树 和 搜索文档树 中有详细解释.现在介绍一下tag中最重要的属性: name和attributes
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{对象的种类}
-
-每个tag都有自己的名字,通过 .name 来获取:
-
-\begin{verbatim}
-
-tag.name
-# u'b'
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-\begin{frame}[t,fragile]{对象的种类}
-
-一个tag可能有很多个属性. tag <b class="boldest"> 有一个 “class” 的属性,值为 “boldest” . tag的属性的操作方法与字典相同:
-
-\begin{verbatim}
-
-tag['class']
-# u'boldest'
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-\begin{frame}[t,fragile]{对象的种类}
-
-也可以直接”点”取属性, 比如: .attrs :
-
-\begin{verbatim}
-
-tag.attrs
-# {u'class': u'boldest'}
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{对象的种类}
-
-字符串常被包含在tag内.Beautiful Soup用 NavigableString 类来包装tag中的字符串:
-
-\begin{verbatim}
-
-tag.string
-# u'Extremely bold'
-type(tag.string)
-# <class 'bs4.element.NavigableString'>
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-\begin{frame}[t,fragile]{对象的种类}
-
-BeautifulSoup 对象表示的是一个文档的全部内容.大部分时候,可以把它当作 Tag 对象,它支持 遍历文档树 和 搜索文档树 中描述的大部分的方法.
-
-因为 BeautifulSoup 对象并不是真正的HTML或XML的tag,所以它没有name和attribute属性.但有时查看它的 .name 属性是很方便的,所以 BeautifulSoup 对象包含了一个值为 “[document]” 的特殊属性 .name
-
-\begin{verbatim}
-
-soup.name
-# u'[document]'
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{对象的种类}
-
-Tag , NavigableString , BeautifulSoup 几乎覆盖了html和xml中的所有内容,但是还有一些特殊对象.容易让人担心的内容是文档的注释部分:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{对象的种类}
-
-
-\begin{verbatim}
-
-markup = "<b><!--Hey, buddy. Want to buy a used parser?--></b>"
-soup = BeautifulSoup(markup)
-comment = soup.b.string
-type(comment)
-# <class 'bs4.element.Comment'>
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
+% \section{对象的种类}
+% 
+% 
+% \begin{frame}[t,fragile]{对象的种类}
+% 
+% Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节点都是Python对象,所有对象可以归纳为4种: Tag , NavigableString , BeautifulSoup , Comment .
+% 
+% \begin{verbatim}
+% 
+% soup = BeautifulSoup('<b class="boldest">Extremely bold</b>')
+% tag = soup.b
+% type(tag)
+% # <class 'bs4.element.Tag'>
+% 
+% 
+% \end{verbatim}
+% 
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}[t]{对象的种类}
+% 
+% Tag有很多方法和属性,在 遍历文档树 和 搜索文档树 中有详细解释.现在介绍一下tag中最重要的属性: name和attributes
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}[t,fragile]{对象的种类}
+% 
+% 每个tag都有自己的名字,通过 .name 来获取:
+% 
+% \begin{verbatim}
+% 
+% tag.name
+% # u'b'
+% 
+% 
+% \end{verbatim}
+% 
+% 
+% \end{frame}
+% 
+% \begin{frame}[t,fragile]{对象的种类}
+% 
+% 一个tag可能有很多个属性. tag <b class="boldest"> 有一个 “class” 的属性,值为 “boldest” . tag的属性的操作方法与字典相同:
+% 
+% \begin{verbatim}
+% 
+% tag['class']
+% # u'boldest'
+% 
+% 
+% \end{verbatim}
+% 
+% 
+% \end{frame}
+% 
+% \begin{frame}[t,fragile]{对象的种类}
+% 
+% 也可以直接”点”取属性, 比如: .attrs :
+% 
+% \begin{verbatim}
+% 
+% tag.attrs
+% # {u'class': u'boldest'}
+% 
+% 
+% \end{verbatim}
+% 
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}[t,fragile]{对象的种类}
+% 
+% 字符串常被包含在tag内.Beautiful Soup用 NavigableString 类来包装tag中的字符串:
+% 
+% \begin{verbatim}
+% 
+% tag.string
+% # u'Extremely bold'
+% type(tag.string)
+% # <class 'bs4.element.NavigableString'>
+% 
+% 
+% \end{verbatim}
+% 
+% 
+% \end{frame}
+% 
+% \begin{frame}[t,fragile]{对象的种类}
+% 
+% BeautifulSoup 对象表示的是一个文档的全部内容.大部分时候,可以把它当作 Tag 对象,它支持 遍历文档树 和 搜索文档树 中描述的大部分的方法.
+% 
+% 因为 BeautifulSoup 对象并不是真正的HTML或XML的tag,所以它没有name和attribute属性.但有时查看它的 .name 属性是很方便的,所以 BeautifulSoup 对象包含了一个值为 “[document]” 的特殊属性 .name
+% 
+% \begin{verbatim}
+% 
+% soup.name
+% # u'[document]'
+% 
+% 
+% \end{verbatim}
+% 
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}[t]{对象的种类}
+% 
+% Tag , NavigableString , BeautifulSoup 几乎覆盖了html和xml中的所有内容,但是还有一些特殊对象.容易让人担心的内容是文档的注释部分:
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}[t,fragile]{对象的种类}
+% 
+% 
+% \begin{verbatim}
+% 
+% markup = "<b><!--Hey, buddy. Want to buy a used parser?--></b>"
+% soup = BeautifulSoup(markup)
+% comment = soup.b.string
+% type(comment)
+% # <class 'bs4.element.Comment'>
+% 
+% 
+% \end{verbatim}
+% 
+% 
+% \end{frame}
+% 
+% 
 \section{遍历文档树}
 
 
