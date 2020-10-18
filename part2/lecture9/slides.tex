@@ -624,8 +624,46 @@ bytes 	&BLOB    \\
 {'foo': 123, 'bar': 'buz'}
 \end{verbatim}
 \end{frame}
-% section 文件IO (end)
+\section{Pickle}
+\begin{frame}[t]{Pickle}
+    \begin{block}{Pickle}
+The pickle module implements binary protocols for serializing and de-serializing a Python object structure. “Pickling” is the process whereby a Python object hierarchy is converted into a byte stream, and “unpickling” is the inverse operation, whereby a byte stream (from a binary file or bytes-like object) is converted back into an object hierarchy. 
+    \end{block}
+	\centering
+\end{frame}
+\begin{frame}[t]{Pickle vs. JSON}
+	\begin{block}{Comparison with JSON}
 
+		\begin{enumerate}
+			\item JSON is a text serialization format (it outputs unicode text, although most of the time it is then encoded to utf-8), while pickle is a binary serialization format;
 
+			\item JSON is human-readable, while pickle is not;
 
+			\item JSON is interoperable and widely used outside of the Python ecosystem, while pickle is Python-specific;
+
+			\item JSON, by default, can only represent a subset of the Python built-in types, and no custom classes; pickle can represent an extremely large number of Python types (many of them automatically, by clever usage of Python’s introspection facilities; complex cases can be tackled by implementing specific object APIs);
+
+			\item Unlike pickle, deserializing untrusted JSON does not in itself create an arbitrary code execution vulnerability.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}[t,fragile]{Example of Pickle}
+
+\scriptsize
+\begin{verbatim}
+>>> import pickle
+# Save a dictionary into a pickle file.
+
+>>> favorite_color = {"lion": "yellow", "kitty": "red"}
+
+>>> pickle.dump(favorite_color, open( "save.p", "wb"))
+
+>>> favorite_color = pickle.load(open( "save.p", "rb"))
+
+>>> serialized = pickle.dumps(favorite_color)
+
+>>> deserialized = pickle.loads(serialized)
+\end{verbatim}
+\end{frame}
 \end{document}

@@ -1,14 +1,17 @@
-\frametitle{JSON}
+\frametitle{Example of Pickle}
+
 \scriptsize
 \begin{verbatim}
->>> import json
->>> json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]')
-['foo', {'bar': ['baz', None, 1.0, 2]}]
->>> from io import StringIO
->>> handle = open('output.json', ``r'')
+>>> import pickle
+# Save a dictionary into a pickle file.
 
->>> b = json.load(handle)
+>>> favorite_color = {"lion": "yellow", "kitty": "red"}
 
->>> print(b)
-{'foo': 123, 'bar': 'buz'}
+>>> pickle.dump(favorite_color, open( "save.p", "wb"))
+
+>>> favorite_color = pickle.load(open( "save.p", "rb"))
+
+>>> serialized = pickle.dumps(favorite_color)
+
+>>> deserialized = pickle.loads(serialized)
 \end{verbatim}
