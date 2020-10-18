@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2020.9.12)  19 OCT 2020 06:25
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2020.9.12)  19 OCT 2020 06:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1594,12 +1594,9 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [44
 
 ]
-Overfull \vbox (19.7734pt too high) detected at line 649
- []
-
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[45
+ [45
 
 ]
 \openout4 = `slides.vrb'.
@@ -1619,11 +1616,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 669.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 669.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 670.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 670.
  (./slides.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 669.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 669.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 670.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 670.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: 78B6593102E3457E0B6022096E1CB843.
 
@@ -1633,11 +1630,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
  ) 
 Here is how much of TeX's memory you used:
  34126 strings out of 492912
- 696430 string characters out of 6134893
- 808856 words of memory out of 5000000
+ 696390 string characters out of 6134893
+ 808851 words of memory out of 5000000
  37590 multiletter control sequences out of 15000+600000
  577051 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 56i,15n,67p,769b,829s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,67p,769b,853s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on slides.pdf (46 pages).
