@@ -1,0 +1,5 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Stack Overflow简介}{2}{0}{1}
+\beamer@sectionintoc {2}{How do I ask a good question}{10}{0}{2}
+\beamer@sectionintoc {3}{Stack Overflow Survey}{13}{0}{3}
+\beamer@sectionintoc {4}{Something Interesting}{15}{0}{4}

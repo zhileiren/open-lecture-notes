@@ -1,0 +1,12 @@
+\frametitle{StackSort}
+
+\begin{verbatim}
+>>> from stacksort import quicksort
+>>> quicksort([1, 3, 2, 4])
+[1, 2, 3, 4]
+>>> from stacksort import heap_sort
+>>>heap_sort([1, 2, 4, 3])
+[2, 3, 4]
+
+\end{verbatim}
+^^I
