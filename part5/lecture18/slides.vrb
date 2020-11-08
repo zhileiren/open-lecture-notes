@@ -1,0 +1,19 @@
+\frametitle{glob}
+
+\begin{verbatim}
+>>> from glob import glob
+>>> x = glob("*.txt")
+>>> for filename in x:
+...     print(x)
+a.txt
+b.txt
+c.txt
+>>> for f in glob("**/*.txt", recursive=True):
+...     print(f)
+a.txt
+b.txt
+c.txt
+d/a.txt
+...
+\end{verbatim}
+^^I
