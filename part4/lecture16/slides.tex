@@ -150,6 +150,11 @@ Dalian University of Technology
 今有雉兔同笼，上有三十五头，下有九十四足，问雉兔各几何？
 \end{frame}
 
+\begin{frame}[t]{约束求解示例}
+上置头，下置足，半其足，以头除足，以足除头，即得。
+
+\flushright{孙子算经}
+\end{frame}
 \begin{frame}[t,fragile]{约束求解示例}
     \begin{verbatim}
 import z3
@@ -215,7 +220,7 @@ y = Int('y')
 f = Function('f', IntSort(), IntSort())
 s = Solver()
 s.add(f(f(x)) == x, f(x) == y, x != y)
-print s.check()
+print(s.check())
 m = s.model()
 print("f(f(x)) =", m.evaluate(f(f(x))))
 print("f(x)    =", m.evaluate(f(x)))
