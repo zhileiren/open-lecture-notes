@@ -100,7 +100,7 @@ Dalian University of Technology
  \end{frame}
 }
 
-\section{Python日常}
+\section{Python日常: os}
 
 \begin{frame}[t,fragile]{os}
 \begin{verbatim}
@@ -123,6 +123,27 @@ True
 	
 \end{frame}
 
+\begin{frame}[t]{常用函数}
+	\begin{table}
+		\caption{os函数说明}
+		\scriptsize
+		\begin{tabular}{lr}
+os.path.abspath(path) & 返回绝对路径\\
+os.path.basename(path) & 返回文件名\\
+os.path.commonprefix(list) & 返回list所有path共有的最长的路径\\
+os.path.dirname(path) & 返回文件路径\\
+os.path.exists(path) & 如果路径path存在，返回True；不存在，返回False\\
+os.path.expanduser(path) & 把path中包含的"~"和"~user"转换成用户目录\\
+os.path.getsize(path) & 返回文件大小，如果文件不存在就返回错误\\
+os.path.isfile(path) & 判断路径是否为文件\\
+os.path.isdir(path) & 判断路径是否为目录\\
+		\end{tabular}
+
+	\end{table}
+	
+\end{frame}
+
+\section{Python日常: subprocess}
 \begin{frame}[t,fragile]{subprocess}
 \begin{verbatim}
 
@@ -135,6 +156,7 @@ True
 	
 \end{frame}
 
+\section{Python日常: glob}
 \begin{frame}[t,fragile]{glob}
 
 \begin{verbatim}
@@ -154,6 +176,10 @@ d/a.txt
 ...
 \end{verbatim}
 	
+\end{frame}
+
+\begin{frame}[t]{课堂练习}
+给定目录DIR，将其中文件名包含的空格替换为下划线，并将小写字符变为大写。	
 \end{frame}
 
 
