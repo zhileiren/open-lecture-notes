@@ -1,5 +1,5 @@
-\select@language {english}
+\babel@toc {english}{}
 \beamer@sectionintoc {1}{MongoDB简介}{2}{0}{1}
-\beamer@sectionintoc {2}{MongoDB安装}{6}{0}{2}
-\beamer@sectionintoc {3}{MongoDB基本操作}{10}{0}{3}
-\beamer@sectionintoc {4}{基于pymongo的数据库连接}{17}{0}{4}
+\beamer@sectionintoc {2}{MongoDB安装}{7}{0}{2}
+\beamer@sectionintoc {3}{MongoDB基本操作}{11}{0}{3}
+\beamer@sectionintoc {4}{基于pymongo的数据库连接}{14}{0}{4}

@@ -1,18 +1,12 @@
-\frametitle{pymongo API使用}
-\begin{block}{Python snippet}
-^^I^^I\scriptsize
+\frametitle{习题}
+已知如下命令能够获得格式化git log
+
 \begin{verbatim}
-#CRUD: Update
-col.update({"age": {"$lt": 20}}, {"$inc": {"age": 1}})
-#{u'n': 1, u'nModified': 1, u'ok': 1, 'updatedExisting': True}
-col.update({"age": {"$lt": 20}}, {"$inc": {"age": 1}}, multi=True)
-#{u'n': 2, u'nModified': 2, u'ok': 1, 'updatedExisting': True}
-#CRUD: Delete
-col.remove({"age": {"$gt": 10}})
-#{u'n': 2, u'ok': 1}
-coll.insert_one({"id": 123, "name": "zhangsan", "age": 18})
-coll.insert_one({"id": 124, "name": "lisi", "age": 17})
-col.remove({"age": {"$gt": 10}}, multi=False)
-#{u'n': 1, u'ok': 1}
+git log --pretty=format:"%ci::%an::%H::%f"
 \end{verbatim}
-^^I\end{block}
+
+其中\%ci表示时间；\%an表示作者；\%H表示提交id；\%f表示提交信息。将上述四个字段存入mongodb数据库
+
+
+
+^^I

@@ -125,6 +125,13 @@ Dalian University of Technology
 	\Huge
 	{\color{red}Mongo} for \pause hu{\color{red}mongo}us
 \end{frame}
+\begin{frame}[t]{许可证}
+	\begin{block}{Server Side Public License}
+		Red Hat won't use MongoDB in Red Hat Enterprise Linux or Fedora thanks to MongoDB's new Server Side Public License.
+
+		Red Hat's Technical and Community Outreach Program Manager Tom Callaway explained, in a note stating MongoDB is being removed from Fedora Linux, that "It is the belief of Fedora that the SSPL is intentionally crafted to be aggressively discriminatory towards a specific class of users." Debian Linux had already dropped MongoDB from its distribution\footnote{\url{https://www.zdnet.com/article/mongodb-open-source-server-side-public-license-rejected/}} \footnote{\url{https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=915537}}. 
+	\end{block}
+\end{frame}
 \section{MongoDB安装}
 \begin{frame}[t,fragile]{MongoDB安装}
 \begin{block}{开箱即用}
@@ -270,6 +277,19 @@ col.remove({"age": {"$gt": 10}}, multi=False)
 		Zhilei Ren
 
 		zren@dlut.edu.cn
+	
+\end{frame}
+\begin{frame}[t,fragile]{习题}
+	已知如下命令能够获得格式化git log
+
+\begin{verbatim}
+git log --pretty=format:"%ci::%an::%H::%f"
+\end{verbatim}
+
+其中\%ci表示时间；\%an表示作者；\%H表示提交id；\%f表示提交信息。将上述四个字段存入mongodb数据库
+
+
+
 	
 \end{frame}
 \end{document}
