@@ -93,22 +93,13 @@ Dalian University of Technology
  \end{frame}
 }
 
-\section{10 Minutes to pandas}
-
-\begin{frame}[t]{10 Minutes to pandas}
+\section{Pandas简介}
+\begin{frame}[t]{Pandas}
 
 This is a short introduction to pandas, geared mainly for new users.
 You can see more complex recipes in the Cookbook
 
 \end{frame}
-
-
-\begin{frame}[t]{10 Minutes to pandas}
-
-Customarily, we import as follows:
-
-\end{frame}
-
 
 \begin{frame}[t,fragile]{10 Minutes to pandas}
 
@@ -128,23 +119,9 @@ In [3]: import matplotlib.pyplot as plt
 
 \end{frame}
 
-
-\begin{frame}[t]{10 Minutes to pandas}
-
-See the Data Structure Intro section
-
-\end{frame}
-
-
-\begin{frame}[t]{10 Minutes to pandas}
-
+\begin{frame}[t,fragile]{10 Minutes to pandas}
 Creating a Series by passing a list of values, letting pandas create
 a default integer index:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{10 Minutes to pandas}
 
 
 	\scriptsize
@@ -169,16 +146,10 @@ dtype: float64
 \end{frame}
 
 
-\begin{frame}[t]{10 Minutes to pandas}
+\begin{frame}[t,fragile]{10 Minutes to pandas}
 
 Creating a DataFrame by passing a numpy array, with a datetime index
 and labeled columns:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{10 Minutes to pandas}
-
 
 	\scriptsize
 \begin{verbatim}
@@ -211,15 +182,9 @@ Out[9]:
 \end{frame}
 
 
-\begin{frame}[t]{10 Minutes to pandas}
-
-Creating a DataFrame by passing a dict of objects that can be converted to series-like.
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{10 Minutes to pandas}
 
+Creating a DataFrame by passing a dict of objects that can be converted to series-like.
 
 	\scriptsize
 \begin{verbatim}
@@ -247,46 +212,10 @@ Out[11]:
 \end{frame}
 
 
-\begin{frame}[t]{10 Minutes to pandas}
-
-Having specific dtypes
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{10 Minutes to pandas}
-
-
-	\scriptsize
-\begin{verbatim}
-
-In [12]: df2.dtypes
-Out[12]: 
-A           float64
-B    datetime64[ns]
-C           float32
-D             int32
-E          category
-F            object
-dtype: object
-
-
-\end{verbatim}
-
-
-\end{frame}
-
-
-\begin{frame}[t]{10 Minutes to pandas}
-
 If you’re using IPython, tab completion for column names (as well as public
 attributes) is automatically enabled. Here’s a subset of the attributes that
 will be completed:
-
-\end{frame}
-
-
-\begin{frame}[t,fragile]{10 Minutes to pandas}
 
 
 	\scriptsize
@@ -313,31 +242,9 @@ df2.D
 \end{frame}
 
 
-\begin{frame}[t]{10 Minutes to pandas}
-
-As you can see, the columns A, B, C, and D are automatically
-tab completed. E is there as well; the rest of the attributes have been
-truncated for brevity.
-
-\end{frame}
-
-
-\begin{frame}[t]{10 Minutes to pandas}
-
-See the Basics section
-
-\end{frame}
-
-
-\begin{frame}[t]{10 Minutes to pandas}
-
-See the top \& bottom rows of the frame
-
-\end{frame}
-
-
 \begin{frame}[t,fragile]{10 Minutes to pandas}
 
+See the top \& bottom rows of the frame
 
 	\scriptsize
 \begin{verbatim}
