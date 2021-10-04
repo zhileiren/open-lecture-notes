@@ -1,9 +1,9 @@
-[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
 [0] Config.pm:307> INFO - Logfile is 'slides3.blg'
-[14] biber:315> INFO - === 日 9月 20, 2020, 21:46:34
-[28] Biber.pm:371> INFO - Reading 'slides3.bcf'
-[62] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
-[66] Utils.pm:193> WARN - The file 'slides3.bcf' does not contain any citations!
-[70] bbl.pm:636> INFO - Writing 'slides3.bbl' with encoding 'UTF-8'
-[70] bbl.pm:739> INFO - Output to slides3.bbl
-[70] Biber.pm:110> INFO - WARNINGS: 1
+[102] biber:322> INFO - === 一 10月  4, 2021, 21:24:49
+[122] Biber.pm:415> INFO - Reading 'slides3.bcf'
+[198] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[204] Utils.pm:293> WARN - The file 'slides3.bcf' does not contain any citations!
+[213] bbl.pm:652> INFO - Writing 'slides3.bbl' with encoding 'UTF-8'
+[213] bbl.pm:755> INFO - Output to slides3.bbl
+[213] Biber.pm:128> INFO - WARNINGS: 1

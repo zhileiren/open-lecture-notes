@@ -218,8 +218,36 @@
 \headcommand {\slideentry {2}{0}{27}{52/52}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {52}{52}}
-\headcommand {\beamer@partpages {1}{52}}
-\headcommand {\beamer@subsectionpages {26}{52}}
+\defcounter {refsection}{0}\relax 
 \headcommand {\beamer@sectionpages {26}{52}}
-\headcommand {\beamer@documentpages {52}}
-\headcommand {\gdef \inserttotalframenumber {52}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {26}{52}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {3}{开源软件在中国}{53}{开源软件在中国}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{1}{53/53}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {53}{53}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{2}{54/54}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {54}{54}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {53}{54}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {53}{54}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {4}{开源软件在中国}{55}{开源软件在中国}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{0}{1}{55/55}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {55}{55}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{0}{2}{56/56}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@partpages {1}{56}}
+\headcommand {\beamer@subsectionpages {55}{56}}
+\headcommand {\beamer@sectionpages {55}{56}}
+\headcommand {\beamer@documentpages {56}}
+\headcommand {\gdef \inserttotalframenumber {56}}
