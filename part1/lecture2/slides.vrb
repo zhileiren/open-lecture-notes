@@ -7,8 +7,10 @@
     \begin{block}
         {准备}
         \begin{itemize}
-            \item \url{https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/}
-            \item \url{https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/}
+            \item 安装git
+            \item 安装python
+            % \item \url{https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/}
+            % \item \url{https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/}
         \end{itemize}
         \tiny
         \begin{verbatim}
