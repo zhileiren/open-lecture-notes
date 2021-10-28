@@ -6,5 +6,3 @@
 \beamer@sectionintoc {2}{开源软件仓库结构}{26}{0}{2}
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{开源软件在中国}{53}{0}{3}
-\defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{开源软件在中国}{55}{0}{4}

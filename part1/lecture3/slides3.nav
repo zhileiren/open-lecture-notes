@@ -233,21 +233,11 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {54}{54}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {53}{54}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {53}{54}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {4}{开源软件在中国}{55}{开源软件在中国}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{1}{55/55}{}{0}}
+\headcommand {\slideentry {3}{0}{3}{55/55}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {55}{55}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{0}{2}{56/56}{}{0}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@framepages {56}{56}}
-\headcommand {\beamer@partpages {1}{56}}
-\headcommand {\beamer@subsectionpages {55}{56}}
-\headcommand {\beamer@sectionpages {55}{56}}
-\headcommand {\beamer@documentpages {56}}
-\headcommand {\gdef \inserttotalframenumber {56}}
+\headcommand {\beamer@partpages {1}{55}}
+\headcommand {\beamer@subsectionpages {53}{55}}
+\headcommand {\beamer@sectionpages {53}{55}}
+\headcommand {\beamer@documentpages {55}}
+\headcommand {\gdef \inserttotalframenumber {55}}
