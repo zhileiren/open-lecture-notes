@@ -10,6 +10,6 @@ def foo(a, b, x):
 
 if __name__ == "__main__":
     foo(0, 0, 4)
-
+^^I^^I
 \end{verbatim}
-
+^^I

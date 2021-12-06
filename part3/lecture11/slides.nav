@@ -1,9 +1,8 @@
-\beamer@endinputifotherversion {3.36pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\sectionentry {1}{基本概念}{2}{基本概念}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\sectionentry {1}{基本概念}{2}{基本概念}{0}}
 \headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\slideentry {1}{0}{2}{3/3}{}{0}}
@@ -30,9 +29,9 @@
 \headcommand {\beamer@framepages {13}{13}}
 \headcommand {\slideentry {1}{0}{13}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\sectionentry {2}{测试驱动的开发}{15}{测试驱动的开发}{0}}
 \headcommand {\beamer@sectionpages {2}{14}}
 \headcommand {\beamer@subsectionpages {2}{14}}
+\headcommand {\sectionentry {2}{测试驱动的开发}{15}{测试驱动的开发}{0}}
 \headcommand {\slideentry {2}{0}{1}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
 \headcommand {\slideentry {2}{0}{2}{16/16}{}{0}}
@@ -49,9 +48,9 @@
 \headcommand {\beamer@framepages {21}{21}}
 \headcommand {\slideentry {2}{0}{8}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\sectionentry {3}{unittest模块}{23}{unittest模块}{0}}
 \headcommand {\beamer@sectionpages {15}{22}}
 \headcommand {\beamer@subsectionpages {15}{22}}
+\headcommand {\sectionentry {3}{unittest模块}{23}{unittest模块}{0}}
 \headcommand {\slideentry {3}{0}{1}{23/23}{}{0}}
 \headcommand {\beamer@framepages {23}{23}}
 \headcommand {\slideentry {3}{0}{2}{24/24}{}{0}}
@@ -78,9 +77,9 @@
 \headcommand {\beamer@framepages {34}{34}}
 \headcommand {\slideentry {3}{0}{13}{35/35}{}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\sectionentry {4}{coverage模块}{36}{coverage模块}{0}}
 \headcommand {\beamer@sectionpages {23}{35}}
 \headcommand {\beamer@subsectionpages {23}{35}}
+\headcommand {\sectionentry {4}{coverage模块}{36}{coverage模块}{0}}
 \headcommand {\slideentry {4}{0}{1}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
 \headcommand {\slideentry {4}{0}{2}{37/37}{}{0}}
@@ -93,4 +92,4 @@
 \headcommand {\beamer@subsectionpages {36}{39}}
 \headcommand {\beamer@sectionpages {36}{39}}
 \headcommand {\beamer@documentpages {39}}
-\headcommand {\def \inserttotalframenumber {39}}
+\headcommand {\gdef \inserttotalframenumber {39}}
