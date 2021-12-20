@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.4.26)  28 OCT 2021 22:45
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.4.26)  20 DEC 2021 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1464,6 +1464,87 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [1
 
 ]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [2
+
+]
+
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11
+8.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Trying to load font information for TU+ptm on input line 11
+8.
+LaTeX Font Info:    No file TUptm.fd. on input line 118.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 118.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 118
+.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 118
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 118.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 118.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 118.
+
+Overfull \hbox (46.83417pt too wide) in paragraph at lines 118--118
+[][]$\T1/pcr/m/n/10.95 https : / / github . com / c00kiemon5ter / ioccc-[]obfus
+cated-[]c-[]contest$[] 
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[3
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [4
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [5
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [6
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [7
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [8
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [9
+
+]
 \tf@nav=\write7
 \openout7 = `slides.nav'.
 
@@ -1474,6 +1555,9 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \openout9 = `slides.snm'.
 
  (./slides.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'slides.run.xml'.
@@ -1481,12 +1565,12 @@ Package logreq Info: Writing requests to 'slides.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32277 strings out of 477220
- 658856 string characters out of 5832722
- 1471394 words of memory out of 5000000
- 51409 multiletter control sequences out of 15000+600000
- 413322 words of font info for 43 fonts, out of 8000000 for 9000
+ 32603 strings out of 477220
+ 674244 string characters out of 5832722
+ 1481554 words of memory out of 5000000
+ 51704 multiletter control sequences out of 15000+600000
+ 423721 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,15n,132p,739b,3767s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (1 page).
+Output written on slides.pdf (9 pages).

@@ -100,13 +100,73 @@ Dalian University of Technology
  \end{frame}
 }
 
-% \begin{frame}[t]{How To Ask Questions The Smart Way}
-% 
-%   %  http://www.catb.org/~esr/faqs/smart-questions.html
-%   %  https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md
-%     
-% \end{frame}
+\begin{frame}[t]{Fabrice Bellard}
 
+  %  http://www.catb.org/~esr/faqs/smart-questions.html
+  %  https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md
+Fabrice Bellard是一位法国著名的计算机程序员，因FFmpeg、QEMU等项目而闻名业内。他也是最快圆周率算法贝拉公式、TCCBOOT和TCC等项目的作者。
 
+曾在国际C语言混乱代码大赛中三度获胜。    
+\end{frame}
+
+\begin{frame} [t]{今天就能开始用的小知识}
+    国际Ｃ语言混乱代码大赛（IOCCC, The International Obfuscated C Code Contest）是一项国际程序设计赛事。从1984年开始，本赛事每年举办一次（1997年、1999年、2002年、2003年和2006年例外）[1]。本赛事的目的是写出最有创意和最让人难以理解的C语言代码。
+
+从在线提交开始，作品需要经过好几回合的裁判审核。评判作品的标准基于滥用混乱代码的程度（以及滥用程度的创造性）。通过最后一轮审核的作品会被归成特别的一类以示嘉奖，例如“最滥用C预处理器”或者“最古怪的行为”，并且发表在官方IOCCC网站。获胜作品将被公告于IOCCC网站，并以此作为奖赏。
+
+\url{https://github.com/c00kiemon5ter/ioccc-obfuscated-c-contest}
+\end{frame}
+
+\begin{frame}[t]{成就}
+    \begin{itemize}
+        \item 1972年生于法国格勒诺布尔（Grenoble）。在高中就读期间开发了著名的可执行压缩程序LZEXE，这是当年DOS上第一个广泛使用的文件压缩程序。大学就读于巴黎综合理工学院，后在巴黎高等电信学校攻读。
+        \item 1996年，他编写了一个简洁但是完整的C编译器和一个Java虚拟机Harissa。Fabrice Bellard发明的TinyCC是GNU/Linux环境下最小的ANSI C语言编译器，是目前号称编译速度最快的C编译器。
+        \item 1997年他提出了最快速的计算圆周率的算法，是贝利－波尔温－普劳夫公式的变体。[1]在计算圆周率的过程中，Fabrice Bellard使用改良后的查德诺夫斯基方程算法来进行圆周率的计算，并使用贝利－波尔温－普劳夫公式来验证计算的结果。为了纪念他对圆周率算法所作出的杰出贡献，Fabrice Bellard所使用的改良型算法被命名为Fabrice Bellard算法，这种算法是目前所有圆周率算法中最快的一种，这个计算N位PI的公式比传统的BBP算法要快47%。
+        \item 1998年编写了一个简洁的OpenGL实现TinyGL。
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{成就}
+    \begin{itemize}
+        \item 2000年，他化名Gérard Lantau，创建了FFmpeg项目。FFmpeg单词中的FF指的是Fast Forward，FFmpeg这个2000年发起著名的开源多媒体播放器项目，是MPlayer的姊妹项目。这是一个如此重要的成就。这个多平台、多功能的多媒体编码解码器由Fabrice Bellard发起并管理，现在是由Michael Niedermayer在进行维护。
+        \item 2003年，开发了Emacs克隆QEmacs。
+        \item 2004年，他编写了一个只有138KB的启动加载程序TCCBOOT，可以在15秒内从源代码编译并启动Linux系统。[2]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{成就}
+    \begin{itemize}
+        \item 2005年，用普通PC和VGA卡设计了一个数字电视系统。[3]
+        \item 2009年12月31日，他声称打破了圆周率计算的世界纪录，算出小数点后2.7万亿位，仅用一台普通个人电脑。[4][5]他使用的个人PC价格不到2000欧元，仅用了116天，就计算出了PI的小数点后第2.7万亿位，超过了由目前排名世界第47位的T2K Open超级计算机于2009年8月17日创造的世界纪录。新纪录比原纪录多出1200亿位，然而，他使用的这台桌面电脑的配置仅为：2.93GHz Core i7 CPU，6GB内存，7.5TB硬盘。
+        \item 2011年，他使用JavaScript写了一个PC虚拟机Jslinux。这个虚拟机仿真了一个32位的x86兼容处理器，一个8259可编程中断控制器，一个8254可编程中断计时器，和一个16450 UART。
+        \item 2012年，在PC上用软件实现4G LTE基站[6]。
+        \item 2019年，他编写了一款新的Javascript引擎QuickJS[7]。
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}[t]{FFmpeg}
+    FFmpeg 是一个开放源代码的自由软件，可以执行音频和视频多种格式的录影、转换、串流功能[6]，包含了libavcodec——这是一个用于多个项目中音频和视频的解码器库，以及libavformat——一个音频与视频格式转换库。
+
+    这个项目最初是由法国程序员法布里斯·贝拉（Fabrice Bellard）发起的，而现在是由迈克尔·尼德梅尔（Michael Niedermayer）在进行维护。许多FFmpeg的开发者同时也是MPlayer项目的成员，FFmpeg在MPlayer项目中是被设计为服务器版本进行开发。
+
+    由于Libav、FFmpeg是在LGPL、GPL下发布的（如果使用了其中一些使用GPL协议发布的模块则必须使用GPL协议），任何人都可以在遵守协议的情况下自由使用。目前有很多播放软件都使用了Libav、FFmpeg的代码，但它们并没有遵守LGPL，GPL协议，没有公开任何源代码。Libav、FFmpeg社区便将这些违反协议的公司、组织、个人的网址贴在“耻辱大厅”（又叫“耻辱柱”）上，并与这些公司/组织/个人商讨如何解决著作权争议。
+\end{frame}
+
+\begin{frame}[t]{QEMU}
+QEMU（quick emulator）是一款由法布里斯·贝拉（Fabrice Bellard）等人编写的免费的可执行硬件虚拟化的（hardware virtualization）开源托管虚拟机（VMM）。
+
+其与Bochs，PearPC类似，但拥有高速（配合KVM），跨平台的特性。
+
+QEMU是一个托管的虚拟机镜像，它通过动态的二进制转换，模拟CPU，并且提供一组设备模型，使它能够运行多种未修改的客户机OS，可以通过与KVM一起使用进而接近本地速度运行虚拟机（接近真实电脑的速度）。
+
+QEMU还可以为user-level的进程执行CPU仿真，进而允许了为一种架构编译的程序在另外一种架构上面运行（借由VMM的形式）。
+\end{frame}
+
+\begin{frame}[t]{Tiny C Compiler}
+    Tiny C Compiler（缩写为TCC、tCc或TinyCC）是一个用于x86（16/32位）或x86-64（64位）系统的C编译器，开发者为Fabrice Bellard。软件是设计用于低端电脑环境，或是于磁盘容量有限的空间中（1.44磁片或是硬盘）。软件可以适用于Windows、Linux、Unix操作系统，而最新版本为0.9.27（2017年12月17日）。TCC是在GNU宽通用公共许可证（LGPL）协议规范下发布。
+
+TCC符合ANSI C（C89/C90）规范[1]亦符合新版的ISO C99标准规范，与GNU C扩展的内嵌汇编语言（即inline assembler）功能汇编语言。
+\end{frame}
 \end{document}
 
