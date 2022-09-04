@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.4.26)  26 OCT 2021 08:01
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.4.26)  4 SEP 2022 20:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1774,17 +1774,8 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `slides1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `slides1.out':
-(rerunfilecheck)             Before: 350F9EE111A4FB8704552027D8E2B03D;179
-(rerunfilecheck)             After:  6F5E780A9251348561E752C704D4F2F3;276.
+Package rerunfilecheck Info: File `slides1.out' has not changed.
+(rerunfilecheck)             Checksum: 6F5E780A9251348561E752C704D4F2F3;276.
 Package logreq Info: Writing requests to 'slides1.run.xml'.
 \openout1 = `slides1.run.xml'.
 
@@ -1792,7 +1783,7 @@ Package logreq Info: Writing requests to 'slides1.run.xml'.
 Here is how much of TeX's memory you used:
  33425 strings out of 477220
  706748 string characters out of 5832722
- 1489245 words of memory out of 5000000
+ 1489368 words of memory out of 5000000
  52496 multiletter control sequences out of 15000+600000
  443332 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
