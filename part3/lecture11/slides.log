@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.4.26)  6 DEC 2021 16:55
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2021.4.26)  17 OCT 2022 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -999,7 +999,7 @@ Package xeCJK Warning: Undefined CJK default family `\CJKsfdefault' has been
 (xeCJK)                
 (xeCJK)                Try to use `\setCJKsansfont[...]{...}' to define it.
 
-No file slides.aux.
+(./slides.aux)
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
@@ -1013,7 +1013,7 @@ LaTeX Font Info:    ... okay on input line 75.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
 5.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 75.
@@ -1077,12 +1077,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 75.
 LaTeX Info: Redefining \pageref on input line 75.
 LaTeX Info: Redefining \nameref on input line 75.
+
+(./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 75.
@@ -1216,25 +1214,24 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  T1/phv/b/n --> TU/phv/b/n on input line 75.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  T1/pcr/b/n --> TU/pcr/b/n on input line 75.
-
-No file slides.nav.
+ (./slides.nav)
 Missing character: There is no 5 in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[1
+ [1
 
-]
-No file slides.toc.
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[2
+ [2
 
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 102
 .
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 102
@@ -1330,51 +1327,56 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [11
 
 ]
+File: differential.jpeg Graphic file (type bmp)
+<differential.jpeg>
+
+Overfull \vbox (11.44781pt too high) detected at line 181
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[12
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [13
+
+]
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [12
+ [14
 
 ]
 File: cat-xfce-bug-2.jpg Graphic file (type bmp)
 <cat-xfce-bug-2.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [13
+ [15
 
 ]
 File: patched-wallpaper.jpg Graphic file (type bmp)
 <patched-wallpaper.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [14
-
-]
-No file slides.toc.
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
-[15
-
-]
-File: TDD-Global-Lifecycle.png Graphic file (type bmp)
-<TDD-Global-Lifecycle.png>
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 195.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 195.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 195.
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [16
 
-]
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [17
 
 ]
+File: TDD-Global-Lifecycle.png Graphic file (type bmp)
+<TDD-Global-Lifecycle.png>
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 214.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 214.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 214.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [18
@@ -1400,10 +1402,20 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [22
 
 ]
-No file slides.toc.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[23
+ [23
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[24
+
+] (./slides.toc)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [25
 
 ]
 \openout4 = `slides.vrb'.
@@ -1417,12 +1429,12 @@ string[]
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [24
+ [26
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [25
+ [27
 
 ]
 \openout4 = `slides.vrb'.
@@ -1436,7 +1448,7 @@ Overfull \hbox (117.60408pt too wide) in paragraph at lines 8--8
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [26
+ [28
 
 ]
 \openout4 = `slides.vrb'.
@@ -1450,30 +1462,14 @@ Overfull \hbox (117.60408pt too wide) in paragraph at lines 11--11
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [27
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [28
-
-]
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
  [29
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [30
 
 ]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [31
@@ -1484,8 +1480,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[32
+ [32
 
 ]
 \openout4 = `slides.vrb'.
@@ -1494,6 +1489,23 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [33
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[34
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [35
 
 ]
 \openout4 = `slides.vrb'.
@@ -1511,21 +1523,7 @@ Overfull \hbox (19.0542pt too wide) in paragraph at lines 17--17
 )
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [34
-
-]
-\openout4 = `slides.vrb'.
-
- (./slides.vrb)
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [35
-
-]
-No file slides.toc.
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
-[36
+ [36
 
 ]
 \openout4 = `slides.vrb'.
@@ -1535,17 +1533,31 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [37
 
-]
+] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [38
+
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [39
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [40
 
 ]
 File: foo.png Graphic file (type bmp)
 <foo.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [39
+
+[41
 
 ]
 \tf@nav=\write6
@@ -1558,25 +1570,16 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 \openout8 = `slides.snm'.
 
  (./slides.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `slides.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `slides.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A4CDC7816C45A4D495238F40D9EB924E;372.
+Package rerunfilecheck Info: File `slides.out' has not changed.
+(rerunfilecheck)             Checksum: A4CDC7816C45A4D495238F40D9EB924E;372.
  ) 
 Here is how much of TeX's memory you used:
- 26099 strings out of 477220
- 546094 string characters out of 5832722
- 932674 words of memory out of 5000000
- 45210 multiletter control sequences out of 15000+600000
+ 26256 strings out of 477220
+ 548260 string characters out of 5832722
+ 935309 words of memory out of 5000000
+ 45350 multiletter control sequences out of 15000+600000
  445493 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 131i,15n,132p,778b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 131i,15n,132p,778b,740s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (39 pages).
+Output written on slides.pdf (41 pages).

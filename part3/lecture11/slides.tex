@@ -160,6 +160,25 @@ Dalian University of Technology
 每个理想的测试案例独立于其它案例；为测试时隔离模块，经常使用stubs、mock或fake等测试马甲程序。单元测试通常由软件开发人员编写，用于确保他们所写的代码匹配软件需求和遵循开发目标。它的实施方式可以是非常手动的，或者是做成构建自动化的一部分。\footnote{\url{https://zh.wikipedia.org/zh-cn/单元测试}}
 \end{frame}
 
+\begin{frame}[t]{测试预言}
+测试准则，又称测试预言（test oracle）是软件测试员或软件工程师用来检测测试是否通过的一种机制。测试准则决定在给定的测试用例输入下产品应有的输出，从而与被测试系统的输出做比较。
+
+
+常见的测试准则包括：
+
+\begin{itemize}
+    \item 设计规格和软件文档
+    \item 其它产品（例如：作为一个软件程序的测试准则，有可能是使用不同算法计算同一个数学表达式的其它程序）
+    \item 为一组少量测试输入提供近似或准确结果的"启发式准则"
+    \item 使用统计学特征的"统计式准则"
+    \item 由使用相同模型而产生和确认系统行为的"基于模型的准则"
+\end{itemize}
+\end{frame}
+\begin{frame}[t]{测试预言}
+    \centering
+\includegraphics[width=0.3\linewidth]{differential.jpeg}    	
+
+\end{frame}
 \begin{frame}[t]{unittest --- Unit testing framework}
 
 The unittest unit testing framework was originally inspired by JUnit
