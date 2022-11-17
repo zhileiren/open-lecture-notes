@@ -1,0 +1,3 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{inspect}{2}{0}{1}
+\beamer@sectionintoc {2}{sys.settrace}{8}{0}{2}

@@ -1,0 +1,22 @@
+\frametitle{settrace}
+\footnotesize
+\begin{verbatim}
+from sys import settrace
+
+def tracer(frame, event, arg = None):
+    code = frame.f_code
+    func_name = code.co_name
+    line_no = frame.f_lineno
+    print(f"事件：{event}，函数：{func_name}()，行号：{line_no}")
+    return tracer
+
+def foo():
+    print("in foo")
+
+def bar():
+    foo()
+
+old_tracer = settrace(tracer)
+bar()
+settrace(old_tracer)
+\end{verbatim}
