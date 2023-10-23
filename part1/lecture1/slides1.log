@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.10.23)  23 OCT 2023 19:45
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.10.23)  23 OCT 2023 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1540,7 +1540,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 [16
 
 ]
-Missing character: There is no 4 ("34) in font nullfont!
+Missing character: There is no 2 ("32) in font nullfont!
 Missing character: There is no 6 ("36) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
@@ -1548,14 +1548,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 
 ]
 Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no 0 ("30) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [18
 
 ]
 Missing character: There is no 5 ("35) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
+Missing character: There is no 5 ("35) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [19
@@ -1567,14 +1567,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 
 ]
 Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no 0 ("30) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [21
 
 ]
 Missing character: There is no 6 ("36) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
+Missing character: There is no 5 ("35) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [22
@@ -1583,14 +1583,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 File: open-letter.jpg Graphic file (type bmp)
 <open-letter.jpg>
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 297.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 298.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [23
 
 ]
 Missing character: There is no 7 ("37) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no 0 ("30) in font nullfont!
 File: eric.jpg Graphic file (type bmp)
 <eric.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -1599,35 +1599,35 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 
 ]
 Missing character: There is no 7 ("37) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
+Missing character: There is no 5 ("35) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [25
 
 ]
 Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no 0 ("30) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [26
 
 ]
 Missing character: There is no 8 ("38) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
+Missing character: There is no 5 ("35) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [27
 
 ]
 Missing character: There is no 9 ("39) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no 0 ("30) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [28
 
 ]
 Missing character: There is no 9 ("39) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
+Missing character: There is no 5 ("35) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [29
@@ -1635,7 +1635,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 Missing character: There is no 1 ("31) in font nullfont!
 Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no 0 ("30) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [30
@@ -1643,7 +1643,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 Missing character: There is no 1 ("31) in font nullfont!
 Missing character: There is no 0 ("30) in font nullfont!
-Missing character: There is no 6 ("36) in font nullfont!
+Missing character: There is no 5 ("35) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [31
@@ -1651,7 +1651,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 Missing character: There is no 1 ("31) in font nullfont!
 Missing character: There is no 1 ("31) in font nullfont!
-Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no 0 ("30) in font nullfont!
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
 [32
@@ -1699,10 +1699,10 @@ Package logreq Info: Writing requests to 'slides1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34618 strings out of 476191
- 761398 string characters out of 5812071
+ 34612 strings out of 476191
+ 761133 string characters out of 5812071
  1492784 words of memory out of 5000000
- 54721 multiletter control sequences out of 15000+600000
+ 54715 multiletter control sequences out of 15000+600000
  509711 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,15n,122p,736b,5448s stack positions out of 5000i,500n,10000p,200000b,80000s
