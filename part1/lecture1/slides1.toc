@@ -1,10 +1,5 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {english}{}
-\defcounter {refsection}{0}\relax 
+\babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{关于我}{2}{0}{1}
-\defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{特色栏目}{10}{0}{2}
-\defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{教学内容}{15}{0}{3}
-\defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {4}{定义}{20}{0}{4}
