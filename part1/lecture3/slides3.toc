@@ -1,8 +1,4 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {english}{}
-\defcounter {refsection}{0}\relax 
+\babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{开源软件仓库介绍}{3}{0}{1}
-\defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {2}{开源软件仓库结构}{26}{0}{2}
-\defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {3}{开源软件在中国}{53}{0}{3}
