@@ -267,6 +267,49 @@ isinstance(b, A)
 “当看到一只鸟走起来像鸭子、游泳起来像鸭子、叫起来也像鸭子，那么这只鸟就可以被称为鸭子。”	\footnote{\url{https://en.wikipedia.org/wiki/Duck_typing}}
 \end{frame}
 
+\begin{frame}[t]{Yet Another 今天就能开始用的小知识}
+\begin{block}{软件工程中的猴子}
+    无限猴子定理（英语：Infinite monkey theorem）：让一只猴子在打字机上随机地按键，当按键时间达到无穷时，几乎必然能够打出任何给定的文字，比如莎士比亚的全套著作\footnote{ Émile Borel. Mécanique Statistique et Irréversibilité. J. Phys. (Paris). Series 5. 1913, 3: 189–196}。
+\end{block}
+\centering
+\includegraphics[width=.4\linewidth]{Monkey-typing.jpg}
+\end{frame}
+
+\begin{frame}[t,fragile]{Monkey Patching}
+
+\begin{verbatim}
+class A:
+    def foo(self):
+        print("in A::foo")
+
+def bar(self):
+    print("in modified foo")
+
+A.foo = bar
+
+a = A()
+a.foo()
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[t,fragile]{Monkey Sort}
+在计算机科学中，Bogo排序（bogo-sort）是个非常低效率的排序算法，通常用在教学或测试。其原理等同将一堆卡片抛起，落在桌上后检查卡片是否已整齐排列好，若非就再抛一次，又称bozo sort、blort sort或猴子排序。其平均时间复杂度是 $O(n \times n!)$，在最坏情况所需时间是无限。它并非一个稳定的算法\footnote{\url{https://en.wikipedia.org/wiki/Bogosort}}。
+
+
+\end{frame}
+
+\begin{frame}[t,fragile]{Monkey Test}
+软件测试中的猴子测试是一种通过让用户提供随机输入来检查行为或查看应用程序或系统是否崩溃来测试应用程序或系统的技术。猴子测试通常作为随机自动化单元测试来实现。
+
+\begin{itemize}
+    \item Android Studio中的Monkey
+    \item Netflix的Chaos Monkey随机终止生产中的实例，以确保工程师实施其服务以适应实例故障。
+\end{itemize}
+\centering
+\includegraphics[width=.2\linewidth]{chaos.png}
+
+\end{frame}
+
 \begin{frame}[t,fragile]{多态}
 \begin{verbatim}
 class A:
