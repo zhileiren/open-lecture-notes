@@ -1,22 +1,28 @@
-\frametitle{settrace}
+\frametitle{CSTTransformer}
 \footnotesize
 \begin{verbatim}
-from sys import settrace
+import libcst
+import re
+class FuncNameUpper(libcst.CSTTransformer):
+    def leave_FunctionDef(self, node, updated):
+        name = updated.name.value
+        updated_name = re.sub(r'_([a-z])', lambda match: match.group(1).upper(), name)
+        return libcst.FunctionDef(name=libcst.Name(value=updated_name),
+                                  params=updated.params,
+                                  body=updated.body)
 
-def tracer(frame, event, arg = None):
-    code = frame.f_code
-    func_name = code.co_name
-    line_no = frame.f_lineno
-    print(f"事件：{event}，函数：{func_name}()，行号：{line_no}")
-    return tracer
-
-def foo():
-    print("in foo")
-
+text='''
+def foo_foo_bar(bar):
+    return 1
 def bar():
-    foo()
+    print('hello')
 
-old_tracer = settrace(tracer)
-bar()
-settrace(old_tracer)
+foo(3)'''
+
+code = libcst.parse_module(text)
+transformer = FuncNameUpper()
+updated = code.visit(transformer)
+print(updated.code)
+
 \end{verbatim}
+
