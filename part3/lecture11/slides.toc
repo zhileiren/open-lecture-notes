@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{基本概念}{2}{0}{1}
 \beamer@sectionintoc {2}{测试驱动的开发}{17}{0}{2}
 \beamer@sectionintoc {3}{unittest模块}{25}{0}{3}
