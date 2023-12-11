@@ -484,6 +484,49 @@ class WidgetTestCase(unittest.TestCase):
 
 
 \end{frame}
+
+\begin{frame}[t,fragile]{How unittest works}
+
+
+\tiny
+\begin{verbatim}
+import unittest
+class MyTestCase(unittest.TestCase):
+    def test_1(self):
+        print("in test_1")
+    def test_2(self):
+        print("in test_2")
+def loadTestCases():
+    module = __import__("__main__")
+    tests = []
+    for name in dir(module):
+        obj = getattr(module, name)
+        if isinstance(obj, type) and issubclass(obj, unittest.TestCase):
+            tests.append(obj)
+    return tests
+def runTest(tests):
+    for testcase in tests:
+        instance = testcase()
+        cases = []
+        for attr in dir(instance):
+            if attr.startswith("test") and callable(getattr(instance, attr)):
+                cases.append(attr)
+        cases = sorted(cases)
+        for c in cases:
+            func = getattr(instance, c)
+            func()
+def main():
+    tests = loadTestCases()
+    runTest(tests)
+
+main()
+
+
+
+\end{verbatim}
+
+
+\end{frame}
 \section{coverage模块}
 \begin{frame}[t,fragile]
   \frametitle{测试程序}

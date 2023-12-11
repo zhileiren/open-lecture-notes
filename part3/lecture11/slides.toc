@@ -2,4 +2,4 @@
 \beamer@sectionintoc {1}{基本概念}{2}{0}{1}
 \beamer@sectionintoc {2}{测试驱动的开发}{17}{0}{2}
 \beamer@sectionintoc {3}{unittest模块}{25}{0}{3}
-\beamer@sectionintoc {4}{coverage模块}{38}{0}{4}
+\beamer@sectionintoc {4}{coverage模块}{39}{0}{4}

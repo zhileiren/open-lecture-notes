@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.10.23)  4 DEC 2023 22:24
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.10.23)  11 DEC 2023 19:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1452,10 +1452,21 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [37
 
+]
+\openout4 = `slides.vrb'.
+
+ (./slides.vrb)
+Overfull \vbox (26.91191pt too high) detected at line 529
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[38
+
 ] (./slides.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [38
+ [39
 
 ]
 \openout4 = `slides.vrb'.
@@ -1463,20 +1474,19 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  (./slides.vrb)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [39
+ [40
 
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
- [40
+ [41
 
 ]
 File: foo.png Graphic file (type bmp)
 <foo.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-
-[41
+ [42
 
 ]
 \tf@nav=\write6
@@ -1493,12 +1503,12 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: A4CDC7816C45A4D495238F40D9EB924E;372.
  ) 
 Here is how much of TeX's memory you used:
- 27244 strings out of 476191
- 598152 string characters out of 5812071
- 929551 words of memory out of 5000000
- 47369 multiletter control sequences out of 15000+600000
- 511880 words of font info for 119 fonts, out of 8000000 for 9000
+ 27250 strings out of 476191
+ 598248 string characters out of 5812071
+ 930237 words of memory out of 5000000
+ 47373 multiletter control sequences out of 15000+600000
+ 512202 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,15n,122p,778b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (41 pages).
+Output written on slides.pdf (42 pages).
