@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.10.23)  11 DEC 2023 19:00
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.10.23)  12 DEC 2023 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1386,41 +1386,66 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 [1
 
 ]
-LaTeX Font Info:    Trying to load font information for TU+ptm on input line 10
-5.
-LaTeX Font Info:    No file TUptm.fd. on input line 105.
+File: bugfeature.jpg Graphic file (type bmp)
+<bugfeature.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [2
+
+]
+File: computer-bug.jpg Graphic file (type bmp)
+<computer-bug.jpg>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [3
+
+]
+File: telebug.jpg Graphic file (type bmp)
+<telebug.jpg>
+
+Overfull \vbox (2.70277pt too high) detected at line 110
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[4
+
+]
+LaTeX Font Info:    Trying to load font information for TU+ptm on input line 11
+6.
+LaTeX Font Info:    No file TUptm.fd. on input line 116.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 105.
+(Font)              using `TU/lmr/m/n' instead on input line 116.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 105
+LaTeX Font Info:    Trying to load font information for U+msa on input line 116
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 105
+LaTeX Font Info:    Trying to load font information for U+msb on input line 116
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 105.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 105.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 105.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 105.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 116.
 
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
 (xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
-5.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11
+6.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -1428,9 +1453,18 @@ Missing character: There is no 电 ("7535) in font pcrr8t!
 Missing character: There is no 子 ("5B50) in font pcrr8t!
 Missing character: There is no 游 ("6E38) in font pcrr8t!
 Missing character: There is no 戏 ("620F) in font pcrr8t!
+File: Super_Street_Fighter_II_screenshot.png Graphic file (type bmp)
+<Super_Street_Fighter_II_screenshot.png>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
-[2
+[5
+
+]
+File: 1280px-Konami_Code.svg.png Graphic file (type bmp)
+<1280px-Konami_Code.svg.png>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [6
 
 ]
 \tf@nav=\write7
@@ -1453,12 +1487,12 @@ Package logreq Info: Writing requests to 'slides.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33663 strings out of 476191
- 720638 string characters out of 5812071
- 1479022 words of memory out of 5000000
- 53792 multiletter control sequences out of 15000+600000
- 496024 words of font info for 78 fonts, out of 8000000 for 9000
+ 33714 strings out of 476191
+ 721833 string characters out of 5812071
+ 1479198 words of memory out of 5000000
+ 53837 multiletter control sequences out of 15000+600000
+ 496032 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,15n,122p,739b,3848s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.pdf (2 pages).
+Output written on slides.pdf (6 pages).
