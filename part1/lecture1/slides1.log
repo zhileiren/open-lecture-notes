@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.10.23)  24 OCT 2023 11:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.4.3)  28 OCT 2024 23:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,9 +820,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language70). Reported on input line 105.
+(babel)             (\language36). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language70). Reported on input line 108.
+(babel)             (\language36). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
@@ -1723,8 +1723,8 @@ Package logreq Info: Writing requests to 'slides1.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  34640 strings out of 476191
- 762580 string characters out of 5812071
- 1492840 words of memory out of 5000000
+ 762580 string characters out of 5812073
+ 1492841 words of memory out of 5000000
  54743 multiletter control sequences out of 15000+600000
  509711 words of font info for 102 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

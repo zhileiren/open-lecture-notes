@@ -1,5 +1,4 @@
-\beamer@endinputifotherversion {3.36pt}
-\select@language {english}
+\babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{A Minimal Application}{3}{0}{1}
 \beamer@sectionintoc {2}{Routing}{10}{0}{2}
 \beamer@sectionintoc {3}{Rendering Templates}{16}{0}{3}
