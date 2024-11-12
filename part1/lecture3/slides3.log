@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.10.23)  31 OCT 2023 08:56
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.4.3)  12 NOV 2024 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,9 +820,9 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language70). Reported on input line 105.
+(babel)             (\language36). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language70). Reported on input line 108.
+(babel)             (\language36). Reported on input line 108.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
@@ -1580,12 +1580,12 @@ File: fedora.jpg Graphic file (type bmp)
 File: Hat-Fedora.jpg Graphic file (type bmp)
 <Hat-Fedora.jpg>
 
-Overfull \hbox (2.32138pt too wide) in paragraph at lines 348--348
+Overfull \hbox (2.32138pt too wide) in paragraph at lines 349--349
 []$[]$ $[]$ 
  []
 
 
-Overfull \vbox (4.85863pt too high) detected at line 348
+Overfull \vbox (4.85863pt too high) detected at line 349
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -1617,7 +1617,7 @@ Missing character: There is no 1 ("31) in font nullfont!
 File: r.png Graphic file (type bmp)
 <r.png>
 
-Overfull \vbox (7.11047pt too high) detected at line 369
+Overfull \vbox (7.11047pt too high) detected at line 370
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -1719,7 +1719,7 @@ Missing character: There is no 1 ("31) in font nullfont!
 Missing character: There is no 6 ("36) in font nullfont!
 Missing character: There is no 1 ("31) in font nullfont!
 
-Overfull \vbox (1.92206pt too high) detected at line 498
+Overfull \vbox (1.92206pt too high) detected at line 499
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -1757,8 +1757,8 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [40
 
 ]
-File: jessie-bullseye.png Graphic file (type bmp)
-<jessie-bullseye.png>
+File: bookworm.jpg Graphic file (type bmp)
+<bookworm.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [41
@@ -1856,7 +1856,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 File: vim.png Graphic file (type bmp)
 <vim.png>
 
-Overfull \vbox (12.75974pt too high) detected at line 638
+Overfull \vbox (12.75974pt too high) detected at line 639
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -1867,7 +1867,7 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 File: framework.png Graphic file (type bmp)
 <framework.png>
 
-Overfull \hbox (7.26933pt too wide) in paragraph at lines 650--650
+Overfull \hbox (7.26933pt too wide) in paragraph at lines 651--651
 []$[]$ $[]$[] 
  []
 
@@ -1882,7 +1882,7 @@ Missing character: There is no 6 ("36) in font nullfont!
 File: Bug-Life-Cycle.jpg Graphic file (type bmp)
 <Bug-Life-Cycle.jpg>
 
-Overfull \hbox (2.32138pt too wide) in paragraph at lines 665--665
+Overfull \hbox (2.32138pt too wide) in paragraph at lines 666--666
 []$[]$ $[]$ 
  []
 
@@ -1915,7 +1915,7 @@ Missing character: There is no 1 ("31) in font nullfont!
 Missing character: There is no 9 ("39) in font nullfont!
 Missing character: There is no 6 ("36) in font nullfont!
 
-Overfull \vbox (1.75679pt too high) detected at line 698
+Overfull \vbox (1.75679pt too high) detected at line 699
  []
 
 File: ../../utils/logo.jpg Graphic file (type bmp)
@@ -1952,8 +1952,8 @@ Package logreq Info: Writing requests to 'slides3.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  34523 strings out of 476191
- 754974 string characters out of 5812071
- 1490014 words of memory out of 5000000
+ 754918 string characters out of 5812073
+ 1490015 words of memory out of 5000000
  54610 multiletter control sequences out of 15000+600000
  504726 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
