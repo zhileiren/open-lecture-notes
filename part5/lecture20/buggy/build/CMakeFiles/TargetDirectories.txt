@@ -1,0 +1,7 @@
+/home/ren/play/open-lecture-notes/part5/lecture20/buggy/build/CMakeFiles/intrinsics_gen.dir
+/home/ren/play/open-lecture-notes/part5/lecture20/buggy/build/CMakeFiles/omp_gen.dir
+/home/ren/play/open-lecture-notes/part5/lecture20/buggy/build/CMakeFiles/acc_gen.dir
+/home/ren/play/open-lecture-notes/part5/lecture20/buggy/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/home/ren/play/open-lecture-notes/part5/lecture20/buggy/build/CMakeFiles/BuggyReturnPass.dir
+/home/ren/play/open-lecture-notes/part5/lecture20/buggy/build/CMakeFiles/edit_cache.dir
+/home/ren/play/open-lecture-notes/part5/lecture20/buggy/build/CMakeFiles/rebuild_cache.dir
