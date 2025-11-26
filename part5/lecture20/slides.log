@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.7.14)  26 NOV 2025 13:07
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.7.14)  26 NOV 2025 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1368,6 +1368,25 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [13
 
 ]
+File: classFunction__coll__graph.dot.pdf Graphic file (type pdf)
+<use classFunction__coll__graph.dot.pdf>
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [14
+
+]
+File: Variable_8cpp_a0a6d19c2f73390302f0bd4e560057e4d_icgraph.dot.pdf Graphic f
+ile (type pdf)
+<use Variable_8cpp_a0a6d19c2f73390302f0bd4e560057e4d_icgraph.dot.pdf>
+
+Overfull \vbox (5.31136pt too high) detected at line 285
+ []
+
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+[15
+
+]
 \tf@nav=\write6
 \openout6 = `slides.nav'.
 
@@ -1390,12 +1409,12 @@ Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: D858F6910E098AE92535EBEF0937BF41;349.
  ) 
 Here is how much of TeX's memory you used:
- 32067 strings out of 476415
- 697066 string characters out of 5792682
+ 32089 strings out of 476415
+ 698099 string characters out of 5792682
  2071627 words of memory out of 5000000
- 53387 multiletter control sequences out of 15000+600000
+ 53407 multiletter control sequences out of 15000+600000
  593103 words of font info for 99 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  128i,16n,123p,415b,1187s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on slides.pdf (13 pages).
+Output written on slides.pdf (15 pages).
