@@ -1,0 +1,16 @@
+\frametitle{加载BuggyReturnPass编译}
+
+\begin{verbatim}
+$ csmith > a.c
+$ clang -O0 -fpass-plugin=./BuggyReturnPass.so a.c \
+  -I /usr/include/csmith/ -o a
+$ clang a.c -I /usr/include/csmith/ -o b
+$ ./a > a.log
+$ ./b > b.log
+$ diff a.log b.log
+1c1
+< checksum = BFB85390
+---
+> checksum = 6B34DC6
+
+\end{verbatim}

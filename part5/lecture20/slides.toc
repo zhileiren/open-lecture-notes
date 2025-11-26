@@ -1,0 +1,5 @@
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{背景}{2}{0}{1}
+\beamer@sectionintoc {2}{编译器测试概述}{3}{0}{2}
+\beamer@sectionintoc {3}{差分测试}{6}{0}{3}
+\beamer@sectionintoc {4}{CSmith和Yarpgen}{9}{0}{4}
