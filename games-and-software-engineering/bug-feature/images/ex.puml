@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor User
+usecase "Login" as UC_Login
+usecase "Logout" as UC_Logout
+
+User --> UC_Login
+User --> UC_Logout
+@enduml
+

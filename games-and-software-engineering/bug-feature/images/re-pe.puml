@@ -1,0 +1,24 @@
+@startuml
+start
+:Identify Stakeholders and Needs;
+:Define Project Scope and Objectives;
+
+while (Requirements Incomplete?) is (yes)
+  :Draft Initial Requirements\nusing Prompt Engineering;
+  :Review with Stakeholders;
+  :Refine Requirements;
+endwhile
+
+:Generate Detailed Use Cases\nand Specifications;
+:Validate Requirements with AI Assistance;
+:Create Traceability Matrix;
+
+if (Validation Successful?) then (yes)
+  :Finalize Requirements Document;
+  :Baseline Requirements;
+  stop
+else (no)
+  :Identify Gaps and Issues;
+  detach
+endif
+@enduml

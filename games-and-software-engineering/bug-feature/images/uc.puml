@@ -1,0 +1,32 @@
+@startuml
+left to right direction
+actor "Bank Customer" as Customer
+actor "Bank Manager" as Manager
+actor "System Administrator" as Admin
+
+rectangle "Online Banking System" {
+    usecase "Authenticate User" as UC1
+    usecase "Check Balance" as UC2
+    usecase "Transfer Funds" as UC3
+    usecase "View Transaction History" as UC4
+    usecase "Generate Reports" as UC5
+    usecase "Manage Users" as UC6
+}
+
+Customer --> UC1
+Customer --> UC2
+Customer --> UC3
+Customer --> UC4
+
+Manager --> UC1
+Manager --> UC4
+Manager --> UC5
+
+Admin --> UC1
+Admin --> UC6
+
+UC1 .> UC2 : <<include>>
+UC1 .> UC3 : <<include>>
+UC1 .> UC4 : <<include>>
+@enduml
+

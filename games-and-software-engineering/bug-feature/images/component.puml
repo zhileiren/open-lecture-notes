@@ -1,0 +1,43 @@
+@startuml E-Commerce System Component Diagram
+
+skinparam componentStyle uml2
+
+package "E-Commerce System" {
+    [Web Frontend] as frontend
+    [API Gateway] as gateway
+    [Authentication Service] as auth
+    [Order Service] as order
+    [Payment Service] as payment
+    [Inventory Service] as inventory
+    [Database] as db
+}
+
+package "External Systems" {
+    [Payment Gateway] as ext_payment
+    [Email Service] as ext_email
+}
+
+frontend --> gateway : HTTP/REST
+gateway --> auth : validate token
+gateway --> order : place order
+gateway --> inventory : check stock
+gateway --> payment : process payment
+
+order --> db : store orders
+inventory --> db : update stock
+auth --> db : user credentials
+
+payment --> ext_payment : process transaction
+order --> ext_email : send confirmation
+
+note right of frontend
+  Angular SPA
+  Mobile apps
+end note
+
+note left of db
+  MySQL Database
+  Cluster setup
+end note
+
+@enduml
