@@ -127,10 +127,17 @@ Dalian University of Technology
             \item 自动化程度高
         \end{itemize}
     \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{编译器测试概述}
     \begin{figure}
-        \includegraphics[width=0.5\textwidth]{example-image}
-        \caption{编译器测试示意图}
+    \begin{center}
+        \includegraphics[width=.5\textwidth]{havoc.png}
+    \end{center}
+    \caption{传统模糊测试}
     \end{figure}
+    
+    
 \end{frame}
 
 \begin{frame}[c]
@@ -161,13 +168,13 @@ Dalian University of Technology
     \begin{center}
         \includegraphics[width=.4\textwidth]{yarpgen.png}
     \end{center}
-    \caption{Yarpgen工作流程}
+    \caption{工作流程}
     \end{figure}
     
     
 \end{frame}
 
-\section{CSmith和Yarpgen}
+\section{CSmith}
 
 \begin{frame}{Csmith 原理示意（随机生成 + 类型安全）}
 
@@ -207,24 +214,22 @@ Dalian University of Technology
 
 
 \begin{lstlisting}
-// BuggyReturnPass: replace all integer returns with constant 1
 struct BuggyReturnPass : public PassInfoMixin<BuggyReturnPass> {
   PreservedAnalyses run(Module &M, ModuleAnalysisManager &) {
-    LLVMContext &C = M.getContext();
-
     for (Function &F : M) {
       if (F.isDeclaration()) continue;
-
       Type *retTy = F.getReturnType();
+      // only target integer return types
       if (!retTy->isIntegerTy()) continue;
-
       IntegerType *IT = cast<IntegerType>(retTy);
+      // Build the constant of the *correct* width
       Constant *oneConst = ConstantInt::get(IT, 1);
-
       for (BasicBlock &BB : F) {
-        for (auto it = BB.begin(); it != BB.end();) {
+        // iterate carefully since we erase instructions
+        for (auto it = BB.begin(); it != BB.end(); ) {
           Instruction &I = *it++;
           if (ReturnInst *RI = dyn_cast<ReturnInst>(&I)) {
+            // Insert new return with correct typed constant
             IRBuilder<> B(RI);
             B.CreateRet(oneConst);
             RI->eraseFromParent();
