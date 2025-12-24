@@ -1,13 +1,22 @@
-\frametitle{程序生成/修复}
+\frametitle{Encoding Dependencies to Z3}
+\begin{figure}
+    \includegraphics[width=.3\textwidth]{dependency-graph.png}
+\end{figure}
+
+\scriptsize
 \begin{verbatim}
-from z3 import *
-x = Int('x')
-y = Int('y')
-f = Function('f', IntSort(), IntSort())
-s = Solver()
-s.add(f(f(x)) == x, f(x) == y, x != y)
-print(s.check())
-m = s.model()
-print("f(f(x)) =", m.evaluate(f(f(x))))
-print("f(x)    =", m.evaluate(f(x)))
+import z3
+A, B, C, D = z3.Bools("A B C D")
+p1, p2, p3, p4, p5, p6 = z3.Bools("p1 p2 p3 p4 p5 p6")
+solver = z3.Solver()
+solver.assert_and_track(-1 * z3.If(A, 1, 0) + z3.If(B, 1, 0) >= 0, p1)
+solver.assert_and_track(-1 * z3.If(A, 1, 0) + z3.If(C, 1, 0) >= 0, p2)
+solver.assert_and_track(-1 * z3.If(A, 1, 0) + z3.If(D, 1, 0) >= 0, p3)
+solver.assert_and_track(-1 * z3.If(B, 1, 0) + z3.If(D, 1, 0) >= 0, p4)
+solver.assert_and_track(z3.If(C, 1, 0) + z3.If(D, 1, 0) <= 1, p5)
+solver.assert_and_track(A == True, p6)
+
+print(solver.check())
+print(solver.unsat_core())
+
 \end{verbatim}

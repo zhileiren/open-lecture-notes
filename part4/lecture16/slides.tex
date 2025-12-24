@@ -23,6 +23,8 @@
 \usepackage{bibentry}
 \usepackage{verbatim}
 \usepackage{color}
+\usepackage[absolute,overlay]{textpos}
+
 \newcommand{\cmark}{\ding{51}}%
 \newcommand{\xmark}{\ding{55}}%
 \setCJKmainfont{WenQuanYi Micro Hei}
@@ -99,29 +101,6 @@ Dalian University of Technology
  \tableofcontents[currentsection]
  \end{frame}
 }
-\section{开始之前}
-\label{sec:开始之前}
-\begin{frame}[t]{课堂效果的反思}
-
-    \begin{block}{不足之处}
-        \begin{enumerate}
-            \item 没有考虑到系统的差异
-            \item 节奏还是偏快
-        \end{enumerate}
-    
-    \end{block}
-    \begin{block}{采取措施}
-        \begin{enumerate}
-            \item 代码在windows系统下进行测试
-            \item 课堂演示也使用windows系统
-            \item 下周课程安排，根据调查结果调整
-        \end{enumerate}
-    \end{block}
-    \pause
-    \Huge
-    希望我们还是朋友
-    
-\end{frame}
 
 \section{z3简介}
 \begin{frame}[t]{z3简介}
@@ -146,14 +125,29 @@ Dalian University of Technology
 \end{frame}
 \section{示例}
 \label{sec:示例}
-\begin{frame}[t]{约束求解示例}
+\begin{frame}[t,fragile]{约束求解示例}
 今有雉兔同笼，上有三十五头，下有九十四足，问雉兔各几何？
 \end{frame}
 
-\begin{frame}[t]{约束求解示例}
+\begin{frame}[t,fragile]{约束求解示例}
 上置头，下置足，半其足，以头除足，以足除头，即得。
 
+\scriptsize
+\begin{verbatim}
+num_heads = 35
+num_feet = 94
+num_feet_half = num_feet // 2
+num_rabbits = num_feet_half - num_heads
+num_chicken = num_heads - num_rabbits
+\end{verbatim}
+
 \flushright{孙子算经}
+    \begin{textblock}{3}(12,8)
+        \only<2>{
+            \includegraphics[width=\textwidth]{Sun_Zi_Suanjing.jpg}
+        }
+    \end{textblock}
+
 \end{frame}
 \begin{frame}[t,fragile]{约束求解示例}
     \begin{verbatim}
@@ -224,6 +218,30 @@ print(s.check())
 m = s.model()
 print("f(f(x)) =", m.evaluate(f(f(x))))
 print("f(x)    =", m.evaluate(f(x)))
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile,t]{Encoding Dependencies to Z3}
+\begin{figure}
+    \includegraphics[width=.3\textwidth]{dependency-graph.png}
+\end{figure}
+
+\scriptsize
+\begin{verbatim}
+import z3
+A, B, C, D = z3.Bools("A B C D")
+p1, p2, p3, p4, p5, p6 = z3.Bools("p1 p2 p3 p4 p5 p6")
+solver = z3.Solver()
+solver.assert_and_track(-1 * z3.If(A, 1, 0) + z3.If(B, 1, 0) >= 0, p1)
+solver.assert_and_track(-1 * z3.If(A, 1, 0) + z3.If(C, 1, 0) >= 0, p2)
+solver.assert_and_track(-1 * z3.If(A, 1, 0) + z3.If(D, 1, 0) >= 0, p3)
+solver.assert_and_track(-1 * z3.If(B, 1, 0) + z3.If(D, 1, 0) >= 0, p4)
+solver.assert_and_track(z3.If(C, 1, 0) + z3.If(D, 1, 0) <= 1, p5)
+solver.assert_and_track(A == True, p6)
+
+print(solver.check())
+print(solver.unsat_core())
+
 \end{verbatim}
 \end{frame}
 
