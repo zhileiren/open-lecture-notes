@@ -206,18 +206,31 @@ solve(val_c + col_c + diag_c)
     \end{verbatim}
 \end{frame}
 
-\begin{frame}[t,fragile]{程序生成/修复}
+\begin{frame}[t,fragile]{符号执行}
+\scriptsize
 \begin{verbatim}
+def target_function(x, y):
+    if x > 10:
+        if y < 5:
+            if x + y == 20:
+                print("You found the secret!")
+            else:
+                print("Failed at math.")
+        else:
+            print("y is too large.")
+    else:
+        print("x is too small.")
 from z3 import *
 x = Int('x')
 y = Int('y')
-f = Function('f', IntSort(), IntSort())
-s = Solver()
-s.add(f(f(x)) == x, f(x) == y, x != y)
-print(s.check())
-m = s.model()
-print("f(f(x)) =", m.evaluate(f(f(x))))
-print("f(x)    =", m.evaluate(f(x)))
+# 2. 创建一个求解器实例
+solver = Solver()
+solver.add(x > 10)         # 对应第一个 if
+solver.add(y < 5)          # 对应第二个 if
+solver.add(x + y == 20)    # 对应第三个 if
+if solver.check() == sat:
+    model = solver.model()
+    print(f"推荐输入值: x = {model[x]}, y = {model[y]}")
 \end{verbatim}
 \end{frame}
 
