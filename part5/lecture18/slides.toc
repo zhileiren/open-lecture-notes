@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{Python日常: os}{2}{0}{1}
 \beamer@sectionintoc {2}{Python日常: subprocess}{5}{0}{2}
 \beamer@sectionintoc {3}{Python日常: glob}{7}{0}{3}

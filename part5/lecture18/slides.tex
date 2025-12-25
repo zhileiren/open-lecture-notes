@@ -150,8 +150,9 @@ os.path.isdir(path) & 判断路径是否为目录\\
 >>> import subprocess
 >>> subprocess.call(['dir', '/a'])
 >>> subprocess.call("dir /a", shell=True)
->>> return_data = subprocess.call(['ls'], stdout=subprocess.PIPE)
->>> result_txt = return_data.stdout.decode("utf-8")
+>>> ret = subprocess.run(['ls'], 
+                         stdout=subprocess.PIPE)
+>>> result_txt = ret.stdout.decode("utf-8")
 \end{verbatim}
 	
 \end{frame}
