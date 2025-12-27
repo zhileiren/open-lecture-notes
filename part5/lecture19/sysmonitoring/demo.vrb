@@ -1,0 +1,20 @@
+\frametitle{总结}
+\begin{itemize}
+  \item sys.monitoring 是 Python 运行时可观测性的基础设施
+  \item 更适合：
+    \begin{itemize}
+      \item 高性能 tracing
+      \item 组合式调试与分析工具
+      \item 系统级行为建模
+    \end{itemize}
+  \item 可作为：
+    \begin{itemize}
+      \item 动态分析工具
+      \item 运行时剖析框架
+      \item 可观测性驱动优化的底层支撑
+    \end{itemize}
+\end{itemize}
+
+\begin{verbatim}
+# 使用 fragile + verbatim, Python f-string 安全显示
+\end{verbatim}
