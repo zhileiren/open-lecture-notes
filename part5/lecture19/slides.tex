@@ -227,6 +227,138 @@ bar()
 settrace(old_tracer)
 \end{verbatim}
 \end{frame}
+\section{sys.monitoring}
+
+\begin{frame}{背景：为什么需要 sys.monitoring？}
+\begin{itemize}
+  \item sys.settrace 存在的问题：
+    \begin{itemize}
+      \item 事件粒度粗（行级）
+      \item 全局单一回调，难以组合多个工具
+      \item 性能开销大
+    \end{itemize}
+  \item Python 3.12 引入 sys.monitoring
+  \item 目标：
+    \begin{itemize}
+      \item 更细粒度事件
+      \item 多工具并存（debugger / profiler / tracer）
+      \item 更低运行时开销
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{sys.monitoring 核心机制}
+\begin{itemize}
+  \item 事件驱动模型（Event-based）
+  \item 为不同工具分配 \textbf{tool\_id}
+  \item 每个工具订阅自己关心的事件
+\end{itemize}
+
+\textbf{典型事件类型：}
+\begin{itemize}
+  \item PY\_START / PY\_RETURN
+  \item LINE
+  \item CALL / C\_CALL
+  \item INSTRUCTION
+\end{itemize}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}[fragile]{Tracer 示例：函数调用追踪}
+\tiny
+\begin{verbatim}
+from sys import monitoring
+indent = 0
+
+def on_start(code, offset):
+    global indent
+    indent += 1
+    print(f"{indent * '>'} entering function: {code.co_name}")
+
+def on_return(code, offset, retval):
+    global indent
+    print(f"{indent * '<'} leaving function: {code.co_name}, with return value: {retval}")
+    indent -= 1
+
+debugger = monitoring.use_tool_id(monitoring.DEBUGGER_ID, "debugger")
+monitoring.register_callback(monitoring.DEBUGGER_ID, monitoring.events.PY_START, on_start)
+monitoring.register_callback(monitoring.DEBUGGER_ID, monitoring.events.PY_RETURN, on_return)
+
+def fib(bar):
+    if bar <= 2:
+        return 1
+    else:
+        return fib(bar - 1) + fib(bar - 2)
+
+monitoring.set_events(monitoring.DEBUGGER_ID, monitoring.events.PY_START |
+                                              monitoring.events.PY_RETURN)
+fib(10)
+monitoring.set_events(monitoring.DEBUGGER_ID, 0)
+monitoring.free_tool_id(monitoring.DEBUGGER_ID)
+\end{verbatim}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}[fragile]{Debugger / Profiler 场景}
+\textbf{Debugger：}
+\begin{itemize}
+  \item 监听 LINE / INSTRUCTION 事件
+  \item 支持断点、单步执行
+\end{itemize}
+
+\textbf{Profiler：}
+\begin{itemize}
+  \item 监听 CALL / RETURN
+  \item 构建调用栈、统计时间
+\end{itemize}
+
+\textbf{Tracer 示例代码：}
+\begin{verbatim}
+# 调试器和性能分析器可以同时启用
+# 而不会覆盖彼此的回调逻辑
+\end{verbatim}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}[fragile]{sys.monitoring vs sys.settrace}
+\begin{tabular}{l|c|c}
+维度 & sys.settrace & sys.monitoring \\
+\hline
+事件粒度 & 行级 & 行 / 指令 / 调用 \\
+多工具支持 & 否 & 是（tool\_id） \\
+性能 & 较高开销 & 更低 \\
+设计年代 & Python 早期 & Python 3.12+ \\
+适用场景 & 简单调试 & 可观测性 / 运行时分析 \\
+\end{tabular}
+
+\begin{verbatim}
+# sys.monitoring 支持更高性能的 tracing
+# 可同时用于调试和性能分析
+\end{verbatim}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}[fragile]{总结}
+\begin{itemize}
+  \item sys.monitoring 是 Python 运行时可观测性的基础设施
+  \item 更适合：
+    \begin{itemize}
+      \item 高性能 tracing
+      \item 组合式调试与分析工具
+      \item 系统级行为建模
+    \end{itemize}
+  \item 可作为：
+    \begin{itemize}
+      \item 动态分析工具
+      \item 运行时剖析框架
+      \item 可观测性驱动优化的底层支撑
+    \end{itemize}
+\end{itemize}
+
+\begin{verbatim}
+\end{verbatim}
+\end{frame}
 \section{tokenize}
 \begin{frame}[t,fragile]{词法分析}
 \footnotesize

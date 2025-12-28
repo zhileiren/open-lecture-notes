@@ -45,3 +45,4 @@ main()
 
 # 5. 停止监控 (清理现场)
 sys.monitoring.set_events(MY_DEBUGGER, 0)
+sys.monitoring.free_tool_id(MY_DEBUGGER)

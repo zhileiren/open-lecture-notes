@@ -1,5 +1,6 @@
 \babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{inspect}{2}{0}{1}
 \beamer@sectionintoc {2}{sys.settrace}{8}{0}{2}
-\beamer@sectionintoc {3}{tokenize}{10}{0}{3}
-\beamer@sectionintoc {4}{libcst}{12}{0}{4}
+\beamer@sectionintoc {3}{sys.monitoring}{10}{0}{3}
+\beamer@sectionintoc {4}{tokenize}{17}{0}{4}
+\beamer@sectionintoc {5}{libcst}{19}{0}{5}
