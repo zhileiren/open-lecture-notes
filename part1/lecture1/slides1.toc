@@ -1,5 +1,5 @@
 \babel@toc {english}{}\relax 
 \beamer@sectionintoc {1}{关于我}{2}{0}{1}
 \beamer@sectionintoc {2}{特色栏目}{10}{0}{2}
-\beamer@sectionintoc {3}{教学内容}{15}{0}{3}
-\beamer@sectionintoc {4}{定义}{23}{0}{4}
+\beamer@sectionintoc {3}{教学内容}{16}{0}{3}
+\beamer@sectionintoc {4}{定义}{24}{0}{4}

@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'slides1.blg'
-[35] biber:340> INFO - === 一 10月 27, 2025, 13:37:05
-[43] Biber.pm:419> INFO - Reading 'slides1.bcf'
-[72] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
-[78] Biber.pm:4419> INFO - Processing section 0
-[83] Biber.pm:4610> INFO - Looking for bibtex file 'cite.bib' for section 0
-[84] bibtex.pm:1713> INFO - LaTeX decoding ...
-[85] bibtex.pm:1519> INFO - Found BibTeX data source 'cite.bib'
-[103] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[103] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[103] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[103] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[104] bbl.pm:660> INFO - Writing 'slides1.bbl' with encoding 'UTF-8'
-[104] bbl.pm:763> INFO - Output to slides1.bbl
+[43] biber:340> INFO - === 一 8月 31, 2026, 11:46:26
+[52] Biber.pm:419> INFO - Reading 'slides1.bcf'
+[87] Biber.pm:979> INFO - Found 1 citekeys in bib section 0
+[94] Biber.pm:4419> INFO - Processing section 0
+[101] Biber.pm:4610> INFO - Looking for bibtex file 'cite.bib' for section 0
+[101] bibtex.pm:1713> INFO - LaTeX decoding ...
+[103] bibtex.pm:1519> INFO - Found BibTeX data source 'cite.bib'
+[124] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[124] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[124] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[124] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[125] bbl.pm:660> INFO - Writing 'slides1.bbl' with encoding 'UTF-8'
+[126] bbl.pm:763> INFO - Output to slides1.bbl

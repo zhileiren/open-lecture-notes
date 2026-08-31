@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.7.14)  27 OCT 2025 13:37
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.7.14)  31 AUG 2026 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1538,12 +1538,14 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [14
 
-] (./slides1.toc)
+]
+File: Mythical Man-Month.jpg Graphic file (type bmp)
+<Mythical Man-Month.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [15
 
-]
+] (./slides1.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [16
@@ -1579,12 +1581,12 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [22
 
 ]
-(./slides1.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [23
 
 ]
+(./slides1.toc)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [24
@@ -1595,22 +1597,22 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
  [25
 
 ]
-File: open-letter.jpg Graphic file (type bmp)
-<open-letter.jpg>
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 316.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [26
 
 ]
-File: eric.jpg Graphic file (type bmp)
-<eric.jpg>
+File: open-letter.jpg Graphic file (type bmp)
+<open-letter.jpg>
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <14.4> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 321.
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [27
 
 ]
+File: eric.jpg Graphic file (type bmp)
+<eric.jpg>
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [28
@@ -1648,17 +1650,17 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 ]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
+ [35
 
-[35
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+
+[36
 
 ]
 File: license-choice.png Graphic file (type bmp)
 <license-choice.png>
-File: ../../utils/logo.jpg Graphic file (type bmp)
-<../../utils/logo.jpg>
- [36
-
-]
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [37
@@ -1672,6 +1674,11 @@ File: ../../utils/logo.jpg Graphic file (type bmp)
 File: ../../utils/logo.jpg Graphic file (type bmp)
 <../../utils/logo.jpg>
  [39
+
+]
+File: ../../utils/logo.jpg Graphic file (type bmp)
+<../../utils/logo.jpg>
+ [40
 
 ]
 \tf@nav=\write7
@@ -1699,12 +1706,12 @@ Package logreq Info: Writing requests to 'slides1.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34882 strings out of 476415
- 767895 string characters out of 5792682
+ 34899 strings out of 476415
+ 768410 string characters out of 5792682
  1947627 words of memory out of 5000000
- 56207 multiletter control sequences out of 15000+600000
+ 56223 multiletter control sequences out of 15000+600000
  598627 words of font info for 111 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  128i,16n,123p,676b,5443s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on slides1.pdf (39 pages).
+Output written on slides1.pdf (40 pages).
