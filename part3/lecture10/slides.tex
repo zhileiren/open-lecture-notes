@@ -311,10 +311,18 @@ git最初的开发动力来自于BitKeeper和Monotone。很多著名的软件都
 I'm an egotistical bastard, and I name all my projects after myself. First Linux, now git.	
     \end{block}
 \end{frame}
+
+\begin{frame}[c]{Git命令初步}
+	\centering
+    \includegraphics[width=.45\textwidth]{zhihu.png}
+    \includegraphics[width=.5\textwidth]{news.png}
+    
+\end{frame}
+
+
 \begin{frame}[t]{Git命令初步}
 	\centering
     \includegraphics[width=.5\textwidth]{staging-area.png}
-    
 \end{frame}
 \begin{frame}[t,fragile]{Git命令初步}
     \scriptsize
@@ -402,6 +410,62 @@ $ git commit -m "Second commit"
 
   \includegraphics[width=.5\textwidth]{git-chat.png}
 \end{frame}
+
+\begin{frame}[t,fragile]{How git Works}
+
+    \tiny
+\begin{verbatim}
+$ git init
+已初始化空的 Git 仓库于 /tmp/demo/.git/
+$ echo hello world > readme
+$ git add readme
+$ find .git/objects/
+... 
+.git/objects/3b
+.git/objects/3b/18e512dba79e4c8300dd08aeb37f8e728b8dad
+$ git cat-file -p 3b18e5
+hello world
+$ git commit -m init
+[master （根提交） 4722e8d] init
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme
+$ git cat-file -p 4722
+tree 2c5264370f2630da80ee38f412213d59657af6e8
+author Zhilei Ren <zren@dlut.edu.cn> 1788934139 +0800
+committer Zhilei Ren <zren@dlut.edu.cn> 1788934139 +0800
+
+init
+$ git cat-file -p 2c52
+100644 blob 3b18e512dba79e4c8300dd08aeb37f8e728b8dad    readme
+$ git cat-file -t 2c52
+tree
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[t,fragile]{How git Works}
+
+    \tiny
+\begin{verbatim}
+$ echo name > contributors
+$ git add contributors
+$ git commit -m contrib
+[master 73ca5d0] contrib
+ 1 file changed, 1 insertion(+)
+ create mode 100644 contributors
+$ git cat-file -p 73ca
+tree b0ebaa6f7d727e9ad7dd9853307339ef584da826
+parent 4722e8df1fbbf644cc5a89944c157adf8c902e30
+author Zhilei Ren <zren@dlut.edu.cn> 1788934283 +0800
+committer Zhilei Ren <zren@dlut.edu.cn> 1788934283 +0800
+
+contrib
+$ git cat-file -p b0eb
+100644 blob f121bdbff4df6ff03e927c8d84e230da55fb1c0b    contributors
+100644 blob 3b18e512dba79e4c8300dd08aeb37f8e728b8dad    readme
+
+\end{verbatim}
+\end{frame}
+
 
 % section Git入门 (end)
 

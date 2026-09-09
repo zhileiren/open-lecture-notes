@@ -1,23 +1,22 @@
-\frametitle{Git命令初步}
-\scriptsize
+\frametitle{How git Works}
+
+    \tiny
 \begin{verbatim}
-#initialization
-$ git init
+$ echo name > contributors
+$ git add contributors
+$ git commit -m contrib
+[master 73ca5d0] contrib
+ 1 file changed, 1 insertion(+)
+ create mode 100644 contributors
+$ git cat-file -p 73ca
+tree b0ebaa6f7d727e9ad7dd9853307339ef584da826
+parent 4722e8df1fbbf644cc5a89944c157adf8c902e30
+author Zhilei Ren <zren@dlut.edu.cn> 1788934283 +0800
+committer Zhilei Ren <zren@dlut.edu.cn> 1788934283 +0800
 
-#configuration
-$ git config --global user.name "Your Name"
-$ git config --global user.email "you@your.server"
+contrib
+$ git cat-file -p b0eb
+100644 blob f121bdbff4df6ff03e927c8d84e230da55fb1c0b    contributors
+100644 blob 3b18e512dba79e4c8300dd08aeb37f8e728b8dad    readme
 
-# First commit
-$ git add example.py
-
-# adds file to the staging area
-$ git commit -m "First commit"
-
-# Second commit
-$ git add another.py
-
-# adds file to the staging area
-$ git commit -m "Second commit"
 \end{verbatim}
-
